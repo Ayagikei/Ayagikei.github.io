@@ -105,14 +105,14 @@
   <meta name="description" content="不得不说MIUI是个大坑，在其他系统都能正常实现的时候，唯独MIUI出现了各种奇奇怪怪的状况。 最后上了第三方框架uCrop解决裁剪问题。 所需要的框架因为LitePal和MobSDK都需要对Application进行修改，所以最好实现自己的Application：  EasyPermissions（负责处理运行时权限的处理）  uCrop（一个图片裁剪框架）">
 <meta name="keywords" content="Android,开发日志">
 <meta property="og:type" content="article">
-<meta property="og:title" content="人升开发日志#10 | 11&#x2F;03 图片选择、裁剪">
+<meta property="og:title" content="人升开发日志#10 | 11&#x2F;03 Android图片选择、裁剪实现（8.0以及MIUI适配）">
 <meta property="og:url" content="http://sarasarasa.net/post/99671126.html">
 <meta property="og:site_name" content="萨拉萨拉萨">
 <meta property="og:description" content="不得不说MIUI是个大坑，在其他系统都能正常实现的时候，唯独MIUI出现了各种奇奇怪怪的状况。 最后上了第三方框架uCrop解决裁剪问题。 所需要的框架因为LitePal和MobSDK都需要对Application进行修改，所以最好实现自己的Application：  EasyPermissions（负责处理运行时权限的处理）  uCrop（一个图片裁剪框架）">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-03T14:42:31.705Z">
+<meta property="og:updated_time" content="2018-11-03T15:01:08.069Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="人升开发日志#10 | 11&#x2F;03 图片选择、裁剪">
+<meta name="twitter:title" content="人升开发日志#10 | 11&#x2F;03 Android图片选择、裁剪实现（8.0以及MIUI适配）">
 <meta name="twitter:description" content="不得不说MIUI是个大坑，在其他系统都能正常实现的时候，唯独MIUI出现了各种奇奇怪怪的状况。 最后上了第三方框架uCrop解决裁剪问题。 所需要的框架因为LitePal和MobSDK都需要对Application进行修改，所以最好实现自己的Application：  EasyPermissions（负责处理运行时权限的处理）  uCrop（一个图片裁剪框架）">
 
 
@@ -130,7 +130,7 @@
   };
 </script>
 
-  <title>人升开发日志#10 | 11/03 图片选择、裁剪 | 萨拉萨拉萨</title>
+  <title>人升开发日志#10 | 11/03 Android图片选择、裁剪实现（8.0以及MIUI适配） | 萨拉萨拉萨</title>
   
 
 
@@ -358,7 +358,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">人升开发日志#10 | 11/03 图片选择、裁剪
+          <h1 class="post-title" itemprop="name headline">人升开发日志#10 | 11/03 Android图片选择、裁剪实现（8.0以及MIUI适配）
               
             
           </h1>
@@ -383,7 +383,7 @@
                 
               
 
-              <time title="创建时间：2018-11-03 19:35:00 / 修改时间：22:42:31" itemprop="dateCreated datePublished" datetime="2018-11-03T19:35:00+08:00">2018-11-03</time>
+              <time title="创建时间：2018-11-03 19:35:00 / 修改时间：23:01:08" itemprop="dateCreated datePublished" datetime="2018-11-03T19:35:00+08:00">2018-11-03</time>
             
 
             
@@ -1043,7 +1043,7 @@
       var disqus_config = function () {
         this.page.url = 'http://sarasarasa.net/post/99671126.html';
         this.page.identifier = 'post/99671126.html';
-        this.page.title = '人升开发日志#10 | 11/03 图片选择、裁剪';
+        this.page.title = '人升开发日志#10 | 11/03 Android图片选择、裁剪实现（8.0以及MIUI适配）';
       };
       function loadComments () {
         var d = document, s = d.createElement('script');
