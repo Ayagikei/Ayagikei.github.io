@@ -102,20 +102,25 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="萨拉萨拉萨">
-<meta property="og:url" content="http://sarasarasa.net/archives/2018/page/4/index.html">
+  <meta name="description" content="AndroidX是 Google 发布的对原来的支持库整理后的新一代支持库。并且原来的支持库的最后版本将停留在“28.0.0”，迁移是迟早的事情。 主要动机还是想要用一个框架，结果它只支持AndroidX，就这样决定开始迁移了。 利用Android Studio迁移需求：Android Studio版本3.2以上 操作：Refactor -&amp;gt; Migrate to Androidx IDE会">
+<meta name="keywords" content="Android,开发日志">
+<meta property="og:type" content="article">
+<meta property="og:title" content="人升开发日志#13 | 03&#x2F;21 迁移至AndroidX">
+<meta property="og:url" content="http://sarasarasa.net/post/d848a650.html">
 <meta property="og:site_name" content="萨拉萨拉萨">
+<meta property="og:description" content="AndroidX是 Google 发布的对原来的支持库整理后的新一代支持库。并且原来的支持库的最后版本将停留在“28.0.0”，迁移是迟早的事情。 主要动机还是想要用一个框架，结果它只支持AndroidX，就这样决定开始迁移了。 利用Android Studio迁移需求：Android Studio版本3.2以上 操作：Refactor -&amp;gt; Migrate to Androidx IDE会">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-21T10:57:23.595Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="萨拉萨拉萨">
+<meta name="twitter:title" content="人升开发日志#13 | 03&#x2F;21 迁移至AndroidX">
+<meta name="twitter:description" content="AndroidX是 Google 发布的对原来的支持库整理后的新一代支持库。并且原来的支持库的最后版本将停留在“28.0.0”，迁移是迟早的事情。 主要动机还是想要用一个框架，结果它只支持AndroidX，就这样决定开始迁移了。 利用Android Studio迁移需求：Android Studio版本3.2以上 操作：Refactor -&amp;gt; Migrate to Androidx IDE会">
 
 
 
 
 
 
-  <link rel="canonical" href="http://sarasarasa.net/archives/2018/page/4/"/>
+  <link rel="canonical" href="http://sarasarasa.net/post/d848a650.html"/>
 
 
 
@@ -125,7 +130,7 @@
   };
 </script>
 
-  <title>归档 | 萨拉萨拉萨</title>
+  <title>人升开发日志#13 | 03/21 迁移至AndroidX | 萨拉萨拉萨</title>
   
 
 
@@ -182,7 +187,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -252,7 +257,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
   </li>
@@ -316,106 +321,287 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      
-      <span class="archive-page-counter">
-        
-        
-         
-        
-        还行! 目前共计 34 篇日志。 继续努力。
-      </span>
-      
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
-
-        
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://sarasarasa.net/post/d848a650.html">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="AyagiKei">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="萨拉萨拉萨">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/post/396831a4.html" itemprop="url">
-              
-                <span itemprop="name">VectorDrawable(xml)转换回SVG</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">人升开发日志#13 | 03/21 迁移至AndroidX
+              
+            
+          </h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-02T21:30:10+08:00"
-              content="2018-02-02" >
-          02-02
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
 
-    </header>
-  </article>
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
 
+              
+                
+              
+
+              <time title="创建时间：2019-03-21 17:51:24 / 修改时间：18:57:23" itemprop="dateCreated datePublished" datetime="2019-03-21T17:51:24+08:00">2019-03-21</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/项目/" itemprop="url" rel="index"><span itemprop="name">项目</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/项目/开发日志/" itemprop="url" rel="index"><span itemprop="name">开发日志</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/项目/开发日志/人升/" itemprop="url" rel="index"><span itemprop="name">人升</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/post/d848a650.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="post/d848a650.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.1k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">2 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <p>AndroidX是 Google 发布的对原来的支持库整理后的新一代支持库。并且原来的支持库的最后版本将停留在“28.0.0”，迁移是迟早的事情。</p>
+<p>主要动机还是想要用一个框架，结果它只支持AndroidX，就这样决定开始迁移了。</p>
+<h1 id="利用Android-Studio迁移"><a href="#利用Android-Studio迁移" class="headerlink" title="利用Android Studio迁移"></a>利用Android Studio迁移</h1><p><strong>需求：</strong>Android Studio版本3.2以上</p>
+<p><strong>操作：</strong>Refactor -&gt; Migrate to Androidx</p>
+<p>IDE会询问是否要备份一份当前的项目，并且会告知可能需要你手动解决一些项目Error。</p>
+<p>继续操作，IDE会搜索所有的要改变的依赖路径，然后点击<code>DO REFACTOR</code>按钮吧。</p>
+<a id="more"></a>
+<p><br></p>
+<h1 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h1><h2 id="马上Gradle-Build就出现了第一个问题"><a href="#马上Gradle-Build就出现了第一个问题" class="headerlink" title="马上Gradle Build就出现了第一个问题"></a>马上Gradle Build就出现了第一个问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Android resource compilation failed</span><br><span class="line"> error: duplicate value for resource &apos;attr/visibility&apos; with config &apos;&apos;. and error: resource previously defined here.</span><br></pre></td></tr></table></figure>
+<p>检索可知，这是依赖库的一个Bug。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">androidx.constraintlayout:constraintlayout:2.0.0-alpha3</span><br></pre></td></tr></table></figure>
+<p><strong>解决方法：</strong>暂时将alpha3降级到alpha2，等待下一个版本解决。</p>
+<p><strong>参考链接：</strong><a href="https://stackoverflow.com/questions/53908854/android-resource-compilation-failed-error-duplicate-value-for-resource-attr-vi" target="_blank" rel="noopener">https://stackoverflow.com/questions/53908854/android-resource-compilation-failed-error-duplicate-value-for-resource-attr-vi</a></p>
+<p><br></p>
+<h2 id="Kotlin的View依赖失效"><a href="#Kotlin的View依赖失效" class="headerlink" title="Kotlin的View依赖失效"></a>Kotlin的View依赖失效</h2><p><strong>解决方法：</strong>重新导一下View的依赖就好。</p>
+<p><br></p>
+<h2 id="第三方框架的错误"><a href="#第三方框架的错误" class="headerlink" title="第三方框架的错误"></a>第三方框架的错误</h2><p>第三方框架有的可能还依赖于原始的支持库，这时IDE会报错。</p>
+<p>这里有2个解决方案：</p>
+<h3 id="1-更新框架"><a href="#1-更新框架" class="headerlink" title="1. 更新框架"></a>1. 更新框架</h3><p>一般坚持维护的大型框架都有提供 AndroidX 版本，更新一下即可。</p>
+<h3 id="2-修改-gradle-properties"><a href="#2-修改-gradle-properties" class="headerlink" title="2. 修改 gradle.properties"></a>2. 修改 gradle.properties</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">android.useAndroidX=true</span><br><span class="line">android.enableJetifier=true</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>android.useAndroidX=true</code> 表示当前项目启用 AndroidX</li>
+<li><code>android.enableJetifier=true</code>表示启用 Jetifier。而Jetifier会在构建项目的时候，将你的第三方依赖里面的旧支持库依赖自动转换为AndroidX支持库。</li>
+</ul>
+
+      
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"># Android</a>
+          
+            <a href="/tags/开发日志/" rel="tag"># 开发日志</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/post/396831a4.html" rel="next" title="VectorDrawable(xml)转换回SVG">
+                <i class="fa fa-chevron-left"></i> VectorDrawable(xml)转换回SVG
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/post/b122a7c6.html" rel="prev" title="人升开发日志#14 | 03/21 几个小问题的解决">
+                人升开发日志#14 | 03/21 几个小问题的解决 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/2018/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/archives/2018/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2018/page/3/">3</a><span class="page-number current">4</span>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -436,8 +622,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -456,7 +651,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">34</span>
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -665,6 +860,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#利用Android-Studio迁移"><span class="nav-number">1.</span> <span class="nav-text">利用Android Studio迁移</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决问题"><span class="nav-number">2.</span> <span class="nav-text">解决问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#马上Gradle-Build就出现了第一个问题"><span class="nav-number">2.1.</span> <span class="nav-text">马上Gradle Build就出现了第一个问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kotlin的View依赖失效"><span class="nav-number">2.2.</span> <span class="nav-text">Kotlin的View依赖失效</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三方框架的错误"><span class="nav-number">2.3.</span> <span class="nav-text">第三方框架的错误</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-更新框架"><span class="nav-number">2.3.1.</span> <span class="nav-text">1. 更新框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-修改-gradle-properties"><span class="nav-number">2.3.2.</span> <span class="nav-text">2. 修改 gradle.properties</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -692,7 +903,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">136k</span>
+    <span title="站点总字数">139k</span>
   
 
   
@@ -816,6 +1027,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.2.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.2.0"></script>
+
+
 
   
 
@@ -830,6 +1045,23 @@
     <script id="dsq-count-scr" src="https://AyagiKei.disqus.com/count.js" async></script>
   
 
+  
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'http://sarasarasa.net/post/d848a650.html';
+        this.page.identifier = 'post/d848a650.html';
+        this.page.title = '人升开发日志#13 | 03/21 迁移至AndroidX';
+      };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://AyagiKei.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        loadComments();
+      
+    </script>
   
 
 
