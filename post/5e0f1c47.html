@@ -102,20 +102,25 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="萨拉萨拉萨">
-<meta property="og:url" content="http://sarasarasa.net/categories/项目/page/2/index.html">
+  <meta name="description" content="简介之前在《人升》的桌面小部件，实现ListView中的点击事件监听的方式是： 使用fillInIntent发送广播到Widget类中，并在onReceive方法中拦截，处理业务逻辑。 但是， Widget的本质是个广播接收器，不适宜在里面处理耗时操作。 （完成团队事项的时候需要发送网络请求，普通事项需要更改数据库，都可以视为是耗时操作。） 所以，我决定改用IntentService处理完成事项的">
+<meta name="keywords" content="技术,Android">
+<meta property="og:type" content="article">
+<meta property="og:title" content="桌面小部件-IntentService-Oreo的那些事">
+<meta property="og:url" content="http://sarasarasa.net/post/5e0f1c47.html">
 <meta property="og:site_name" content="萨拉萨拉萨">
+<meta property="og:description" content="简介之前在《人升》的桌面小部件，实现ListView中的点击事件监听的方式是： 使用fillInIntent发送广播到Widget类中，并在onReceive方法中拦截，处理业务逻辑。 但是， Widget的本质是个广播接收器，不适宜在里面处理耗时操作。 （完成团队事项的时候需要发送网络请求，普通事项需要更改数据库，都可以视为是耗时操作。） 所以，我决定改用IntentService处理完成事项的">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-04-19T14:29:02.487Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="萨拉萨拉萨">
+<meta name="twitter:title" content="桌面小部件-IntentService-Oreo的那些事">
+<meta name="twitter:description" content="简介之前在《人升》的桌面小部件，实现ListView中的点击事件监听的方式是： 使用fillInIntent发送广播到Widget类中，并在onReceive方法中拦截，处理业务逻辑。 但是， Widget的本质是个广播接收器，不适宜在里面处理耗时操作。 （完成团队事项的时候需要发送网络请求，普通事项需要更改数据库，都可以视为是耗时操作。） 所以，我决定改用IntentService处理完成事项的">
 
 
 
 
 
 
-  <link rel="canonical" href="http://sarasarasa.net/categories/项目/page/2/"/>
+  <link rel="canonical" href="http://sarasarasa.net/post/5e0f1c47.html"/>
 
 
 
@@ -125,7 +130,7 @@
   };
 </script>
 
-  <title>分类: 项目 | 萨拉萨拉萨</title>
+  <title>桌面小部件-IntentService-Oreo的那些事 | 萨拉萨拉萨</title>
   
 
 
@@ -182,7 +187,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -236,7 +241,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
   </li>
@@ -316,254 +321,288 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block category">
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>项目<small>分类</small>
-        </h1>
-      </div>
-
-      
-        
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://sarasarasa.net/post/5e0f1c47.html">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="AyagiKei">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="萨拉萨拉萨">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/post/a1903a1d.html" itemprop="url">
-              
-                <span itemprop="name">人升开发日志#6 | 6/19 Launch Screen</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">桌面小部件-IntentService-Oreo的那些事
+              
+            
+          </h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-19T21:37:01+08:00"
-              content="2018-06-19" >
-          06-19
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
 
-    </header>
-  </article>
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-19 21:57:42 / 修改时间：22:29:02" itemprop="dateCreated datePublished" datetime="2019-04-19T21:57:42+08:00">2019-04-19</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技术/" itemprop="url" rel="index"><span itemprop="name">技术</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技术/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/post/5e0f1c47.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="post/5e0f1c47.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">3.3k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">5 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/post/7c1546cb.html" itemprop="url">
-              
-                <span itemprop="name">人升开发日志#5 | 6/17 布局复用</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-19T12:35:36+08:00"
-              content="2018-06-19" >
-          06-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/post/3ffb3959.html" itemprop="url">
-              
-                <span itemprop="name">人升开发日志#4 | 6/11 多语言</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-13T22:30:22+08:00"
-              content="2018-06-13" >
-          06-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/post/eac283fe.html" itemprop="url">
-              
-                <span itemprop="name">人升开发日志#3 | 6/8 自适应图标</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-08T16:50:37+08:00"
-              content="2018-06-08" >
-          06-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/post/17b01d24.html" itemprop="url">
-              
-                <span itemprop="name">人升开发日志#2 | 6/7 引导页</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-07T22:36:52+08:00"
-              content="2018-06-07" >
-          06-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/post/1188c9f1.html" itemprop="url">
-              
-                <span itemprop="name">人升开发日志#1 | 6/1 APP 图标设计</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-02T22:51:10+08:00"
-              content="2018-06-02" >
-          06-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/post/61989d5e.html" itemprop="url">
-              
-                <span itemprop="name">项目文档：舰C主题的QQ机器人（ QQ Bot Kancolle）</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-20T19:16:38+08:00"
-              content="2018-04-20" >
-          04-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>之前在《人升》的桌面小部件，实现ListView中的点击事件监听的方式是：</p>
+<p>使用fillInIntent发送广播到Widget类中，并在onReceive方法中拦截，处理业务逻辑。</p>
+<p><strong>但是，</strong></p>
+<p>Widget的本质是个广播接收器，不适宜在里面处理耗时操作。</p>
+<p>（完成团队事项的时候需要发送网络请求，普通事项需要更改数据库，都可以视为是耗时操作。）</p>
+<p>所以，我决定改用IntentService处理完成事项的业务逻辑。</p>
+<p><strong>IntentService的特点是后台运行、自动销毁、异步运行。</strong></p>
+<p>首先尝试直接用fillInIntent启动服务失败了。</p>
+<p><strong>然后改成了先发送广播，然后在Widget类中，并在onReceive方法拦截再启动IntentService：</strong></p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onReceive</span><span class="params">(context: <span class="type">Context</span>, intent: <span class="type">Intent</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">super</span>.onReceive(context, intent)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (...) &#123;</span><br><span class="line">	...</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (intent.action == FINISH_TASK) &#123;</span><br><span class="line">        <span class="comment">// 将耗时操作交给IntentService完成</span></span><br><span class="line">        <span class="keyword">val</span> finishIntent = Intent(context, FinishTaskIntentService::<span class="class"><span class="keyword">class</span>.<span class="title">java</span>)</span></span><br><span class="line">        <span class="keyword">if</span> (intent.extras != <span class="literal">null</span>) &#123;</span><br><span class="line">            finishIntent.putExtras(intent.extras!!)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.O) &#123;</span><br><span class="line">                context.startForegroundService(finishIntent)</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                context.startService(finishIntent)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (e: Exception) &#123;</span><br><span class="line">            e.printStackTrace()</span><br><span class="line">            ToastUtils.showShortToast(<span class="string">"完成事项似乎出现了一些问题，请尝试刷新下。"</span>, LifeUpApplication.getLifeUpApplication())</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后就遇到了坑。</p>
+<a id="more"></a>
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>一开始我是没写对Oreo的判断的，直接startService。</p>
+<p>简单测试了成功，但是应用放置一会后，再测试，会发现应用抛出了异常：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java.lang.IllegalStateException: Not allowed to start service Intent</span><br></pre></td></tr></table></figure>
+<p>查询了一下，是Oreo不允许后台启动服务。</p>
+<p>首先需要以startForegroundService的方式启动服务，然后启动后5s内切换到前台服务（调用startForeground方法）：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FinishTaskIntentService</span> : <span class="type">IntentService</span></span>(<span class="string">"FinishTaskIntentService"</span>) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreate</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate()</span><br><span class="line">        Log.i(<span class="string">"FinishTaskIntentService"</span>, <span class="string">"onCreate()"</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onHandleIntent</span><span class="params">(intent: <span class="type">Intent</span>?)</span></span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.O) &#123;</span><br><span class="line">            <span class="keyword">val</span> NOTIFICATION_CHANNEL_ID = <span class="string">"net.sarasarasa.lifeup"</span></span><br><span class="line">            <span class="keyword">val</span> channelName = <span class="string">"FinishTaskIntentService"</span></span><br><span class="line">            <span class="keyword">val</span> channel = NotificationChannel(NOTIFICATION_CHANNEL_ID, channelName,</span><br><span class="line">                    NotificationManager.IMPORTANCE_MIN)</span><br><span class="line"></span><br><span class="line">            <span class="keyword">val</span> manager = getSystemService(Context.NOTIFICATION_SERVICE) <span class="keyword">as</span> NotificationManager</span><br><span class="line">            manager.createNotificationChannel(channel)</span><br><span class="line"></span><br><span class="line">            <span class="keyword">val</span> notification = Notification.Builder(applicationContext, NOTIFICATION_CHANNEL_ID).build()</span><br><span class="line"></span><br><span class="line">            startForeground(<span class="number">1001</span>, notification)       </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">val</span> extras = intent?.extras</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (extras != <span class="literal">null</span>) &#123;</span><br><span class="line">            ... <span class="comment">// 业务逻辑</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>一开始我是直接new Notification传参，然后测试发现又抛了一个异常：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Bad notification for startForeground: java.lang.RuntimeException: invalid channel for service notification: Notification</span><br></pre></td></tr></table></figure>
+<p>嗯，这是Android 8.1新添加的限制。</p>
+<p><strong>在Android 8.1中，必须创建自己的Notification Channel。</strong></p>
+<p><strong>在 Android 9（P）中，还需要声明前台服务权限：</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.FOREGROUND_SERVICE"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="JobIntentService"><a href="#JobIntentService" class="headerlink" title="JobIntentService"></a>JobIntentService</h1><p>其实 Google 推荐的是使用 JobIntentService 处理那些后台业务。</p>
+<p><strong>特色：</strong></p>
+<ul>
+<li>8.0以下会被当作普通的Service。</li>
+<li>8.0及以上会被作为job用jobScheduler.enqueue()方法来分发。</li>
+</ul>
+<p>但是呢，JobIntentService 并不适用于我们这个场景：</p>
+<p><strong>它的任务会在合适的时刻执行，（即使空闲）也并不保证会立即执行。</strong></p>
+<p>这里的<a href="https://stackoverflow.com/questions/46856171/jobintentservice-doesnt-start-immediately-on-android-8-0" target="_blank" rel="noopener">讨论</a>挺有意思的，可以看看~</p>
+<p>结论就是，需要立即执行的业务最好还是靠前台Service实现。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://stackoverflow.com/questions/46445265/android-8-0-java-lang-illegalstateexception-not-allowed-to-start-service-inten" target="_blank" rel="noopener">https://stackoverflow.com/questions/46445265/android-8-0-java-lang-illegalstateexception-not-allowed-to-start-service-inten</a></p>
+<p><a href="https://blog.csdn.net/Houson_c/article/details/78461751" target="_blank" rel="noopener">JobIntentService详解及使用</a></p>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/技术/" rel="tag"># 技术</a>
+          
+            <a href="/tags/Android/" rel="tag"># Android</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/post/4f03117d.html" rel="next" title="实现Snackbar弹出时任意View闪躲">
+                <i class="fa fa-chevron-left"></i> 实现Snackbar弹出时任意View闪躲
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/categories/项目/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/categories/项目/">1</a><span class="page-number current">2</span>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -584,8 +623,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -819,6 +867,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题"><span class="nav-number">2.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JobIntentService"><span class="nav-number">3.</span> <span class="nav-text">JobIntentService</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -970,6 +1034,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.2.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.2.0"></script>
+
+
 
   
 
@@ -984,6 +1052,23 @@
     <script id="dsq-count-scr" src="https://AyagiKei.disqus.com/count.js" async></script>
   
 
+  
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'http://sarasarasa.net/post/5e0f1c47.html';
+        this.page.identifier = 'post/5e0f1c47.html';
+        this.page.title = '桌面小部件-IntentService-Oreo的那些事';
+      };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://AyagiKei.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        loadComments();
+      
+    </script>
   
 
 
