@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Git修改已经提交的用户名信息]]></title>
+    <url>%2Fpost%2F5d88e185.html</url>
+    <content type="text"><![CDATA[参考： https://www.jianshu.com/p/93bb4d049955 最近的一条记录如果只是需要修改最近的一条记录的话，只需要 1git commit --amend --author=&quot;作者名 &lt;邮箱@xxxx.com&gt;&quot; 注意：这里的尖括号是要带上的。 多条记录12345678910# 第一步，（n）代表提交次数git rebase -i HEAD~n# 第二步然后按`i`编辑，把`pick` 改成 `edit`，按&apos;Esc&apos;退出编辑，按`:wq`保存退出# 第三步git commit --amend --author=&quot;作者 &lt;邮箱@xxxx.com&gt;&quot; --no-edit# 第四步（多条记录的话，会跳转到下一条记录，返回第三步）git rebase --continue# 第五步（全部完成后，覆盖远程git记录，危险操作要谨慎操作）git push --force 非常多条记录更改转自网络： 如果是多个修改，那么就需要使用到git filter-branch这个工具来做批量修改为了方便大家使用，封装了一个简单的shell脚本，直接修改[XXX]中的变量为对应的值即可 12345678910111213141516171819202122232425#!/bin/sh git filter-branch --env-filter ' an="$GIT_AUTHOR_NAME"am="$GIT_AUTHOR_EMAIL"cn="$GIT_COMMITTER_NAME"cm="$GIT_COMMITTER_EMAIL" if [ "$GIT_COMMITTER_EMAIL" = "[Your Old Email]" ]then cn="[Your New Author Name]" cm="[Your New Email]"fiif [ "$GIT_AUTHOR_EMAIL" = "[Your Old Email]" ]then an="[Your New Author Name]" am="[Your New Email]"fi export GIT_AUTHOR_NAME="$an"export GIT_AUTHOR_EMAIL="$am"export GIT_COMMITTER_NAME="$cn"export GIT_COMMITTER_EMAIL="$cm"']]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[Android]多语言、Google授权登陆]]></title>
+    <url>%2Fpost%2F7096aa00.html</url>
+    <content type="text"><![CDATA[以此文总结一下《LifeUp》上架 GooglePlay 的全过程~ 多语言App默认会根据系统语言加载不同的字符串资源文件，这是我们实现多语言的基础。 新建资源文件首先是建立相应的资源文件，可以手动建立，也可以用 Android Studio 的选项建立： 右键 res 文件夹选择File–&gt;New–&gt;Android resource file选择 Locale 可以见到下图 选择你要新建的语言，并且改文件名为strings即可。 实际上，就是新建一个value-(语言缩写)的文件夹（简体中文的话就是value-zh），然后在其中放上string.xml文件。 提取代码、Layout中的字符串点击相应的字符串，按下ALT+ENTER，然后选择 Extract string resouces。 然后输入字符串资源的名称，勾选相应的资源文件： 按下确定后，AS就会提取该字符串到资源文件内了，同时代码会被替换成： Context getString(resouceId) 在Layout中操作同理，利用这个操作可以替换掉App内大部分的静态的字符串。 那么需要动态赋值的字符串该怎么办呢？ 字符串资源文件中的变量设置比如我们的字符串需要传入一个整数型变量的话： 1"你已经完成了$&#123;getCount()&#125;个任务" // kotlin的String模板写法 当然，你可以简单地拆分为两个字符串&quot;你已经完成了&quot;和&quot;个任务&quot;，然后 1getString(R.string.string1) + getCount() + getString(R.string.string2) 只是这种写法很不优雅，而且会有些小问题。 getString的时候，会自动去掉取得的字符串头尾的空格，这会让我们不太好控制格式。 特别是英文的时候，经常需要空格隔开。 何况，有些语言我们需要更改语序，这种简单拼接的方法就很不合适。 其实，字符串资源文件里可以用变量占位的方法： %n$md：代表输出的是整数，n代表是第几个参数，设置m的值可以在输出之前放置空格。 %n$ms：代表输出的是字符串，n代表是第几个参数，设置m的值可以在输出之前放置空格。 %n$mf：代表输出的是浮点数，n代表是第几个参数，设置m的值可以控制小数位数，如m=2.2时，输出格式为0.00。 如果只有一个变量的话，可以直接不写前面的“%n”。 m的值为0的话，也可以留空。 比如上面的例子中，可以在资源文件里这样写： 1&lt;string name="task_finish"&gt;你已经完成了%1$d个任务，共%2$d个&lt;/string&gt; 英文就可以： 1&lt;string name="task_finish"&gt;You have already completed %1$d of %2$d tasks&lt;/string&gt; 代码中可以这样传入参数： 12// getCompletedCount() 就对应 %1$d，getTotalCount()对应%2$dgetString(R.string.task_finish,getCompletedCount(),getTotalCount()) 利用这个技巧就能完成整个应用的多语言化了。 多语言切换 参考：https://www.jianshu.com/p/b9e32fad36a2 主要参考的是上面这篇文章，非常感谢原作者，稍作了一些代码更改。 工具类代码： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109import android.content.Context;import android.content.SharedPreferences;import android.content.res.Configuration;import android.content.res.Resources;import android.os.Build;import android.os.LocaleList;import android.text.TextUtils;import android.util.DisplayMetrics;import androidx.annotation.RequiresApi;import com.google.gson.Gson;import java.util.Locale;public class LanguageUtil &#123; /** * 中文 */ public static final Locale LOCALE_CHINESE = Locale.CHINESE; /** * 英文 */ public static final Locale LOCALE_ENGLISH = Locale.ENGLISH; private static final String LOCALE_SP = "LOCALE_SP"; private static final String LOCALE_SP_KEY = "LOCALE_SP_KEY"; public static Locale getLocale(Context context) &#123; SharedPreferences spLocale = context.getSharedPreferences(LOCALE_SP, Context.MODE_PRIVATE); String localeJson = spLocale.getString(LOCALE_SP_KEY, ""); if (TextUtils.isEmpty(localeJson)) return null; Gson gson = new Gson(); return gson.fromJson(localeJson, Locale.class); &#125; private static void setLocale(Context pContext, Locale pUserLocale) &#123; SharedPreferences spLocal = pContext.getSharedPreferences(LOCALE_SP, Context.MODE_PRIVATE); SharedPreferences.Editor edit = spLocal.edit(); String json = new Gson().toJson(pUserLocale); edit.putString(LOCALE_SP_KEY, json); edit.apply(); &#125; public static void clearLocale(Context pContext) &#123; SharedPreferences spLocal = pContext.getSharedPreferences(LOCALE_SP, Context.MODE_PRIVATE); SharedPreferences.Editor edit = spLocal.edit(); edit.putString(LOCALE_SP_KEY, ""); edit.apply(); &#125; public static boolean updateLocale(Context context, Locale locale) &#123; if (needUpdateLocale(context, locale)) &#123; Configuration configuration = context.getResources().getConfiguration(); if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.JELLY_BEAN_MR1) &#123; configuration.setLocale(locale); &#125; else &#123; configuration.locale = locale; &#125; DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics(); context.getResources().updateConfiguration(configuration, displayMetrics); setLocale(context, locale); return true; &#125; return false; &#125; public static boolean needUpdateLocale(Context pContext, Locale newUserLocale) &#123; return newUserLocale != null &amp;&amp; !getCurrentLocale(pContext).equals(newUserLocale); &#125; public static Locale getCurrentLocale(Context context) &#123; Locale locale; if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.N) &#123; //7.0有多语言设置获取顶部的语言 locale = context.getResources().getConfiguration().getLocales().get(0); &#125; else &#123; locale = context.getResources().getConfiguration().locale; &#125; return locale; &#125; public static Context languageWork(Context context) &#123; // 8.0及以上使用createConfigurationContext设置configuration if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.O) &#123; return updateResources(context); &#125; else &#123; return context; &#125; &#125; @RequiresApi(api = Build.VERSION_CODES.O) private static Context updateResources(Context context) &#123; Resources resources = context.getResources(); Locale locale = LanguageUtil.getLocale(context); if (locale == null) &#123; return context; &#125; Configuration configuration = resources.getConfiguration(); configuration.setLocale(locale); configuration.setLocales(new LocaleList(locale)); return context.createConfigurationContext(configuration); &#125;&#125; BaseActivity配置（Kotlin）： 1234override fun attachBaseContext(newBase: Context) &#123; val context = LanguageUtil.languageWork(newBase) super.attachBaseContext(context)&#125; 工具类使用： 1LanguageUtil.updateLocale(context, LanguageUtil.LOCALE_ENGLISH) 注意：切换语言后，之前创建的Activity的语言不会马上切换。这里应该引导用户重启应用，或者是想方设法让之前的Activity销毁重建一遍。 接入Google登陆 科学上网肯定是要需要的~这里不提供解决方案。 准备阶段 Google Develper原文：https://developers.google.com/identity/sign-in/android/start-integrating 配置 Android 设备至少是Android 4.1及以上，并且安装有15.0.0以上版本的 Google Play 服务。 项目配置编译版本对应Android 4.1及以上。 安装 Google Play Services SDK 在Android Studio，选择Tools &gt; Android &gt; SDK Manager。 移到底部选择 Extras &gt; Google Repository Gradle配置项目级别的build.gradle文件中配置Google的Maven仓库： 12345678910allprojects &#123; repositories &#123; google() // 如果你使用的Gradle版本低于4.1，使用下面语句代替: // maven &#123; // url 'https://maven.google.com' // &#125; &#125;&#125; 然后在app模块级别的build.gradle文件里，声明Google Play服务依赖： 123456apply plugin: &apos;com.android.application&apos; ... dependencies &#123; compile &apos;com.google.android.gms:play-services-auth:16.0.1&apos; &#125; 配置 Google API 控制台项目点击原文中的CONFIGURE A PROJECT按钮，然后按照步骤进行就可以配置项目了。 或者前往https://console.developers.google.com/apis/配置也可以。 所需的信息 项目名 签名证书的指纹 可以通过这条命令获取： 1keytool -exportcert -keystore &lt;将这里替换成你的keystore文件路径，不含尖括号&gt; -list -v 软件包名 获得Client ID配置完后，你能在Google APIs看到你配置的OAuth 2.0客户端ID。 其中有一个是Web应用类型的，一个是Android应用类型的。 前者是提供给有后端服务器验证需求使用的，具体可以参考：https://developers.google.com/identity/sign-in/android/backend-auth 项目配置实现Google登录配置 GoogleSignInClient直接看代码吧： 在activity的onCreate方法中使用 GoogleSignInOptions 配置你所需要申请的 API 范围： 12345// 配置获取用户ID、邮箱和头像等基础信息// 其中 DEFAULT_SIGN_IN 用户ID和头像等基础信息。GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN) .requestEmail() .build(); 同样在onCreate方法中构建一个 GoogleSIgnInClient 实例 12// 利用你刚才的gso配置构建GoogleSIgnInClient实例mGoogleSignInClient = GoogleSignIn.getClient(this, gso); 检查登录状态12345// 检查用户是否已经登录过，如果已经登陆过会返回一个GoogleSignInAccount实例// 接着你就应该拿着这些信息去更新 UI 了// 如果没有登录，account会返回null值。GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);updateUI(account); 布局增加登录按钮 在布局文件中加入： 1234&lt;com.google.android.gms.common.SignInButton android:id="@+id/sign_in_button" android:layout_width="wrap_content" android:layout_height="wrap_content" /&gt; 你能得到一个这样的登录按钮： 可选：你可以使用setSize方法修改按钮的样式： 123// 设置登录按钮的尺寸样式SignInButton signInButton = findViewById(R.id.sign_in_button);signInButton.setSize(SignInButton.SIZE_STANDARD); 设置onClickListener： 1findViewById(R.id.sign_in_button).setOnClickListener(this); 实现登录逻辑 实现 activity 的onClick方法： 123456789@Overridepublic void onClick(View v) &#123; switch (v.getId()) &#123; case R.id.sign_in_button: signIn(); break; // ... &#125;&#125; 实现 signIn 方法： 1234private void signIn() &#123; Intent signInIntent = mGoogleSignInClient.getSignInIntent(); startActivityForResult(signInIntent, RC_SIGN_IN);&#125; 在用户登录成功后，你会在activity的onActivityResult 方法回调中获得一个 GoogleSignInAccount实例。 12345678910@Overridepublic void onActivityResult(int requestCode, int resultCode, Intent data) &#123; super.onActivityResult(requestCode, resultCode, data); // 结果是从 GoogleSignInClient.getSignInIntent(...) 回调回来的; if (requestCode == RC_SIGN_IN) &#123; Task&lt;GoogleSignInAccount&gt; task = GoogleSignIn.getSignedInAccountFromIntent(data); handleSignInResult(task); &#125;&#125; 处理GoogleSignInAccount实例： 1234567891011121314private void handleSignInResult(Task&lt;GoogleSignInAccount&gt; completedTask) &#123; try &#123; GoogleSignInAccount account = completedTask.getResult(ApiException.class); // 登录成功，更新UI // 可以通过account.getId()获取Id，account.getDisplayName获得昵称等 updateUI(account); &#125; catch (ApiException e) &#123; // ApiException 的状态码代表着错误原因 // 可以参考 GoogleSignInStatusCodes 类查询具体原因 Log.w(TAG, "signInResult:failed code=" + e.getStatusCode()); updateUI(null); &#125;&#125; 可选：如果你需要让后端去调用相应API，应该通过 1String idToken = account.getIdToken(); 获取到 IdToken 然后通过HTTP POST方法发送给后端，然后后端拿去验证，调用API。 具体参考：https://developers.google.com/identity/sign-in/android/backend-auth 完整登录代码（Kotlin)12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152class LoginActivity : BaseActivity() &#123; private lateinit var mGoogleSignInClient: GoogleSignInClient private val RC_SIGN_IN = 416 override fun onCreate(savedInstanceState: Bundle?) &#123; super.onCreate(savedInstanceState) ... // 登录配置 val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN) .build() mGoogleSignInClient = GoogleSignIn.getClient(this, gso) sign_in_button.setOnClickListener &#123; signInViaGoogle() &#125; &#125; private fun signInViaGoogle() &#123; // 发起登录的Intent val signInIntent = mGoogleSignInClient.signInIntent startActivityForResult(signInIntent, RC_SIGN_IN) &#125; override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) &#123; super.onActivityResult(requestCode, resultCode, data) if (requestCode == RC_SIGN_IN) &#123; // 回调收到结果 val task = GoogleSignIn.getSignedInAccountFromIntent(data) handleSignInResult(task) &#125; &#125; private fun handleSignInResult(completedTask: Task&lt;GoogleSignInAccount&gt;) &#123; try &#123; // 拿到结果去更新UI，发起网络请求 val account = completedTask.getResult(ApiException::class.java) val signUpVO = SignUpVO() with(signUpVO) &#123; authIdentifier = account?.id authType = "google" nickname = account?.displayName userHead = account?.photoUrl.toString() idToken = account?.idToken &#125; loginNetworkImpl.loginOrSignUp(signUpVO, "google") &#125; catch (e: ApiException) &#123; Log.w("SIGN", "signInResult:failed code=" + e.statusCode()) &#125; &#125;]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Toolbar减少标题和 Navigation icon 的间距]]></title>
     <url>%2Fpost%2F96ecb474.html</url>
     <content type="text"><![CDATA[Toolbar 默认配置下，标题和Navigation icon（比如返回按钮）之间的间隔会迷之过长， 可以通过配置toolbar的属性调整： 1app:contentInsetStartWithNavigation="0dp" 这个间隔的设计好像是配合没有Navigation icon的情况的，默认值为16dp。 有Navigation icon的情况下应该手动调整。 完整的Toolbar配置： 1234567891011121314&lt;com.google.android.material.appbar.AppBarLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:theme="@style/AppTheme.AppBarOverlay"&gt; &lt;androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:background="?attr/colorPrimary" app:contentInsetStartWithNavigation="0dp" app:popupTheme="@style/AppTheme.PopupOverlay" /&gt;&lt;/com.google.android.material.appbar.AppBarLayout&gt;]]></content>
@@ -9,8 +34,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -22,8 +47,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -35,8 +60,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -49,10 +74,10 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>后端</tag>
-        <tag>SpringBoot2</tag>
         <tag>Java</tag>
         <tag>框架</tag>
+        <tag>后端</tag>
+        <tag>SpringBoot2</tag>
       </tags>
   </entry>
   <entry>
@@ -106,8 +131,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -151,7 +176,7 @@
   <entry>
     <title><![CDATA[人升Lifeup 常见问题]]></title>
     <url>%2Fpost%2F157a032e.html</url>
-    <content type="text"><![CDATA[TODO短期版本的预计更新内容： 可以自定义每周几重复的设置. 「历史」页面增加查看事项详情的功能 「状态」页面的内存占用优化 清单分类系统 商店/金币系统 长期版本的预计更新内容： 实现一个与目标次数结合的游戏化系统（打BOSS） 观影阅读记录 推送提醒的方式改进 显示属性等级的小部件 Q&amp;AQ：可以离线使用吗？ A：完全支持离线使用，只要你不需要用到社区方面的功能。 Q：社区团队是什么？ A：现在的社区其实是一个事项的发布和领取的地方，并且还支持了发表动态等功能。 Q：有广告或者内置收费吗？ A：没有任何广告和收费项目。并且现在处于开发初期，功能还十分不完善，暂时不设捐赠功能。 Q：已经创建的事项可以编辑吗？ A：长按事项会弹出选项，可以进行编辑、删除、放弃、置顶等功能。 Q：已经完成的事项可以撤销吗？ A：今天以内完成的事项都可以在历史页面撤销。 Q：事项消失？ A：在老版本中，逾期的事项会自动中断，需要在历史页面中继续事项。新版新增了一个“自动重做逾期事项”的选项，默认开启，应该不会再出现这种情况了。 Q：没能收到事项的提醒？ A：现在的提醒用的是Android原生的闹钟机制，在国产定制系统里，这个闹钟机制需要应用后台运行才能正常运作。所以，最好不要依赖于当前版本的提醒功能。 Q：如何提建议或者提交BUG？ A：建议和提交BUG都可以在酷安评论区或者是私发邮件。如果是崩溃BUG的话，尽量麻烦发下崩溃报告，这对修复BUG有很大帮助。APP暂处于开发初期，非常需要用户的集思广益，所以欢迎提建议。但是不欢迎莫须有的诽谤指责，或者是恶意对比，或者是高高在上地“指导”，谢谢。 已知BUG 部分魅族机型的部分Flyme版本号点击新建待办事项可能会闪退 参考解决方案：更新Flyme版本 参考链接：https://github.com/android-in-china/Compatibility/issues/11 其实已经按照这个链接的方法进行了修复，但不知道为什么仍然收到了这个崩溃报告orz QQ名称含emoji不能QQ授权登陆 参考解决方案：先暂时去掉emoji再登陆，或者等待服务器端修复。 这个其实是服务器端的问题，但是负责服务器端的同学怕弄出什么问题，暂时不太敢对服务器的数据库做操作。 新建团队的事项内容和团队描述含emoji会导致无法新建 原因同上。 更新日志1.60.4 增加应用内语言更改。 设置(Settings)→显示设置(Display Settings)→语言设置(Language) 新建本地事项的开始时间新增了两个选项 自动调整（根据重复频次） 期限当天 自定义 现在支持隐藏事项页面头部的事项计数卡片。相应的也在右上角菜单加入了重新显示的选项。 修复了当编辑事项时，修改所属清单不生效的问题。 1.60.3 修复数个崩溃问题。 1.60.2 修复一些文本显示 1.60.1 修复了默认情况下，桌面小部件设置「隐藏非今日事项」显示勾选，实际未生效的问题。 1.60 添加了英文翻译 新增了 Google 授权登录 界面微调 1.59c 修复了提醒不正常的问题。 修复了在一些情况下，新建事项点击没反应的问题。 1.59b 修复 Android P 在桌面小部件完成时可能崩溃的问题。 1.59a 修复v1.59的桌面小部件完成时可能崩溃的问题。 1.59 现在支持滑动完成事项了。 新增「统一事项颜色」设置：将所有类型的事项统一为蓝色。 完成事项时底部弹框提供「撤销」选项。 「新建事项」页面可以选择「所属清单」了。 「排序」新增按「重复频次」排序选项。 优化了桌面小部件完成事项的实现方式，可能解决了一些问题。 「关于」页面新增「通过Android绿色应用公约认证」的链接。 现在新建事项时可以不选择相关属性，直接新建普通事项了。 1.58c 为了提前适配Android Q和遵守绿色应用公约，去掉了对读写外部存储权限的使用依赖。 修复放弃事项会让目标完成次数+1的逻辑问题。 修复选择艾宾浩斯记忆法的事项缺少最后一天的问题。（需要新建事项） 修复不能把事项编辑为艾宾浩斯记忆法的事项的问题。 修复编辑个人资料的一个崩溃问题。 1.58b 修复选择艾宾浩斯记忆法的事项开始时间异常的问题。 修复事项详情页面目标次数计数有误的问题。 1.58a 修复「状态」页面的步数兑换经验值“领取”按钮不可点击的问题。 修复删除历史记录后，「我的」的事项统计数据不会相应变化的问题。 1.58 增加事项详情页面。（可点击待办事项卡片或者历史页面的记录查看） 优化当事项备注过长时，待办事项卡片的显示效果。 优化大部分对话框的显示效果。 优化设置页面的显示效果，并且增加了选项说明文字。 新建待办事项页面，增加了各个设置项的指引说明。并且属性下方加上了名字。 新手指引增加清单和主页右上角的菜单选项（时间范围选择）的说明内容。 修复了当团队事项逾期后，自动领取下一次团队事项不会刷新页面的问题。 更换了新图标。 支持库迁移到了AndroidX。 修复了一个桌面小部件完成事项时的问题。 修复了一些崩溃、逻辑和内存泄露问题。 1.57a 修复当事项名较长时候的一些显示问题。 1.57 添加了「隐藏计步」的设置项。 调整了重复事项的处理逻辑：每次事项的持续时间将对应上重复频次。 修复了编辑事项的一些问题。 修复了两个罕见的崩溃问题。 去掉了手动输入计步数据的步数限制。 颜色微调。 1.56 重复频率增加”艾宾浩斯记忆法”选项。 （依次重复频率为当天→1天后→2天后→4天后→7天后→15天后） 优化待办事项卡片和桌面小部件的时间显示。 新增了本地数据的备份/恢复功能。 修复重置“团队截止加入日期”时的崩溃问题。 修复了一些情况下标题栏菜单错乱的问题。 一些界面优化。 1.55 修改了“放弃”操作的逻辑：不再会中断重复事项。 修复了编辑事项时候的“重置”按钮显示异常。 桌面小部件添加圆角。 修复服务器宕机时的程序崩溃，并且添加了提示。 服务器修复了 emoji 问题，在昵称、团队、动态等地方都能使用 emoji 了。（代价是丢失了一天的数据orz） 因为一些意外，3月3号服务器停止了服务近10个小时。 并且丢失了一小段时间的团队数据，很抱歉(:з」∠)。 丢失的部分团队事项应该无法完成，2号后第一次登陆的用户可能要重新登陆一遍，麻烦了。 1.54 修复因为网络原因没领取到下一次事项的问题（上次判断写错了orz） 修复一个崩溃问题 一些界面微调 1.53 「清单」新增了一个「所有清单」：可以查看所有清单的事项。 「提醒时间」加入了三个预设选项：期限前10分钟、期限前30分钟、期限前1小时。 修复桌面小部件只显示当前清单的问题。 「待办事项」和「状态」页面布局优化，理论上适配了任意宽度。（解决了当最低宽度为320dp的显示问题） 修复 QQ 授权登陆时获取失败昵称、头像的问题。 步数兑换力量经验值的奖励数值调低。 修复了右上角菜单错乱的问题。 一些页面的小修小改，属性图标进行了微调。 偷偷地加了个「捐赠」功能。 1.52功能： 「清单」分类功能： 新建清单 重命名清单 删除清单 事项的「移至」功能。 「历史」页面新增将逾期事项「设为完成」的功能（点击时间会弹出选项） 优化： 优化了对团队事项逾期的处理逻辑，防止出现因为网络原因没领取到下一次事项的情况。 优化了当团队名太长时，动态的布局显示。 修复了当重复点期限日期的「设置时间」时触发的一个问题。 优化了对登陆授权失效的处理。 修复了发表动态时的一个错误提示。 1.51 功能： 新增「期限日期」的「具体时间」设置，现在可以建立如“每天的4:00到第二天的4:00”周期事项。 当选择「重复频次」为「每日」的时候，新增了一个设置「星期几忽略」的功能。即可以设置如“每周一到周三”的周期事项。 设置里新增了「默认不发表团队动态」的选择项 「社区」的「时刻」新增了范围的选择，可以选择「所有」浏览社区的所有创建和完成事项的动态。 「排序」新增按拼音字母排序的功能。 优化： 待办事项页面新增了移除和新增的动画效果。 修复了完成事项后，桌面小部件没有立即刷新的问题。 修复了近七天步数统计柱形图的数据显示不全的问题。 修复了经验值收支详情页面的文字重叠问题。 「关于」页面的「检测更新」功能，检测到新的更新时，会弹出一个对话框说明更新内容，询问是否更新。 「自动重做逾期事项」加上了对单次事项的支持。 还有一些页面的小修小改和代码优化。 1.50 新增「统计」页面（替换掉原来的「消息」模块）：可以查看近七天事项完成数、经验值获取、经验值分布、每日步数等统计数据。 新增了「经验值收支详情」页面，可以查看经验值的变动详情。 新增了本地事项的「完成奖励」功能，可以自设事项的完成奖励。 新增了「手动输入每日步数」的功能。 优化了各个页面的工具栏标题显示。 优化了「历史」的加载方式，提升了加载速度。 优化了小部件的自动刷新间隔。 “登陆”→ “登录”。 1.49 紧急修复一个逾期事项重做的逻辑bug 增加了历史页面中记录的删除功能 1.48 增加了【隐藏社区和消息模块】的设置项 修复了【自动重做逾期事项】的一个逻辑问题：可能把团队事项当做本地事项来重做。 修复了历史页面的逾期事项不显示【重做】按钮的问题 1.47 增加了事项的【开始时间】选项 增加了事项的【显示所有事项】、【显示今日事项】、【显示近七天事项】的选项 增加了简单的【排序】功能（按开始时间、期限时间、创建时间或者经验值排序） 优化了新建事项的界面 修复了一个登陆后打开社区还要求登陆的问题 修复了社区的一个崩溃问题 1.46 增加了简单的新手指引功能 增加了一个默认开启的“自动重做逾期事项”的选项 新增事项页面增加了容错处理：选择重复周期后，会默认期限日期为当天 修复了重做时，期限日期不正确逻辑问题；以及在历史页面的“重做”按钮的显示逻辑问题 修复了在有事项逾期情况下，小部件可能导致应用崩溃的问题 修复了登陆界面的一个崩溃问题（还优化了按钮的字体位置） 修复了终止团队时的一个崩溃问题 1.45 增加了编辑团队的功能 增加了小部件的【白色字体和图标】的设置选项 增加了一个“常见问题”的侧边栏入口 优化了加载中和加载失败的图片显示 修复了一个可能导致团队头像为空的问题 修复了一个“退出登录”可能引起的问题 1.44 【功能】本地事项可以设置事项「目标次数」了 【优化】简单适配了一下全面屏 【优化】优化了小部件的隐藏事项的逻辑（从隐藏所有未开始事项改成隐藏非今日的事项） 【优化】默认不开启“状态”页面的波浪动画（开启可能导致页面卡顿和崩溃（？)） 【优化】修复了一个导致事项的字体颜色不正常的bug 【优化】排行榜可以直接进入个人主页 1.43 增加了小部件的【暗色主题】 增加了小部件的【隐藏未开始事项】的设置选项 修复了在完成团队事项、领取团队事项时，小部件不会自动刷新的问题 1.42 桌面小部件 优化了团队、动态列表的每次加载数量 稍微优化了计步器（只有步行检测传感器的时候也能计步了） 修复了单次和多次任务“重做”时崩溃的问题 修复了修改个人信息后，本地显示头像异常的问题 1.41: 功能： （本地）可以自定义重复频次 增加了一个“默认重复事项”的选项 其他： 修复了成就页面的一个逻辑bug 修复了当服务器在维护时，打开社区可能会应用崩溃的问题 修复了一个引起新建团队时崩溃的问题（弹出错误提示） 一些页面的细节优化 1.40： 解决了Android P不能QQ登陆的问题（昵称暂不能含emoji，这个要等服务器端修复） 解决了动态文本显示不全的问题]]></content>
+    <content type="text"><![CDATA[注意目前，华为应用市场上的版本是被恶意篡改，插入广告，修改权限申请**（甚至申请了录音权限）**的版本。 该版本甚至不能打开登录界面、设置界面，尝试更新也会提示应用签名不正确。 如果你是从华为应用市场下载的，请尽快卸载。 目前，我们官方上架并且维护更新的应用市场有：酷安、魅族、小米、Google Play。 TODO短期版本的预计更新内容： 可以自定义每周几重复的设置. 「历史」页面增加查看事项详情的功能 「状态」页面的内存占用优化 清单分类系统 商店/金币系统 长期版本的预计更新内容： 实现一个与目标次数结合的游戏化系统（打BOSS） 观影阅读记录 推送提醒的方式改进 显示属性等级的小部件 Q&amp;AQ：可以离线使用吗？ A：完全支持离线使用，只要你不需要用到社区方面的功能。 Q：社区团队是什么？ A：现在的社区其实是一个事项的发布和领取的地方，并且还支持了发表动态等功能。 Q：有广告或者内置收费吗？ A：没有任何广告和收费项目。 目前应用在 Google Play作为付费应用上架（0.99美元），功能暂时与国内各市场上架的版本一致。 Q：已经创建的事项可以编辑吗？ A：长按事项会弹出选项，可以进行编辑、删除、放弃、置顶等功能。 Q：已经完成的事项可以撤销吗？ A：今天以内完成的事项都可以在历史页面撤销。 Q：事项消失？ A：在老版本中，逾期的事项会自动中断，需要在历史页面中继续事项。新版新增了一个“自动重做逾期事项”的选项，默认开启，应该不会再出现这种情况了。 Q：没能收到事项的提醒？ A：现在的提醒用的是Android原生的闹钟机制，在国产定制系统里，这个闹钟机制需要应用后台运行才能正常运作。所以，最好不要依赖于当前版本的提醒功能。 Q：如何提建议或者提交BUG？ A：建议和提交BUG都可以在酷安评论区或者是私发邮件。如果是崩溃BUG的话，尽量麻烦发下崩溃报告，这对修复BUG有很大帮助。APP暂处于开发初期，非常需要用户的集思广益，所以欢迎提建议。但是不欢迎莫须有的诽谤指责，或者是恶意对比，或者是高高在上地“指导”，谢谢。 已知BUG 部分魅族机型的部分Flyme版本号点击新建待办事项可能会闪退（很久没收到相应反馈了） 参考解决方案：更新Flyme版本 参考链接：https://github.com/android-in-china/Compatibility/issues/11 其实已经按照这个链接的方法进行了修复，但不知道为什么仍然收到了这个崩溃报告orz QQ名称含emoji不能QQ授权登陆（已修复） 新建团队的事项内容和团队描述含emoji会导致无法新建（已修复） 更新日志1.60.8 修复因为混淆导致登录界面闪退的问题。 1.60.7 现支持重命名默认清单。 修复有时候图标显示不出来的问题。 优化提交崩溃报告的对话框。 采用混淆优化应用体积，提高运行效率。 部分界面开始采用MVP架构重构。 1.60.6 修复新建事项时候“开始时间数据异常”的问题 将隐藏事项页面头部的事项计数卡片改为持久性的，不再是临时性的了。 大幅度优化了主页、状态、历史等页面的性能表现。 1.60.5 修复逾期事项的清单分类可能变回默认清单的问题。 1.60.4 增加应用内语言更改。 设置(Settings)→显示设置(Display Settings)→语言设置(Language) 新建本地事项的开始时间新增了两个选项 自动调整（根据重复频次） 期限当天 自定义 现在支持隐藏事项页面头部的事项计数卡片。相应的也在右上角菜单加入了重新显示的选项。 修复了当编辑事项时，修改所属清单不生效的问题。 1.60.3 修复数个崩溃问题。 1.60.2 修复一些文本显示 1.60.1 修复了默认情况下，桌面小部件设置「隐藏非今日事项」显示勾选，实际未生效的问题。 1.60 添加了英文翻译 新增了 Google 授权登录 界面微调 1.59c 修复了提醒不正常的问题。 修复了在一些情况下，新建事项点击没反应的问题。 1.59b 修复 Android P 在桌面小部件完成时可能崩溃的问题。 1.59a 修复v1.59的桌面小部件完成时可能崩溃的问题。 1.59 现在支持滑动完成事项了。 新增「统一事项颜色」设置：将所有类型的事项统一为蓝色。 完成事项时底部弹框提供「撤销」选项。 「新建事项」页面可以选择「所属清单」了。 「排序」新增按「重复频次」排序选项。 优化了桌面小部件完成事项的实现方式，可能解决了一些问题。 「关于」页面新增「通过Android绿色应用公约认证」的链接。 现在新建事项时可以不选择相关属性，直接新建普通事项了。 1.58c 为了提前适配Android Q和遵守绿色应用公约，去掉了对读写外部存储权限的使用依赖。 修复放弃事项会让目标完成次数+1的逻辑问题。 修复选择艾宾浩斯记忆法的事项缺少最后一天的问题。（需要新建事项） 修复不能把事项编辑为艾宾浩斯记忆法的事项的问题。 修复编辑个人资料的一个崩溃问题。 1.58b 修复选择艾宾浩斯记忆法的事项开始时间异常的问题。 修复事项详情页面目标次数计数有误的问题。 1.58a 修复「状态」页面的步数兑换经验值“领取”按钮不可点击的问题。 修复删除历史记录后，「我的」的事项统计数据不会相应变化的问题。 1.58 增加事项详情页面。（可点击待办事项卡片或者历史页面的记录查看） 优化当事项备注过长时，待办事项卡片的显示效果。 优化大部分对话框的显示效果。 优化设置页面的显示效果，并且增加了选项说明文字。 新建待办事项页面，增加了各个设置项的指引说明。并且属性下方加上了名字。 新手指引增加清单和主页右上角的菜单选项（时间范围选择）的说明内容。 修复了当团队事项逾期后，自动领取下一次团队事项不会刷新页面的问题。 更换了新图标。 支持库迁移到了AndroidX。 修复了一个桌面小部件完成事项时的问题。 修复了一些崩溃、逻辑和内存泄露问题。 1.57a 修复当事项名较长时候的一些显示问题。 1.57 添加了「隐藏计步」的设置项。 调整了重复事项的处理逻辑：每次事项的持续时间将对应上重复频次。 修复了编辑事项的一些问题。 修复了两个罕见的崩溃问题。 去掉了手动输入计步数据的步数限制。 颜色微调。 1.56 重复频率增加”艾宾浩斯记忆法”选项。 （依次重复频率为当天→1天后→2天后→4天后→7天后→15天后） 优化待办事项卡片和桌面小部件的时间显示。 新增了本地数据的备份/恢复功能。 修复重置“团队截止加入日期”时的崩溃问题。 修复了一些情况下标题栏菜单错乱的问题。 一些界面优化。 1.55 修改了“放弃”操作的逻辑：不再会中断重复事项。 修复了编辑事项时候的“重置”按钮显示异常。 桌面小部件添加圆角。 修复服务器宕机时的程序崩溃，并且添加了提示。 服务器修复了 emoji 问题，在昵称、团队、动态等地方都能使用 emoji 了。（代价是丢失了一天的数据orz） 因为一些意外，3月3号服务器停止了服务近10个小时。 并且丢失了一小段时间的团队数据，很抱歉(:з」∠)。 丢失的部分团队事项应该无法完成，2号后第一次登陆的用户可能要重新登陆一遍，麻烦了。 1.54 修复因为网络原因没领取到下一次事项的问题（上次判断写错了orz） 修复一个崩溃问题 一些界面微调 1.53 「清单」新增了一个「所有清单」：可以查看所有清单的事项。 「提醒时间」加入了三个预设选项：期限前10分钟、期限前30分钟、期限前1小时。 修复桌面小部件只显示当前清单的问题。 「待办事项」和「状态」页面布局优化，理论上适配了任意宽度。（解决了当最低宽度为320dp的显示问题） 修复 QQ 授权登陆时获取失败昵称、头像的问题。 步数兑换力量经验值的奖励数值调低。 修复了右上角菜单错乱的问题。 一些页面的小修小改，属性图标进行了微调。 偷偷地加了个「捐赠」功能。 1.52功能： 「清单」分类功能： 新建清单 重命名清单 删除清单 事项的「移至」功能。 「历史」页面新增将逾期事项「设为完成」的功能（点击时间会弹出选项） 优化： 优化了对团队事项逾期的处理逻辑，防止出现因为网络原因没领取到下一次事项的情况。 优化了当团队名太长时，动态的布局显示。 修复了当重复点期限日期的「设置时间」时触发的一个问题。 优化了对登陆授权失效的处理。 修复了发表动态时的一个错误提示。 1.51 功能： 新增「期限日期」的「具体时间」设置，现在可以建立如“每天的4:00到第二天的4:00”周期事项。 当选择「重复频次」为「每日」的时候，新增了一个设置「星期几忽略」的功能。即可以设置如“每周一到周三”的周期事项。 设置里新增了「默认不发表团队动态」的选择项 「社区」的「时刻」新增了范围的选择，可以选择「所有」浏览社区的所有创建和完成事项的动态。 「排序」新增按拼音字母排序的功能。 优化： 待办事项页面新增了移除和新增的动画效果。 修复了完成事项后，桌面小部件没有立即刷新的问题。 修复了近七天步数统计柱形图的数据显示不全的问题。 修复了经验值收支详情页面的文字重叠问题。 「关于」页面的「检测更新」功能，检测到新的更新时，会弹出一个对话框说明更新内容，询问是否更新。 「自动重做逾期事项」加上了对单次事项的支持。 还有一些页面的小修小改和代码优化。 1.50 新增「统计」页面（替换掉原来的「消息」模块）：可以查看近七天事项完成数、经验值获取、经验值分布、每日步数等统计数据。 新增了「经验值收支详情」页面，可以查看经验值的变动详情。 新增了本地事项的「完成奖励」功能，可以自设事项的完成奖励。 新增了「手动输入每日步数」的功能。 优化了各个页面的工具栏标题显示。 优化了「历史」的加载方式，提升了加载速度。 优化了小部件的自动刷新间隔。 “登陆”→ “登录”。 1.49 紧急修复一个逾期事项重做的逻辑bug 增加了历史页面中记录的删除功能 1.48 增加了【隐藏社区和消息模块】的设置项 修复了【自动重做逾期事项】的一个逻辑问题：可能把团队事项当做本地事项来重做。 修复了历史页面的逾期事项不显示【重做】按钮的问题 1.47 增加了事项的【开始时间】选项 增加了事项的【显示所有事项】、【显示今日事项】、【显示近七天事项】的选项 增加了简单的【排序】功能（按开始时间、期限时间、创建时间或者经验值排序） 优化了新建事项的界面 修复了一个登陆后打开社区还要求登陆的问题 修复了社区的一个崩溃问题 1.46 增加了简单的新手指引功能 增加了一个默认开启的“自动重做逾期事项”的选项 新增事项页面增加了容错处理：选择重复周期后，会默认期限日期为当天 修复了重做时，期限日期不正确逻辑问题；以及在历史页面的“重做”按钮的显示逻辑问题 修复了在有事项逾期情况下，小部件可能导致应用崩溃的问题 修复了登陆界面的一个崩溃问题（还优化了按钮的字体位置） 修复了终止团队时的一个崩溃问题 1.45 增加了编辑团队的功能 增加了小部件的【白色字体和图标】的设置选项 增加了一个“常见问题”的侧边栏入口 优化了加载中和加载失败的图片显示 修复了一个可能导致团队头像为空的问题 修复了一个“退出登录”可能引起的问题 1.44 【功能】本地事项可以设置事项「目标次数」了 【优化】简单适配了一下全面屏 【优化】优化了小部件的隐藏事项的逻辑（从隐藏所有未开始事项改成隐藏非今日的事项） 【优化】默认不开启“状态”页面的波浪动画（开启可能导致页面卡顿和崩溃（？)） 【优化】修复了一个导致事项的字体颜色不正常的bug 【优化】排行榜可以直接进入个人主页 1.43 增加了小部件的【暗色主题】 增加了小部件的【隐藏未开始事项】的设置选项 修复了在完成团队事项、领取团队事项时，小部件不会自动刷新的问题 1.42 桌面小部件 优化了团队、动态列表的每次加载数量 稍微优化了计步器（只有步行检测传感器的时候也能计步了） 修复了单次和多次任务“重做”时崩溃的问题 修复了修改个人信息后，本地显示头像异常的问题 1.41: 功能： （本地）可以自定义重复频次 增加了一个“默认重复事项”的选项 其他： 修复了成就页面的一个逻辑bug 修复了当服务器在维护时，打开社区可能会应用崩溃的问题 修复了一个引起新建团队时崩溃的问题（弹出错误提示） 一些页面的细节优化 1.40： 解决了Android P不能QQ登陆的问题（昵称暂不能含emoji，这个要等服务器端修复） 解决了动态文本显示不全的问题]]></content>
       <categories>
         <category>项目</category>
         <category>开发日志</category>
@@ -253,8 +278,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
         <tag>调试</tag>
       </tags>
   </entry>
@@ -309,9 +334,9 @@
         <category>记录</category>
       </categories>
       <tags>
+        <tag>技术</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
-        <tag>技术</tag>
         <tag>DigitalOcean</tag>
       </tags>
   </entry>
@@ -408,8 +433,8 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>云服务器</tag>
         <tag>技术</tag>
+        <tag>云服务器</tag>
         <tag>游戏</tag>
         <tag>记录</tag>
         <tag>linux</tag>
@@ -502,10 +527,10 @@
         <category>技术</category>
       </categories>
       <tags>
+        <tag>技术</tag>
         <tag>Android</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
-        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -531,10 +556,10 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>Java</tag>
-        <tag>框架</tag>
         <tag>Quartz</tag>
         <tag>实例</tag>
+        <tag>Java</tag>
+        <tag>框架</tag>
       </tags>
   </entry>
   <entry>
