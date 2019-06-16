@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[人升开发日志#15 | 06/16 夜间模式]]></title>
+    <url>%2Fpost%2F33771fff.html</url>
+    <content type="text"><![CDATA[收到多次需要夜间模式的反馈，就研究了一下要怎么实现~ 本以为需要手动替换Theme，实际上Android已经提供了相应的功能。 实际使用之后才发现，Fragment能实现到和Activity在使用上分辨不出的效果。 依赖首先是依赖，需要使用appcompat：（我这里用的androidx库，support库同理） 1implementation 'androidx.appcompat:appcompat:1.1.0-beta01' 准备资源 Activity的主题要继承自 DayNight 主题 123456&lt;!-- Base application theme. --&gt;&lt;style name="AppTheme" parent="Theme.AppCompat.DayNight"&gt; &lt;item name="colorPrimary"&gt;@color/colorPrimary&lt;/item&gt; &lt;item name="colorPrimaryDark"&gt;@color/colorPrimaryDark&lt;/item&gt; &lt;item name="colorAccent"&gt;@color/colorAccent&lt;/item&gt;&lt;/style&gt; 创建values-night文件夹，并在里面放置一份相应的colors.xml 步骤： res文件夹右键 -&gt; New -&gt; New Resource Directory Directory name 输入values-night Resource type 输入values 将原本的colors.xml复制一份到values-night文件夹内。 调整夜间模式内的颜色值。 编程实现切换需要注意的是，这里切换没有考虑到状态的保留。用的是finish+startActivity+动画效果。 一开始使用recreate方法，发现会卡顿一下，而且没有动画效果。 切换按钮的逻辑 判断模式的代码参考了：https://juejin.im/entry/586863f1ac502e006d6f1aa8 12345678910111213141516171819//获取当前的模式，设置相反的模式，这里只使用了，夜间和非夜间模式val currentMode = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASKval editor = SharedPreferencesUtils.getStatusPreferencesInstance().edit()if (currentMode != Configuration.UI_MODE_NIGHT_YES) &#123; //保存夜间模式状态,Application中可以根据这个值判断是否设置夜间模式 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES) //ThemeConfig主题配置，这里只是保存了是否是夜间模式的boolean值 editor.putBoolean("isNightMode", true).apply()&#125; else &#123; AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO) editor.putBoolean("isNightMode", false).apply()&#125;val intent = Intent(this, MainActivity::class.java)finish()overridePendingTransition(R.anim.fade_in, R.anim.fade_out)startActivity(intent) 自定义Application的相应逻辑 12345if (SharedPreferencesUtils.getStatusPreferencesInstance().getBoolean("isNightMode", false)) &#123; AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)&#125; else &#123; AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)&#125; 难点其实，夜间模式的实现并不困难。难的是： 相应的夜间模式颜色配置 切换实现流畅的动画效果 切换实现保留状态 切换后确保所有页面都是夜间模式 我这里是将夜间模式的按钮放在了主页的侧边栏，所以finish之后肯定是唯一一个activity，所以不用考虑残留页面的问题。 保留状态这一点也没有考虑，有需要的话可以参考一下https://juejin.im/entry/58eb498e0ce463005869dd3b 另外还有通过windowAnimation配合recreate的方法，但是实际测试好像动画不会生效。]]></content>
+      <categories>
+        <category>项目</category>
+        <category>开发日志</category>
+        <category>人升</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>开发日志</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Git修改已经提交的用户名信息]]></title>
     <url>%2Fpost%2F5d88e185.html</url>
     <content type="text"><![CDATA[参考： https://www.jianshu.com/p/93bb4d049955 最近的一条记录如果只是需要修改最近的一条记录的话，只需要 1git commit --amend --author=&quot;作者名 &lt;邮箱@xxxx.com&gt;&quot; 注意：这里的尖括号是要带上的。 多条记录12345678910# 第一步，（n）代表提交次数git rebase -i HEAD~n# 第二步然后按`i`编辑，把`pick` 改成 `edit`，按&apos;Esc&apos;退出编辑，按`:wq`保存退出# 第三步git commit --amend --author=&quot;作者 &lt;邮箱@xxxx.com&gt;&quot; --no-edit# 第四步（多条记录的话，会跳转到下一条记录，返回第三步）git rebase --continue# 第五步（全部完成后，覆盖远程git记录，危险操作要谨慎操作）git push --force 非常多条记录更改转自网络： 如果是多个修改，那么就需要使用到git filter-branch这个工具来做批量修改为了方便大家使用，封装了一个简单的shell脚本，直接修改[XXX]中的变量为对应的值即可 12345678910111213141516171819202122232425#!/bin/sh git filter-branch --env-filter ' an="$GIT_AUTHOR_NAME"am="$GIT_AUTHOR_EMAIL"cn="$GIT_COMMITTER_NAME"cm="$GIT_COMMITTER_EMAIL" if [ "$GIT_COMMITTER_EMAIL" = "[Your Old Email]" ]then cn="[Your New Author Name]" cm="[Your New Email]"fiif [ "$GIT_AUTHOR_EMAIL" = "[Your Old Email]" ]then an="[Your New Author Name]" am="[Your New Email]"fi export GIT_AUTHOR_NAME="$an"export GIT_AUTHOR_EMAIL="$am"export GIT_COMMITTER_NAME="$cn"export GIT_COMMITTER_EMAIL="$cm"']]></content>
@@ -21,8 +35,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -34,8 +48,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -47,8 +61,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -60,8 +74,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -131,8 +145,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -278,8 +292,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
         <tag>调试</tag>
       </tags>
   </entry>
@@ -334,9 +348,9 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
+        <tag>技术</tag>
         <tag>DigitalOcean</tag>
       </tags>
   </entry>
@@ -433,8 +447,8 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>云服务器</tag>
+        <tag>技术</tag>
         <tag>游戏</tag>
         <tag>记录</tag>
         <tag>linux</tag>
@@ -527,10 +541,10 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
