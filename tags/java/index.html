@@ -104,7 +104,7 @@
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="萨拉萨拉萨">
-<meta property="og:url" content="http://sarasarasa.net/tags/Java/index.html">
+<meta property="og:url" content="http://sarasarasa.net/tags/java/index.html">
 <meta property="og:site_name" content="萨拉萨拉萨">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
@@ -115,7 +115,7 @@
 
 
 
-  <link rel="canonical" href="http://sarasarasa.net/tags/Java/"/>
+  <link rel="canonical" href="http://sarasarasa.net/tags/java/"/>
 
 
 
@@ -125,7 +125,7 @@
   };
 </script>
 
-  <title>标签: Java | 萨拉萨拉萨</title>
+  <title>标签: java | 萨拉萨拉萨</title>
   
 
 
@@ -346,7 +346,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>Java<small>标签</small>
+        <h1>java<small>标签</small>
         </h1>
       </div>
 
@@ -358,9 +358,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/post/27139efb.html" itemprop="url">
+            <a class="post-title-link" href="/post/a3a124b6.html" itemprop="url">
               
-                <span itemprop="name">SpringBoot2+Jpa+Shiro实现用户鉴权</span>
+                <span itemprop="name">Java DFS+贪心解决骑士游历问题</span>
               
             </a>
         
@@ -368,9 +368,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2019-04-09T22:04:26+08:00"
-              content="2019-04-09" >
-          04-09
+              datetime="2018-05-05T18:51:46+08:00"
+              content="2018-05-05" >
+          05-05
         </time>
       </div>
 
@@ -386,37 +386,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/post/687507b9.html" itemprop="url">
+            <a class="post-title-link" href="/post/995edba2.html" itemprop="url">
               
-                <span itemprop="name">初接触实际Spring Boot项目的小总结</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-26T01:52:30+08:00"
-              content="2018-07-26" >
-          07-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/post/5dc888ab.html" itemprop="url">
-              
-                <span itemprop="name">Quartz的简单介绍与实例应用：整点报时</span>
+                <span itemprop="name">Java 分别用栈dfs和队列bfs解决走迷宫问题</span>
               
             </a>
         
@@ -424,9 +396,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-19T15:23:25+08:00"
-              content="2018-04-19" >
-          04-19
+              datetime="2018-05-04T21:16:24+08:00"
+              content="2018-05-04" >
+          05-04
         </time>
       </div>
 
@@ -487,7 +459,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">44</span>
+                    <span class="site-state-item-count">45</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -651,7 +623,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">49</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">51</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -729,7 +705,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">190k</span>
+    <span title="站点总字数">191k</span>
   
 
   
@@ -1279,6 +1255,27 @@
           var $wrap = $('<div>').addClass('highlight-wrap')
           $(e).after($wrap)
           $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+              var code = $(e.target).parent().find('.code').find('.line').map(function(i, e) {
+                  return $(e).text()
+              }).toArray().join('\n')
+              var ta = document.createElement('textarea')
+              document.body.appendChild(ta)
+              ta.style.position = 'fixed'
+              ta.style.top = 0
+              ta.style.left = 0
+              ta.value = code
+              ta.select()
+              ta.focus()
+              document.execCommand('copy')
+              document.body.removeChild(ta)
+          })).append(e)
+      })
+  </script>
+
+
+</body>
+</html>
+ss('copy-btn').append('复制').on('click', function(e) {
               var code = $(e.target).parent().find('.code').find('.line').map(function(i, e) {
                   return $(e).text()
               }).toArray().join('\n')

@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Pray For KyoAni]]></title>
+    <url>%2Fpost%2Fc3b7d6d1.html</url>
+    <content type="text"><![CDATA[Original Publish 这件事的最恐怖之处在于，既不是意外，也不是群体作案，只是一个恶魔因不明原因想报复就造成了这么大的损伤。 京阿尼在日本动画业界是独树一帜的存在：几乎所有的工作都是内部员工完成，培养自己的原画师，福利制度，以及完全不用担心的作品高质量。只因为一个疯子就损失了大半有生力量。 7月18号，早上看到京阿尼工作室遭纵火的消息。初还不相信，看到死亡1人的时候还觉得不是特别严重。然后看着死亡人数慢慢升到了33人，再后来变成34人遇难。心情非常复杂，难受。又忍不住继续看事件的报道更新，然后继续难受。 一开始是看了《K-ON》接触到了京阿尼，动画演绎的形式让这部音乐题材的漫画焕发了新生。初还觉得不会对音乐类的动画感兴趣，看完感觉真香。原来日常都能演绎得这么温馨有趣！ 后续看了京阿尼的其他作品，无一不是制作精良。生活忙碌之后，虽然有几部京阿尼的番剧还没看，但想着，有京阿尼在，优秀的番剧总会源源不断地产出吧，囤着慢慢看也不迟。但… 希望奇迹能发生，希望不要再有遇难人数增加了。希望我们还能再遇见京阿尼。 也希望各方能依此次事件加强安保，减少、杜绝这种个人恐怖袭击事件。 另外，看到一些幸灾乐祸和道德绑架捐赠者的言论也很是难受。 拿捐赠来说，他人捐赠何方是他人意愿，哪容得你一个外人干预。甚至你可以去呼吁不要捐赠，但请不要恶意评论捐赠者。更何况，我甚至怀疑那些人可曾进行过捐赠。 不过，他们也不会看这些的吧。]]></content>
+      <categories>
+        <category>个人</category>
+      </categories>
+      <tags>
+        <tag>个人</tag>
+        <tag>京阿尼</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[人升开发日志#15 | 06/16 夜间模式]]></title>
     <url>%2Fpost%2F33771fff.html</url>
     <content type="text"><![CDATA[收到多次需要夜间模式的反馈，就研究了一下要怎么实现~ 本以为需要手动替换Theme，实际上Android已经提供了相应的功能。 实际使用之后才发现，Fragment能实现到和Activity在使用上分辨不出的效果。 依赖首先是依赖，需要使用appcompat：（我这里用的androidx库，support库同理） 1implementation 'androidx.appcompat:appcompat:1.1.0-beta01' 准备资源 Activity的主题要继承自 DayNight 主题 123456&lt;!-- Base application theme. --&gt;&lt;style name="AppTheme" parent="Theme.AppCompat.DayNight"&gt; &lt;item name="colorPrimary"&gt;@color/colorPrimary&lt;/item&gt; &lt;item name="colorPrimaryDark"&gt;@color/colorPrimaryDark&lt;/item&gt; &lt;item name="colorAccent"&gt;@color/colorAccent&lt;/item&gt;&lt;/style&gt; 创建values-night文件夹，并在里面放置一份相应的colors.xml 步骤： res文件夹右键 -&gt; New -&gt; New Resource Directory Directory name 输入values-night Resource type 输入values 将原本的colors.xml复制一份到values-night文件夹内。 调整夜间模式内的颜色值。 编程实现切换需要注意的是，这里切换没有考虑到状态的保留。用的是finish+startActivity+动画效果。 一开始使用recreate方法，发现会卡顿一下，而且没有动画效果。 切换按钮的逻辑 判断模式的代码参考了：https://juejin.im/entry/586863f1ac502e006d6f1aa8 12345678910111213141516171819//获取当前的模式，设置相反的模式，这里只使用了，夜间和非夜间模式val currentMode = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASKval editor = SharedPreferencesUtils.getStatusPreferencesInstance().edit()if (currentMode != Configuration.UI_MODE_NIGHT_YES) &#123; //保存夜间模式状态,Application中可以根据这个值判断是否设置夜间模式 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES) //ThemeConfig主题配置，这里只是保存了是否是夜间模式的boolean值 editor.putBoolean("isNightMode", true).apply()&#125; else &#123; AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO) editor.putBoolean("isNightMode", false).apply()&#125;val intent = Intent(this, MainActivity::class.java)finish()overridePendingTransition(R.anim.fade_in, R.anim.fade_out)startActivity(intent) 自定义Application的相应逻辑 12345if (SharedPreferencesUtils.getStatusPreferencesInstance().getBoolean("isNightMode", false)) &#123; AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)&#125; else &#123; AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)&#125; 难点其实，夜间模式的实现并不困难。难的是： 相应的夜间模式颜色配置 切换实现流畅的动画效果 切换实现保留状态 切换后确保所有页面都是夜间模式 我这里是将夜间模式的按钮放在了主页的侧边栏，所以finish之后肯定是唯一一个activity，所以不用考虑残留页面的问题。 保留状态这一点也没有考虑，有需要的话可以参考一下https://juejin.im/entry/58eb498e0ce463005869dd3b 另外还有通过windowAnimation配合recreate的方法，但是实际测试好像动画不会生效。]]></content>
@@ -35,8 +47,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -48,8 +60,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -61,8 +73,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -74,8 +86,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -145,8 +157,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -292,8 +304,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
         <tag>调试</tag>
       </tags>
   </entry>
@@ -348,9 +360,9 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
+        <tag>技术</tag>
         <tag>DigitalOcean</tag>
       </tags>
   </entry>
@@ -447,11 +459,11 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>云服务器</tag>
+        <tag>技术</tag>
         <tag>游戏</tag>
-        <tag>记录</tag>
         <tag>linux</tag>
+        <tag>记录</tag>
       </tags>
   </entry>
   <entry>
@@ -463,8 +475,8 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>记录</tag>
         <tag>系统</tag>
+        <tag>记录</tag>
         <tag>WIN10</tag>
       </tags>
   </entry>
@@ -541,10 +553,10 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -613,10 +625,10 @@
         <category>技术</category>
       </categories>
       <tags>
+        <tag>记录</tag>
         <tag>前端</tag>
         <tag>hexo</tag>
         <tag>NexT</tag>
-        <tag>记录</tag>
       </tags>
   </entry>
 </search>
