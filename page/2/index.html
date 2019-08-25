@@ -337,6 +337,227 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://sarasarasa.net/post/b122a7c6.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="AyagiKei">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="萨拉萨拉萨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/b122a7c6.html" itemprop="url">
+                  人升开发日志#14 | 03/21 几个小问题的解决
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-21 18:34:59 / 修改时间：19:46:14" itemprop="dateCreated datePublished" datetime="2019-03-21T18:34:59+08:00">2019-03-21</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/项目/" itemprop="url" rel="index"><span itemprop="name">项目</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/项目/开发日志/" itemprop="url" rel="index"><span itemprop="name">开发日志</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/项目/开发日志/人升/" itemprop="url" rel="index"><span itemprop="name">人升</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/post/b122a7c6.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="post/b122a7c6.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">2.6k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">4 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="ViewPager-Fragments-导致的选项菜单错乱解决"><a href="#ViewPager-Fragments-导致的选项菜单错乱解决" class="headerlink" title="ViewPager + Fragments 导致的选项菜单错乱解决"></a>ViewPager + Fragments 导致的选项菜单错乱解决</h1><h2 id="原先的Toolbar实现"><a href="#原先的Toolbar实现" class="headerlink" title="原先的Toolbar实现"></a>原先的Toolbar实现</h2><p>在Fragment中获取Toolbar这个View，然后调用Activity的<code>setSupportActionBar(toolbar)</code>方法。</p>
+<p>然后实现Option菜单的方法：在Fragment中设置<code>setHasOptionsMenu(true)</code>，然后重写<code>fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater)</code>方法。</p>
+<p><strong>出现的问题：</strong>似乎是因为ViewPager的缓存机制，导致切换Fragments切换的时候可能出现菜单错乱的情况。</p>
+<h2 id="解决：把Toolbar当做控件使用"><a href="#解决：把Toolbar当做控件使用" class="headerlink" title="解决：把Toolbar当做控件使用"></a>解决：把Toolbar当做控件使用</h2><p><strong>MainActivity.kt</strong></p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">initToolBar</span><span class="params">(toolbar: <span class="type">Toolbar</span>)</span></span> &#123;</span><br><span class="line">    <span class="comment">//setSupportActionBar(toolbar) 注释掉这条</span></span><br><span class="line"></span><br><span class="line">    currentToolbar = toolbar</span><br><span class="line">    <span class="keyword">val</span> toggle = ActionBarDrawerToggle(</span><br><span class="line">            <span class="keyword">this</span>, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)</span><br><span class="line">    drawer_layout.addDrawerListener(toggle)</span><br><span class="line">    nav_view.setNavigationItemSelectedListener(<span class="keyword">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">getCurrentToolbar</span><span class="params">()</span></span>: Toolbar? &#123;</span><br><span class="line">    <span class="keyword">return</span> currentToolbar</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>Fragment.kt</strong></p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">initToolbar</span><span class="params">(view: <span class="type">View</span>)</span></span> &#123;</span><br><span class="line">    <span class="comment">//设置toolbar</span></span><br><span class="line">    mToolbar = view.findViewById(R.id.toolbar)</span><br><span class="line">    (activity <span class="keyword">as</span> MainActivity).initToolBar(mToolbar)</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 填充菜单</span></span><br><span class="line">    mToolbar?.inflateMenu(R.menu.main)</span><br><span class="line">    mToolbar?.setOnMenuItemClickListener &#123; item -&gt;</span><br><span class="line">        <span class="keyword">when</span> (item.itemId) &#123;</span><br><span class="line">            R.id.action_sort -&gt; &#123;</span><br><span class="line">                <span class="comment">// do something</span></span><br><span class="line">                <span class="literal">true</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> -&gt; <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/post/b122a7c6.html#更多" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://sarasarasa.net/post/d848a650.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1529,7 +1750,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-13 16:38:40" itemprop="dateModified" datetime="2019-07-13T16:38:40+08:00">2019-07-13</time>
+                <time title="修改时间：2019-08-23 22:11:14" itemprop="dateModified" datetime="2019-08-23T22:11:14+08:00">2019-08-23</time>
               
             
           </span>
@@ -1599,7 +1820,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">5.7k</span>
+                <span title="本文字数">6.1k</span>
               
 
               
@@ -1613,7 +1834,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">9 分钟</span>
+                <span title="阅读时长">10 分钟</span>
               
             </div>
           
@@ -2408,236 +2629,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://sarasarasa.net/post/e7c566a6.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="AyagiKei">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="萨拉萨拉萨">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/e7c566a6.html" itemprop="url">
-                  人升开发日志#9 | 8/30 数据库+数据填充
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-08-30 02:08:40" itemprop="dateCreated datePublished" datetime="2018-08-30T02:08:40+08:00">2018-08-30</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-09-04 22:31:24" itemprop="dateModified" datetime="2018-09-04T22:31:24+08:00">2018-09-04</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/项目/" itemprop="url" rel="index"><span itemprop="name">项目</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/项目/开发日志/" itemprop="url" rel="index"><span itemprop="name">开发日志</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/项目/开发日志/人升/" itemprop="url" rel="index"><span itemprop="name">人升</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/post/e7c566a6.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="post/e7c566a6.html" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">8.2k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">14 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>使用了Litepal作为数据库ORM框架，还有BRAVH来简化RecyclerView的适配器的写法。</p>
-<p>这里记录下开发途中遇到的坑。</p>
-<h1 id="创建自己的Application类"><a href="#创建自己的Application类" class="headerlink" title="创建自己的Application类"></a>创建自己的Application类</h1><p>因为LitePal和MobSDK都需要对Application进行修改，所以最好实现自己的Application：</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> android.app.Application</span><br><span class="line"><span class="keyword">import</span> com.mob.MobSDK</span><br><span class="line"><span class="keyword">import</span> org.litepal.LitePal</span><br><span class="line"></span><br><span class="line"> <span class="class"><span class="keyword">class</span> <span class="title">LifeUpApplication</span> : <span class="type">Application</span></span>() &#123;</span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreate</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate()</span><br><span class="line">         MobSDK.init(<span class="keyword">this</span>)</span><br><span class="line">        LitePal.initialize(<span class="keyword">this</span>);</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/post/e7c566a6.html#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2689,7 +2680,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">45</span>
+                    <span class="site-state-item-count">46</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2935,7 +2926,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">191k</span>
+    <span title="站点总字数">193k</span>
   
 
   

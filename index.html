@@ -337,6 +337,268 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://sarasarasa.net/post/be07a40.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="AyagiKei">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="萨拉萨拉萨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/post/be07a40.html" itemprop="url">
+                  人升开发日志#17 | 08/25 接入Firebase、Crashlytics
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-25 16:44:03 / 修改时间：20:59:42" itemprop="dateCreated datePublished" datetime="2019-08-25T16:44:03+08:00">2019-08-25</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/项目/" itemprop="url" rel="index"><span itemprop="name">项目</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/项目/开发日志/" itemprop="url" rel="index"><span itemprop="name">开发日志</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/项目/开发日志/人升/" itemprop="url" rel="index"><span itemprop="name">人升</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/post/be07a40.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="post/be07a40.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.8k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">3 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>找到实习后，挺长一段时间没更新了。</p>
+<p>《人升》的话，最近接入了Crashlytics，更新了金币系统等等。</p>
+<p>回忆一下Crashlytics的接入过程~</p>
+<h1 id="为什么选择Crashlytics"><a href="#为什么选择Crashlytics" class="headerlink" title="为什么选择Crashlytics?"></a>为什么选择Crashlytics?</h1><ul>
+<li><p><strong>不需要额外权限</strong></p>
+<p>而国内很多崩溃统计向的都有不少权限要求，比如友盟统计必须依赖READ_PHONE_STATE等权限。</p>
+</li>
+<li><p><strong>国内也能访问</strong></p>
+<p>是的，虽然Crashlytics属于Firebase，但是并没有用到Google的服务器。</p>
+</li>
+<li><p><strong>配置简单，不需要额外代码</strong></p>
+<p>这一点我也很惊喜，只需要在Gradle文件里进行一些配置。项目代码甚至不需要任何变动。</p>
+</li>
+<li><p><strong>能直接在Crashlytics后台看到混淆前的堆栈信息</strong></p>
+<img src="/post/be07a40/01.jpg">
+<img src="/post/be07a40/02.jpg">
+</li>
+</ul>
+<p>另外除了崩溃分析/管理功能外，其实还能在控制台看到活跃用户统计、用户行为分析、次日留存率、版本情况等等。</p>
+<p><strong>查看这些信息感觉很有助于维持更新兴趣~</strong></p>
+ <img src="/post/be07a40/03.jpg">
+<p>总体来讲，感觉Crashlytics很适合独立开发者使用。</p>
+<h1 id="接入Firebase以及Crashlytics"><a href="#接入Firebase以及Crashlytics" class="headerlink" title="接入Firebase以及Crashlytics"></a>接入Firebase以及Crashlytics</h1><p>Crashlytics已经被并入了Firebase体系，所以要先接入Firebase。</p>
+<blockquote>
+<p>Fabric虽然还能直接加入Crashlytics，<strong>但是仅提供支持到2020年3月31号</strong>，官网也在建议用户迁移至Firebase。</p>
+</blockquote>
+<p>接入Firebase可以参考<a href="https://firebase.google.com/docs/android/setup?hl=zh-cn" target="_blank" rel="noopener">官方教程</a>。</p>
+<p><strong>流程可以概述为：</strong></p>
+<ol>
+<li><p>创建Firebase项目</p>
+</li>
+<li><p>注册应用，上传签名的SHA码</p>
+<p><strong>这两步在官网跟着流程走就可以，就不详细说明了。</strong></p>
+</li>
+<li><p><strong>下载 google-services.json</strong>放到项目的模块目录（一般是app文件夹里）中。</p>
+</li>
+<li><p>项目级gradle文件里加入Firebase和Crashlytics配置：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">buildscript &#123;</span><br><span class="line">    ...</span><br><span class="line"></span><br><span class="line">    repositories &#123;</span><br><span class="line">    	<span class="comment">// 加上这两个仓库地址</span></span><br><span class="line">        google()</span><br><span class="line">        maven &#123;</span><br><span class="line">            url <span class="string">'https://maven.fabric.io/public'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    dependencies &#123;</span><br><span class="line">        classpath <span class="string">'com.google.gms:google-services:4.3.0'</span> <span class="comment">// Google 服务</span></span><br><span class="line">        classpath <span class="string">'io.fabric.tools:gradle:1.29.0'</span>  <span class="comment">// Crashlytics 插件</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>模块级gradle文件里加入：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">apply <span class="string">plugin:</span> <span class="string">'com.google.gms.google-services'</span></span><br><span class="line">apply <span class="string">plugin:</span> <span class="string">'io.fabric'</span></span><br><span class="line"></span><br><span class="line">dependencies &#123;</span><br><span class="line">    ...</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** firebase **/</span></span><br><span class="line">    implementation <span class="string">'com.google.firebase:firebase-core:17.0.0'</span></span><br><span class="line">    implementation <span class="string">'com.crashlytics.sdk.android:crashlytics:2.10.1'</span></span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>到这一步为止，其实已经集成完毕了。</strong></p>
+</li>
+<li><p>（可选）如果你的应用开启了代码混淆的话，建议在proguard-rules.pro文件里加入以下规则，<strong>以便拿到混淆前的堆栈信息：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Crashlytics</span><br><span class="line">-keepattributes *Annotation*</span><br><span class="line">-keepattributes SourceFile,LineNumberTable</span><br><span class="line">-keep public class * extends java.lang.Exception</span><br><span class="line">-keep class com.crashlytics.** &#123; *; &#125;</span><br><span class="line">-dontwarn com.crashlytics.**</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>测试一下崩溃吧</strong></p>
+<p>在相应的地方可以用以下语句制造一个崩溃，然后过几分钟后，前往Firebase的后台查看崩溃信息吧~</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Crashlytics.getInstance().crash() <span class="comment">// 制造一个崩溃</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="更多玩法"><a href="#更多玩法" class="headerlink" title="更多玩法"></a>更多玩法</h1><p>更多Crashlytics的用法可以参考<a href="https://firebase.google.com/docs/crashlytics/customize-crash-reports?hl=zh-cn&amp;platform=android#nav-buttons-1" target="_blank" rel="noopener">官方的页面</a>，比如可以记录try-catch住的异常，自定义一些key-value信息方便分析崩溃等等。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://sarasarasa.net/post/c3b7d6d1.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2302,227 +2564,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://sarasarasa.net/post/b122a7c6.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="AyagiKei">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="萨拉萨拉萨">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/post/b122a7c6.html" itemprop="url">
-                  人升开发日志#14 | 03/21 几个小问题的解决
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-03-21 18:34:59 / 修改时间：19:46:14" itemprop="dateCreated datePublished" datetime="2019-03-21T18:34:59+08:00">2019-03-21</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/项目/" itemprop="url" rel="index"><span itemprop="name">项目</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/项目/开发日志/" itemprop="url" rel="index"><span itemprop="name">开发日志</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/项目/开发日志/人升/" itemprop="url" rel="index"><span itemprop="name">人升</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/post/b122a7c6.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="post/b122a7c6.html" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">2.6k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">4 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="ViewPager-Fragments-导致的选项菜单错乱解决"><a href="#ViewPager-Fragments-导致的选项菜单错乱解决" class="headerlink" title="ViewPager + Fragments 导致的选项菜单错乱解决"></a>ViewPager + Fragments 导致的选项菜单错乱解决</h1><h2 id="原先的Toolbar实现"><a href="#原先的Toolbar实现" class="headerlink" title="原先的Toolbar实现"></a>原先的Toolbar实现</h2><p>在Fragment中获取Toolbar这个View，然后调用Activity的<code>setSupportActionBar(toolbar)</code>方法。</p>
-<p>然后实现Option菜单的方法：在Fragment中设置<code>setHasOptionsMenu(true)</code>，然后重写<code>fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater)</code>方法。</p>
-<p><strong>出现的问题：</strong>似乎是因为ViewPager的缓存机制，导致切换Fragments切换的时候可能出现菜单错乱的情况。</p>
-<h2 id="解决：把Toolbar当做控件使用"><a href="#解决：把Toolbar当做控件使用" class="headerlink" title="解决：把Toolbar当做控件使用"></a>解决：把Toolbar当做控件使用</h2><p><strong>MainActivity.kt</strong></p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">initToolBar</span><span class="params">(toolbar: <span class="type">Toolbar</span>)</span></span> &#123;</span><br><span class="line">    <span class="comment">//setSupportActionBar(toolbar) 注释掉这条</span></span><br><span class="line"></span><br><span class="line">    currentToolbar = toolbar</span><br><span class="line">    <span class="keyword">val</span> toggle = ActionBarDrawerToggle(</span><br><span class="line">            <span class="keyword">this</span>, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)</span><br><span class="line">    drawer_layout.addDrawerListener(toggle)</span><br><span class="line">    nav_view.setNavigationItemSelectedListener(<span class="keyword">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">getCurrentToolbar</span><span class="params">()</span></span>: Toolbar? &#123;</span><br><span class="line">    <span class="keyword">return</span> currentToolbar</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>Fragment.kt</strong></p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">initToolbar</span><span class="params">(view: <span class="type">View</span>)</span></span> &#123;</span><br><span class="line">    <span class="comment">//设置toolbar</span></span><br><span class="line">    mToolbar = view.findViewById(R.id.toolbar)</span><br><span class="line">    (activity <span class="keyword">as</span> MainActivity).initToolBar(mToolbar)</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 填充菜单</span></span><br><span class="line">    mToolbar?.inflateMenu(R.menu.main)</span><br><span class="line">    mToolbar?.setOnMenuItemClickListener &#123; item -&gt;</span><br><span class="line">        <span class="keyword">when</span> (item.itemId) &#123;</span><br><span class="line">            R.id.action_sort -&gt; &#123;</span><br><span class="line">                <span class="comment">// do something</span></span><br><span class="line">                <span class="literal">true</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> -&gt; <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/post/b122a7c6.html#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2574,7 +2615,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">45</span>
+                    <span class="site-state-item-count">46</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2820,7 +2861,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">191k</span>
+    <span title="站点总字数">193k</span>
   
 
   
