@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Git修改已经提交的用户名信息]]></title>
+    <url>%2Fpost%2F5d88e185.html</url>
+    <content type="text"><![CDATA[参考： https://github.com/Kotlin/kotlinx.coroutines/issues/799 起因发布了《人升》新版本后， 线上突然出现了数个Kotlin协程相关的异常。 IllegalStateException: Module with the Main dispatcher is missing. Add dependency providing the Main dispatcher, e.g. ‘kotlinx-coroutines-android’ 而我们肯定是已经依赖了kotlin的协程库的，问题不在于此。 不是很懂为什么在更新的好几天之后才集中爆发这个问题。 查询了一下发现是升级kotlin版本后的混淆bug，要增加几条混淆规则。 混淆规则https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/jvm/resources/META-INF/proguard/coroutines.pro 将以下混淆规则加入到项目的混淆规则文件中： 12345678910# ServiceLoader support-keepnames class kotlinx.coroutines.internal.MainDispatcherFactory &#123;&#125;-keepnames class kotlinx.coroutines.CoroutineExceptionHandler &#123;&#125;-keepnames class kotlinx.coroutines.android.AndroidExceptionPreHandler &#123;&#125;-keepnames class kotlinx.coroutines.android.AndroidDispatcherFactory &#123;&#125;# Most of volatile fields are updated with AFU and should not be mangled-keepclassmembernames class kotlinx.** &#123; volatile &lt;fields&gt;;&#125; 然后重新编译打包发版吧~]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[人升开发日志#17 | 08/25 接入Firebase、Crashlytics]]></title>
     <url>%2Fpost%2Fbe07a40.html</url>
     <content type="text"><![CDATA[找到实习后，挺长一段时间没更新了。 《人升》的话，最近接入了Crashlytics，更新了金币系统等等。 回忆一下Crashlytics的接入过程~ 为什么选择Crashlytics? 不需要额外权限 而国内很多崩溃统计向的都有不少权限要求，比如友盟统计必须依赖READ_PHONE_STATE等权限。 国内也能访问 是的，虽然Crashlytics属于Firebase，但是并没有用到Google的服务器。 配置简单，不需要额外代码 这一点我也很惊喜，只需要在Gradle文件里进行一些配置。项目代码甚至不需要任何变动。 能直接在Crashlytics后台看到混淆前的堆栈信息 另外除了崩溃分析/管理功能外，其实还能在控制台看到活跃用户统计、用户行为分析、次日留存率、版本情况等等。 查看这些信息感觉很有助于维持更新兴趣~ 总体来讲，感觉Crashlytics很适合独立开发者使用。 接入Firebase以及CrashlyticsCrashlytics已经被并入了Firebase体系，所以要先接入Firebase。 Fabric虽然还能直接加入Crashlytics，但是仅提供支持到2020年3月31号，官网也在建议用户迁移至Firebase。 接入Firebase可以参考官方教程。 流程可以概述为： 创建Firebase项目 注册应用，上传签名的SHA码 这两步在官网跟着流程走就可以，就不详细说明了。 下载 google-services.json放到项目的模块目录（一般是app文件夹里）中。 项目级gradle文件里加入Firebase和Crashlytics配置： 123456789101112131415buildscript &#123; ... repositories &#123; // 加上这两个仓库地址 google() maven &#123; url 'https://maven.fabric.io/public' &#125; &#125; dependencies &#123; classpath 'com.google.gms:google-services:4.3.0' // Google 服务 classpath 'io.fabric.tools:gradle:1.29.0' // Crashlytics 插件 &#125;&#125; 模块级gradle文件里加入： 1234567891011apply plugin: 'com.google.gms.google-services'apply plugin: 'io.fabric'dependencies &#123; ... /** firebase **/ implementation 'com.google.firebase:firebase-core:17.0.0' implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1' &#125; 到这一步为止，其实已经集成完毕了。 （可选）如果你的应用开启了代码混淆的话，建议在proguard-rules.pro文件里加入以下规则，以便拿到混淆前的堆栈信息： 123456# Crashlytics-keepattributes *Annotation*-keepattributes SourceFile,LineNumberTable-keep public class * extends java.lang.Exception-keep class com.crashlytics.** &#123; *; &#125;-dontwarn com.crashlytics.** 测试一下崩溃吧 在相应的地方可以用以下语句制造一个崩溃，然后过几分钟后，前往Firebase的后台查看崩溃信息吧~ 1Crashlytics.getInstance().crash() // 制造一个崩溃 更多玩法更多Crashlytics的用法可以参考官方的页面，比如可以记录try-catch住的异常，自定义一些key-value信息方便分析崩溃等等。]]></content>
@@ -61,8 +74,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -74,8 +87,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -87,8 +100,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -100,8 +113,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -171,8 +184,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -318,8 +331,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
         <tag>调试</tag>
       </tags>
   </entry>
@@ -374,9 +387,9 @@
         <category>记录</category>
       </categories>
       <tags>
+        <tag>技术</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
-        <tag>技术</tag>
         <tag>DigitalOcean</tag>
       </tags>
   </entry>
@@ -473,8 +486,8 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>云服务器</tag>
         <tag>技术</tag>
+        <tag>云服务器</tag>
         <tag>游戏</tag>
         <tag>linux</tag>
         <tag>记录</tag>
@@ -567,10 +580,10 @@
         <category>技术</category>
       </categories>
       <tags>
+        <tag>技术</tag>
         <tag>Android</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
-        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
