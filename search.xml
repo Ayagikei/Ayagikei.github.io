@@ -543,8 +543,8 @@
         <tag>云服务器</tag>
         <tag>技术</tag>
         <tag>游戏</tag>
-        <tag>记录</tag>
         <tag>linux</tag>
+        <tag>记录</tag>
       </tags>
   </entry>
   <entry>
@@ -556,8 +556,8 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>记录</tag>
         <tag>系统</tag>
+        <tag>记录</tag>
         <tag>WIN10</tag>
       </tags>
   </entry>
@@ -706,10 +706,10 @@
         <category>技术</category>
       </categories>
       <tags>
+        <tag>记录</tag>
         <tag>前端</tag>
         <tag>hexo</tag>
         <tag>NexT</tag>
-        <tag>记录</tag>
       </tags>
   </entry>
 </search>
