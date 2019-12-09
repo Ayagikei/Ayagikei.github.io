@@ -715,7 +715,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">204k</span>
+    <span title="站点总字数">205k</span>
   
 
   
@@ -1272,27 +1272,6 @@
           var $wrap = $('<div>').addClass('highlight-wrap')
           $(e).after($wrap)
           $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
-              var code = $(e.target).parent().find('.code').find('.line').map(function(i, e) {
-                  return $(e).text()
-              }).toArray().join('\n')
-              var ta = document.createElement('textarea')
-              document.body.appendChild(ta)
-              ta.style.position = 'fixed'
-              ta.style.top = 0
-              ta.style.left = 0
-              ta.value = code
-              ta.select()
-              ta.focus()
-              document.execCommand('copy')
-              document.body.removeChild(ta)
-          })).append(e)
-      })
-  </script>
-
-
-</body>
-</html>
-ss('copy-btn').append('复制').on('click', function(e) {
               var code = $(e.target).parent().find('.code').find('.line').map(function(i, e) {
                   return $(e).text()
               }).toArray().join('\n')
