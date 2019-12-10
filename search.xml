@@ -1716,7 +1716,23 @@
   <entry>
     <title>人升Lifeup 更新日志</title>
     <url>/post/a889432c.html</url>
-    <content><![CDATA[<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p><strong>1.68.2（2019/12/05）</strong></p>
+    <content><![CDATA[<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p><strong>1.68.3（2019/12/10）</strong></p>
+<ol>
+<li><p>【修复】修复设置了提醒的单次事项逾期时的崩溃问题</p>
+</li>
+<li><p>【修复】修复编辑事项/新建事项的时候的一些异常崩溃问题</p>
+</li>
+<li><p>【修复】修复商店新增按钮偶现点击无效的问题</p>
+</li>
+<li><p>【修复】修复系统缺失存储访问框架时，使用自定义路径备份/恢复时崩溃的问题</p>
+<p>这里捕获了异常（不直接崩溃），加上了提醒。但实际问题出于系统缺失，所以没法根本上解决。<strong>需要检查系统完整性（更新或者重新安装系统），或者使用默认路径。</strong></p>
+</li>
+<li><p>【修复】修复当放弃事项的时候很罕见的崩溃问题</p>
+</li>
+<li><p>【修复】修复当成就解锁动画弹出时很罕见的崩溃问题</p>
+</li>
+</ol>
+<p><strong>1.68.2（2019/12/05）</strong></p>
 <ol>
 <li>【功能】备份升级：备份现在支持备份商店图片和偏好设置</li>
 <li>【功能】计数事项奖励调整：计数事项的经验值奖励现在会根据次数增倍（最高6倍）</li>
@@ -3435,8 +3451,8 @@
         <tag>云服务器</tag>
         <tag>技术</tag>
         <tag>游戏</tag>
-        <tag>linux</tag>
         <tag>记录</tag>
+        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -3468,8 +3484,8 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>系统</tag>
         <tag>记录</tag>
+        <tag>系统</tag>
         <tag>WIN10</tag>
       </tags>
   </entry>
@@ -4350,10 +4366,10 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>记录</tag>
         <tag>前端</tag>
         <tag>hexo</tag>
         <tag>NexT</tag>
+        <tag>记录</tag>
       </tags>
   </entry>
 </search>
