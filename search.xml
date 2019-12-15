@@ -149,6 +149,21 @@
 </thead>
 <tbody>
 <tr>
+<td>2019/12/15</td>
+<td>*银川</td>
+<td>5.00</td>
+</tr>
+<tr>
+<td>2019/12/13</td>
+<td>*子秋</td>
+<td>3.00</td>
+</tr>
+<tr>
+<td>2019/12/11</td>
+<td>（微信）竹璃纷染</td>
+<td>3.00</td>
+</tr>
+<tr>
 <td>2019/12/10</td>
 <td>*奕斯</td>
 <td>2.00</td>
@@ -1458,7 +1473,13 @@
   <entry>
     <title>人升Lifeup 更新日志</title>
     <url>/post/a889432c.html</url>
-    <content><![CDATA[<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p><strong>1.68.3（2019/12/10）</strong></p>
+    <content><![CDATA[<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p><strong>1.68.4（2019/12/13）</strong></p>
+<ol>
+<li>修复成就重复问题</li>
+<li>修复某些情况下开始/期限时间计算错误的问题</li>
+<li>修复少了一个成就的问题</li>
+</ol>
+<p><strong>1.68.3（2019/12/10）</strong></p>
 <ol>
 <li><p>【修复】修复设置了提醒的单次事项逾期时的崩溃问题</p>
 </li>
