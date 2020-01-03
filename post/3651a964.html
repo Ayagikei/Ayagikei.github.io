@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.7.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://sarasarasa.net').hostname,
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="上周六已经发布了本次1.69.0的更新。 更新内容覆盖面较广，本以为会出现很多问题，现在看来还好~ 因为更新比较匆忙，当时没写更新介绍，现在补上。 有的更新内容不看更新日志不容易察觉，比如团队事项编辑的开放。 这次更新的主题是加强实用性，增强各个功能模块。 开始正题之前，先发下这篇文章的总览： 总览 子任务  逾期处理  自定义排序以及菜单重制  桌面小部件升级  更多改进 5.1 冻结 5.2">
+<meta name="keywords" content="Android,开发日志,更新介绍">
+<meta property="og:type" content="article">
+<meta property="og:title" content="人升更新介绍#1.69.0 | 01&#x2F;02 子任务">
+<meta property="og:url" content="http://sarasarasa.net/post/3651a964.html">
+<meta property="og:site_name" content="SaraSaraSa">
+<meta property="og:description" content="上周六已经发布了本次1.69.0的更新。 更新内容覆盖面较广，本以为会出现很多问题，现在看来还好~ 因为更新比较匆忙，当时没写更新介绍，现在补上。 有的更新内容不看更新日志不容易察觉，比如团队事项编辑的开放。 这次更新的主题是加强实用性，增强各个功能模块。 开始正题之前，先发下这篇文章的总览： 总览 子任务  逾期处理  自定义排序以及菜单重制  桌面小部件升级  更多改进 5.1 冻结 5.2">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://sarasarasa.net/post/3651a964/01.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/3651a964/02.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/3651a964/03.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/3651a964/04.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/3651a964/06.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/3651a964/05.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/3651a964/07.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/3651a964/08.jpg">
+<meta property="og:updated_time" content="2020-01-03T10:47:36.934Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="人升更新介绍#1.69.0 | 01&#x2F;02 子任务">
+<meta name="twitter:description" content="上周六已经发布了本次1.69.0的更新。 更新内容覆盖面较广，本以为会出现很多问题，现在看来还好~ 因为更新比较匆忙，当时没写更新介绍，现在补上。 有的更新内容不看更新日志不容易察觉，比如团队事项编辑的开放。 这次更新的主题是加强实用性，增强各个功能模块。 开始正题之前，先发下这篇文章的总览： 总览 子任务  逾期处理  自定义排序以及菜单重制  桌面小部件升级  更多改进 5.1 冻结 5.2">
+<meta name="twitter:image" content="http://sarasarasa.net/post/3651a964/01.jpg">
+
+<link rel="canonical" href="http://sarasarasa.net/post/3651a964.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>人升更新介绍#1.69.0 | 01/02 子任务 | SaraSaraSa</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?bbe7ac5f435cef91b7c68c2e1aa4d39e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">SaraSaraSa</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">A Blog to Write about Everything</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://sarasarasa.net/post/3651a964.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="AyagiKei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SaraSaraSa">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          人升更新介绍#1.69.0 | 01/02 子任务
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-01-02 22:24:15" itemprop="dateCreated datePublished" datetime="2020-01-02T22:24:15+08:00">2020-01-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-03 18:47:36" itemprop="dateModified" datetime="2020-01-03T18:47:36+08:00">2020-01-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/项目/" itemprop="url" rel="index">
+                    <span itemprop="name">项目</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/项目/开发日志/" itemprop="url" rel="index">
+                    <span itemprop="name">开发日志</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/项目/开发日志/人升/" itemprop="url" rel="index">
+                    <span itemprop="name">人升</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/post/3651a964.html#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="post/3651a964.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>上周六已经发布了本次1.69.0的更新。</p>
+<p>更新内容覆盖面较广，本以为会出现很多问题，现在看来还好~</p>
+<p>因为更新比较匆忙，当时没写更新介绍，现在补上。</p>
+<p>有的更新内容不看更新日志不容易察觉，比如团队事项编辑的开放。</p>
+<p>这次更新的主题是<strong>加强实用性，增强各个功能模块</strong>。</p>
+<p>开始正题之前，先发下这篇文章的总览：</p>
+<h2 id="总览"><a href="#总览" class="headerlink" title="总览"></a>总览</h2><ol>
+<li><p><strong>子任务</strong></p>
+</li>
+<li><p><strong>逾期处理</strong></p>
+</li>
+<li><p><strong>自定义排序以及菜单重制</strong></p>
+</li>
+<li><p><strong>桌面小部件升级</strong></p>
+</li>
+<li><p><strong>更多改进</strong></p>
+<p>5.1 <strong>冻结</strong></p>
+<p>5.2 <strong>编辑团队事项</strong></p>
+</li>
+<li><p><strong>详细更新日志</strong></p>
+</li>
+</ol>
+<a id="more"></a>
+<hr>
+<h2 id="子任务"><a href="#子任务" class="headerlink" title="子任务"></a>子任务</h2><h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3> <img src="/post/3651a964/01.jpg">
+<p>在新建待办事项页面加入了增加子任务的功能，子任务的目前仅支持内容描述。</p>
+<p><strong>输入完成后可按回车键建立多条子任务。</strong></p>
+<p>也可以在建立的时候，就点击<strong>小圆圈</strong>标记子任务<strong>已完成</strong>。</p>
+<p>长按右方的按钮可以进行<strong>拖动排序</strong>。</p>
+<h3 id="卡片"><a href="#卡片" class="headerlink" title="卡片"></a>卡片</h3> <img src="/post/3651a964/02.jpg">
+<p>设置了子任务的任务卡片会标识出子任务的完成进度。</p>
+<p>但是，子任务是不严格要求完成的。</p>
+<p><strong>可以在没有完成所有子任务的情况下，完成主任务。</strong></p>
+<h3 id="标记完成"><a href="#标记完成" class="headerlink" title="标记完成"></a>标记完成</h3> <img src="/post/3651a964/03.jpg">
+<p><strong>如何标记子任务的完成情况？</strong></p>
+<ol>
+<li><strong>点击任务卡片</strong>，在<strong>事项详情页面</strong>标记。</li>
+<li>长按任务卡片，点击编辑按钮，在<strong>编辑待办事项页面</strong>标记。</li>
+<li>建立待办事项的时候标记。</li>
+</ol>
+<h3 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h3><p>计划实现子任务的提醒功能，算是间接实现多提醒。</p>
+<p><br></p>
+<h3 id="逾期处理"><a href="#逾期处理" class="headerlink" title="逾期处理"></a>逾期处理</h3><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>以往版本，逾期的情况下只会弹出一个提示。</p>
+<p><strong>一是</strong>实际完成，但是没有标记完成的情况下很不方便：需要手动去历史页面，找到该事项，然后点击”设为完成“。</p>
+<p><strong>二是</strong>缺少经验值惩罚的提示，很多用户可能没意识到有这么一回事。</p>
+<h3 id="对策"><a href="#对策" class="headerlink" title="对策"></a>对策</h3> <img src="/post/3651a964/04.jpg">
+<p>于是这个版本加入了这个逾期处理的对话框。</p>
+<p>窗口会展示所有逾期事项，以及其引起的经验值惩罚数值（和金币惩罚，如果你设置了的话）。</p>
+<p><strong>可以点击每个卡片的按钮，快速将事项标记为完成状态，撤销惩罚，给予完成奖励。</strong></p>
+<p>为了防止误操作，点击空白处是不能关掉这个窗口的。</p>
+<p><strong>在操作完成后，点击窗口右上方的”完成“按钮即可。</strong></p>
+<hr>
+<h2 id="自定义排序"><a href="#自定义排序" class="headerlink" title="自定义排序"></a>自定义排序</h2><h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><p>这个版本对大部分列表页面都做了自定义排序的处理。</p>
+<p>如今你可以<strong>拖动进行待办事项卡片、清单、商店或者是仓库商品的排序</strong>了。</p>
+ <img src="/post/3651a964/06.jpg">
+<p>其中，主界面的排序也专门新增了一个”自定义“选项。</p>
+<p><strong>该选项会保存上次你拖动排序的结果，方便临时切换到其他排序依据。</strong></p>
+<p><br></p>
+<h3 id="菜单重制"><a href="#菜单重制" class="headerlink" title="菜单重制"></a>菜单重制</h3> <img src="/post/3651a964/05.jpg">
+<p>因为以往版本的菜单是长按弹出，与拖动排序的长按拖动会有冲突。</p>
+<p>该版本也重制了一遍菜单，现在改为顶部菜单栏。</p>
+<p>相应地，也加入了<strong>批量删除/移至</strong>的操作：</p>
+<p><strong>长按一个待办事项卡片，进入选中状态，然后再点击其他卡片，即可进行批量操作。</strong></p>
+<p>商店页面也加入了类似的设计，实现批量下架。</p>
+<hr>
+<h2 id="桌面小部件升级"><a href="#桌面小部件升级" class="headerlink" title="桌面小部件升级"></a>桌面小部件升级</h2> <img src="/post/3651a964/07.jpg">
+<h3 id="清单选择"><a href="#清单选择" class="headerlink" title="清单选择"></a>清单选择</h3><p>最主要的改动是加上了清单选择。</p>
+<p>现在可以实现同时使用多个桌面小部件，每个桌面小部件对应一个清单。</p>
+<h3 id="主题色适配"><a href="#主题色适配" class="headerlink" title="主题色适配"></a>主题色适配</h3><p>现在桌面小部件的顶部颜色会跟随主题色变化。</p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>因为事项类型的显示比较冗余，该版本去除了显示。</p>
+<hr>
+<h2 id="更多改进"><a href="#更多改进" class="headerlink" title="更多改进"></a>更多改进</h2><h3 id="冻结"><a href="#冻结" class="headerlink" title="冻结"></a>冻结</h3> <img src="/post/3651a964/08.jpg">
+<p>现在，你可以冻结待办事项了，适用于那些因为特殊原因一段时间没法完成重复事项的情况。</p>
+<p>冻结期间的事项不会因为逾期产生历史记录和惩罚。</p>
+<p>在需要的时候可以解冻，或者直接标记完成也可以实现解冻效果。</p>
+<p><br></p>
+<h3 id="编辑团队事项"><a href="#编辑团队事项" class="headerlink" title="编辑团队事项"></a>编辑团队事项</h3><p>该版本开放了团队事项的编辑功能。</p>
+<p><strong>你可以设置团队事项的：</strong></p>
+<ul>
+<li>备注</li>
+<li>增添子任务</li>
+<li>设置重要/困难程度（不影响经验值，可用于排序）</li>
+<li>金币</li>
+<li>提醒</li>
+</ul>
+<p><strong>已知的一个小Bug：</strong></p>
+<p>事项详情页面仍无法点进编辑页面。</p>
+<p><strong>解决方法：</strong>你可以在主页面进行操作。</p>
+<p><br></p>
+<h3 id="Material-Components升级"><a href="#Material-Components升级" class="headerlink" title="Material Components升级"></a>Material Components升级</h3><p>这个版本针对使用的UI组件进行了升级，改进了各个UI控件的显示效果。</p>
+<p>对于之前版本的文本按钮，也增添了点击效果，扩大了点击范围。</p>
+<hr>
+<h2 id="详细更新日志"><a href="#详细更新日志" class="headerlink" title="详细更新日志"></a>详细更新日志</h2><p><strong>1.69.0（2019/12/28）</strong></p>
+<ol>
+<li>【功能】子任务</li>
+<li>【功能】自定义排序：现支持待办事项/清单/商店的拖动排序</li>
+<li>【功能】冻结事项：用于暂停某个重复事项，冻结的事项逾期时不会进行经验值/金币惩罚</li>
+<li>【功能】批量操作：事项批量删除/移动，商品批量下架</li>
+<li>【功能】桌面小部件支持清单选择</li>
+<li>【功能】“逾期处理”页面</li>
+<li>【功能】团队支持“按活跃度排序”、“筛选未截止团队”</li>
+<li>【功能】团队事项现在支持部分编辑：设置备注、金币、提醒等</li>
+<li>【功能】排序依据增加“重要程度“、“困难程度”</li>
+<li>【功能】成就现在支持排序：“按完成时间”、“按进度”</li>
+<li>【功能】成就进度现在会同步到云端</li>
+<li>【功能】现支持自定义滑动操作</li>
+<li>【优化】“筛选”设置为“显示今天事项”或者“显示仅七天事项”的时候，会提示还有多少个事项未开始，并可以临时显示</li>
+<li>【优化】桌面小部件现支持跟随主题色设置</li>
+<li>【优化】团队事项现支持放弃操作</li>
+<li>【优化】“设为完成”操作将撤销惩罚</li>
+<li>【优化】发表动态的内容增加保护机制，在发送的时候再次点击完成的时候会恢复之前的内容。</li>
+<li>【优化】“单次事项”的逾期处理优化</li>
+<li>【优化】“日历”视图的待办事项增加点击到事项详情的入口</li>
+<li>【优化】优化平板的显示效果</li>
+<li>【优化】“置顶”图标增加英文版图标</li>
+<li>【优化】大量视觉优化效果：升级Material Components</li>
+<li>【修复】某些情况下点赞显示“点赞操作失败”的问题</li>
+<li>【修复】“倒计时显示时间”的状态显示不正确的问题</li>
+<li>【修复】改动系统时区后，应用内时间显示不生效的问题</li>
+<li>【修复】某些事项的逾期时间显示不准确的问题</li>
+</ol>
+<p><br></p>
+<p>扫码关注人升公众号，可以尽快收到更新介绍<del>而且我们说不定能赚点服务器钱:)</del></p>
+ 
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Android/" rel="tag"><i class="fa fa-tag"></i> Android</a>
+              <a href="/tags/开发日志/" rel="tag"><i class="fa fa-tag"></i> 开发日志</a>
+              <a href="/tags/更新介绍/" rel="tag"><i class="fa fa-tag"></i> 更新介绍</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/post/72566ae3.html" rel="prev" title="2019 年终总结">
+      <i class="fa fa-chevron-left"></i> 2019 年终总结
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#总览"><span class="nav-number">1.</span> <span class="nav-text">总览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子任务"><span class="nav-number">2.</span> <span class="nav-text">子任务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#操作"><span class="nav-number">2.1.</span> <span class="nav-text">操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#卡片"><span class="nav-number">2.2.</span> <span class="nav-text">卡片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标记完成"><span class="nav-number">2.3.</span> <span class="nav-text">标记完成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后续"><span class="nav-number">2.4.</span> <span class="nav-text">后续</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逾期处理"><span class="nav-number">2.5.</span> <span class="nav-text">逾期处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原因"><span class="nav-number">2.6.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对策"><span class="nav-number">2.7.</span> <span class="nav-text">对策</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义排序"><span class="nav-number">3.</span> <span class="nav-text">自定义排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#排序"><span class="nav-number">3.1.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#菜单重制"><span class="nav-number">3.2.</span> <span class="nav-text">菜单重制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#桌面小部件升级"><span class="nav-number">4.</span> <span class="nav-text">桌面小部件升级</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#清单选择"><span class="nav-number">4.1.</span> <span class="nav-text">清单选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主题色适配"><span class="nav-number">4.2.</span> <span class="nav-text">主题色适配</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">4.3.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更多改进"><span class="nav-number">5.</span> <span class="nav-text">更多改进</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#冻结"><span class="nav-number">5.1.</span> <span class="nav-text">冻结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编辑团队事项"><span class="nav-number">5.2.</span> <span class="nav-text">编辑团队事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Material-Components升级"><span class="nav-number">5.3.</span> <span class="nav-text">Material Components升级</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#详细更新日志"><span class="nav-number">6.</span> <span class="nav-text">详细更新日志</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="AyagiKei"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">AyagiKei</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">54</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">52</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Ayagikei" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Ayagikei" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:AyagiKei@163.com" title="E-Mail → mailto:AyagiKei@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/people/kei-8/activities" title="ZhiHu → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;kei-8&#x2F;activities" rel="noopener" target="_blank"><i class="fa fa-fw fa-circle"></i>ZhiHu</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/ayagikei" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;ayagikei" rel="noopener" target="_blank"><i class="fa fa-fw fa-circle"></i>CSDN</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">AyagiKei</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">183k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5:05</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.7.1
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.6.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://AyagiKei.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: {page: {
+            url: "http://sarasarasa.net/post/3651a964.html",
+            identifier: "post/3651a964.html",
+            title: "人升更新介绍#1.69.0 | 01/02 子任务"
+          }
+        }
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://AyagiKei.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>

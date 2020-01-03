@@ -1,6 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>人升更新介绍#1.69.0 | 01/02 子任务</title>
+    <url>/post/3651a964.html</url>
+    <content><![CDATA[<p>上周六已经发布了本次1.69.0的更新。</p>
+<p>更新内容覆盖面较广，本以为会出现很多问题，现在看来还好~</p>
+<p>因为更新比较匆忙，当时没写更新介绍，现在补上。</p>
+<p>有的更新内容不看更新日志不容易察觉，比如团队事项编辑的开放。</p>
+<p>这次更新的主题是<strong>加强实用性，增强各个功能模块</strong>。</p>
+<p>开始正题之前，先发下这篇文章的总览：</p>
+<h2 id="总览"><a href="#总览" class="headerlink" title="总览"></a>总览</h2><ol>
+<li><p><strong>子任务</strong></p>
+</li>
+<li><p><strong>逾期处理</strong></p>
+</li>
+<li><p><strong>自定义排序以及菜单重制</strong></p>
+</li>
+<li><p><strong>桌面小部件升级</strong></p>
+</li>
+<li><p><strong>更多改进</strong></p>
+<p>5.1 <strong>冻结</strong></p>
+<p>5.2 <strong>编辑团队事项</strong></p>
+</li>
+<li><p><strong>详细更新日志</strong></p>
+</li>
+</ol>
+<a id="more"></a>
+<hr>
+<h2 id="子任务"><a href="#子任务" class="headerlink" title="子任务"></a>子任务</h2><h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3> <img src="/post/3651a964/01.jpg">
+<p>在新建待办事项页面加入了增加子任务的功能，子任务的目前仅支持内容描述。</p>
+<p><strong>输入完成后可按回车键建立多条子任务。</strong></p>
+<p>也可以在建立的时候，就点击<strong>小圆圈</strong>标记子任务<strong>已完成</strong>。</p>
+<p>长按右方的按钮可以进行<strong>拖动排序</strong>。</p>
+<h3 id="卡片"><a href="#卡片" class="headerlink" title="卡片"></a>卡片</h3> <img src="/post/3651a964/02.jpg">
+<p>设置了子任务的任务卡片会标识出子任务的完成进度。</p>
+<p>但是，子任务是不严格要求完成的。</p>
+<p><strong>可以在没有完成所有子任务的情况下，完成主任务。</strong></p>
+<h3 id="标记完成"><a href="#标记完成" class="headerlink" title="标记完成"></a>标记完成</h3> <img src="/post/3651a964/03.jpg">
+<p><strong>如何标记子任务的完成情况？</strong></p>
+<ol>
+<li><strong>点击任务卡片</strong>，在<strong>事项详情页面</strong>标记。</li>
+<li>长按任务卡片，点击编辑按钮，在<strong>编辑待办事项页面</strong>标记。</li>
+<li>建立待办事项的时候标记。</li>
+</ol>
+<h3 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h3><p>计划实现子任务的提醒功能，算是间接实现多提醒。</p>
+<p><br></p>
+<h3 id="逾期处理"><a href="#逾期处理" class="headerlink" title="逾期处理"></a>逾期处理</h3><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>以往版本，逾期的情况下只会弹出一个提示。</p>
+<p><strong>一是</strong>实际完成，但是没有标记完成的情况下很不方便：需要手动去历史页面，找到该事项，然后点击”设为完成“。</p>
+<p><strong>二是</strong>缺少经验值惩罚的提示，很多用户可能没意识到有这么一回事。</p>
+<h3 id="对策"><a href="#对策" class="headerlink" title="对策"></a>对策</h3> <img src="/post/3651a964/04.jpg">
+<p>于是这个版本加入了这个逾期处理的对话框。</p>
+<p>窗口会展示所有逾期事项，以及其引起的经验值惩罚数值（和金币惩罚，如果你设置了的话）。</p>
+<p><strong>可以点击每个卡片的按钮，快速将事项标记为完成状态，撤销惩罚，给予完成奖励。</strong></p>
+<p>为了防止误操作，点击空白处是不能关掉这个窗口的。</p>
+<p><strong>在操作完成后，点击窗口右上方的”完成“按钮即可。</strong></p>
+<hr>
+<h2 id="自定义排序"><a href="#自定义排序" class="headerlink" title="自定义排序"></a>自定义排序</h2><h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><p>这个版本对大部分列表页面都做了自定义排序的处理。</p>
+<p>如今你可以<strong>拖动进行待办事项卡片、清单、商店或者是仓库商品的排序</strong>了。</p>
+ <img src="/post/3651a964/06.jpg">
+<p>其中，主界面的排序也专门新增了一个”自定义“选项。</p>
+<p><strong>该选项会保存上次你拖动排序的结果，方便临时切换到其他排序依据。</strong></p>
+<p><br></p>
+<h3 id="菜单重制"><a href="#菜单重制" class="headerlink" title="菜单重制"></a>菜单重制</h3> <img src="/post/3651a964/05.jpg">
+<p>因为以往版本的菜单是长按弹出，与拖动排序的长按拖动会有冲突。</p>
+<p>该版本也重制了一遍菜单，现在改为顶部菜单栏。</p>
+<p>相应地，也加入了<strong>批量删除/移至</strong>的操作：</p>
+<p><strong>长按一个待办事项卡片，进入选中状态，然后再点击其他卡片，即可进行批量操作。</strong></p>
+<p>商店页面也加入了类似的设计，实现批量下架。</p>
+<hr>
+<h2 id="桌面小部件升级"><a href="#桌面小部件升级" class="headerlink" title="桌面小部件升级"></a>桌面小部件升级</h2> <img src="/post/3651a964/07.jpg">
+<h3 id="清单选择"><a href="#清单选择" class="headerlink" title="清单选择"></a>清单选择</h3><p>最主要的改动是加上了清单选择。</p>
+<p>现在可以实现同时使用多个桌面小部件，每个桌面小部件对应一个清单。</p>
+<h3 id="主题色适配"><a href="#主题色适配" class="headerlink" title="主题色适配"></a>主题色适配</h3><p>现在桌面小部件的顶部颜色会跟随主题色变化。</p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>因为事项类型的显示比较冗余，该版本去除了显示。</p>
+<hr>
+<h2 id="更多改进"><a href="#更多改进" class="headerlink" title="更多改进"></a>更多改进</h2><h3 id="冻结"><a href="#冻结" class="headerlink" title="冻结"></a>冻结</h3> <img src="/post/3651a964/08.jpg">
+<p>现在，你可以冻结待办事项了，适用于那些因为特殊原因一段时间没法完成重复事项的情况。</p>
+<p>冻结期间的事项不会因为逾期产生历史记录和惩罚。</p>
+<p>在需要的时候可以解冻，或者直接标记完成也可以实现解冻效果。</p>
+<p><br></p>
+<h3 id="编辑团队事项"><a href="#编辑团队事项" class="headerlink" title="编辑团队事项"></a>编辑团队事项</h3><p>该版本开放了团队事项的编辑功能。</p>
+<p><strong>你可以设置团队事项的：</strong></p>
+<ul>
+<li>备注</li>
+<li>增添子任务</li>
+<li>设置重要/困难程度（不影响经验值，可用于排序）</li>
+<li>金币</li>
+<li>提醒</li>
+</ul>
+<p><strong>已知的一个小Bug：</strong></p>
+<p>事项详情页面仍无法点进编辑页面。</p>
+<p><strong>解决方法：</strong>你可以在主页面进行操作。</p>
+<p><br></p>
+<h3 id="Material-Components升级"><a href="#Material-Components升级" class="headerlink" title="Material Components升级"></a>Material Components升级</h3><p>这个版本针对使用的UI组件进行了升级，改进了各个UI控件的显示效果。</p>
+<p>对于之前版本的文本按钮，也增添了点击效果，扩大了点击范围。</p>
+<hr>
+<h2 id="详细更新日志"><a href="#详细更新日志" class="headerlink" title="详细更新日志"></a>详细更新日志</h2><p><strong>1.69.0（2019/12/28）</strong></p>
+<ol>
+<li>【功能】子任务</li>
+<li>【功能】自定义排序：现支持待办事项/清单/商店的拖动排序</li>
+<li>【功能】冻结事项：用于暂停某个重复事项，冻结的事项逾期时不会进行经验值/金币惩罚</li>
+<li>【功能】批量操作：事项批量删除/移动，商品批量下架</li>
+<li>【功能】桌面小部件支持清单选择</li>
+<li>【功能】“逾期处理”页面</li>
+<li>【功能】团队支持“按活跃度排序”、“筛选未截止团队”</li>
+<li>【功能】团队事项现在支持部分编辑：设置备注、金币、提醒等</li>
+<li>【功能】排序依据增加“重要程度“、“困难程度”</li>
+<li>【功能】成就现在支持排序：“按完成时间”、“按进度”</li>
+<li>【功能】成就进度现在会同步到云端</li>
+<li>【功能】现支持自定义滑动操作</li>
+<li>【优化】“筛选”设置为“显示今天事项”或者“显示仅七天事项”的时候，会提示还有多少个事项未开始，并可以临时显示</li>
+<li>【优化】桌面小部件现支持跟随主题色设置</li>
+<li>【优化】团队事项现支持放弃操作</li>
+<li>【优化】“设为完成”操作将撤销惩罚</li>
+<li>【优化】发表动态的内容增加保护机制，在发送的时候再次点击完成的时候会恢复之前的内容。</li>
+<li>【优化】“单次事项”的逾期处理优化</li>
+<li>【优化】“日历”视图的待办事项增加点击到事项详情的入口</li>
+<li>【优化】优化平板的显示效果</li>
+<li>【优化】“置顶”图标增加英文版图标</li>
+<li>【优化】大量视觉优化效果：升级Material Components</li>
+<li>【修复】某些情况下点赞显示“点赞操作失败”的问题</li>
+<li>【修复】“倒计时显示时间”的状态显示不正确的问题</li>
+<li>【修复】改动系统时区后，应用内时间显示不生效的问题</li>
+<li>【修复】某些事项的逾期时间显示不准确的问题</li>
+</ol>
+<p><br></p>
+<p>扫码关注人升公众号，可以尽快收到更新介绍<del>而且我们说不定能赚点服务器钱:)</del></p>
+ 
+]]></content>
+      <categories>
+        <category>项目</category>
+        <category>开发日志</category>
+        <category>人升</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>开发日志</tag>
+        <tag>更新介绍</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2019 年终总结</title>
     <url>/post/72566ae3.html</url>
     <content><![CDATA[<p>第二年的年终总结。</p>
@@ -564,8 +703,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -592,8 +731,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -923,8 +1062,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -942,8 +1081,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -991,8 +1130,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -1026,8 +1165,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -1287,8 +1426,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -2860,8 +2999,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
         <tag>调试</tag>
       </tags>
   </entry>
@@ -3088,9 +3227,9 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
+        <tag>技术</tag>
         <tag>DigitalOcean</tag>
       </tags>
   </entry>
@@ -3667,11 +3806,11 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>云服务器</tag>
+        <tag>技术</tag>
         <tag>游戏</tag>
-        <tag>记录</tag>
         <tag>linux</tag>
+        <tag>记录</tag>
       </tags>
   </entry>
   <entry>
@@ -3703,8 +3842,8 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>记录</tag>
         <tag>系统</tag>
+        <tag>记录</tag>
         <tag>WIN10</tag>
       </tags>
   </entry>
@@ -4032,10 +4171,10 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -4585,10 +4724,10 @@
         <category>技术</category>
       </categories>
       <tags>
+        <tag>记录</tag>
         <tag>前端</tag>
         <tag>hexo</tag>
         <tag>NexT</tag>
-        <tag>记录</tag>
       </tags>
   </entry>
 </search>
