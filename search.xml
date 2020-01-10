@@ -1772,7 +1772,12 @@
   <entry>
     <title>人升Lifeup 更新日志</title>
     <url>/post/a889432c.html</url>
-    <content><![CDATA[<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p><strong>1.69.1（2020/01/08）</strong></p>
+    <content><![CDATA[<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p><strong>1.69.2（2020/01/10）</strong></p>
+<ol>
+<li>修复罕见的登录崩溃问题</li>
+<li>调整夜间模式下菜单文字颜色</li>
+</ol>
+<p><strong>1.69.1（2020/01/08）</strong></p>
 <ol>
 <li>【优化】“未开始事项”提示布局优化</li>
 <li>【优化】桌面小部件的时间显示</li>
@@ -2395,8 +2400,10 @@
   <entry>
     <title>人升LifeUp 常见问题</title>
     <url>/post/157a032e.html</url>
-    <content><![CDATA[<h1 id="1-9公告"><a href="#1-9公告" class="headerlink" title="1/9公告"></a>1/9公告</h1><p>1/8-1/9号检测到了少量几位用户遇到了QQ登录崩溃的问题，<strong>经查询发现是QQ互联那边的接口返回值不正常</strong>。（有一个过期时间的数值应该是int，结果这几位用户遇到了返回负long值的问题）</p>
-<p>因为只是偶现+非应用本身问题，暂时应用这边不做处理，先看看QQ互联那边情况会不会好转。</p>
+    <content><![CDATA[<h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><h2 id="关于QQ登录崩溃"><a href="#关于QQ登录崩溃" class="headerlink" title="关于QQ登录崩溃"></a>关于QQ登录崩溃</h2><p>1/8-1/9号检测到了少量几位用户遇到了QQ登录崩溃的问题，<strong>经查询发现是QQ互联那边的接口返回值不正常</strong>。（有一个过期时间的数值应该是int，结果这几位用户遇到了返回负long值的问题）</p>
+<p><strong>1.69.2版本已经修复该问题，并且升级了相关SDK版本。</strong></p>
+<h2 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h2><p>应用图标感觉需要一波更新，但我们这边暂时没什么想法<em>(:з」∠)</em></p>
+<p>如果你有意贡献图标/想法的话，欢迎邮件联系~</p>
 <h1 id="更新介绍"><a href="#更新介绍" class="headerlink" title="更新介绍"></a>更新介绍</h1><p><a href="http://sarasarasa.net/post/3651a964.html">v1.69.0更新介绍</a></p>
 <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ol>
 <li><a href="#应用简介">应用简介</a><br>1.1 <a href="#情景介绍">情景介绍</a><br>1.2 <a href="#已知问题">已知问题</a><br>1.3 <a href="#更新计划">更新计划</a><br>1.4 <a href="#常见问题">常见问题</a><br>1.5 <a href="#绿色应用">绿色应用</a><br>1.6 <a href="#盈利方式">盈利方式</a><br>1.7 <a href="#上架市场">上架市场</a><br>1.8 <a href="#关于开源">关于开源</a></li>
@@ -3820,8 +3827,8 @@
         <tag>云服务器</tag>
         <tag>技术</tag>
         <tag>游戏</tag>
-        <tag>记录</tag>
         <tag>linux</tag>
+        <tag>记录</tag>
       </tags>
   </entry>
   <entry>
@@ -3853,8 +3860,8 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>记录</tag>
         <tag>系统</tag>
+        <tag>记录</tag>
         <tag>WIN10</tag>
       </tags>
   </entry>
@@ -4735,10 +4742,10 @@
         <category>技术</category>
       </categories>
       <tags>
+        <tag>记录</tag>
         <tag>前端</tag>
         <tag>hexo</tag>
         <tag>NexT</tag>
-        <tag>记录</tag>
       </tags>
   </entry>
 </search>
