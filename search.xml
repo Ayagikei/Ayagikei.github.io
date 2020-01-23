@@ -438,6 +438,21 @@
 </thead>
 <tbody>
 <tr>
+<td>2020/01/22</td>
+<td>（支付宝）*—</td>
+<td>10.00</td>
+</tr>
+<tr>
+<td>2020/01/18</td>
+<td>（微信）Player</td>
+<td>3.00</td>
+</tr>
+<tr>
+<td>2020/01/17</td>
+<td>（微信）sin</td>
+<td>1.00</td>
+</tr>
+<tr>
 <td>2019/12/30</td>
 <td>（微信）HouRuilong</td>
 <td>6.66</td>
@@ -2472,7 +2487,6 @@
 </ul>
 <p><br></p>
 <h2 id="盈利方式"><a href="#盈利方式" class="headerlink" title="盈利方式"></a>盈利方式</h2><p>暂时，《人升》在国内是<del>用爱发电</del>，<strong>感谢诸位的捐赠让我们走下来。</strong></p>
-<p>偶尔收到一些广告的合作邮件，我们都是没有接下的（怕用户没了😥）</p>
 <p><br></p>
 <p>在Google Play市场，我们面向海外发布了价格为$0.99的买断版本。</p>
 <p><strong>捐赠过的用户可以向我们发送邮件获取Google Play的兑换码。</strong></p>
@@ -2485,7 +2499,8 @@
 <p>并且计划实现会员前捐赠的所有用户都能获得相应的会员兑换码。</p>
 </blockquote>
 <p><br></p>
-<h2 id="上架市场"><a href="#上架市场" class="headerlink" title="上架市场"></a>上架市场</h2><p>目前，我们官方上架并且维护更新的应用市场有：<strong>酷安、魅族、小米、Google Play</strong>。</p>
+<h2 id="上架市场"><a href="#上架市场" class="headerlink" title="上架市场"></a>上架市场</h2><p>目前，我们官方上架并且维护更新的应用市场有：<strong>酷安、魅族、小米、Google Play、应用宝、阿里应用分发（含：豌豆荚、PP 助手、YunOS 应用商店、UC应用商店等）</strong>。</p>
+<p>华为应用市场的正在努力准备上架。</p>
 <p>并且在这些应用市场上架的都是相同的包名，完全<strong>可以跨市场升级</strong>~</p>
 <h3 id="Google-Play上的Pro版差异"><a href="#Google-Play上的Pro版差异" class="headerlink" title="Google Play上的Pro版差异"></a>Google Play上的Pro版差异</h3><ul>
 <li>去掉了“捐赠”入口</li>
@@ -3826,8 +3841,8 @@
         <tag>云服务器</tag>
         <tag>技术</tag>
         <tag>游戏</tag>
-        <tag>linux</tag>
         <tag>记录</tag>
+        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -3859,8 +3874,8 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>系统</tag>
         <tag>记录</tag>
+        <tag>系统</tag>
         <tag>WIN10</tag>
       </tags>
   </entry>
@@ -4741,10 +4756,10 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>记录</tag>
         <tag>前端</tag>
         <tag>hexo</tag>
         <tag>NexT</tag>
+        <tag>记录</tag>
       </tags>
   </entry>
 </search>
