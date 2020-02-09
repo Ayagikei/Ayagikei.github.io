@@ -438,6 +438,21 @@
 </thead>
 <tbody>
 <tr>
+<td>2020/02/09</td>
+<td>*凯航</td>
+<td>1.88</td>
+</tr>
+<tr>
+<td>2020/02/09</td>
+<td>*立国</td>
+<td>9.99</td>
+</tr>
+<tr>
+<td>2020/02/08</td>
+<td>*杨</td>
+<td>5.00</td>
+</tr>
+<tr>
 <td>2020/02/06</td>
 <td>*君瑞</td>
 <td>2.77</td>
@@ -1815,277 +1830,6 @@
       </tags>
   </entry>
   <entry>
-    <title>人升LifeUp 常见问题</title>
-    <url>/post/157a032e.html</url>
-    <content><![CDATA[<h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><h2 id="功能更新推迟（在做了，1-）"><a href="#功能更新推迟（在做了，1-）" class="headerlink" title="功能更新推迟（在做了，1%）"></a>功能更新推迟（在做了，1%）</h2><p>一部分代码（主要是简洁模式相关）因失误忘记上传了，留在了学校，这段时间的更新会因此推迟一阵时间。</p>
-<p>而且这部分代码重新写挺麻烦的，效果也可能出现偏差。</p>
-<p>所以打算先<strong>专注其他功能的开发以及毕设</strong>，等回到学校后合并代码，再考虑发布新版本~</p>
- <img src="/post/157a032e/delay.jpg">
-<p><strong>祝大家新年快乐！</strong></p>
-<p><br></p>
-<h2 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h2><p>应用图标感觉需要一波更新，但我们这边暂时没什么想法<em>(:з」∠)</em></p>
-<p>如果你有意贡献图标/想法的话，欢迎邮件联系~</p>
-<h1 id="更新介绍"><a href="#更新介绍" class="headerlink" title="更新介绍"></a>更新介绍</h1><p><a href="http://sarasarasa.net/post/3651a964.html">v1.69.0更新介绍</a></p>
-<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ol>
-<li><a href="#应用简介">应用简介</a><br>1.1 <a href="#情景介绍">情景介绍</a><br>1.2 <a href="#已知问题">已知问题</a><br>1.3 <a href="#更新计划">更新计划</a><br>1.4 <a href="#常见问题">常见问题</a><br>1.5 <a href="#绿色应用">绿色应用</a><br>1.6 <a href="#盈利方式">盈利方式</a><br>1.7 <a href="#上架市场">上架市场</a><br>1.8 <a href="#关于开源">关于开源</a></li>
-<li><a href="#功能介绍">功能介绍</a><br>2.1 <a href="#新成就系统">新成就系统</a><br>2.2 <a href="#建立事项">建立事项</a><br>2.3 <a href="#清单管理">清单管理</a><br>2.4 <a href="#稍后阅读">稍后阅读</a><br>2.5 <a href="#商店系统">商店系统</a><br>2.6 <a href="#社区">社区</a></li>
-<li><a href="#其他">其他</a><br>3.1 <a href="http://sarasarasa.net/post/a889432c.html">更新日志</a><br>3.2 <a href="http://sarasarasa.net/post/22d5d0d5.html">捐赠名单</a></li>
-</ol>
-<hr>
-<h1 id="应用简介"><a href="#应用简介" class="headerlink" title="应用简介"></a>应用简介</h1><h2 id="情景介绍"><a href="#情景介绍" class="headerlink" title="情景介绍"></a>情景介绍</h2><blockquote>
-<p>升级你的人生</p>
-</blockquote>
-<p>简单一句话介绍这个应用的特色，就是<em>“游戏化的待办事项应用”</em>。</p>
-<p><strong>用一个情景详细地介绍游戏化：</strong></p>
-<blockquote>
-<p>完成了一篇文章，打开应用，在“写一篇文章”的事项前打上勾，标记完成。</p>
-<p>此时你获得了一些「学识」和「创造」200经验值，并且「学识」升了一级。</p>
-<p>应用还弹出了“成就解锁！法师”的成就解锁提示框。</p>
-<p>此外，还<strong>获得了10个金币</strong>。</p>
-<p>点击商店，查看为自己设置的奖励商品列表。</p>
-<p>斟酌半刻，你购买了耗费8金币的奶茶。然后前往仓库，使用了刚刚购买的奶茶。</p>
-<p>于是现实中，可以心满意足地点开外卖应用下单奶茶奖励自己。</p>
-</blockquote>
-<p>该情景<strong>主要只涵盖了应用的游戏化部分</strong>，除此之外还有社区、统计、日历、桌面小部件等功能，会在后面部分介绍。</p>
-<p><br></p>
-<h2 id="已知问题"><a href="#已知问题" class="headerlink" title="已知问题"></a>已知问题</h2><ul>
-<li><p><del><strong>备份恢复功能在Android P上偶现失败。</strong></del>（修复于v1.68.2）</p>
-<p>暂时怀疑是数据库连接中导致无法写入文件。</p>
-<p>可以打开备份页面静置一段时候后，再进行恢复操作。</p>
-<p>或者使用“钛备份”、“换机助手”等应用进行操作。</p>
-</li>
-<li><p><del><strong>点击通知崩溃</strong></del></p>
-</li>
-<li><p><del><strong>偶现商店上架按钮点击不了</strong></del></p>
-</li>
-</ul>
-<p><br></p>
-<h2 id="更新计划"><a href="#更新计划" class="headerlink" title="更新计划"></a>更新计划</h2><p><strong>2019/10/31：</strong>因为目前在实习+准备毕设，稍微将原本大概7-14天一更的频次调整到<strong>14-21天一更</strong>。</p>
-<p><br></p>
-<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p><strong>Q：</strong>团队事项消失？</p>
-<p><strong>A：</strong>在退出登录的时候会清空未完成的团队事项。</p>
-<p>可以查看自己加入的团队，<strong>然后点击“领取”按钮重新领取团队事项。</strong></p>
-<p>计划加入“一键领取所有已加入团队事项”的按钮。</p>
-<p><strong>Q：</strong>如何建立工作日事项或者周指定日事项?</p>
-<p><strong>A：</strong>重复频次选择“每日”后，选择“设置忽略”按钮。详情可以查看<a href="#建立事项">建立事项</a>。</p>
-<p><strong>Q：</strong>没能收到事项的提醒？</p>
-<p><strong>A：</strong>默认的提醒用的是Android原生的闹钟机制，在国产OS里，这个闹钟机制可能需要应用后台运行才能正常运作。如果有精准的需求，<strong>可以前往设置里，选择<code>更换提醒方式</code>，系统日历提醒会更准确，并且不受后台运行限制。</strong></p>
-<h2 id="绿色应用"><a href="#绿色应用" class="headerlink" title="绿色应用"></a>绿色应用</h2><p>并且，《人升》<strong>无开屏、无内置广告、暂无内购</strong>。体积也一直<strong>尽量保持在6mb</strong>左右。</p>
-<p>并且通过了<a href="https://green-android.org/" target="_blank" rel="noopener">Android 绿色应用公约 3.0验证</a>，<strong>无需读取手机状态、甚至无需外部存储空间权限</strong>。</p>
-<p>理论上运行<strong>无需任何权限</strong>，只为了一些可选功能申请了一些权限：</p>
-<ul>
-<li><p><strong>查看网络连接、查看WLAN连接、拥有完全的网络访问权限</strong></p>
-<p>为了实现登录、社区等功能。</p>
-<p>如果完全把《人升》当作一个离线工具使用，甚至可以关闭这些权限。</p>
-</li>
-<li><p><strong>运行前台服务</strong></p>
-<p>为了实现桌面小部件完成事项的功能。</p>
-<p>同理，如果不需要用到桌面小部件，该权限也可以关闭。</p>
-</li>
-<li><p><strong>日历读写权限</strong></p>
-<p>只有将提醒方式改为“系统日历提醒”的时候才会动态申请该权限。</p>
-<p>如果不需要“系统日历提醒”功能，该权限也可以关闭。</p>
-</li>
-<li><p><strong>其他权限</strong></p>
-<p>一些其他权限诸如Play Store相关的，其实是第三方SDK申请的。</p>
-<p>比如Google授权登录、QQ授权登录。</p>
-</li>
-</ul>
-<p><br></p>
-<h2 id="盈利方式"><a href="#盈利方式" class="headerlink" title="盈利方式"></a>盈利方式</h2><p>暂时，《人升》在国内是<del>用爱发电</del>，<strong>感谢诸位的捐赠让我们走下来。</strong></p>
-<p><br></p>
-<p>在Google Play市场，我们面向海外发布了价格为$0.99的买断版本。</p>
-<p><strong>捐赠过的用户可以向我们发送邮件获取Google Play的兑换码。</strong></p>
-<p><br></p>
-<p>并且有意把这个版本当作以后《人升》实现“终身会员”的雏形，</p>
-<p><strong>目前的所有基础功能都不会需要会员</strong>，</p>
-<p>部分比较偏的需求，或者是需要消耗服务器资源的需求，可能会选作是”终身会员“的福利。</p>
-<blockquote>
-<p>有意把”会员“的购买界面做得像购买游戏DLC一样😂</p>
-<p>并且计划实现会员前捐赠的所有用户都能获得相应的会员兑换码。</p>
-</blockquote>
-<p><br></p>
-<h2 id="上架市场"><a href="#上架市场" class="headerlink" title="上架市场"></a>上架市场</h2><p>目前，我们官方上架并且维护更新的应用市场有：<strong>酷安、魅族、小米、Google Play、应用宝、阿里应用分发（含：豌豆荚、PP 助手、YunOS 应用商店、UC应用商店等）</strong>。</p>
-<p>华为应用市场的正在努力准备上架。</p>
-<p>并且在这些应用市场上架的都是相同的包名，完全<strong>可以跨市场升级</strong>~</p>
-<h3 id="Google-Play上的Pro版差异"><a href="#Google-Play上的Pro版差异" class="headerlink" title="Google Play上的Pro版差异"></a>Google Play上的Pro版差异</h3><ul>
-<li>去掉了“捐赠”入口</li>
-<li>去掉了“应用内更新提示”</li>
-<li>（计划）更多增值内容，如Google Drive同步</li>
-</ul>
-<p><br></p>
-<h2 id="关于开源"><a href="#关于开源" class="headerlink" title="关于开源"></a>关于开源</h2><p>之前客户端的代码是在Github上完全开源的，</p>
-<p>但是经历了被人恶意篡改、插入广告，上架到一些市场抢占包名的事情之后，</p>
-<p>我们已经把客户端的代码闭源了。</p>
-<p><br></p>
-<p>以后，<strong>可能会开源部分代码或者应用架构等</strong>。</p>
-<a id="more"></a>
-<p><br></p>
-<hr>
-<h1 id="功能介绍（施工中）"><a href="#功能介绍（施工中）" class="headerlink" title="功能介绍（施工中）"></a>功能介绍（施工中）</h1><h2 id="新成就系统"><a href="#新成就系统" class="headerlink" title="新成就系统"></a>新成就系统</h2> <img src="/post/157a032e/achievement_01.jpg">
-<p>探索应用的各个功能，解锁多达56种成就，收获经验值/金币奖励。</p>
-<p>成就按<strong>内容</strong>可分为<strong>基础成就（17个）、事项成就（15个）、属性成就（7个）、商店成就（7个）、社区成就（10个，如果隐藏社区则不显示）</strong></p>
-<p>按完成条件可分为探索型（尝试某个功能、随机到某个条件）和累积型两种。</p>
-<p>探索型成就是设计来引导用户体验各种功能，也有一些设置为秘密成就，当作一种解谜小游戏。</p>
-<p>累积型成就是当作一种比较难的挑战设计的，激励用户挑战，坚持使用。</p>
-<p><strong>详细介绍：</strong></p>
-<p><a href="http://sarasarasa.net/post/43761082.html">新成就系统（v1.68.0更新介绍）</a></p>
-<hr>
-<h2 id="建立事项"><a href="#建立事项" class="headerlink" title="建立事项"></a>建立事项</h2><p>人升的事项依靠着<strong>开始时间、期限时间和重复频次</strong>的配合，可以建立出各种复杂情况的待办事项。</p>
-<p><strong>以下是一些情况的例子：</strong></p>
-<h3 id="普通待办事项-琐事-购物清单"><a href="#普通待办事项-琐事-购物清单" class="headerlink" title="普通待办事项/琐事/购物清单"></a>普通待办事项/琐事/购物清单</h3> <img src="/post/157a032e/task_01.jpg">
-<p>这种类型的事项，不需要关心“期限时间”，重复频次默认也是“单次”。</p>
-<p>所以，<strong>不需要额外设置。只需要填好“待办事项”内容即可。</strong></p>
-<h3 id="习惯养成（每日早起、每周跑步等）"><a href="#习惯养成（每日早起、每周跑步等）" class="headerlink" title="习惯养成（每日早起、每周跑步等）"></a>习惯养成（每日早起、每周跑步等）</h3> <img src="/post/157a032e/task_02.jpg">
-<p>调整<strong>“重复频次”</strong>为相应的“每日”或者“每周”后，再根据情况看要不要调整<strong>“期限日期”</strong>。</p>
-<p>当“重复频次”不为“单次”的情况下，期限日期会默认为“当天”。</p>
-<p>对于“每日”事项来说，这样设置一般是合理的。</p>
-<p>而对于重复频次大于“每日”的事项，要根据具体情况调整期限：</p>
-<blockquote>
-<ol>
-<li>比如1号的时候建立“每周”事项，不改期限日期。那么下一次的事项的时间会在2-8号。</li>
-<li>如果你调整期限日期到2号。那么下一次的事项时间就会在3-9号。（相当于延后一天）</li>
-</ol>
-</blockquote>
-<h3 id="每周一-每周日"><a href="#每周一-每周日" class="headerlink" title="每周一-每周日"></a>每周一-每周日</h3> <img src="/post/157a032e/task_03.jpg">
-<p>通过期限时间和重复频次的配合，<strong>你能轻松地设置出“星期一”到“星期日”的每周事项。</strong></p>
-<p><strong>只要设置重复频次为“每周”，然后期限时间设置为“周末”即可~。</strong></p>
-<p>人升弱化了开始时间的概念，在绝大多的时候可以让相应的开始时间自动计算得出。</p>
-<h3 id="当天23-00-第二天2-00"><a href="#当天23-00-第二天2-00" class="headerlink" title="当天23:00-第二天2:00"></a>当天23:00-第二天2:00</h3> <img src="/post/157a032e/task_04.jpg">
-<p>通过开始时间、期限时间和重复频次的配合，你能轻松地设置出情况很复杂的待办事项。</p>
-<p>只需要设置<strong>开始时间为具体的“当天23：00”</strong>，期限时间为<strong>具体的“第二天2：00”</strong>，<strong>重复频次为“每日”</strong>即可。</p>
-<h3 id="指定每周几（仅工作日、仅周末等）"><a href="#指定每周几（仅工作日、仅周末等）" class="headerlink" title="指定每周几（仅工作日、仅周末等）"></a>指定每周几（仅工作日、仅周末等）</h3> <img src="/post/157a032e/task_05.jpg">
- <img src="/post/157a032e/task_06.jpg">
-<p>设置“重复频次”为“每日”后，在“重复频次”的输入框右侧点击“设置忽略”。然后就能指定每周几重复了。</p>
-<hr>
-<h2 id="清单管理"><a href="#清单管理" class="headerlink" title="清单管理"></a>清单管理</h2><h3 id="清单分类"><a href="#清单分类" class="headerlink" title="清单分类"></a>清单分类</h3> <img src="/post/157a032e/list_01.jpg" title="清单入口">
-<p>在<code>告示板</code>界面右上角，可以点击第一个按钮（即<code>清单</code>按钮），进入选择清单界面。</p>
- <img src="/post/157a032e/list_02.jpg" title="点击列表项目右侧的按钮有额外菜单">
-<p><strong>在这里可以：</strong></p>
-<ul>
-<li><p><strong>切换清单</strong></p>
-<p>直接点击列表项即可</p>
-</li>
-<li><p><strong>新建/重命名清单</strong></p>
-<p>所有清单不支持重命名</p>
-</li>
-<li><p><strong>删除清单</strong></p>
-<p>只有在清单为空的时候，才能进行删除操作</p>
-</li>
-</ul>
-<p><code>默认清单</code>不可删除，但可以重命名。</p>
-<p><code>所有清单</code>会显示所有清单的待办事项，该清单也是不可删除的，并且不可重命名。</p>
-<h3 id="筛选排序"><a href="#筛选排序" class="headerlink" title="筛选排序"></a>筛选排序</h3> <img src="/post/157a032e/options_01.jpg" title="更多选项">
-<p>在<code>告示板</code>界面右上角，点击最右侧的按钮（即<code>更多选项</code>按钮），可以进行<code>筛选</code>和<code>排序</code>设置。</p>
- <img src="/post/157a032e/options_02.jpg" title="时间筛选设置">
-<p>如果<strong>你偏好于隐藏未开始的事项</strong>，可以在这里选择<code>显示今天事项</code>。</p>
-<p>这个选项会只显示<strong>今天已经开始或将于今天某个时刻开始</strong>的事项。</p>
-<hr>
-<h2 id="稍后阅读"><a href="#稍后阅读" class="headerlink" title="稍后阅读"></a>稍后阅读</h2> <img src="/post/157a032e/read_01.jpg" title="在其他应用选择“其他”分享">
- <img src="/post/157a032e/read_02.jpg" title="快速建立「稍后阅读」事项">
-<p><strong>《人升》可以接受其他应用分享过来的信息，用以快速建立「稍后阅读」事项。</strong>并且默认会勾选“学识”属性。</p>
-<p><strong>支持大部分提供分享功能的应用：</strong>如“微博”、“知乎”、“浏览器”、“Twitter”等。</p>
-<hr>
-<h2 id="商店系统"><a href="#商店系统" class="headerlink" title="商店系统"></a>商店系统</h2><div class="note primary">
-            <p><strong>上架商品，获得金币，购买奖励</strong></p><p>商店系统是对完成事项后奖励自我的一种游戏化体现，<del>并不是什么内购</del>。</p>
-          </div>
-<p>所以，在商店上架的商品，就是你打算在自己达到一定目标后给自己的奖励。</p>
-<p>价格是你自己衡量是否达到这个目标的标尺。</p>
-<p><br></p>
- <img src="/post/157a032e/shop_01.jpg">
-<h3 id="金币获取手段"><a href="#金币获取手段" class="headerlink" title="金币获取手段"></a>金币获取手段</h3><p>设置好了商品（奖励），那么就只差金币的获取手段了：</p>
-<ol>
-<li><p><strong>自建待办事项，设置金币奖励</strong></p>
-<p><strong>自设奖励：</strong>如果你对自己的金币体系很看重，那么最好每个事项都单独设置金币奖励。</p>
-<p><strong>自动计算：</strong>否则的话，你可以选择<code>自动计算</code>金币奖励。</p>
-<p><code>自动计算</code>会根据你设置的<code>重要程度</code>和<code>困难程度</code>计算出该事项的奖励，取值为15-120。</p>
-<p>然后你应该根据该取值定义商店商品的价格。</p>
-<p>当然，<strong>你可以两种方式一起使用</strong>。</p>
-</li>
-<li><p><strong>加入团队，完成团队任务获取奖励</strong></p>
-<p>如果团队的建造者设置了金币奖励，那么完成该事项的时候，你也能获得相应的金币。</p>
-</li>
-<li><p><strong>解锁成就</strong></p>
-<p>部分成就解锁后，会奖励小额金币。</p>
-</li>
-</ol>
-<p><br></p>
-<h3 id="仓库"><a href="#仓库" class="headerlink" title="仓库"></a>仓库</h3><p>默认情况下，购买的商品会放到仓库里。</p>
-<p>需要点击<code>使用</code>的时候才消耗掉。</p>
-<p>当然，最新版本，你能在购买的时候选择<code>立即使用</code>了。</p>
-<p><br></p>
-<h3 id="贷款"><a href="#贷款" class="headerlink" title="贷款"></a>贷款</h3><p>右上角的商店设置里，可以设置贷款金额。</p>
-<p>现在的贷款实现，其实是允许金币负值。</p>
-<p>比如，你设置了贷款1000。那么就是允许金币最小为-1000。</p>
-<p>所以，偿还贷款的方式，就是挣金币~</p>
-<p><br></p>
-<h3 id="使用参考"><a href="#使用参考" class="headerlink" title="使用参考"></a>使用参考</h3><p>具体上架什么商品，取决你自己的爱好~</p>
-<p><strong>这里提供一些参考：</strong></p>
-<p>奶茶 —— 10金币：使用之后，奖励自己一杯奶茶</p>
-<p>空气 —— 0金币（免费）：要多少有多少</p>
-<p>手机 —— 3000金币：换台新手机</p>
-<p><strong>另外，也有一些用户把商品当作惩罚来用😂：</strong></p>
-<p>浪费时间惩罚 —— 5金币：如果今天浪费了时间，就购买这项金币惩罚</p>
-<hr>
-<h2 id="社区"><a href="#社区" class="headerlink" title="社区"></a>社区</h2><div class="note primary">
-            <p><strong>组织团队、共同进步</strong></p><p>《人升》的社区也不是普通的论坛，而是一个组织团队共同完成某个事项，养成习惯的地方。</p><p>并且这里主打轻社交，没有聊天，没有通知。</p><p>但是你能看到浏览别人完成事项的动态。</p>
-          </div>
-<h3 id="团队"><a href="#团队" class="headerlink" title="团队"></a>团队</h3><p>社区的主体就是团队，</p>
-<p>你可以浏览加入感兴趣的团队。</p>
-<p>如果找不到，那么可以自己建立一个团队。</p>
-<blockquote>
-<p> 团队的内容是公开的，<strong>所以请不要建立比较私人的事项，或者涉及违法敏感相关的事项，谢谢~</strong>。</p>
-<p> 如果有特殊需要，可以建立成本地事项。</p>
-</blockquote>
-<p><br></p>
-<p>加入或者建立一个团队之后，会自动领取团队事项。</p>
-<p><strong>如果你删除错了团队事项，或者退出登录导致团队事项消失。</strong></p>
-<p>那么，可以返回团队详情界面，<strong>点击<code>领取</code>按钮</strong>重新领取团队事项。</p>
-<p><br></p>
-<p>团队事项暂时不支持编辑、放弃等操作。</p>
-<p>后续会开放<strong>部分编辑</strong>功能。</p>
-<p><br></p>
-<h3 id="新建团队"><a href="#新建团队" class="headerlink" title="新建团队"></a>新建团队</h3><p>新建团队的界面其实和新建待办事项差不多，只是缺少了一些自定义选项。</p>
-<p>值得注意的是，</p>
-<p>“<code>首次开始日期</code>+<code>首次开始时间</code>”和“<code>首次结束日期</code>+<code>结束时间</code>”指的是<strong>第一次事项的开始结束时间，并不是团队的结束时间</strong>。</p>
-<p>比如，每日事项，这两个时间一般来说是一天的00:00:00到23:59:59即可。</p>
-<p>如果是<code>早起</code>之类的事项，设置为<strong>同一天</strong>的06:00:00到08:59:59。</p>
-<p>再比如说每周事项，可以设置为周一00:00:00到周日23:59:59。</p>
-<p><br></p>
-<p><strong>如果需要终止团队，</strong></p>
-<p>如果创建者到团队详情页面右上角选项，选择<code>终止</code>即可。</p>
-<p>如果你不是创建者，可以选择<code>退出</code>团队。</p>
-<p><br></p>
-<h3 id="时刻"><a href="#时刻" class="headerlink" title="时刻"></a>时刻</h3><p>在完成团队事项的时候，你可选择性地发表动态，并且可以贴上图片。</p>
-<blockquote>
-<p>为了节省服务器流量，以及防止一些问题，图片会默认进行压缩。</p>
-</blockquote>
-<p>你能在时刻页面浏览到其他人发表的动态内容，查看别人坚持事项的情况。</p>
-<p>同时，你也能关注感兴趣的人。并且筛选关注的人的动态等。</p>
-<p>在个人主页（<strong>入口</strong>：<code>我的</code>→<code>我的主页</code>→<code>查看</code>），</p>
-<p>你能随时浏览自己发表过的动态，长按也可以进行删除操作。</p>
-<p><br></p>
-<h3 id="排行榜"><a href="#排行榜" class="headerlink" title="排行榜"></a>排行榜</h3><p>你可能会诧异为什么排行榜只有你自己一个人。😂</p>
-<p>因为并不想让排行榜变成一个攀比的地方，所以设计成了只显示自己与自己关注的人。</p>
-<p><br></p>
-<p><strong>所以，去关注一下其他人吧~<del>（说不定还能解锁成就）</del></strong></p>
-<p>排行榜目前功能较薄弱，以后可能会改进。</p>
-<p><br></p>
-<hr>
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a><a href="http://sarasarasa.net/post/a889432c.html">更新日志</a></h2><h2 id="捐赠名单"><a href="#捐赠名单" class="headerlink" title="捐赠名单"></a><a href="http://sarasarasa.net/post/22d5d0d5.html">捐赠名单</a></h2><p>扫码关注人升公众号，可以尽快收到更新介绍<del>而且我们说不定能赚点服务器钱:)</del></p>
- <img src="/post/157a032e/01.jpg">
-]]></content>
-      <categories>
-        <category>项目</category>
-        <category>开发日志</category>
-        <category>人升</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>开发日志</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>人升Lifeup 更新日志</title>
     <url>/post/a889432c.html</url>
     <content><![CDATA[<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p><strong>1.69.2（2020/01/10）</strong></p>
@@ -2707,6 +2451,277 @@
       <categories>
         <category>项目</category>
         <category>人升Q&amp;A</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>开发日志</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>人升LifeUp 常见问题</title>
+    <url>/post/157a032e.html</url>
+    <content><![CDATA[<h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><h2 id="功能更新推迟（在做了，1-）"><a href="#功能更新推迟（在做了，1-）" class="headerlink" title="功能更新推迟（在做了，1%）"></a>功能更新推迟（在做了，1%）</h2><p>一部分代码（主要是简洁模式相关）因失误忘记上传了，留在了学校，这段时间的更新会因此推迟一阵时间。</p>
+<p>而且这部分代码重新写挺麻烦的，效果也可能出现偏差。</p>
+<p>所以打算先<strong>专注其他功能的开发以及毕设</strong>，等回到学校后合并代码，再考虑发布新版本~</p>
+ <img src="/post/157a032e/delay.jpg">
+<p><strong>祝大家新年快乐！</strong></p>
+<p><br></p>
+<h2 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h2><p>应用图标感觉需要一波更新，但我们这边暂时没什么想法<em>(:з」∠)</em></p>
+<p>如果你有意贡献图标/想法的话，欢迎邮件联系~</p>
+<h1 id="更新介绍"><a href="#更新介绍" class="headerlink" title="更新介绍"></a>更新介绍</h1><p><a href="http://sarasarasa.net/post/3651a964.html">v1.69.0更新介绍</a></p>
+<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ol>
+<li><a href="#应用简介">应用简介</a><br>1.1 <a href="#情景介绍">情景介绍</a><br>1.2 <a href="#已知问题">已知问题</a><br>1.3 <a href="#更新计划">更新计划</a><br>1.4 <a href="#常见问题">常见问题</a><br>1.5 <a href="#绿色应用">绿色应用</a><br>1.6 <a href="#盈利方式">盈利方式</a><br>1.7 <a href="#上架市场">上架市场</a><br>1.8 <a href="#关于开源">关于开源</a></li>
+<li><a href="#功能介绍">功能介绍</a><br>2.1 <a href="#新成就系统">新成就系统</a><br>2.2 <a href="#建立事项">建立事项</a><br>2.3 <a href="#清单管理">清单管理</a><br>2.4 <a href="#稍后阅读">稍后阅读</a><br>2.5 <a href="#商店系统">商店系统</a><br>2.6 <a href="#社区">社区</a></li>
+<li><a href="#其他">其他</a><br>3.1 <a href="http://sarasarasa.net/post/a889432c.html">更新日志</a><br>3.2 <a href="http://sarasarasa.net/post/22d5d0d5.html">捐赠名单</a></li>
+</ol>
+<hr>
+<h1 id="应用简介"><a href="#应用简介" class="headerlink" title="应用简介"></a>应用简介</h1><h2 id="情景介绍"><a href="#情景介绍" class="headerlink" title="情景介绍"></a>情景介绍</h2><blockquote>
+<p>升级你的人生</p>
+</blockquote>
+<p>简单一句话介绍这个应用的特色，就是<em>“游戏化的待办事项应用”</em>。</p>
+<p><strong>用一个情景详细地介绍游戏化：</strong></p>
+<blockquote>
+<p>完成了一篇文章，打开应用，在“写一篇文章”的事项前打上勾，标记完成。</p>
+<p>此时你获得了一些「学识」和「创造」200经验值，并且「学识」升了一级。</p>
+<p>应用还弹出了“成就解锁！法师”的成就解锁提示框。</p>
+<p>此外，还<strong>获得了10个金币</strong>。</p>
+<p>点击商店，查看为自己设置的奖励商品列表。</p>
+<p>斟酌半刻，你购买了耗费8金币的奶茶。然后前往仓库，使用了刚刚购买的奶茶。</p>
+<p>于是现实中，可以心满意足地点开外卖应用下单奶茶奖励自己。</p>
+</blockquote>
+<p>该情景<strong>主要只涵盖了应用的游戏化部分</strong>，除此之外还有社区、统计、日历、桌面小部件等功能，会在后面部分介绍。</p>
+<p><br></p>
+<h2 id="已知问题"><a href="#已知问题" class="headerlink" title="已知问题"></a>已知问题</h2><ul>
+<li><p><del><strong>备份恢复功能在Android P上偶现失败。</strong></del>（修复于v1.68.2）</p>
+<p>暂时怀疑是数据库连接中导致无法写入文件。</p>
+<p>可以打开备份页面静置一段时候后，再进行恢复操作。</p>
+<p>或者使用“钛备份”、“换机助手”等应用进行操作。</p>
+</li>
+<li><p><del><strong>点击通知崩溃</strong></del></p>
+</li>
+<li><p><del><strong>偶现商店上架按钮点击不了</strong></del></p>
+</li>
+</ul>
+<p><br></p>
+<h2 id="更新计划"><a href="#更新计划" class="headerlink" title="更新计划"></a>更新计划</h2><p><strong>2019/10/31：</strong>因为目前在实习+准备毕设，稍微将原本大概7-14天一更的频次调整到<strong>14-21天一更</strong>。</p>
+<p><br></p>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p><strong>Q：</strong>团队事项消失？</p>
+<p><strong>A：</strong>在退出登录的时候会清空未完成的团队事项。</p>
+<p>可以查看自己加入的团队，<strong>然后点击“领取”按钮重新领取团队事项。</strong></p>
+<p>计划加入“一键领取所有已加入团队事项”的按钮。</p>
+<p><strong>Q：</strong>如何建立工作日事项或者周指定日事项?</p>
+<p><strong>A：</strong>重复频次选择“每日”后，选择“设置忽略”按钮。详情可以查看<a href="#建立事项">建立事项</a>。</p>
+<p><strong>Q：</strong>没能收到事项的提醒？</p>
+<p><strong>A：</strong>默认的提醒用的是Android原生的闹钟机制，在国产OS里，这个闹钟机制可能需要应用后台运行才能正常运作。如果有精准的需求，<strong>可以前往设置里，选择<code>更换提醒方式</code>，系统日历提醒会更准确，并且不受后台运行限制。</strong></p>
+<h2 id="绿色应用"><a href="#绿色应用" class="headerlink" title="绿色应用"></a>绿色应用</h2><p>并且，《人升》<strong>无开屏、无内置广告、暂无内购</strong>。体积也一直<strong>尽量保持在6mb</strong>左右。</p>
+<p>并且通过了<a href="https://green-android.org/" target="_blank" rel="noopener">Android 绿色应用公约 3.0验证</a>，<strong>无需读取手机状态、甚至无需外部存储空间权限</strong>。</p>
+<p>理论上运行<strong>无需任何权限</strong>，只为了一些可选功能申请了一些权限：</p>
+<ul>
+<li><p><strong>查看网络连接、查看WLAN连接、拥有完全的网络访问权限</strong></p>
+<p>为了实现登录、社区等功能。</p>
+<p>如果完全把《人升》当作一个离线工具使用，甚至可以关闭这些权限。</p>
+</li>
+<li><p><strong>运行前台服务</strong></p>
+<p>为了实现桌面小部件完成事项的功能。</p>
+<p>同理，如果不需要用到桌面小部件，该权限也可以关闭。</p>
+</li>
+<li><p><strong>日历读写权限</strong></p>
+<p>只有将提醒方式改为“系统日历提醒”的时候才会动态申请该权限。</p>
+<p>如果不需要“系统日历提醒”功能，该权限也可以关闭。</p>
+</li>
+<li><p><strong>其他权限</strong></p>
+<p>一些其他权限诸如Play Store相关的，其实是第三方SDK申请的。</p>
+<p>比如Google授权登录、QQ授权登录。</p>
+</li>
+</ul>
+<p><br></p>
+<h2 id="盈利方式"><a href="#盈利方式" class="headerlink" title="盈利方式"></a>盈利方式</h2><p>暂时，《人升》在国内是<del>用爱发电</del>，<strong>感谢诸位的捐赠让我们走下来。</strong></p>
+<p><br></p>
+<p>在Google Play市场，我们面向海外发布了价格为$0.99的买断版本。</p>
+<p><strong>捐赠过的用户可以向我们发送邮件获取Google Play的兑换码。</strong></p>
+<p><br></p>
+<p>并且有意把这个版本当作以后《人升》实现“终身会员”的雏形，</p>
+<p><strong>目前的所有基础功能都不会需要会员</strong>，</p>
+<p>部分比较偏的需求，或者是需要消耗服务器资源的需求，可能会选作是”终身会员“的福利。</p>
+<blockquote>
+<p>有意把”会员“的购买界面做得像购买游戏DLC一样😂</p>
+<p>并且计划实现会员前捐赠的所有用户都能获得相应的会员兑换码。</p>
+</blockquote>
+<p><br></p>
+<h2 id="上架市场"><a href="#上架市场" class="headerlink" title="上架市场"></a>上架市场</h2><p>目前，我们官方上架并且维护更新的应用市场有：<strong>酷安、魅族、小米、华为、Google Play、应用宝、阿里应用分发（含：豌豆荚、PP 助手、YunOS 应用商店、UC应用商店等）</strong>。</p>
+<p>华为应用市场的正在努力准备上架。</p>
+<p>并且在这些应用市场上架的都是相同的包名，完全<strong>可以跨市场升级</strong>~</p>
+<h3 id="Google-Play上的Pro版差异"><a href="#Google-Play上的Pro版差异" class="headerlink" title="Google Play上的Pro版差异"></a>Google Play上的Pro版差异</h3><ul>
+<li>去掉了“捐赠”入口</li>
+<li>去掉了“应用内更新提示”</li>
+<li>（计划）更多增值内容，如Google Drive同步</li>
+</ul>
+<p><br></p>
+<h2 id="关于开源"><a href="#关于开源" class="headerlink" title="关于开源"></a>关于开源</h2><p>之前客户端的代码是在Github上完全开源的，</p>
+<p>但是经历了被人恶意篡改、插入广告，上架到一些市场抢占包名的事情之后，</p>
+<p>我们已经把客户端的代码闭源了。</p>
+<p><br></p>
+<p>以后，<strong>可能会开源部分代码或者应用架构等</strong>。</p>
+<a id="more"></a>
+<p><br></p>
+<hr>
+<h1 id="功能介绍（施工中）"><a href="#功能介绍（施工中）" class="headerlink" title="功能介绍（施工中）"></a>功能介绍（施工中）</h1><h2 id="新成就系统"><a href="#新成就系统" class="headerlink" title="新成就系统"></a>新成就系统</h2> <img src="/post/157a032e/achievement_01.jpg">
+<p>探索应用的各个功能，解锁多达56种成就，收获经验值/金币奖励。</p>
+<p>成就按<strong>内容</strong>可分为<strong>基础成就（17个）、事项成就（15个）、属性成就（7个）、商店成就（7个）、社区成就（10个，如果隐藏社区则不显示）</strong></p>
+<p>按完成条件可分为探索型（尝试某个功能、随机到某个条件）和累积型两种。</p>
+<p>探索型成就是设计来引导用户体验各种功能，也有一些设置为秘密成就，当作一种解谜小游戏。</p>
+<p>累积型成就是当作一种比较难的挑战设计的，激励用户挑战，坚持使用。</p>
+<p><strong>详细介绍：</strong></p>
+<p><a href="http://sarasarasa.net/post/43761082.html">新成就系统（v1.68.0更新介绍）</a></p>
+<hr>
+<h2 id="建立事项"><a href="#建立事项" class="headerlink" title="建立事项"></a>建立事项</h2><p>人升的事项依靠着<strong>开始时间、期限时间和重复频次</strong>的配合，可以建立出各种复杂情况的待办事项。</p>
+<p><strong>以下是一些情况的例子：</strong></p>
+<h3 id="普通待办事项-琐事-购物清单"><a href="#普通待办事项-琐事-购物清单" class="headerlink" title="普通待办事项/琐事/购物清单"></a>普通待办事项/琐事/购物清单</h3> <img src="/post/157a032e/task_01.jpg">
+<p>这种类型的事项，不需要关心“期限时间”，重复频次默认也是“单次”。</p>
+<p>所以，<strong>不需要额外设置。只需要填好“待办事项”内容即可。</strong></p>
+<h3 id="习惯养成（每日早起、每周跑步等）"><a href="#习惯养成（每日早起、每周跑步等）" class="headerlink" title="习惯养成（每日早起、每周跑步等）"></a>习惯养成（每日早起、每周跑步等）</h3> <img src="/post/157a032e/task_02.jpg">
+<p>调整<strong>“重复频次”</strong>为相应的“每日”或者“每周”后，再根据情况看要不要调整<strong>“期限日期”</strong>。</p>
+<p>当“重复频次”不为“单次”的情况下，期限日期会默认为“当天”。</p>
+<p>对于“每日”事项来说，这样设置一般是合理的。</p>
+<p>而对于重复频次大于“每日”的事项，要根据具体情况调整期限：</p>
+<blockquote>
+<ol>
+<li>比如1号的时候建立“每周”事项，不改期限日期。那么下一次的事项的时间会在2-8号。</li>
+<li>如果你调整期限日期到2号。那么下一次的事项时间就会在3-9号。（相当于延后一天）</li>
+</ol>
+</blockquote>
+<h3 id="每周一-每周日"><a href="#每周一-每周日" class="headerlink" title="每周一-每周日"></a>每周一-每周日</h3> <img src="/post/157a032e/task_03.jpg">
+<p>通过期限时间和重复频次的配合，<strong>你能轻松地设置出“星期一”到“星期日”的每周事项。</strong></p>
+<p><strong>只要设置重复频次为“每周”，然后期限时间设置为“周末”即可~。</strong></p>
+<p>人升弱化了开始时间的概念，在绝大多的时候可以让相应的开始时间自动计算得出。</p>
+<h3 id="当天23-00-第二天2-00"><a href="#当天23-00-第二天2-00" class="headerlink" title="当天23:00-第二天2:00"></a>当天23:00-第二天2:00</h3> <img src="/post/157a032e/task_04.jpg">
+<p>通过开始时间、期限时间和重复频次的配合，你能轻松地设置出情况很复杂的待办事项。</p>
+<p>只需要设置<strong>开始时间为具体的“当天23：00”</strong>，期限时间为<strong>具体的“第二天2：00”</strong>，<strong>重复频次为“每日”</strong>即可。</p>
+<h3 id="指定每周几（仅工作日、仅周末等）"><a href="#指定每周几（仅工作日、仅周末等）" class="headerlink" title="指定每周几（仅工作日、仅周末等）"></a>指定每周几（仅工作日、仅周末等）</h3> <img src="/post/157a032e/task_05.jpg">
+ <img src="/post/157a032e/task_06.jpg">
+<p>设置“重复频次”为“每日”后，在“重复频次”的输入框右侧点击“设置忽略”。然后就能指定每周几重复了。</p>
+<hr>
+<h2 id="清单管理"><a href="#清单管理" class="headerlink" title="清单管理"></a>清单管理</h2><h3 id="清单分类"><a href="#清单分类" class="headerlink" title="清单分类"></a>清单分类</h3> <img src="/post/157a032e/list_01.jpg" title="清单入口">
+<p>在<code>告示板</code>界面右上角，可以点击第一个按钮（即<code>清单</code>按钮），进入选择清单界面。</p>
+ <img src="/post/157a032e/list_02.jpg" title="点击列表项目右侧的按钮有额外菜单">
+<p><strong>在这里可以：</strong></p>
+<ul>
+<li><p><strong>切换清单</strong></p>
+<p>直接点击列表项即可</p>
+</li>
+<li><p><strong>新建/重命名清单</strong></p>
+<p>所有清单不支持重命名</p>
+</li>
+<li><p><strong>删除清单</strong></p>
+<p>只有在清单为空的时候，才能进行删除操作</p>
+</li>
+</ul>
+<p><code>默认清单</code>不可删除，但可以重命名。</p>
+<p><code>所有清单</code>会显示所有清单的待办事项，该清单也是不可删除的，并且不可重命名。</p>
+<h3 id="筛选排序"><a href="#筛选排序" class="headerlink" title="筛选排序"></a>筛选排序</h3> <img src="/post/157a032e/options_01.jpg" title="更多选项">
+<p>在<code>告示板</code>界面右上角，点击最右侧的按钮（即<code>更多选项</code>按钮），可以进行<code>筛选</code>和<code>排序</code>设置。</p>
+ <img src="/post/157a032e/options_02.jpg" title="时间筛选设置">
+<p>如果<strong>你偏好于隐藏未开始的事项</strong>，可以在这里选择<code>显示今天事项</code>。</p>
+<p>这个选项会只显示<strong>今天已经开始或将于今天某个时刻开始</strong>的事项。</p>
+<hr>
+<h2 id="稍后阅读"><a href="#稍后阅读" class="headerlink" title="稍后阅读"></a>稍后阅读</h2> <img src="/post/157a032e/read_01.jpg" title="在其他应用选择“其他”分享">
+ <img src="/post/157a032e/read_02.jpg" title="快速建立「稍后阅读」事项">
+<p><strong>《人升》可以接受其他应用分享过来的信息，用以快速建立「稍后阅读」事项。</strong>并且默认会勾选“学识”属性。</p>
+<p><strong>支持大部分提供分享功能的应用：</strong>如“微博”、“知乎”、“浏览器”、“Twitter”等。</p>
+<hr>
+<h2 id="商店系统"><a href="#商店系统" class="headerlink" title="商店系统"></a>商店系统</h2><div class="note primary">
+            <p><strong>上架商品，获得金币，购买奖励</strong></p><p>商店系统是对完成事项后奖励自我的一种游戏化体现，<del>并不是什么内购</del>。</p>
+          </div>
+<p>所以，在商店上架的商品，就是你打算在自己达到一定目标后给自己的奖励。</p>
+<p>价格是你自己衡量是否达到这个目标的标尺。</p>
+<p><br></p>
+ <img src="/post/157a032e/shop_01.jpg">
+<h3 id="金币获取手段"><a href="#金币获取手段" class="headerlink" title="金币获取手段"></a>金币获取手段</h3><p>设置好了商品（奖励），那么就只差金币的获取手段了：</p>
+<ol>
+<li><p><strong>自建待办事项，设置金币奖励</strong></p>
+<p><strong>自设奖励：</strong>如果你对自己的金币体系很看重，那么最好每个事项都单独设置金币奖励。</p>
+<p><strong>自动计算：</strong>否则的话，你可以选择<code>自动计算</code>金币奖励。</p>
+<p><code>自动计算</code>会根据你设置的<code>重要程度</code>和<code>困难程度</code>计算出该事项的奖励，取值为15-120。</p>
+<p>然后你应该根据该取值定义商店商品的价格。</p>
+<p>当然，<strong>你可以两种方式一起使用</strong>。</p>
+</li>
+<li><p><strong>加入团队，完成团队任务获取奖励</strong></p>
+<p>如果团队的建造者设置了金币奖励，那么完成该事项的时候，你也能获得相应的金币。</p>
+</li>
+<li><p><strong>解锁成就</strong></p>
+<p>部分成就解锁后，会奖励小额金币。</p>
+</li>
+</ol>
+<p><br></p>
+<h3 id="仓库"><a href="#仓库" class="headerlink" title="仓库"></a>仓库</h3><p>默认情况下，购买的商品会放到仓库里。</p>
+<p>需要点击<code>使用</code>的时候才消耗掉。</p>
+<p>当然，最新版本，你能在购买的时候选择<code>立即使用</code>了。</p>
+<p><br></p>
+<h3 id="贷款"><a href="#贷款" class="headerlink" title="贷款"></a>贷款</h3><p>右上角的商店设置里，可以设置贷款金额。</p>
+<p>现在的贷款实现，其实是允许金币负值。</p>
+<p>比如，你设置了贷款1000。那么就是允许金币最小为-1000。</p>
+<p>所以，偿还贷款的方式，就是挣金币~</p>
+<p><br></p>
+<h3 id="使用参考"><a href="#使用参考" class="headerlink" title="使用参考"></a>使用参考</h3><p>具体上架什么商品，取决你自己的爱好~</p>
+<p><strong>这里提供一些参考：</strong></p>
+<p>奶茶 —— 10金币：使用之后，奖励自己一杯奶茶</p>
+<p>空气 —— 0金币（免费）：要多少有多少</p>
+<p>手机 —— 3000金币：换台新手机</p>
+<p><strong>另外，也有一些用户把商品当作惩罚来用😂：</strong></p>
+<p>浪费时间惩罚 —— 5金币：如果今天浪费了时间，就购买这项金币惩罚</p>
+<hr>
+<h2 id="社区"><a href="#社区" class="headerlink" title="社区"></a>社区</h2><div class="note primary">
+            <p><strong>组织团队、共同进步</strong></p><p>《人升》的社区也不是普通的论坛，而是一个组织团队共同完成某个事项，养成习惯的地方。</p><p>并且这里主打轻社交，没有聊天，没有通知。</p><p>但是你能看到浏览别人完成事项的动态。</p>
+          </div>
+<h3 id="团队"><a href="#团队" class="headerlink" title="团队"></a>团队</h3><p>社区的主体就是团队，</p>
+<p>你可以浏览加入感兴趣的团队。</p>
+<p>如果找不到，那么可以自己建立一个团队。</p>
+<blockquote>
+<p> 团队的内容是公开的，<strong>所以请不要建立比较私人的事项，或者涉及违法敏感相关的事项，谢谢~</strong>。</p>
+<p> 如果有特殊需要，可以建立成本地事项。</p>
+</blockquote>
+<p><br></p>
+<p>加入或者建立一个团队之后，会自动领取团队事项。</p>
+<p><strong>如果你删除错了团队事项，或者退出登录导致团队事项消失。</strong></p>
+<p>那么，可以返回团队详情界面，<strong>点击<code>领取</code>按钮</strong>重新领取团队事项。</p>
+<p><br></p>
+<p>团队事项暂时不支持编辑、放弃等操作。</p>
+<p>后续会开放<strong>部分编辑</strong>功能。</p>
+<p><br></p>
+<h3 id="新建团队"><a href="#新建团队" class="headerlink" title="新建团队"></a>新建团队</h3><p>新建团队的界面其实和新建待办事项差不多，只是缺少了一些自定义选项。</p>
+<p>值得注意的是，</p>
+<p>“<code>首次开始日期</code>+<code>首次开始时间</code>”和“<code>首次结束日期</code>+<code>结束时间</code>”指的是<strong>第一次事项的开始结束时间，并不是团队的结束时间</strong>。</p>
+<p>比如，每日事项，这两个时间一般来说是一天的00:00:00到23:59:59即可。</p>
+<p>如果是<code>早起</code>之类的事项，设置为<strong>同一天</strong>的06:00:00到08:59:59。</p>
+<p>再比如说每周事项，可以设置为周一00:00:00到周日23:59:59。</p>
+<p><br></p>
+<p><strong>如果需要终止团队，</strong></p>
+<p>如果创建者到团队详情页面右上角选项，选择<code>终止</code>即可。</p>
+<p>如果你不是创建者，可以选择<code>退出</code>团队。</p>
+<p><br></p>
+<h3 id="时刻"><a href="#时刻" class="headerlink" title="时刻"></a>时刻</h3><p>在完成团队事项的时候，你可选择性地发表动态，并且可以贴上图片。</p>
+<blockquote>
+<p>为了节省服务器流量，以及防止一些问题，图片会默认进行压缩。</p>
+</blockquote>
+<p>你能在时刻页面浏览到其他人发表的动态内容，查看别人坚持事项的情况。</p>
+<p>同时，你也能关注感兴趣的人。并且筛选关注的人的动态等。</p>
+<p>在个人主页（<strong>入口</strong>：<code>我的</code>→<code>我的主页</code>→<code>查看</code>），</p>
+<p>你能随时浏览自己发表过的动态，长按也可以进行删除操作。</p>
+<p><br></p>
+<h3 id="排行榜"><a href="#排行榜" class="headerlink" title="排行榜"></a>排行榜</h3><p>你可能会诧异为什么排行榜只有你自己一个人。😂</p>
+<p>因为并不想让排行榜变成一个攀比的地方，所以设计成了只显示自己与自己关注的人。</p>
+<p><br></p>
+<p><strong>所以，去关注一下其他人吧~<del>（说不定还能解锁成就）</del></strong></p>
+<p>排行榜目前功能较薄弱，以后可能会改进。</p>
+<p><br></p>
+<hr>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a><a href="http://sarasarasa.net/post/a889432c.html">更新日志</a></h2><h2 id="捐赠名单"><a href="#捐赠名单" class="headerlink" title="捐赠名单"></a><a href="http://sarasarasa.net/post/22d5d0d5.html">捐赠名单</a></h2><p>扫码关注人升公众号，可以尽快收到更新介绍<del>而且我们说不定能赚点服务器钱:)</del></p>
+ <img src="/post/157a032e/01.jpg">
+]]></content>
+      <categories>
+        <category>项目</category>
+        <category>开发日志</category>
+        <category>人升</category>
       </categories>
       <tags>
         <tag>Android</tag>
