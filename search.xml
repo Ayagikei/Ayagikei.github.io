@@ -2460,11 +2460,17 @@
   <entry>
     <title>人升LifeUp 常见问题</title>
     <url>/post/157a032e.html</url>
-    <content><![CDATA[<h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><h2 id="功能更新推迟（在做了，1-）"><a href="#功能更新推迟（在做了，1-）" class="headerlink" title="功能更新推迟（在做了，1%）"></a>功能更新推迟（在做了，1%）</h2><p>一部分代码（主要是简洁模式相关）因失误忘记上传了，留在了学校，这段时间的更新会因此推迟一阵时间。</p>
+    <content><![CDATA[<h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><h2 id="更新预告（预计本周内更新）"><a href="#更新预告（预计本周内更新）" class="headerlink" title="更新预告（预计本周内更新）"></a>更新预告（预计本周内更新）</h2><p><del>一部分代码（主要是简洁模式相关）因失误忘记上传了，留在了学校，这段时间的更新会因此推迟一阵时间。</del></p>
 <p>而且这部分代码重新写挺麻烦的，效果也可能出现偏差。</p>
 <p>所以打算先<strong>专注其他功能的开发以及毕设</strong>，等回到学校后合并代码，再考虑发布新版本~</p>
+<p>因为短时间返回不了学校，靠着残留的部分代码重新写了一遍简洁模式。</p>
+<p>并且下次更新还会有<strong>WebDAV备份、自定义属性图标和名称</strong>等功能。</p>
+<p>也修复了用户反馈的桌面小部件的颜色问题、选中模式下点击小圆圈的优化等。</p>
+<p><strong>本周内应该就会更新了~敬请期待。</strong></p>
  <img src="/post/157a032e/delay.jpg">
-<p><strong>祝大家新年快乐！</strong></p>
+ <img src="/post/157a032e/delay1.png">
+ <img src="/post/157a032e/delay2.png">
+ <img src="/post/157a032e/delay3.jpg">
 <p><br></p>
 <h2 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h2><p>应用图标感觉需要一波更新，但我们这边暂时没什么想法<em>(:з」∠)</em></p>
 <p>如果你有意贡献图标/想法的话，欢迎邮件联系~</p>
