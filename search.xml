@@ -438,6 +438,11 @@
 </thead>
 <tbody>
 <tr>
+<td>2020/02/11</td>
+<td>（微信匿名）</td>
+<td>5.00</td>
+</tr>
+<tr>
 <td>2020/02/09</td>
 <td>*凯航</td>
 <td>1.88</td>
@@ -539,7 +544,7 @@
 </tr>
 <tr>
 <td>2019/12/06</td>
-<td>（微信）</td>
+<td>（微信匿名）</td>
 <td>6.66</td>
 </tr>
 <tr>
@@ -1832,7 +1837,17 @@
   <entry>
     <title>人升Lifeup 更新日志</title>
     <url>/post/a889432c.html</url>
-    <content><![CDATA[<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p><strong>1.69.2（2020/01/10）</strong></p>
+    <content><![CDATA[<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p><strong>1.70.0（2020/02/11）</strong></p>
+<ol>
+<li>简洁模式：全新的简洁待办卡片</li>
+<li>图片附件：每个待办事项可以附上至多3张图片</li>
+<li>支持WebDAV云备份设置</li>
+<li>自定义属性的名称和图标</li>
+<li>修复桌面小部件的颜色不正确问题</li>
+<li>修复选中状态下，点击圆圈仍是完成事项的问题</li>
+<li>优化各个页面卡片显示</li>
+</ol>
+<p><strong>1.69.2（2020/01/10）</strong></p>
 <ol>
 <li>修复罕见的登录崩溃问题</li>
 <li>调整夜间模式下菜单文字颜色</li>
@@ -2460,7 +2475,7 @@
   <entry>
     <title>人升LifeUp 常见问题</title>
     <url>/post/157a032e.html</url>
-    <content><![CDATA[<h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><h2 id="更新预告（预计本周内更新）"><a href="#更新预告（预计本周内更新）" class="headerlink" title="更新预告（预计本周内更新）"></a>更新预告（预计本周内更新）</h2><p><del>一部分代码（主要是简洁模式相关）因失误忘记上传了，留在了学校，这段时间的更新会因此推迟一阵时间。</del></p>
+    <content><![CDATA[<h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><h2 id="更新预告"><a href="#更新预告" class="headerlink" title="更新预告"></a>更新预告</h2><p><del>一部分代码（主要是简洁模式相关）因失误忘记上传了，留在了学校，这段时间的更新会因此推迟一阵时间。</del></p>
 <p>而且这部分代码重新写挺麻烦的，效果也可能出现偏差。</p>
 <p>所以打算先<strong>专注其他功能的开发以及毕设</strong>，等回到学校后合并代码，再考虑发布新版本~</p>
 <p>因为短时间返回不了学校，靠着残留的部分代码重新写了一遍简洁模式。</p>
