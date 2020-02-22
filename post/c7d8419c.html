@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.7.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://sarasarasa.net').hostname,
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="大家好~欢迎查阅本次更新日志。 v1.70.1的版本已经于2月14号发布了，修复了v1.70.0的数个问题。遇到一些奇怪的问题的用户可以升级下版本。 今年以来，「人升」陆续地登上了更多的应用市场：应用宝、华为应用市场、豌豆荚、360应用市场、UC等。 现在可以在上述的一些平台进行应用更新了。 （之前仅登录了酷安、小米、魅族、Google Play市场。华为应用市场的之前被侵权了，这次也靠着大家的举">
+<meta name="keywords" content="Android,开发日志,更新介绍">
+<meta property="og:type" content="article">
+<meta property="og:title" content="人升更新介绍#1.70.1 | 02&#x2F;22 简洁模式">
+<meta property="og:url" content="http://sarasarasa.net/post/c7d8419c.html">
+<meta property="og:site_name" content="SaraSaraSa">
+<meta property="og:description" content="大家好~欢迎查阅本次更新日志。 v1.70.1的版本已经于2月14号发布了，修复了v1.70.0的数个问题。遇到一些奇怪的问题的用户可以升级下版本。 今年以来，「人升」陆续地登上了更多的应用市场：应用宝、华为应用市场、豌豆荚、360应用市场、UC等。 现在可以在上述的一些平台进行应用更新了。 （之前仅登录了酷安、小米、魅族、Google Play市场。华为应用市场的之前被侵权了，这次也靠着大家的举">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://sarasarasa.net/post/c7d8419c/01.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/c7d8419c/02.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/c7d8419c/03.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/c7d8419c/04.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/c7d8419c/05.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/c7d8419c/06.png">
+<meta property="og:image" content="http://sarasarasa.net/post/c7d8419c/07.png">
+<meta property="og:image" content="http://sarasarasa.net/post/c7d8419c/08.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/c7d8419c/09.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/c7d8419c/10.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/c7d8419c/11.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/c7d8419c/12.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/c7d8419c/13.jpg">
+<meta property="og:updated_time" content="2020-02-22T12:58:53.346Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="人升更新介绍#1.70.1 | 02&#x2F;22 简洁模式">
+<meta name="twitter:description" content="大家好~欢迎查阅本次更新日志。 v1.70.1的版本已经于2月14号发布了，修复了v1.70.0的数个问题。遇到一些奇怪的问题的用户可以升级下版本。 今年以来，「人升」陆续地登上了更多的应用市场：应用宝、华为应用市场、豌豆荚、360应用市场、UC等。 现在可以在上述的一些平台进行应用更新了。 （之前仅登录了酷安、小米、魅族、Google Play市场。华为应用市场的之前被侵权了，这次也靠着大家的举">
+<meta name="twitter:image" content="http://sarasarasa.net/post/c7d8419c/01.jpg">
+
+<link rel="canonical" href="http://sarasarasa.net/post/c7d8419c.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>人升更新介绍#1.70.1 | 02/22 简洁模式 | SaraSaraSa</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?bbe7ac5f435cef91b7c68c2e1aa4d39e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">SaraSaraSa</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">A Blog to Write about Everything</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://sarasarasa.net/post/c7d8419c.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="AyagiKei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SaraSaraSa">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          人升更新介绍#1.70.1 | 02/22 简洁模式
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-22 20:57:56 / 修改时间：20:58:53" itemprop="dateCreated datePublished" datetime="2020-02-22T20:57:56+08:00">2020-02-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/项目/" itemprop="url" rel="index">
+                    <span itemprop="name">项目</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/项目/开发日志/" itemprop="url" rel="index">
+                    <span itemprop="name">开发日志</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/项目/开发日志/人升/" itemprop="url" rel="index">
+                    <span itemprop="name">人升</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/post/c7d8419c.html#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="post/c7d8419c.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.9k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>大家好~欢迎查阅本次更新日志。</p>
+<p><strong>v1.70.1</strong>的版本已经于2月14号发布了，修复了v1.70.0的数个问题。遇到一些奇怪的问题的用户可以升级下版本。</p>
+<p>今年以来，「人升」陆续地登上了更多的应用市场：应用宝、华为应用市场、豌豆荚、360应用市场、UC等。</p>
+<p>现在可以在上述的一些平台进行应用更新了。</p>
+<p>（之前仅登录了酷安、小米、魅族、Google Play市场。华为应用市场的之前被侵权了，这次也靠着大家的举报和申诉成功拿回来了管理权）</p>
+<p><strong>本文会简单介绍各个新功能，以及其使用方法。</strong></p>
+<p>比如讲解了如何用坚果云做WebDAV备份。</p>
+<h2 id="总览"><a href="#总览" class="headerlink" title="总览"></a>总览</h2><ol>
+<li><p><strong>简洁模式</strong></p>
+</li>
+<li><p><strong>图片附件</strong></p>
+</li>
+<li><p><strong>WebDAV备份</strong></p>
+</li>
+<li><p><strong>自定义属性</strong></p>
+</li>
+<li><p><strong>更多改进</strong></p>
+<p>5.1 <strong>“撤销”功能优化</strong></p>
+<p>5.2 <strong>动态显示效果优化</strong></p>
+</li>
+<li><p><strong>详细更新日志</strong></p>
+</li>
+</ol>
+<a id="more"></a>
+<hr>
+<h2 id="简洁模式"><a href="#简洁模式" class="headerlink" title="简洁模式"></a>简洁模式</h2> <img src="/post/c7d8419c/01.jpg">
+<p>简洁模式的卡片会更加紧凑。</p>
+<p>每一屏能显示更多的代办卡片。</p>
+<p><strong>卡片上会有各种展示各种信息的图标：</strong></p>
+<p>备注、计数事项进度、子任务进度、经验值、金币、重复、提醒、开始/期限日期等。</p>
+<p>并且只会展示进度和日期的详细信息，而其他的只是提醒<strong>有无</strong>：</p>
+<p>比如有填写备注，那么只会展示一个备注图标。详细的备注信息可以点进事项详情里面查看。</p>
+<h3 id="启用方法"><a href="#启用方法" class="headerlink" title="启用方法"></a>启用方法</h3> <img src="/post/c7d8419c/02.jpg">
+<p>主页，点击侧边栏，点击进入“实验”页面，开启「简洁模式」。</p>
+<h3 id="后续计划"><a href="#后续计划" class="headerlink" title="后续计划"></a>后续计划</h3><ul>
+<li>实现用户可自定义展示的内容，比如展示金币数量。</li>
+</ul>
+<hr>
+<h2 id="图片附件"><a href="#图片附件" class="headerlink" title="图片附件"></a>图片附件</h2> <img src="/post/c7d8419c/03.jpg">
+<p>现在，你可以为你的每个待办事项贴上<strong>至多三张图片</strong>。</p>
+<p>并且，可以方便地在「事项详情」页面查看图片。</p>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3> <img src="/post/c7d8419c/04.jpg">
+<p>新建或是编辑待办事项的时候，点击右上角首个按钮，即可新增/删除图片附件。</p>
+<h3 id="其他细节"><a href="#其他细节" class="headerlink" title="其他细节"></a>其他细节</h3><ul>
+<li><p>1.70.0版本中，存在 Bug 会导致重复事项不能继承到图片附件。</p>
+<p><strong>1.70.1版本已经修复该问题。</strong></p>
+</li>
+</ul>
+<ul>
+<li><p>应用会将你的图片复制到<code>Android/media/net.sarasarasa.net/</code>，理论上也会被系统图库扫描到。</p>
+<p>可以使用系统图库应用/文件管理应用等进行管理。</p>
+</li>
+</ul>
+<hr>
+<h2 id="WebDAV备份"><a href="#WebDAV备份" class="headerlink" title="WebDAV备份"></a>WebDAV备份</h2> <img src="/post/c7d8419c/05.jpg">
+<p>备份功能现在新增了对 WebDAV 协议的支持。</p>
+<p>只要填写好了 WebDAV 地址、账号和密码之后，就能使用云备份和恢复功能了。</p>
+<p>因为一些原因，暂时还是只支持手动备份。</p>
+<p>并且由于恢复功能比较危险，也有用户因此损失过数据，<strong>该版本还新增了「撤销上次恢复」的功能。</strong></p>
+<h3 id="使用方法-1"><a href="#使用方法-1" class="headerlink" title="使用方法"></a>使用方法</h3><h4 id="获取-WebDAV-地址、账号、密码"><a href="#获取-WebDAV-地址、账号、密码" class="headerlink" title="获取 WebDAV 地址、账号、密码"></a>获取 WebDAV 地址、账号、密码</h4><p>理论上任意支持WebDAV协议的服务都可以使用。</p>
+<p><strong>国内可以使用坚果云：</strong></p>
+<ol>
+<li><p>首先打开坚果云官网，注册并且登录账号。</p>
+</li>
+<li><p>点击<strong>右上角用户名</strong>→<code>账号信息</code>。</p>
+</li>
+<li><p>切换至安全选项。</p>
+ <img src="/post/c7d8419c/06.png">
+</li>
+<li><p>在右边<code>第三方应用管理</code>处，点击新增应用，输入名称（如：LifeUp）</p>
+</li>
+<li><p>然后点击<code>生成密码</code>，保存此处的<code>服务器地址</code>、<code>账号</code>和<code>密码</code>等信息，然后进入应用内进行配置。</p>
+ <img src="/post/c7d8419c/07.png">
+</li>
+</ol>
+<h4 id="应用配置"><a href="#应用配置" class="headerlink" title="应用配置"></a>应用配置</h4><p><code>侧边栏</code>→<code>设置</code>→<code>数据备份/恢复/清除</code>→<code>WebDAV 配置</code>，填写地址、账号密码等信息，并且测试通过。</p>
+<p>随之就能在<code>备份</code>和<code>恢复</code>操作上选择 WebDAV 了。</p>
+<h3 id="其他细节-1"><a href="#其他细节-1" class="headerlink" title="其他细节"></a>其他细节</h3><ul>
+<li><p><strong>当服务器地址填写错误的时候，点击测试连接可能会导致应用崩溃。</strong></p>
+<p>这是个 bug ，下个版本会进行修复。</p>
+</li>
+<li><p><strong>备份会放在 WebDAV 服务器上的LifeUp文件夹内，请勿误操作删除。</strong></p>
+</li>
+</ul>
+<hr>
+<h2 id="自定义属性"><a href="#自定义属性" class="headerlink" title="自定义属性"></a>自定义属性</h2> <img src="/post/c7d8419c/08.jpg">
+<p>自定义属性一直有需求的反馈，这个版本也加上了自定义的功能。</p>
+<p>当然，因为增删属性会涉及到大量改动，暂时只支持修改，不支持新增。</p>
+<h3 id="使用方法-2"><a href="#使用方法-2" class="headerlink" title="使用方法"></a>使用方法</h3> <img src="/post/c7d8419c/09.jpg">
+<p><code>侧边栏</code>→<code>设置</code>→<code>自定义设置</code>→<code>自定义属性</code>。</p>
+<p>然后就可以修改任意一个属性的图标和文本定义，也有恢复默认的功能。</p>
+<p><strong>由于修改文本会影响到一些页面显示，建议还是使用两个字。</strong></p>
+<hr>
+<h2 id="更多改进"><a href="#更多改进" class="headerlink" title="更多改进"></a>更多改进</h2><h3 id="撤销功能优化"><a href="#撤销功能优化" class="headerlink" title="撤销功能优化"></a>撤销功能优化</h3> <img src="/post/c7d8419c/10.jpg">
+ <img src="/post/c7d8419c/11.jpg">
+<p>你现在可以凭自己的喜好，<strong>设置撤销弹窗的显示长短。</strong></p>
+<p>在历史页面，现在菜单也会显示<code>撤销</code>选项。</p>
+<p>并且，<strong>任意时间点的单次事项</strong>也都开放了<code>撤销</code>选项。（以前是仅当天事项可撤销）</p>
+<p><br></p>
+<h3 id="动态显示效果优化"><a href="#动态显示效果优化" class="headerlink" title="动态显示效果优化"></a>动态显示效果优化</h3> <img src="/post/c7d8419c/12.jpg">
+ <img src="/post/c7d8419c/13.jpg">
+<p>简单优化了动态的显示效果，下个版本还会继续修改时间的显示。</p>
+<hr>
+<h2 id="详细更新日志"><a href="#详细更新日志" class="headerlink" title="详细更新日志"></a>详细更新日志</h2><p><strong>1.70.1（2020/02/14）</strong></p>
+<p><strong>功能</strong></p>
+<ol>
+<li>可进行“撤销”对话框显示时长设置（事项设置内）</li>
+</ol>
+<p><strong>优化</strong></p>
+<ol>
+<li>历史页面的操作逻辑，现可在“菜单”中进行“撤销”操作</li>
+<li>更改撤销逻辑，现在可以撤销任意时间的单次事项</li>
+<li>优化动态的显示效果</li>
+</ol>
+<p><strong>修复</strong></p>
+<ol>
+<li>修复多个页面不该出现的附件按钮</li>
+<li>修复修改自定义属性的文本定义后，在新建事项页面不生效的问题</li>
+<li>修复图片附件不会被重复事项继承的问题</li>
+</ol>
+<p><strong>1.70.0（2020/02/11）</strong></p>
+<p><strong>功能</strong></p>
+<ol>
+<li>简洁模式：全新的简洁待办卡片</li>
+<li>图片附件：每个待办事项可以附上至多3张图片</li>
+<li>支持WebDAV云备份设置</li>
+<li>自定义属性的名称和图标</li>
+<li>现支持「撤销上次恢复」</li>
+</ol>
+<p><strong>优化</strong></p>
+<ol>
+<li>优化各个页面卡片显示</li>
+<li>恢复备份时，现在会对文件格式进行检测，并且可能会警告弹窗。</li>
+</ol>
+<p><strong>修复</strong></p>
+<ol>
+<li>修复桌面小部件的颜色不正确问题</li>
+<li>修复选中状态下，点击圆圈仍是完成事项的问题</li>
+</ol>
+<p><br></p>
+<p>扫码关注人升公众号，可以尽快收到更新介绍<del>而且我们说不定能赚点服务器钱:)</del></p>
+ 
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Android/" rel="tag"><i class="fa fa-tag"></i> Android</a>
+              <a href="/tags/开发日志/" rel="tag"><i class="fa fa-tag"></i> 开发日志</a>
+              <a href="/tags/更新介绍/" rel="tag"><i class="fa fa-tag"></i> 更新介绍</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/post/3651a964.html" rel="prev" title="人升更新介绍#1.69.0 | 01/02 子任务">
+      <i class="fa fa-chevron-left"></i> 人升更新介绍#1.69.0 | 01/02 子任务
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#总览"><span class="nav-number">1.</span> <span class="nav-text">总览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简洁模式"><span class="nav-number">2.</span> <span class="nav-text">简洁模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#启用方法"><span class="nav-number">2.1.</span> <span class="nav-text">启用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后续计划"><span class="nav-number">2.2.</span> <span class="nav-text">后续计划</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片附件"><span class="nav-number">3.</span> <span class="nav-text">图片附件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用方法"><span class="nav-number">3.1.</span> <span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他细节"><span class="nav-number">3.2.</span> <span class="nav-text">其他细节</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WebDAV备份"><span class="nav-number">4.</span> <span class="nav-text">WebDAV备份</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用方法-1"><span class="nav-number">4.1.</span> <span class="nav-text">使用方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#获取-WebDAV-地址、账号、密码"><span class="nav-number">4.1.1.</span> <span class="nav-text">获取 WebDAV 地址、账号、密码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用配置"><span class="nav-number">4.1.2.</span> <span class="nav-text">应用配置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他细节-1"><span class="nav-number">4.2.</span> <span class="nav-text">其他细节</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义属性"><span class="nav-number">5.</span> <span class="nav-text">自定义属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用方法-2"><span class="nav-number">5.1.</span> <span class="nav-text">使用方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更多改进"><span class="nav-number">6.</span> <span class="nav-text">更多改进</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#撤销功能优化"><span class="nav-number">6.1.</span> <span class="nav-text">撤销功能优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动态显示效果优化"><span class="nav-number">6.2.</span> <span class="nav-text">动态显示效果优化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#详细更新日志"><span class="nav-number">7.</span> <span class="nav-text">详细更新日志</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="AyagiKei"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">AyagiKei</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">55</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">52</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Ayagikei" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Ayagikei" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:AyagiKei@163.com" title="E-Mail → mailto:AyagiKei@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/people/kei-8/activities" title="ZhiHu → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;kei-8&#x2F;activities" rel="noopener" target="_blank"><i class="fa fa-fw fa-circle"></i>ZhiHu</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/ayagikei" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;ayagikei" rel="noopener" target="_blank"><i class="fa fa-fw fa-circle"></i>CSDN</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">AyagiKei</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">186k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5:10</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.7.1
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.6.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://AyagiKei.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: {page: {
+            url: "http://sarasarasa.net/post/c7d8419c.html",
+            identifier: "post/c7d8419c.html",
+            title: "人升更新介绍#1.70.1 | 02/22 简洁模式"
+          }
+        }
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://AyagiKei.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>
