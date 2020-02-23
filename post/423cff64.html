@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.7.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://sarasarasa.net').hostname,
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="这里会讲解事项相关的内容~ 目录（施工中） 建立事项1.1 设置介绍  ▌新建事项设置介绍重复频次艾宾浩斯记忆法的时间表 依次重复频率为当天→1天后→2天后→4天后→7天后→15天后→30天后 设置忽略日（每周几）  设置重复频率为每日之后，会出现一个设置忽略的按钮。 完成奖励 其实这是实现商店功能前的替代品。 设置奖励之后，「经验值弹窗」会展示奖励内容。 目标重复次数 仅适用于重复事项  设置你">
+<meta name="keywords" content="Android,开发日志">
+<meta property="og:type" content="article">
+<meta property="og:title" content="人升LifeUp常见问题-事项篇">
+<meta property="og:url" content="http://sarasarasa.net/post/423cff64.html">
+<meta property="og:site_name" content="SaraSaraSa">
+<meta property="og:description" content="这里会讲解事项相关的内容~ 目录（施工中） 建立事项1.1 设置介绍  ▌新建事项设置介绍重复频次艾宾浩斯记忆法的时间表 依次重复频率为当天→1天后→2天后→4天后→7天后→15天后→30天后 设置忽略日（每周几）  设置重复频率为每日之后，会出现一个设置忽略的按钮。 完成奖励 其实这是实现商店功能前的替代品。 设置奖励之后，「经验值弹窗」会展示奖励内容。 目标重复次数 仅适用于重复事项  设置你">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://sarasarasa.net/post/423cff64/task_07.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/423cff64/task_05.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/423cff64/task_06.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/423cff64/task_08.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/423cff64/task_11.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/423cff64/task_09.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/423cff64/task_10.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/423cff64/task_01.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/423cff64/task_02.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/423cff64/task_03.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/423cff64/task_04.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/423cff64/task_05.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/423cff64/task_06.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/423cff64/list_01.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/423cff64/list_02.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/423cff64/options_01.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/423cff64/options_02.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/423cff64/read_01.jpg">
+<meta property="og:image" content="http://sarasarasa.net/post/423cff64/read_02.jpg">
+<meta property="og:updated_time" content="2020-02-23T14:20:23.020Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="人升LifeUp常见问题-事项篇">
+<meta name="twitter:description" content="这里会讲解事项相关的内容~ 目录（施工中） 建立事项1.1 设置介绍  ▌新建事项设置介绍重复频次艾宾浩斯记忆法的时间表 依次重复频率为当天→1天后→2天后→4天后→7天后→15天后→30天后 设置忽略日（每周几）  设置重复频率为每日之后，会出现一个设置忽略的按钮。 完成奖励 其实这是实现商店功能前的替代品。 设置奖励之后，「经验值弹窗」会展示奖励内容。 目标重复次数 仅适用于重复事项  设置你">
+<meta name="twitter:image" content="http://sarasarasa.net/post/423cff64/task_07.jpg">
+
+<link rel="canonical" href="http://sarasarasa.net/post/423cff64.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>人升LifeUp常见问题-事项篇 | SaraSaraSa</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?bbe7ac5f435cef91b7c68c2e1aa4d39e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">SaraSaraSa</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">A Blog to Write about Everything</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://sarasarasa.net/post/423cff64.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="AyagiKei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SaraSaraSa">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          人升LifeUp常见问题-事项篇
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-23 22:11:50 / 修改时间：22:20:23" itemprop="dateCreated datePublished" datetime="2020-02-23T22:11:50+08:00">2020-02-23</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/项目/" itemprop="url" rel="index">
+                    <span itemprop="name">项目</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/项目/人升Q-A/" itemprop="url" rel="index">
+                    <span itemprop="name">人升Q&A</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/post/423cff64.html#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="post/423cff64.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>这里会讲解事项相关的内容~</p>
+<h1 id="目录（施工中）"><a href="#目录（施工中）" class="headerlink" title="目录（施工中）"></a>目录（施工中）</h1><ol>
+<li><a href="#建立事项">建立事项</a><br>1.1 <a href="#设置介绍">设置介绍</a></li>
+</ol>
+<h1 id="▌新建事项"><a href="#▌新建事项" class="headerlink" title="▌新建事项"></a>▌新建事项</h1><h2 id="设置介绍"><a href="#设置介绍" class="headerlink" title="设置介绍"></a>设置介绍</h2><h3 id="重复频次"><a href="#重复频次" class="headerlink" title="重复频次"></a>重复频次</h3><h4 id="艾宾浩斯记忆法的时间表"><a href="#艾宾浩斯记忆法的时间表" class="headerlink" title="艾宾浩斯记忆法的时间表"></a>艾宾浩斯记忆法的时间表</h4><img src="/post/423cff64/task_07.jpg">
+<p>依次重复频率为当天→1天后→2天后→4天后→7天后→15天后→30天后</p>
+<h4 id="设置忽略日（每周几）"><a href="#设置忽略日（每周几）" class="headerlink" title="设置忽略日（每周几）"></a>设置忽略日（每周几）</h4><img src="/post/423cff64/task_05.jpg">
+<img src="/post/423cff64/task_06.jpg">
+<p>设置重复频率为<code>每日</code>之后，会出现一个<code>设置忽略</code>的按钮。</p>
+<h3 id="完成奖励"><a href="#完成奖励" class="headerlink" title="完成奖励"></a>完成奖励</h3><img src="/post/423cff64/task_08.jpg">
+<p>其实这是实现<strong>商店功能</strong>前的替代品。</p>
+<p>设置奖励之后，「经验值弹窗」会展示奖励内容。</p>
+<h3 id="目标重复次数"><a href="#目标重复次数" class="headerlink" title="目标重复次数"></a>目标重复次数</h3><blockquote>
+<p>仅适用于重复事项</p>
+</blockquote>
+<p>设置你想进行重复事项的目标次数，达到目标后，事项会自动终止。</p>
+<img src="/post/423cff64/task_11.jpg">
+<p><strong>比如你想立个小目标，坚持30天学外语。</strong></p>
+<p>那么，可以设置一个重复频次为<code>每日</code>，目标重复次数为<code>30</code>的待办事项。</p>
+<p>进行该设置的事项，会在事项内容后面显示进度（当前次数/目标次数）</p>
+<h3 id="计数事项"><a href="#计数事项" class="headerlink" title="计数事项"></a>计数事项</h3><img src="/post/423cff64/task_09.jpg">
+<p>点击<code>事项类型</code>可以将事项设置为「计数事项」。</p>
+<img src="/post/423cff64/task_10.jpg">
+<p>计数事项会在你点击「完成小圆圈」的时候，弹框让你记录完成次数。<br>只有达到或超过了目标次数，才会标记为「完成状态」。<br>如果还没有达到，则会帮你记录目前进度。</p>
+<p><strong>使用场景：</strong></p>
+<ul>
+<li>每天背诵30个单词（重复频次设为<code>每日</code>，计数目标次数设为<code>30</code>）</li>
+<li>每周完成4次打扫卫生（重复频次设为<code>每日</code>，计数目标次数设为<code>30</code>）</li>
+</ul>
+<hr>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>人升的事项依靠着<strong>开始时间、期限时间和重复频次</strong>的配合，可以建立出各种复杂情况的待办事项。</p>
+<p><strong>以下是一些情况的例子：</strong></p>
+<h3 id="普通待办事项-琐事-购物清单"><a href="#普通待办事项-琐事-购物清单" class="headerlink" title="普通待办事项/琐事/购物清单"></a>普通待办事项/琐事/购物清单</h3> <img src="/post/423cff64/task_01.jpg">
+<p>这种类型的事项，不需要关心“期限时间”，重复频次默认也是“单次”。</p>
+<p>所以，<strong>不需要额外设置。只需要填好“待办事项”内容即可。</strong></p>
+<h3 id="习惯养成（每日早起、每周跑步等）"><a href="#习惯养成（每日早起、每周跑步等）" class="headerlink" title="习惯养成（每日早起、每周跑步等）"></a>习惯养成（每日早起、每周跑步等）</h3> <img src="/post/423cff64/task_02.jpg">
+<p>调整<strong>“重复频次”</strong>为相应的“每日”或者“每周”后，再根据情况看要不要调整<strong>“期限日期”</strong>。</p>
+<p>当“重复频次”不为“单次”的情况下，期限日期会默认为“当天”。</p>
+<p>对于“每日”事项来说，这样设置一般是合理的。</p>
+<p>而对于重复频次大于“每日”的事项，要根据具体情况调整期限：</p>
+<blockquote>
+<ol>
+<li>比如1号的时候建立“每周”事项，不改期限日期。那么下一次的事项的时间会在2-8号。</li>
+<li>如果你调整期限日期到2号。那么下一次的事项时间就会在3-9号。（相当于延后一天）</li>
+</ol>
+</blockquote>
+<h3 id="每周一-每周日"><a href="#每周一-每周日" class="headerlink" title="每周一-每周日"></a>每周一-每周日</h3> <img src="/post/423cff64/task_03.jpg">
+<p>通过期限时间和重复频次的配合，<strong>你能轻松地设置出“星期一”到“星期日”的每周事项。</strong></p>
+<p><strong>只要设置重复频次为“每周”，然后期限时间设置为“周末”即可~。</strong></p>
+<p>人升弱化了开始时间的概念，在绝大多的时候可以让相应的开始时间自动计算得出。</p>
+<h3 id="当天23-00-第二天2-00"><a href="#当天23-00-第二天2-00" class="headerlink" title="当天23:00-第二天2:00"></a>当天23:00-第二天2:00</h3> <img src="/post/423cff64/task_04.jpg">
+<p>通过开始时间、期限时间和重复频次的配合，你能轻松地设置出情况很复杂的待办事项。</p>
+<p>只需要设置<strong>开始时间为具体的“当天23：00”</strong>，期限时间为<strong>具体的“第二天2：00”</strong>，<strong>重复频次为“每日”</strong>即可。</p>
+<h3 id="指定每周几（仅工作日、仅周末等）"><a href="#指定每周几（仅工作日、仅周末等）" class="headerlink" title="指定每周几（仅工作日、仅周末等）"></a>指定每周几（仅工作日、仅周末等）</h3> <img src="/post/423cff64/task_05.jpg">
+ <img src="/post/423cff64/task_06.jpg">
+<p>设置“重复频次”为“每日”后，在“重复频次”的输入框右侧点击“设置忽略”。然后就能指定每周几重复了。</p>
+<hr>
+<h1 id="▌清单管理"><a href="#▌清单管理" class="headerlink" title="▌清单管理"></a>▌清单管理</h1><h2 id="清单分类"><a href="#清单分类" class="headerlink" title="清单分类"></a>清单分类</h2> <img src="/post/423cff64/list_01.jpg" title="清单入口">
+<p>在<code>告示板</code>界面右上角，可以点击第一个按钮（即<code>清单</code>按钮），进入选择清单界面。</p>
+ <img src="/post/423cff64/list_02.jpg" title="点击列表项目右侧的按钮有额外菜单">
+<p><strong>在这里可以：</strong></p>
+<ul>
+<li><p><strong>切换清单</strong></p>
+<p>直接点击列表项即可</p>
+</li>
+<li><p><strong>新建/重命名清单</strong></p>
+<p>所有清单不支持重命名</p>
+</li>
+<li><p><strong>删除清单</strong></p>
+<p>只有在清单为空的时候，才能进行删除操作</p>
+</li>
+</ul>
+<p><code>默认清单</code>不可删除，但可以重命名。</p>
+<p><code>所有清单</code>会显示所有清单的待办事项，该清单也是不可删除的，并且不可重命名。</p>
+<h2 id="筛选排序"><a href="#筛选排序" class="headerlink" title="筛选排序"></a>筛选排序</h2> <img src="/post/423cff64/options_01.jpg" title="更多选项">
+<p>在<code>告示板</code>界面右上角，点击最右侧的按钮（即<code>更多选项</code>按钮），可以进行<code>筛选</code>和<code>排序</code>设置。</p>
+ <img src="/post/423cff64/options_02.jpg" title="时间筛选设置">
+<p>如果<strong>你偏好于隐藏未开始的事项</strong>，可以在这里选择<code>显示今天事项</code>。</p>
+<p>这个选项会只显示<strong>今天已经开始或将于今天某个时刻开始</strong>的事项。</p>
+<h2 id="自定义排序"><a href="#自定义排序" class="headerlink" title="自定义排序"></a>自定义排序</h2><p>长按即可拖动待办事项卡片进行排序。</p>
+<hr>
+<h1 id="▌稍后阅读"><a href="#▌稍后阅读" class="headerlink" title="▌稍后阅读"></a>▌稍后阅读</h1> <img src="/post/423cff64/read_01.jpg" title="在其他应用选择“其他”分享">
+ <img src="/post/423cff64/read_02.jpg" title="快速建立「稍后阅读」事项">
+<p><strong>《人升》可以接受其他应用分享过来的信息，用以快速建立「稍后阅读」事项。</strong>并且默认会勾选“学识”属性。</p>
+<p><strong>支持大部分提供分享功能的应用：</strong>如“微博”、“知乎”、“浏览器”、“Twitter”等。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Android/" rel="tag"><i class="fa fa-tag"></i> Android</a>
+              <a href="/tags/开发日志/" rel="tag"><i class="fa fa-tag"></i> 开发日志</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/post/c7d8419c.html" rel="prev" title="人升更新介绍#1.70.1 | 02/22 简洁模式">
+      <i class="fa fa-chevron-left"></i> 人升更新介绍#1.70.1 | 02/22 简洁模式
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#目录（施工中）"><span class="nav-number">1.</span> <span class="nav-text">目录（施工中）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#▌新建事项"><span class="nav-number">2.</span> <span class="nav-text">▌新建事项</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#设置介绍"><span class="nav-number">2.1.</span> <span class="nav-text">设置介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#重复频次"><span class="nav-number">2.1.1.</span> <span class="nav-text">重复频次</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#艾宾浩斯记忆法的时间表"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">艾宾浩斯记忆法的时间表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置忽略日（每周几）"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">设置忽略日（每周几）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#完成奖励"><span class="nav-number">2.1.2.</span> <span class="nav-text">完成奖励</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目标重复次数"><span class="nav-number">2.1.3.</span> <span class="nav-text">目标重复次数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计数事项"><span class="nav-number">2.1.4.</span> <span class="nav-text">计数事项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例子"><span class="nav-number">2.2.</span> <span class="nav-text">例子</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#普通待办事项-琐事-购物清单"><span class="nav-number">2.2.1.</span> <span class="nav-text">普通待办事项/琐事/购物清单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#习惯养成（每日早起、每周跑步等）"><span class="nav-number">2.2.2.</span> <span class="nav-text">习惯养成（每日早起、每周跑步等）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#每周一-每周日"><span class="nav-number">2.2.3.</span> <span class="nav-text">每周一-每周日</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#当天23-00-第二天2-00"><span class="nav-number">2.2.4.</span> <span class="nav-text">当天23:00-第二天2:00</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指定每周几（仅工作日、仅周末等）"><span class="nav-number">2.2.5.</span> <span class="nav-text">指定每周几（仅工作日、仅周末等）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#▌清单管理"><span class="nav-number">3.</span> <span class="nav-text">▌清单管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#清单分类"><span class="nav-number">3.1.</span> <span class="nav-text">清单分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#筛选排序"><span class="nav-number">3.2.</span> <span class="nav-text">筛选排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义排序"><span class="nav-number">3.3.</span> <span class="nav-text">自定义排序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#▌稍后阅读"><span class="nav-number">4.</span> <span class="nav-text">▌稍后阅读</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="AyagiKei"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">AyagiKei</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">56</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">52</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Ayagikei" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Ayagikei" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:AyagiKei@163.com" title="E-Mail → mailto:AyagiKei@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/people/kei-8/activities" title="ZhiHu → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;kei-8&#x2F;activities" rel="noopener" target="_blank"><i class="fa fa-fw fa-circle"></i>ZhiHu</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/ayagikei" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;ayagikei" rel="noopener" target="_blank"><i class="fa fa-fw fa-circle"></i>CSDN</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">AyagiKei</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">187k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5:12</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.7.1
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.6.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://AyagiKei.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: {page: {
+            url: "http://sarasarasa.net/post/423cff64.html",
+            identifier: "post/423cff64.html",
+            title: "人升LifeUp常见问题-事项篇"
+          }
+        }
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://AyagiKei.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>
