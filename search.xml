@@ -4,7 +4,36 @@
     <title>LifeUp Release Log</title>
     <url>/post/e5dce7c7.html</url>
     <content><![CDATA[<h2 id="Known-Bug"><a href="#Known-Bug" class="headerlink" title="Known Bug"></a><del>Known Bug</del></h2><p><br></p>
-<h2 id="Release-Log"><a href="#Release-Log" class="headerlink" title="Release Log"></a>Release Log</h2><p><strong>v1.70.3 (Released at 2020/03/05)</strong></p>
+<h2 id="Release-Log"><a href="#Release-Log" class="headerlink" title="Release Log"></a>Release Log</h2><p><strong>v1.70.5 (Released at 2020/03/06)</strong></p>
+<p><strong>Fixed：</strong></p>
+<ul>
+<li>To-Do Card keep loading when change theme color or enable/disable night mode</li>
+</ul>
+<p><strong>v1.70.4 (Released at 2020/03/05)</strong></p>
+<p><strong>Improvements：</strong></p>
+<ul>
+<li>Shop Page will show coin number when there is no items</li>
+<li>Can access the Coin Detail Page by clicking the coin number in the Shop Page</li>
+<li>Improve text format of the app widget in English</li>
+<li>Can access the Task Detail Page by clicking the task on the App Widget</li>
+</ul>
+<p><strong>Fixed：</strong></p>
+<ul>
+<li>Team activity incorrect showing style</li>
+</ul>
+<p><strong>v1.70.3 (Released at 2020/03/05)</strong></p>
+<p><strong>Improvements:</strong></p>
+<ul>
+<li>Shop Page will now show coin number when there is no items</li>
+<li>Click the coin number in the Shop Page to enter Coin Detail Page now</li>
+<li>Improve the English text format on the App Widget</li>
+<li>Click the App Widget item to enter Task Detail Page</li>
+</ul>
+<p><strong>Fixed：</strong></p>
+<ul>
+<li>Fixed when Filter Today, the footer hint “xx task(s) is not yet started” not showing after completing task</li>
+</ul>
+<p><strong>v1.70.3 (Released at 2020/03/05)</strong></p>
 <p><strong>Important Fixes:</strong></p>
 <ul>
 <li>Fixes bugs about input coin number</li>
@@ -36,7 +65,7 @@
 <li>Improve History Page UI style</li>
 <li>Add “Lost Calendar Write/Read Permission” Dialog when enabling System Calendar Reminder and not granted permissions</li>
 </ul>
-<p><strong>Fixes：</strong></p>
+<p><strong>Fixed：</strong></p>
 <ul>
 <li>Fixes bugs about Count Task in compact mode</li>
 <li>Fixes bugs about repeat tasks</li>
@@ -794,6 +823,18 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>2020/03/05</td>
+<td>（微信）Jason.</td>
+<td>支持一下！继续加油</td>
+<td>6.00</td>
+</tr>
+<tr>
+<td>2020/03/05</td>
+<td>（微信）腊月不知寒冬暖</td>
+<td>期待(o^^o)</td>
+<td>4.00</td>
+</tr>
 <tr>
 <td>2020/03/05</td>
 <td>（微信）粽子今天高兴吗？</td>
@@ -1854,10 +1895,10 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>Java</tag>
-        <tag>框架</tag>
         <tag>后端</tag>
         <tag>SpringBoot2</tag>
+        <tag>Java</tag>
+        <tag>框架</tag>
       </tags>
   </entry>
   <entry>
@@ -2390,7 +2431,26 @@
   <entry>
     <title>人升Lifeup 更新日志</title>
     <url>/post/a889432c.html</url>
-    <content><![CDATA[<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p><strong>1.70.3（2020/03/05）</strong></p>
+    <content><![CDATA[<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p><strong>1.70.5（2020/03/06）</strong></p>
+<p><strong>修复：</strong></p>
+<ol>
+<li>修复某些情况下，待办事项卡片显示持续加载中的问题。</li>
+</ol>
+<p><strong>1.70.4（2020/03/05）</strong></p>
+<p><strong>优化：</strong></p>
+<ul>
+<li>没有商品时，商店页面现在也会显示金币数</li>
+<li>点击商店页面的金币数，现在能跳转「金币收支详情」页面</li>
+<li>修改仓库为空时的文案</li>
+<li>优化在英文下，桌面小部件的文本格式显示</li>
+<li>重新实现点击桌面小部件事项，跳转事项详情页</li>
+</ul>
+<p><strong>修复：</strong></p>
+<ul>
+<li>修复当筛选为“今天”时，完成事项后可能不会出现“还有x个事项未开始”的问题</li>
+<li>修复社区动态显示不正常的问题</li>
+</ul>
+<p><strong>1.70.3（2020/03/05）</strong></p>
 <p><strong>修复：</strong></p>
 <ul>
 <li>修复手动输入金币数量无效的问题</li>
@@ -5004,10 +5064,10 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>Quartz</tag>
-        <tag>实例</tag>
         <tag>Java</tag>
         <tag>框架</tag>
+        <tag>Quartz</tag>
+        <tag>实例</tag>
       </tags>
   </entry>
   <entry>
