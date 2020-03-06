@@ -3,7 +3,12 @@
   <entry>
     <title>LifeUp Release Log</title>
     <url>/post/e5dce7c7.html</url>
-    <content><![CDATA[<h2 id="Known-Bug"><a href="#Known-Bug" class="headerlink" title="Known Bug"></a><del>Known Bug</del></h2><p><br></p>
+    <content><![CDATA[<h2 id="Known-Bug"><a href="#Known-Bug" class="headerlink" title="Known Bug"></a>Known Bug</h2><ul>
+<li><p><strong>“Copy” cannot copy sub-tasks</strong></p>
+<p>It will be fixed next version</p>
+</li>
+</ul>
+<p><br></p>
 <h2 id="Release-Log"><a href="#Release-Log" class="headerlink" title="Release Log"></a>Release Log</h2><p><strong>v1.70.5 (Released at 2020/03/06)</strong></p>
 <p><strong>Fixed：</strong></p>
 <ul>
@@ -107,8 +112,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -824,6 +829,30 @@
 </thead>
 <tbody>
 <tr>
+<td>2020/03/06</td>
+<td>（微信）酷安-概念1337</td>
+<td>给有心回复的作者(((о´∀<code>о)ノ♡ヽ(о´∀</code>о</td>
+<td>1.23</td>
+</tr>
+<tr>
+<td>2020/03/06</td>
+<td>（微信）酷安-概念1337</td>
+<td>ｸﾞｯ!(๑•̀ㅂ•́)و✧</td>
+<td>3.21</td>
+</tr>
+<tr>
+<td>2020/03/06</td>
+<td>（微信）酷安-概念1337</td>
+<td>游戏人升咯~</td>
+<td>3.88</td>
+</tr>
+<tr>
+<td>2020/03/06</td>
+<td>*阳杭</td>
+<td></td>
+<td>1.80</td>
+</tr>
+<tr>
 <td>2020/03/05</td>
 <td>（微信）Jason.</td>
 <td>支持一下！继续加油</td>
@@ -1362,8 +1391,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -1390,8 +1419,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -1721,8 +1750,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -1740,8 +1769,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -1789,8 +1818,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -1824,8 +1853,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -1895,10 +1924,10 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>后端</tag>
-        <tag>SpringBoot2</tag>
         <tag>Java</tag>
         <tag>框架</tag>
+        <tag>后端</tag>
+        <tag>SpringBoot2</tag>
       </tags>
   </entry>
   <entry>
@@ -2085,8 +2114,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -3142,7 +3171,9 @@
   <entry>
     <title>人升LifeUp 常见问题</title>
     <url>/post/157a032e.html</url>
-    <content><![CDATA[<h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><h2 id="因为1-70-2问题较多，请更新至1-70-3"><a href="#因为1-70-2问题较多，请更新至1-70-3" class="headerlink" title="因为1.70.2问题较多，请更新至1.70.3"></a>因为1.70.2问题较多，请更新至1.70.3</h2><p>存在如不能输入金币数量，桌面小部件不能正常完成事项的问题。</p>
+    <content><![CDATA[<h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><h2 id="1-70-5-已知问题"><a href="#1-70-5-已知问题" class="headerlink" title="1.70.5 已知问题"></a>1.70.5 已知问题</h2><ul>
+<li>复制不能成功复制子任务</li>
+</ul>
 <p><br></p>
 <h2 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h2><p>应用图标感觉需要一波更新，但我们这边暂时没什么想法<em>(:з」∠)</em></p>
 <p>如果你有意贡献图标/想法的话，欢迎邮件联系~</p>
@@ -3703,8 +3734,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
         <tag>调试</tag>
       </tags>
   </entry>
@@ -3931,9 +3962,9 @@
         <category>记录</category>
       </categories>
       <tags>
+        <tag>技术</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
-        <tag>技术</tag>
         <tag>DigitalOcean</tag>
       </tags>
   </entry>
@@ -4510,8 +4541,8 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>云服务器</tag>
         <tag>技术</tag>
+        <tag>云服务器</tag>
         <tag>游戏</tag>
         <tag>记录</tag>
         <tag>linux</tag>
@@ -4875,10 +4906,10 @@
         <category>技术</category>
       </categories>
       <tags>
+        <tag>技术</tag>
         <tag>Android</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
-        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -5064,10 +5095,10 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>Java</tag>
-        <tag>框架</tag>
         <tag>Quartz</tag>
         <tag>实例</tag>
+        <tag>Java</tag>
+        <tag>框架</tag>
       </tags>
   </entry>
   <entry>
