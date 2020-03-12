@@ -4,7 +4,7 @@
     <title>LifeUp Release Log</title>
     <url>/post/e5dce7c7.html</url>
     <content><![CDATA[<h2 id="Known-Bug"><a href="#Known-Bug" class="headerlink" title="Known Bug"></a>Known Bug</h2><ul>
-<li><p><strong>“Copy” cannot copy sub-tasks</strong></p>
+<li><p><strong>Task in unstarted state cannot change to started state showing if not closing the app/changing the list.</strong></p>
 <p>It will be fixed next version</p>
 </li>
 </ul>
@@ -126,8 +126,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -843,6 +843,18 @@
 </thead>
 <tbody>
 <tr>
+<td>2020/03/12</td>
+<td>*国鸿</td>
+<td>学生党微小的支持</td>
+<td>3.00</td>
+</tr>
+<tr>
+<td>2020/03/12</td>
+<td>*晓烽</td>
+<td></td>
+<td>2.00</td>
+</tr>
+<tr>
 <td>2020/03/11</td>
 <td>*峰</td>
 <td></td>
@@ -1429,8 +1441,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -1457,8 +1469,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -1788,8 +1800,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -1807,8 +1819,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -1856,8 +1868,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -1891,8 +1903,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -1962,10 +1974,10 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>Java</tag>
-        <tag>框架</tag>
         <tag>后端</tag>
         <tag>SpringBoot2</tag>
+        <tag>Java</tag>
+        <tag>框架</tag>
       </tags>
   </entry>
   <entry>
@@ -2152,8 +2164,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -2498,9 +2510,10 @@
   <entry>
     <title>人升LifeUp 常见问题</title>
     <url>/post/157a032e.html</url>
-    <content><![CDATA[<h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><h2 id="1-70-5-已知问题"><a href="#1-70-5-已知问题" class="headerlink" title="1.70.5 已知问题"></a>1.70.5 已知问题</h2><ul>
-<li>复制不能成功复制子任务</li>
-<li>批量移动多个事项到其他清单的时候，可能偶现崩溃</li>
+    <content><![CDATA[<h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><h2 id="1-70-6-已知问题"><a href="#1-70-6-已知问题" class="headerlink" title="1.70.6 已知问题"></a>1.70.6 已知问题</h2><ul>
+<li><p><strong>在一直开着应用的情况下，当未开始事项达到了“开始”时间后，可能仍显示“未开始”状态，但是可以点击“完成”。</strong></p>
+<p>临时解决方案：切换清单触发刷新/重启应用</p>
+</li>
 </ul>
 <p><br></p>
 <h2 id="下个版本计划"><a href="#下个版本计划" class="headerlink" title="下个版本计划"></a>下个版本计划</h2><p><strong>计划中：</strong></p>
@@ -3797,8 +3810,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
         <tag>调试</tag>
       </tags>
   </entry>
@@ -4025,9 +4038,9 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
+        <tag>技术</tag>
         <tag>DigitalOcean</tag>
       </tags>
   </entry>
@@ -4445,9 +4458,9 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>系统</tag>
-        <tag>linux</tag>
         <tag>Ubuntu</tag>
+        <tag>linux</tag>
+        <tag>系统</tag>
       </tags>
   </entry>
   <entry>
@@ -4604,10 +4617,10 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>云服务器</tag>
-        <tag>记录</tag>
+        <tag>技术</tag>
         <tag>游戏</tag>
+        <tag>记录</tag>
         <tag>linux</tag>
       </tags>
   </entry>
@@ -4897,9 +4910,9 @@
         <category>文化</category>
       </categories>
       <tags>
+        <tag>游戏</tag>
         <tag>Portal</tag>
         <tag>Valve</tag>
-        <tag>游戏</tag>
         <tag>文化</tag>
         <tag>机制</tag>
       </tags>
@@ -4969,10 +4982,10 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -5158,10 +5171,10 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>Quartz</tag>
-        <tag>实例</tag>
         <tag>Java</tag>
         <tag>框架</tag>
+        <tag>Quartz</tag>
+        <tag>实例</tag>
       </tags>
   </entry>
   <entry>
