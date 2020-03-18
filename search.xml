@@ -4,7 +4,17 @@
     <title>LifeUp Release Log</title>
     <url>/post/e5dce7c7.html</url>
     <content><![CDATA[<h2 id="Known-Bug"><a href="#Known-Bug" class="headerlink" title="Known Bug"></a>Known Bug</h2><p><br></p>
-<h2 id="Release-Log"><a href="#Release-Log" class="headerlink" title="Release Log"></a>Release Log</h2><p><strong>v1.71.0 (Released at 2020/03/13)</strong></p>
+<h2 id="Release-Log"><a href="#Release-Log" class="headerlink" title="Release Log"></a>Release Log</h2><p><strong>v1.71.1 (Released at 2020/03/17)</strong></p>
+<p><strong>Improvement:</strong></p>
+<ul>
+<li>Better progress bar animation in task page</li>
+</ul>
+<p><strong>Fixed:</strong></p>
+<ul>
+<li>Fixed a bug that may cause crash when launching application on some devices</li>
+<li>Fixed a bug about selecting photos</li>
+</ul>
+<p><strong>v1.71.0 (Released at 2020/03/13)</strong></p>
 <p><strong>Features:</strong></p>
 <ul>
 <li><p>Feelings Feature</p>
@@ -138,8 +148,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -855,6 +865,24 @@
 </thead>
 <tbody>
 <tr>
+<td>2020/03/18</td>
+<td>（微信）Xm</td>
+<td>半睡不醒的考研党表示棒极了XD</td>
+<td>10.00</td>
+</tr>
+<tr>
+<td>2020/03/18</td>
+<td>*菁</td>
+<td>学生，不多，加油</td>
+<td>2.00</td>
+</tr>
+<tr>
+<td>2020/03/17</td>
+<td>*婷</td>
+<td>希望一直更新下去，谢谢！很喜欢</td>
+<td>6.00</td>
+</tr>
+<tr>
 <td>2020/03/17</td>
 <td>*丽豪</td>
 <td>非常感谢相遇!功能又细又强大!爱您!</td>
@@ -1501,8 +1529,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -1529,8 +1557,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -1860,8 +1888,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -1879,8 +1907,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -1928,8 +1956,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -1963,8 +1991,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -2224,8 +2252,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -2570,7 +2598,17 @@
   <entry>
     <title>人升Lifeup 更新日志</title>
     <url>/post/a889432c.html</url>
-    <content><![CDATA[<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p><strong>1.71.0（2020/03/13）</strong></p>
+    <content><![CDATA[<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p><strong>1.71.1（2020/03/17）</strong></p>
+<p><strong>优化：</strong></p>
+<ul>
+<li>优化待办事项顶部卡片的进度条动画效果</li>
+</ul>
+<p><strong>修复：</strong></p>
+<ul>
+<li>修复部分用户会启动闪退的问题（感谢酷安 @第六代魁拔 帮忙验证）</li>
+<li>选择图片增加权限判断</li>
+</ul>
+<p><strong>1.71.0（2020/03/13）</strong></p>
 <p><strong>功能：</strong></p>
 <ul>
 <li><p>感想功能：记录完成本地事项的心得体会</p>
@@ -3872,8 +3910,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
         <tag>调试</tag>
       </tags>
   </entry>
@@ -4100,9 +4138,9 @@
         <category>记录</category>
       </categories>
       <tags>
+        <tag>技术</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
-        <tag>技术</tag>
         <tag>DigitalOcean</tag>
       </tags>
   </entry>
@@ -4520,9 +4558,9 @@
         <category>Linux</category>
       </categories>
       <tags>
+        <tag>系统</tag>
         <tag>Ubuntu</tag>
         <tag>linux</tag>
-        <tag>系统</tag>
       </tags>
   </entry>
   <entry>
@@ -4679,8 +4717,8 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>云服务器</tag>
         <tag>技术</tag>
+        <tag>云服务器</tag>
         <tag>游戏</tag>
         <tag>记录</tag>
         <tag>linux</tag>
@@ -5044,10 +5082,10 @@
         <category>技术</category>
       </categories>
       <tags>
+        <tag>技术</tag>
         <tag>Android</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
-        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
