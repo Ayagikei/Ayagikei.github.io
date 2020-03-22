@@ -148,8 +148,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -1571,8 +1571,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -1599,8 +1599,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -1930,8 +1930,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -1949,8 +1949,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -1998,8 +1998,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -2033,8 +2033,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -2294,8 +2294,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -3393,7 +3393,12 @@
   <entry>
     <title>人升LifeUp 常见问题</title>
     <url>/post/157a032e.html</url>
-    <content><![CDATA[<h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><h2 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h2><p>应用图标感觉需要一波更新，但我们这边暂时没什么想法<em>(:з」∠)</em></p>
+    <content><![CDATA[<h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><h2 id="更新速度减缓"><a href="#更新速度减缓" class="headerlink" title="更新速度减缓"></a>更新速度减缓</h2><p>因为近期我们两位开发者都需要赶毕业设计/论文进度😅</p>
+<p>所以这段时间的更新速度会稍微减缓。</p>
+<p>后续的一些更新目前计划是关注于增强“游戏化”方面，还有实现之前采纳的用户建议。</p>
+<p>也欢迎大家继续提出各种建议~</p>
+<p><br></p>
+<h2 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h2><p>应用图标感觉需要一波更新，但我们这边暂时没什么想法<em>(:з」∠)</em></p>
 <p>如果你有意贡献图标/想法的话，欢迎邮件联系~</p>
 <p><br></p>
 <h2 id="使用指南（施工中）"><a href="#使用指南（施工中）" class="headerlink" title="使用指南（施工中）"></a>使用指南（施工中）</h2><p><strong><a href="http://sarasarasa.net/post/423cff64.html">事项篇</a></strong></p>
@@ -3952,8 +3957,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
         <tag>调试</tag>
       </tags>
   </entry>
@@ -4180,9 +4185,9 @@
         <category>记录</category>
       </categories>
       <tags>
+        <tag>技术</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
-        <tag>技术</tag>
         <tag>DigitalOcean</tag>
       </tags>
   </entry>
@@ -4759,8 +4764,8 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>云服务器</tag>
         <tag>技术</tag>
+        <tag>云服务器</tag>
         <tag>游戏</tag>
         <tag>记录</tag>
         <tag>linux</tag>
@@ -5124,10 +5129,10 @@
         <category>技术</category>
       </categories>
       <tags>
+        <tag>技术</tag>
         <tag>Android</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
-        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
