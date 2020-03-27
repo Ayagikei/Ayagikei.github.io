@@ -1,9 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Android DialogFragment 相关代码段</title>
+    <url>/post/a542da69.html</url>
+    <content><![CDATA[<h1 id="设置软键盘弹出，自动上移"><a href="#设置软键盘弹出，自动上移" class="headerlink" title="设置软键盘弹出，自动上移"></a>设置软键盘弹出，自动上移</h1><figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreateView</span><span class="params">(inflater: <span class="type">LayoutInflater</span>, container: <span class="type">ViewGroup</span>?, savedInstanceState: <span class="type">Bundle</span>?)</span></span>: View? &#123;</span><br><span class="line">	...</span><br><span class="line">    <span class="comment">// 设置有软键盘时，窗口自动上移</span></span><br><span class="line">    dialog?.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="设置全屏显示"><a href="#设置全屏显示" class="headerlink" title="设置全屏显示"></a>设置全屏显示</h1><figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreate</span><span class="params">(savedInstanceState: <span class="type">Bundle</span>?)</span></span> &#123;</span><br><span class="line">    <span class="keyword">super</span>.onCreate(savedInstanceState)</span><br><span class="line">    setStyle(STYLE_NORMAL, R.style.Dialog_FullScreen)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">name</span>=<span class="string">"Dialog.FullScreen"</span> <span class="attr">parent</span>=<span class="string">"Theme.AppCompat.Dialog"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">item</span> <span class="attr">name</span>=<span class="string">"android:windowNoTitle"</span>&gt;</span>true<span class="tag">&lt;/<span class="name">item</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">item</span> <span class="attr">name</span>=<span class="string">"android:windowBackground"</span>&gt;</span>@color/transparent<span class="tag">&lt;/<span class="name">item</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">item</span> <span class="attr">name</span>=<span class="string">"android:windowIsFloating"</span>&gt;</span>false<span class="tag">&lt;/<span class="name">item</span>&gt;</span></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="子Fragment"><a href="#子Fragment" class="headerlink" title="子Fragment"></a>子Fragment</h1><figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">replace</span><span class="params">(fragment: <span class="type">androidx</span>.<span class="type">fragment</span>.<span class="type">app</span>.<span class="type">Fragment</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> transaction = childFragmentManager.beginTransaction()</span><br><span class="line">    transaction.replace(R.id.fragment, fragment)</span><br><span class="line">    transaction.commit()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Android</category>
+        <category>Code-Snippet</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>Android</tag>
+        <tag>Code-Snippet</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android动画相关代码段</title>
+    <url>/post/a2321477.html</url>
+    <content><![CDATA[<h1 id="ValueAnimator-实现TextView打字机效果"><a href="#ValueAnimator-实现TextView打字机效果" class="headerlink" title="ValueAnimator 实现TextView打字机效果"></a>ValueAnimator 实现TextView打字机效果</h1><figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> TextView.<span class="title">startTypeAnimation</span><span class="params">(duration: <span class="type">Long</span> = <span class="number">300</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> originText = <span class="keyword">this</span>.text</span><br><span class="line">    <span class="keyword">val</span> valueAnimator = ValueAnimator.ofInt(<span class="number">0</span>, originText.length)</span><br><span class="line">    valueAnimator.duration = duration</span><br><span class="line">    valueAnimator.interpolator = LinearInterpolator()</span><br><span class="line">    valueAnimator.addUpdateListener &#123; animation -&gt;</span><br><span class="line">        <span class="keyword">val</span> length = animation.animatedValue <span class="keyword">as</span> <span class="built_in">Int</span></span><br><span class="line">        <span class="keyword">this</span>.text = originText.subSequence(<span class="number">0</span>, length)</span><br><span class="line">    &#125;</span><br><span class="line">    valueAnimator.start()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="SpringInterpolator-简易的弹性插值器"><a href="#SpringInterpolator-简易的弹性插值器" class="headerlink" title="SpringInterpolator 简易的弹性插值器"></a>SpringInterpolator 简易的弹性插值器</h1><figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 弹性插值器</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SpringInterpolator</span></span>(<span class="keyword">private</span> <span class="keyword">val</span> factor: <span class="built_in">Float</span>) : Interpolator &#123;</span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">getInterpolation</span><span class="params">(input: <span class="type">Float</span>)</span></span>: <span class="built_in">Float</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> (<span class="number">2.0</span>.pow((<span class="number">-10</span> * input).toDouble()) * sin((input - factor / <span class="number">4</span>) * (<span class="number">2</span> * Math.PI) / factor) + <span class="number">1</span>).toFloat()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h1 id="XML-底部弹出动画"><a href="#XML-底部弹出动画" class="headerlink" title="XML 底部弹出动画"></a>XML 底部弹出动画</h1><figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">&lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"utf-8"</span>?&gt;</span><br><span class="line">&lt;translate xmlns:android=<span class="string">"http://schemas.android.com/apk/res/android"</span></span><br><span class="line">    android:duration=<span class="string">"800"</span></span><br><span class="line">    android:fromYDelta=<span class="string">"100%"</span></span><br><span class="line">    android:toYDelta=<span class="string">"0"</span> /&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="底部弹出-弹性插值器用法"><a href="#底部弹出-弹性插值器用法" class="headerlink" title="底部弹出+弹性插值器用法"></a>底部弹出+弹性插值器用法</h1><figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> View.<span class="title">startTranslateInSpringAnimation</span><span class="params">(factor: <span class="type">Float</span> = <span class="number">0.8</span>f)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> enterAnimation = AnimationUtils.loadAnimation(context, R.anim.translate_in_bottom)</span><br><span class="line">    enterAnimation.interpolator = SpringInterpolator(factor)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.post &#123;</span><br><span class="line">        <span class="keyword">this</span>.startAnimation(enterAnimation)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="XML-AnimationSet-底部渐显弹出"><a href="#XML-AnimationSet-底部渐显弹出" class="headerlink" title="XML AnimationSet  底部渐显弹出"></a>XML AnimationSet  底部渐显弹出</h1><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">set</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:duration</span>=<span class="string">"600"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">alpha</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:fromAlpha</span>=<span class="string">"0"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:toAlpha</span>=<span class="string">"1"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">translate</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:fromYDelta</span>=<span class="string">"100%"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:toYDelta</span>=<span class="string">"0"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">set</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="ConstraintSet-简易用法"><a href="#ConstraintSet-简易用法" class="headerlink" title="ConstraintSet 简易用法"></a>ConstraintSet 简易用法</h1><figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 伪代码</span></span><br><span class="line"><span class="keyword">val</span> genderLayoutMaleSet = ConstraintSet()</span><br><span class="line">genderLayoutMaleSet.clone(genderLayout)</span><br><span class="line">genderLayoutMaleSet.constrainWidth(R.id.femaleTextView, DisplayUtils.dp2px(<span class="number">56</span>))</span><br><span class="line">genderLayoutMaleSet.setVisibility(R.id.femaleIconTextView, View.GONE)</span><br><span class="line"></span><br><span class="line">TransitionManager.beginDelayedTransition(genderLayout)</span><br><span class="line">genderLayoutMaleSet.applyTo(genderLayout)</span><br></pre></td></tr></table></figure>
+<h1 id="AnimatorSet-放大渐显-缩小渐隐（泡沫效果）"><a href="#AnimatorSet-放大渐显-缩小渐隐（泡沫效果）" class="headerlink" title="AnimatorSet 放大渐显/缩小渐隐（泡沫效果）"></a>AnimatorSet 放大渐显/缩小渐隐（泡沫效果）</h1><p><strong>渐显</strong></p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">set</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:interpolator</span>=<span class="string">"@android:anim/decelerate_interpolator"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:ordering</span>=<span class="string">"together"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">objectAnimator</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:duration</span>=<span class="string">"500"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:propertyName</span>=<span class="string">"scaleX"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:valueFrom</span>=<span class="string">"0.0"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:valueTo</span>=<span class="string">"1.0"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">objectAnimator</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:duration</span>=<span class="string">"500"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:propertyName</span>=<span class="string">"scaleY"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:valueFrom</span>=<span class="string">"0.0"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:valueTo</span>=<span class="string">"1.0"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">objectAnimator</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:duration</span>=<span class="string">"500"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:propertyName</span>=<span class="string">"alpha"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:valueFrom</span>=<span class="string">"0.0"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:valueTo</span>=<span class="string">"1.0"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">set</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>渐隐</strong></p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">set</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:interpolator</span>=<span class="string">"@android:anim/accelerate_interpolator"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:ordering</span>=<span class="string">"together"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">objectAnimator</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:duration</span>=<span class="string">"500"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:propertyName</span>=<span class="string">"scaleX"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:valueFrom</span>=<span class="string">"1.0"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:valueTo</span>=<span class="string">"0.0"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">objectAnimator</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:duration</span>=<span class="string">"500"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:propertyName</span>=<span class="string">"scaleY"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:valueFrom</span>=<span class="string">"1.0"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:valueTo</span>=<span class="string">"0.0"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">objectAnimator</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:duration</span>=<span class="string">"500"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:propertyName</span>=<span class="string">"alpha"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:valueFrom</span>=<span class="string">"1.0"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:valueTo</span>=<span class="string">"0.0"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">set</span>&gt;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Android</category>
+        <category>Code-Snippet</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>Android</tag>
+        <tag>Code-Snippet</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LifeUp Release Log</title>
     <url>/post/e5dce7c7.html</url>
-    <content><![CDATA[<h2 id="Known-Bug"><a href="#Known-Bug" class="headerlink" title="Known Bug"></a>Known Bug</h2><p><br></p>
+    <content><![CDATA[<h2 id="Known-Bug"><a href="#Known-Bug" class="headerlink" title="Known Bug"></a>Known Bug</h2><ul>
+<li><p><strong>When getting achievement reward, unlock date is incorrect (always 2019/11/16)</strong></p>
+<p>You can re-enter the achievement page to check the correct date.</p>
+<p>The bug will be fixed next version.</p>
+</li>
+</ul>
+<p><br></p>
 <h2 id="Release-Log"><a href="#Release-Log" class="headerlink" title="Release Log"></a>Release Log</h2><p><strong>v1.71.1 (Released at 2020/03/17)</strong></p>
 <p><strong>Improvement:</strong></p>
 <ul>
@@ -14,6 +65,7 @@
 <li>Fixed a bug that may cause crash when launching application on some devices</li>
 <li>Fixed a bug about selecting photos</li>
 </ul>
+<a id="more"></a>
 <p><strong>v1.71.0 (Released at 2020/03/13)</strong></p>
 <p><strong>Features:</strong></p>
 <ul>
@@ -864,6 +916,30 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>2020/03/27</td>
+<td>**楠</td>
+<td>很棒的创意 作者棒棒 一起往前..</td>
+<td>5.00</td>
+</tr>
+<tr>
+<td>2020/03/26</td>
+<td>*洪实</td>
+<td>期待新的功能，加油</td>
+<td>10.00</td>
+</tr>
+<tr>
+<td>2020/03/26</td>
+<td>（微信）平凡的人生</td>
+<td>感谢你的软件对我的帮助，也在此给予一些力所能及的谢礼</td>
+<td>1.00</td>
+</tr>
+<tr>
+<td>2020/03/26</td>
+<td>（微信）Jamin</td>
+<td>用起来很舒服，正在慢慢摸索中，作者大大继续加油哦</td>
+<td>5.00</td>
+</tr>
 <tr>
 <td>2020/03/22</td>
 <td>*锦荣</td>
@@ -2104,10 +2180,10 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>Java</tag>
-        <tag>框架</tag>
         <tag>后端</tag>
         <tag>SpringBoot2</tag>
+        <tag>Java</tag>
+        <tag>框架</tag>
       </tags>
   </entry>
   <entry>
@@ -3393,7 +3469,12 @@
   <entry>
     <title>人升LifeUp 常见问题</title>
     <url>/post/157a032e.html</url>
-    <content><![CDATA[<h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><h2 id="更新速度减缓"><a href="#更新速度减缓" class="headerlink" title="更新速度减缓"></a>更新速度减缓</h2><p>因为近期我们两位开发者都需要赶毕业设计/论文进度😅</p>
+    <content><![CDATA[<h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><h2 id="已知bug"><a href="#已知bug" class="headerlink" title="已知bug"></a>已知bug</h2><ul>
+<li><p><strong>领取成就奖励时，显示的时间不正确。</strong></p>
+<p>重新进入页面可以查看正确的时间。下个版本会修复。</p>
+</li>
+</ul>
+<h2 id="更新速度减缓"><a href="#更新速度减缓" class="headerlink" title="更新速度减缓"></a>更新速度减缓</h2><p>因为近期我们两位开发者都需要赶毕业设计/论文进度😅</p>
 <p>所以这段时间的更新速度会稍微减缓。</p>
 <p>后续的一些更新目前计划是关注于增强“游戏化”方面，还有实现之前采纳的用户建议。</p>
 <p>也欢迎大家继续提出各种建议~</p>
@@ -5318,10 +5399,10 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>Quartz</tag>
-        <tag>实例</tag>
         <tag>Java</tag>
         <tag>框架</tag>
+        <tag>Quartz</tag>
+        <tag>实例</tag>
       </tags>
   </entry>
   <entry>

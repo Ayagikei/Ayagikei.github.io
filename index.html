@@ -214,6 +214,244 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://sarasarasa.net/post/a542da69.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="AyagiKei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SaraSaraSa">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/post/a542da69.html" class="post-title-link" itemprop="url">Android DialogFragment 相关代码段</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-03-25 01:20:23 / 修改时间：01:51:56" itemprop="dateCreated datePublished" datetime="2020-03-25T01:20:23+08:00">2020-03-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Android/Code-Snippet/" itemprop="url" rel="index">
+                    <span itemprop="name">Code-Snippet</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/post/a542da69.html#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="post/a542da69.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>870</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="设置软键盘弹出，自动上移"><a href="#设置软键盘弹出，自动上移" class="headerlink" title="设置软键盘弹出，自动上移"></a>设置软键盘弹出，自动上移</h1><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreateView</span><span class="params">(inflater: <span class="type">LayoutInflater</span>, container: <span class="type">ViewGroup</span>?, savedInstanceState: <span class="type">Bundle</span>?)</span></span>: View? &#123;</span><br><span class="line">	...</span><br><span class="line">    <span class="comment">// 设置有软键盘时，窗口自动上移</span></span><br><span class="line">    dialog?.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="设置全屏显示"><a href="#设置全屏显示" class="headerlink" title="设置全屏显示"></a>设置全屏显示</h1><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreate</span><span class="params">(savedInstanceState: <span class="type">Bundle</span>?)</span></span> &#123;</span><br><span class="line">    <span class="keyword">super</span>.onCreate(savedInstanceState)</span><br><span class="line">    setStyle(STYLE_NORMAL, R.style.Dialog_FullScreen)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">name</span>=<span class="string">"Dialog.FullScreen"</span> <span class="attr">parent</span>=<span class="string">"Theme.AppCompat.Dialog"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">item</span> <span class="attr">name</span>=<span class="string">"android:windowNoTitle"</span>&gt;</span>true<span class="tag">&lt;/<span class="name">item</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">item</span> <span class="attr">name</span>=<span class="string">"android:windowBackground"</span>&gt;</span>@color/transparent<span class="tag">&lt;/<span class="name">item</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">item</span> <span class="attr">name</span>=<span class="string">"android:windowIsFloating"</span>&gt;</span>false<span class="tag">&lt;/<span class="name">item</span>&gt;</span></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="子Fragment"><a href="#子Fragment" class="headerlink" title="子Fragment"></a>子Fragment</h1><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">replace</span><span class="params">(fragment: <span class="type">androidx</span>.<span class="type">fragment</span>.<span class="type">app</span>.<span class="type">Fragment</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> transaction = childFragmentManager.beginTransaction()</span><br><span class="line">    transaction.replace(R.id.fragment, fragment)</span><br><span class="line">    transaction.commit()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/a542da69.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://sarasarasa.net/post/a2321477.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="AyagiKei">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SaraSaraSa">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/post/a2321477.html" class="post-title-link" itemprop="url">Android动画相关代码段</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-03-25 01:08:56 / 修改时间：01:51:56" itemprop="dateCreated datePublished" datetime="2020-03-25T01:08:56+08:00">2020-03-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Android/Code-Snippet/" itemprop="url" rel="index">
+                    <span itemprop="name">Code-Snippet</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/post/a2321477.html#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="post/a2321477.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>5 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="ValueAnimator-实现TextView打字机效果"><a href="#ValueAnimator-实现TextView打字机效果" class="headerlink" title="ValueAnimator 实现TextView打字机效果"></a>ValueAnimator 实现TextView打字机效果</h1><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> TextView.<span class="title">startTypeAnimation</span><span class="params">(duration: <span class="type">Long</span> = <span class="number">300</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> originText = <span class="keyword">this</span>.text</span><br><span class="line">    <span class="keyword">val</span> valueAnimator = ValueAnimator.ofInt(<span class="number">0</span>, originText.length)</span><br><span class="line">    valueAnimator.duration = duration</span><br><span class="line">    valueAnimator.interpolator = LinearInterpolator()</span><br><span class="line">    valueAnimator.addUpdateListener &#123; animation -&gt;</span><br><span class="line">        <span class="keyword">val</span> length = animation.animatedValue <span class="keyword">as</span> <span class="built_in">Int</span></span><br><span class="line">        <span class="keyword">this</span>.text = originText.subSequence(<span class="number">0</span>, length)</span><br><span class="line">    &#125;</span><br><span class="line">    valueAnimator.start()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="SpringInterpolator-简易的弹性插值器"><a href="#SpringInterpolator-简易的弹性插值器" class="headerlink" title="SpringInterpolator 简易的弹性插值器"></a>SpringInterpolator 简易的弹性插值器</h1><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 弹性插值器</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SpringInterpolator</span></span>(<span class="keyword">private</span> <span class="keyword">val</span> factor: <span class="built_in">Float</span>) : Interpolator &#123;</span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">getInterpolation</span><span class="params">(input: <span class="type">Float</span>)</span></span>: <span class="built_in">Float</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> (<span class="number">2.0</span>.pow((<span class="number">-10</span> * input).toDouble()) * sin((input - factor / <span class="number">4</span>) * (<span class="number">2</span> * Math.PI) / factor) + <span class="number">1</span>).toFloat()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/a2321477.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://sarasarasa.net/post/e5dce7c7.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -245,7 +483,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-17 22:40:39" itemprop="dateModified" datetime="2020-03-17T22:40:39+08:00">2020-03-17</time>
+                <time title="修改时间：2020-03-26 00:05:45" itemprop="dateModified" datetime="2020-03-26T00:05:45+08:00">2020-03-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -285,7 +523,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.2k</span>
+              <span>2.4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -304,7 +542,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="Known-Bug"><a href="#Known-Bug" class="headerlink" title="Known Bug"></a>Known Bug</h2><p><br></p>
+          <h2 id="Known-Bug"><a href="#Known-Bug" class="headerlink" title="Known Bug"></a>Known Bug</h2><ul>
+<li><p><strong>When getting achievement reward, unlock date is incorrect (always 2019/11/16)</strong></p>
+<p>You can re-enter the achievement page to check the correct date.</p>
+<p>The bug will be fixed next version.</p>
+</li>
+</ul>
+<p><br></p>
 <h2 id="Release-Log"><a href="#Release-Log" class="headerlink" title="Release Log"></a>Release Log</h2><p><strong>v1.71.1 (Released at 2020/03/17)</strong></p>
 <p><strong>Improvement:</strong></p>
 <ul>
@@ -315,107 +559,14 @@
 <li>Fixed a bug that may cause crash when launching application on some devices</li>
 <li>Fixed a bug about selecting photos</li>
 </ul>
-<p><strong>v1.71.0 (Released at 2020/03/13)</strong></p>
-<p><strong>Features:</strong></p>
-<ul>
-<li><p>Feelings Feature</p>
-</li>
-<li><p>Add Swipe Action: Finish Task (No Dialog)</p>
-</li>
-</ul>
-<p><strong>Fixed:</strong></p>
-<ul>
-<li><p>Fixed bug that task card state showing incorrectly</p>
-</li>
-<li><p>Fixed bug that task which was undo may be disappeared when overdue</p>
-</li>
-<li><p>Fixed that the selected sort not showing correctly</p>
-</li>
-</ul>
-<p><strong>v1.70.6 (Released at 2020/03/09)</strong></p>
-<p><strong>Improvement:</strong> </p>
-<ul>
-<li>Make the Achievement unlocked Hint colors same as the theme color</li>
-</ul>
-<p><strong>Fixed：</strong></p>
-<ul>
-<li><p>Fixed overdue dialog status not showing correctly after clicking the button</p>
-</li>
-<li><p>Fixed a bug that COPY cannot copy sub-tasks</p>
-</li>
-<li>Fixed a crash occurred when using “Move To…”</li>
-<li>Fixed the Selecting Card not correctly showing on some devices</li>
-</ul>
-<p><strong>v1.70.5 (Released at 2020/03/06)</strong></p>
-<p><strong>Fixed：</strong></p>
-<ul>
-<li>To-Do Card keep loading when change theme color or enable/disable night mode</li>
-</ul>
-<p><strong>v1.70.4 (Released at 2020/03/05)</strong></p>
-<p><strong>Improvements：</strong></p>
-<ul>
-<li>Shop Page will show coin number when there is no items</li>
-<li>Can access the Coin Detail Page by clicking the coin number in the Shop Page</li>
-<li>Improve text format of the app widget in English</li>
-<li>Can access the Task Detail Page by clicking the task on the App Widget</li>
-</ul>
-<p><strong>Fixed：</strong></p>
-<ul>
-<li>Team activity incorrect showing style</li>
-</ul>
-<p><strong>v1.70.3 (Released at 2020/03/05)</strong></p>
-<p><strong>Improvements:</strong></p>
-<ul>
-<li>Shop Page will now show coin number when there is no items</li>
-<li>Click the coin number in the Shop Page to enter Coin Detail Page now</li>
-<li>Improve the English text format on the App Widget</li>
-<li>Click the App Widget item to enter Task Detail Page</li>
-</ul>
-<p><strong>Fixed：</strong></p>
-<ul>
-<li>Fixed when Filter Today, the footer hint “xx task(s) is not yet started” not showing after completing task</li>
-</ul>
-<p><strong>v1.70.3 (Released at 2020/03/05)</strong></p>
-<p><strong>Important Fixes:</strong></p>
-<ul>
-<li>Fixes bugs about input coin number</li>
-<li>Fixes bugs that sub-tasks not refreshing correctly</li>
-<li>Fixes bugs that cannot like others’ activity</li>
-<li>Fixes bugs that App Widget cannot finishing tasks</li>
-</ul>
-<p><strong>v1.70.2 (Released at 2020/03/04)</strong></p>
-<p><strong>Features：</strong></p>
-<ul>
-<li><p>Community is now available for all time zone</p>
-</li>
-<li><p>Copy Tasks</p>
-</li>
-<li>Support edit new task default settings</li>
-<li><p>Shop List</p>
-</li>
-<li><p>Improve App Widget actions</p>
-</li>
-<li>Add menu for ended tasks for In Calendar Page</li>
-</ul>
-<p><strong>Improvements</strong>：</p>
-<ul>
-<li><p>Improve animations of task card </p>
-</li>
-<li><p>Remove an unneeded permission</p>
-</li>
-<li>Add complete sound</li>
-<li>Improve History Page UI style</li>
-<li>Add “Lost Calendar Write/Read Permission” Dialog when enabling System Calendar Reminder and not granted permissions</li>
-</ul>
-<p><strong>Fixed：</strong></p>
-<ul>
-<li>Fixes bugs about Count Task in compact mode</li>
-<li>Fixes bugs about repeat tasks</li>
-<li>Fixes crash that may occurs when delete sub-tasks</li>
-<li>Fixes crash that occurs when input incorrect WebDAV URL</li>
-<li>Fixes incorrect theme color showing , which may occurs after restore a backup</li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/e5dce7c7.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1415,922 +1566,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://sarasarasa.net/post/22d5d0d5.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="AyagiKei">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SaraSaraSa">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/post/22d5d0d5.html" class="post-title-link" itemprop="url">人升Lifeup 捐赠名单</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-10-17 23:33:33" itemprop="dateCreated datePublished" datetime="2019-10-17T23:33:33+08:00">2019-10-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-22 23:25:38" itemprop="dateModified" datetime="2020-03-22T23:25:38+08:00">2020-03-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/项目/" itemprop="url" rel="index">
-                    <span itemprop="name">项目</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/项目/人升Q-A/" itemprop="url" rel="index">
-                    <span itemprop="name">人升Q&A</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/post/22d5d0d5.html#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="post/22d5d0d5.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>2.8k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>现在人升国内没有设置任何盈利手段，你们的捐赠和支持是我们更新的极大动力！😘</p>
-<h2 id="捐赠手段"><a href="#捐赠手段" class="headerlink" title="捐赠手段"></a>捐赠手段</h2><h3 id="支付宝"><a href="#支付宝" class="headerlink" title="支付宝"></a>支付宝</h3><p>支付宝可以直接在应用内的关于界面跳转捐赠~</p>
-<h3 id="微信"><a href="#微信" class="headerlink" title="微信"></a>微信</h3> <img src="/post/22d5d0d5/01.jpg">
-<hr>
-<h2 id="捐赠名单"><a href="#捐赠名单" class="headerlink" title="捐赠名单"></a>捐赠名单</h2><p><strong>感谢以下各位的捐赠：</strong></p>
-<p>（按时间倒序排序）</p>
-<table>
-<thead>
-<tr>
-<th>时间</th>
-<th>姓名</th>
-<th>留言</th>
-<th>金额</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2020/03/22</td>
-<td>*锦荣</td>
-<td></td>
-<td>5.00</td>
-</tr>
-<tr>
-<td>2020/03/21</td>
-<td>张不song~</td>
-<td>开发者棒棒~为数不多的能让我坚持一个月不卸载的清单类软件\</td>
-<td>5.00</td>
-</tr>
-<tr>
-<td>2020/03/21</td>
-<td>*之沫</td>
-<td>炒鸡棒的创意，谢谢开发大大！请继续更新哦</td>
-<td>3.00</td>
-</tr>
-<tr>
-<td>2020/03/21</td>
-<td>*宇欣</td>
-<td></td>
-<td>4.00</td>
-</tr>
-<tr>
-<td>2020/03/21</td>
-<td>*镇杰</td>
-<td></td>
-<td>4.08</td>
-</tr>
-<tr>
-<td>2020/03/21</td>
-<td>（微信）</td>
-<td>有创意小而美</td>
-<td>6.00</td>
-</tr>
-<tr>
-<td>2020/03/20</td>
-<td>（微信）方糖Ricky</td>
-<td>我一直很想要这样的应用！感谢！希望后续会出iOS端的，加油！</td>
-<td>6.66</td>
-</tr>
-<tr>
-<td>2020/03/18</td>
-<td>（微信）Xm</td>
-<td>半睡不醒的考研党表示棒极了XD</td>
-<td>10.00</td>
-</tr>
-<tr>
-<td>2020/03/18</td>
-<td>*菁</td>
-<td>学生，不多，加油</td>
-<td>2.00</td>
-</tr>
-<tr>
-<td>2020/03/17</td>
-<td>*婷</td>
-<td>希望一直更新下去，谢谢！很喜欢</td>
-<td>6.00</td>
-</tr>
-<tr>
-<td>2020/03/17</td>
-<td>*丽豪</td>
-<td>非常感谢相遇!功能又细又强大!爱您!</td>
-<td>10.00</td>
-</tr>
-<tr>
-<td>2020/03/14</td>
-<td>（微信）方程式-高二党</td>
-<td>超级感谢你们。成功让一个整天恍恍惚惚的高中生改变了自己。</td>
-<td>5.00</td>
-</tr>
-<tr>
-<td>2020/03/14</td>
-<td>**呈</td>
-<td></td>
-<td>15.00</td>
-</tr>
-<tr>
-<td>2020/03/14</td>
-<td>（微信）</td>
-<td>真的很好用，加油</td>
-<td>2.00</td>
-</tr>
-<tr>
-<td>2020/03/13</td>
-<td>（微信）Eggness!</td>
-<td>谢谢您开发这个好应用，对我很有帮助，开发者加油！</td>
-<td>1.00</td>
-</tr>
-<tr>
-<td>2020/03/13</td>
-<td>（微信）</td>
-<td>加油 奥利给!</td>
-<td>2.00</td>
-</tr>
-<tr>
-<td>2020/03/13</td>
-<td>**鑫</td>
-<td>学生党的支持</td>
-<td>2.33</td>
-</tr>
-<tr>
-<td>2020/03/13</td>
-<td>*汶</td>
-<td></td>
-<td>6.00</td>
-</tr>
-<tr>
-<td>2020/03/12</td>
-<td>*国鸿</td>
-<td>学生党微小的支持</td>
-<td>3.00</td>
-</tr>
-<tr>
-<td>2020/03/12</td>
-<td>*晓烽</td>
-<td></td>
-<td>2.00</td>
-</tr>
-<tr>
-<td>2020/03/11</td>
-<td>*峰</td>
-<td></td>
-<td>10.00</td>
-</tr>
-<tr>
-<td>2020/03/10</td>
-<td>（微信）缕缕不倦</td>
-<td>以后进度了一定还会回来感谢开发者！</td>
-<td>5.00</td>
-</tr>
-<tr>
-<td>2020/03/09</td>
-<td>*雨潇</td>
-<td></td>
-<td>6.66</td>
-</tr>
-<tr>
-<td>2020/03/08</td>
-<td>*莉</td>
-<td>非常好的软件，继续完善，一定能火</td>
-<td>10.00</td>
-</tr>
-<tr>
-<td>2020/03/06</td>
-<td>（微信）酷安-概念1337</td>
-<td>给有心回复的作者(((о´∀<code>о)ノ♡ヽ(о´∀</code>о</td>
-<td>1.23</td>
-</tr>
-<tr>
-<td>2020/03/06</td>
-<td>（微信）酷安-概念1337</td>
-<td>ｸﾞｯ!(๑•̀ㅂ•́)و✧</td>
-<td>3.21</td>
-</tr>
-<tr>
-<td>2020/03/06</td>
-<td>（微信）酷安-概念1337</td>
-<td>游戏人升咯~</td>
-<td>3.88</td>
-</tr>
-<tr>
-<td>2020/03/06</td>
-<td>*阳杭</td>
-<td></td>
-<td>1.80</td>
-</tr>
-<tr>
-<td>2020/03/05</td>
-<td>（微信）Jason.</td>
-<td>支持一下！继续加油</td>
-<td>6.00</td>
-</tr>
-<tr>
-<td>2020/03/05</td>
-<td>（微信）腊月不知寒冬暖</td>
-<td>期待(o^^o)</td>
-<td>4.00</td>
-</tr>
-<tr>
-<td>2020/03/05</td>
-<td>（微信）粽子今天高兴吗？</td>
-<td>希望人升找到一个合适的盈利模式，长久发展下去，宝藏软件加油鸭</td>
-<td>6.66</td>
-</tr>
-<tr>
-<td>2020/03/03</td>
-<td>*赠涵</td>
-<td>很棒的软件</td>
-<td>1.00</td>
-</tr>
-<tr>
-<td>2020/03/02</td>
-<td>（微信）泛舟</td>
-<td>非常好用！希望能坚持做下去，不断完善</td>
-<td>6.00</td>
-</tr>
-<tr>
-<td>2020/03/02</td>
-<td>*淇锋</td>
-<td>还是个学生只能表示下心意，希望能越来越好</td>
-<td>2.33</td>
-</tr>
-<tr>
-<td>2020/03/02</td>
-<td>*俊俊</td>
-<td>一点心意，请收下。</td>
-<td>5.00</td>
-</tr>
-<tr>
-<td>2020/03/01</td>
-<td>*俊辉</td>
-<td></td>
-<td>5.00</td>
-</tr>
-<tr>
-<td>2020/03/01</td>
-<td>*东升</td>
-<td></td>
-<td>0.10</td>
-</tr>
-<tr>
-<td>2020/02/29</td>
-<td>*永红</td>
-<td></td>
-<td>0.15</td>
-</tr>
-<tr>
-<td>2020/02/28</td>
-<td>*宇航</td>
-<td>虽然很少，但是应该或许大概能请你喝奶茶？</td>
-<td>5.00</td>
-</tr>
-<tr>
-<td>2020/02/26</td>
-<td>*竟楠</td>
-<td>完美软件。</td>
-<td>2.00</td>
-</tr>
-<tr>
-<td>2020/02/26</td>
-<td>*钰华</td>
-<td></td>
-<td>5.20</td>
-</tr>
-<tr>
-<td>2020/02/24</td>
-<td>（微信）汉十一</td>
-<td>我喜欢这个软件的创意，感谢开发者</td>
-<td>3.00</td>
-</tr>
-<tr>
-<td>2020/02/23</td>
-<td>*智灏</td>
-<td></td>
-<td>1.00</td>
-</tr>
-<tr>
-<td>2020/02/22</td>
-<td>（微信）匿名</td>
-<td></td>
-<td>10.00</td>
-</tr>
-<tr>
-<td>2020/02/16</td>
-<td>*培星</td>
-<td></td>
-<td>6.66</td>
-</tr>
-<tr>
-<td>2020/02/15</td>
-<td>*子贤</td>
-<td></td>
-<td>10.00</td>
-</tr>
-<tr>
-<td>2020/02/15</td>
-<td>*文涛</td>
-<td></td>
-<td>2.00</td>
-</tr>
-<tr>
-<td>2020/02/15</td>
-<td>（微信）夏</td>
-<td>Singerson</td>
-<td>10.00</td>
-</tr>
-<tr>
-<td>2020/02/14</td>
-<td>（微信）楸</td>
-<td>很棒的应用，加油！情人节快乐吗orz</td>
-<td>1.00</td>
-</tr>
-<tr>
-<td>2020/02/14</td>
-<td>*钰瑶</td>
-<td></td>
-<td>8.88</td>
-</tr>
-<tr>
-<td>2020/02/13</td>
-<td>（微信）我的名字</td>
-<td>很有意思的软件，希望能一直做下去。</td>
-<td>18.00</td>
-</tr>
-<tr>
-<td>2020/02/13</td>
-<td>（微信）就暮</td>
-<td>加油，祝越来越好~——就暮</td>
-<td>2.88</td>
-</tr>
-<tr>
-<td>2020/02/12</td>
-<td>（微信）夏元素</td>
-<td>加油＾０＾~</td>
-<td>5.00</td>
-</tr>
-<tr>
-<td>2020/02/11</td>
-<td>（微信匿名）</td>
-<td>超级喜欢</td>
-<td>5.00</td>
-</tr>
-<tr>
-<td>2020/02/09</td>
-<td>*凯航</td>
-<td></td>
-<td>1.88</td>
-</tr>
-<tr>
-<td>2020/02/09</td>
-<td>*立国</td>
-<td></td>
-<td>9.99</td>
-</tr>
-<tr>
-<td>2020/02/08</td>
-<td>*杨</td>
-<td></td>
-<td>5.00</td>
-</tr>
-<tr>
-<td>2020/02/06</td>
-<td>*君瑞</td>
-<td></td>
-<td>2.77</td>
-</tr>
-<tr>
-<td>2020/02/05</td>
-<td>（微信）gorkor</td>
-<td>共勉之</td>
-<td>5.20</td>
-</tr>
-<tr>
-<td>2020/02/05</td>
-<td>*明</td>
-<td></td>
-<td>6.66</td>
-</tr>
-<tr>
-<td>2020/02/04</td>
-<td>*鑫</td>
-<td></td>
-<td>3.65</td>
-</tr>
-<tr>
-<td>2020/01/28</td>
-<td>（微信）Good luck,Mr. Gosky.</td>
-<td>软件和UI都很好看，加油！</td>
-<td>20.00</td>
-</tr>
-<tr>
-<td>2020/01/26</td>
-<td>（微信）长欢</td>
-<td></td>
-<td>6.00</td>
-</tr>
-<tr>
-<td>2020/01/22</td>
-<td>（支付宝）*—</td>
-<td></td>
-<td>10.00</td>
-</tr>
-<tr>
-<td>2020/01/18</td>
-<td>（微信）Player</td>
-<td></td>
-<td>3.00</td>
-</tr>
-<tr>
-<td>2020/01/17</td>
-<td>（微信）sin</td>
-<td>加油！</td>
-<td>1.00</td>
-</tr>
-<tr>
-<td>2019/12/30</td>
-<td>（微信）HouRuilong</td>
-<td></td>
-<td>6.66</td>
-</tr>
-<tr>
-<td>2019/12/28</td>
-<td>*宇轩</td>
-<td></td>
-<td>3.00</td>
-</tr>
-<tr>
-<td>2019/12/15</td>
-<td>*银川</td>
-<td></td>
-<td>5.00</td>
-</tr>
-<tr>
-<td>2019/12/13</td>
-<td>*子秋</td>
-<td></td>
-<td>3.00</td>
-</tr>
-<tr>
-<td>2019/12/11</td>
-<td>（微信）竹璃纷染</td>
-<td>ヾ(❀╹◡╹)ﾉ~支持！</td>
-<td>3.00</td>
-</tr>
-<tr>
-<td>2019/12/10</td>
-<td>*奕斯</td>
-<td></td>
-<td>2.00</td>
-</tr>
-<tr>
-<td>2019/12/08</td>
-<td>*柏墚</td>
-<td></td>
-<td>2.00</td>
-</tr>
-<tr>
-<td>2019/12/08</td>
-<td>（微信）孙書云101029</td>
-<td>软件实在是太棒了！学生党很穷，这就是一点心意，表达一下感谢！</td>
-<td>2.00</td>
-</tr>
-<tr>
-<td>2019/12/06</td>
-<td>（微信匿名）</td>
-<td>用了快一年了，很舒服。</td>
-<td>6.66</td>
-</tr>
-<tr>
-<td>2019/12/05</td>
-<td>*谦</td>
-<td></td>
-<td>7.77</td>
-</tr>
-<tr>
-<td>2019/12/03</td>
-<td>*裕钦</td>
-<td></td>
-<td>2.00</td>
-</tr>
-<tr>
-<td>2019/11/23</td>
-<td>*阳</td>
-<td></td>
-<td>10.00</td>
-</tr>
-<tr>
-<td>2019/11/23</td>
-<td>*克富</td>
-<td></td>
-<td>1.00</td>
-</tr>
-<tr>
-<td>2019/11/04</td>
-<td>【红巢】夕阳薄暮</td>
-<td></td>
-<td>1.00</td>
-</tr>
-<tr>
-<td>2019/10/31</td>
-<td>*孝宇</td>
-<td></td>
-<td>6.00</td>
-</tr>
-<tr>
-<td>2019/10/31</td>
-<td>*静</td>
-<td></td>
-<td>6.00</td>
-</tr>
-<tr>
-<td>2019/10/31</td>
-<td>酷安 @该账号涉嫌严重违纪</td>
-<td></td>
-<td>6.66</td>
-</tr>
-<tr>
-<td>2019/10/28</td>
-<td>*刚</td>
-<td></td>
-<td>5.00</td>
-</tr>
-<tr>
-<td>2019/10/28</td>
-<td>*江</td>
-<td></td>
-<td>6.00</td>
-</tr>
-<tr>
-<td>2019/10/27</td>
-<td>*艺</td>
-<td></td>
-<td>5.00</td>
-</tr>
-<tr>
-<td>2019/10/26</td>
-<td>*博超</td>
-<td></td>
-<td>1.00</td>
-</tr>
-<tr>
-<td>2019/10/20</td>
-<td>*海涛</td>
-<td></td>
-<td>3.00</td>
-</tr>
-<tr>
-<td>2019/10/17</td>
-<td>*佳佳</td>
-<td></td>
-<td>1.00</td>
-</tr>
-<tr>
-<td>2019/10/10</td>
-<td>*进伟</td>
-<td></td>
-<td>30.00</td>
-</tr>
-<tr>
-<td>2019/10/03</td>
-<td>*心煌</td>
-<td></td>
-<td>10.00</td>
-</tr>
-<tr>
-<td>2019/09/24</td>
-<td>*羽</td>
-<td></td>
-<td>2.00</td>
-</tr>
-<tr>
-<td>2019/08/29</td>
-<td>*步军</td>
-<td></td>
-<td>10.00</td>
-</tr>
-<tr>
-<td>2019/08/29</td>
-<td>*金陆</td>
-<td></td>
-<td>5.00</td>
-</tr>
-<tr>
-<td>2019/08/25</td>
-<td>*永振</td>
-<td></td>
-<td>3.00</td>
-</tr>
-<tr>
-<td>2019/08/25</td>
-<td>*静</td>
-<td></td>
-<td>10.00</td>
-</tr>
-<tr>
-<td>2019/06/22</td>
-<td>*思远</td>
-<td></td>
-<td>5.00</td>
-</tr>
-<tr>
-<td>2019/05/21</td>
-<td>*瀚禧</td>
-<td></td>
-<td>57.21</td>
-</tr>
-<tr>
-<td>2019/04/12</td>
-<td>*国浩</td>
-<td></td>
-<td>5.00</td>
-</tr>
-<tr>
-<td>2019/04/06</td>
-<td>*耿</td>
-<td></td>
-<td>0.01</td>
-</tr>
-<tr>
-<td>2019/04/03</td>
-<td>*金娥</td>
-<td></td>
-<td>5.00</td>
-</tr>
-<tr>
-<td>2019/03/29</td>
-<td>*浩宗</td>
-<td></td>
-<td>1.00</td>
-</tr>
-<tr>
-<td>2019/03/21</td>
-<td>*晓阳</td>
-<td></td>
-<td>10.00</td>
-</tr>
-<tr>
-<td>2019/03/20</td>
-<td>*泽恺</td>
-<td></td>
-<td>1.00</td>
-</tr>
-<tr>
-<td>2019/03/19</td>
-<td>*伟棠</td>
-<td></td>
-<td>5.00</td>
-</tr>
-<tr>
-<td>2019/03/09</td>
-<td>*翊淇</td>
-<td></td>
-<td>3.00</td>
-</tr>
-<tr>
-<td>2019/02/27</td>
-<td>*汉凯</td>
-<td></td>
-<td>6.66</td>
-</tr>
-<tr>
-<td>2019/02/27</td>
-<td>*京</td>
-<td></td>
-<td>9.99</td>
-</tr>
-<tr>
-<td>2019/02/15</td>
-<td>*猛</td>
-<td></td>
-<td>5.00</td>
-</tr>
-<tr>
-<td>2019/02/14</td>
-<td>*涵予</td>
-<td></td>
-<td>5.00</td>
-</tr>
-<tr>
-<td>2019/02/02</td>
-<td>*佳融</td>
-<td></td>
-<td>5.00</td>
-</tr>
-</tbody>
-</table>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://sarasarasa.net/post/91d5b971.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="AyagiKei">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SaraSaraSa">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/post/91d5b971.html" class="post-title-link" itemprop="url">PopupMenu弹出导致RecyclerView滚动的解决方法</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2019-09-28 23:15:44 / 修改时间：23:29:28" itemprop="dateCreated datePublished" datetime="2019-09-28T23:15:44+08:00">2019-09-28</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/Android/" itemprop="url" rel="index">
-                    <span itemprop="name">Android</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/post/91d5b971.html#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="post/91d5b971.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>437</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p> 参考： <a href="https://blog.csdn.net/qq_16445551/article/details/70213660" target="_blank" rel="noopener">https://blog.csdn.net/qq_16445551/article/details/70213660</a></p>
-</blockquote>
-<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>这个问题其实一直存在，但是新版本增加了Toolbar收缩之后，就因为这个自动滚动直接导致了Toolbar收缩，现象更为明显。</p>
-<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>参考<a href="">原文</a>两个解决办法</p>
-<p><strong>如果你的应用的最小支持版本达到了<em>Android KitKat 4.4</em>的话，建议使用第一种方法。</strong></p>
-<p><strong>简单总结一下：</strong></p>
-<ol>
-<li><blockquote>
-<p>将<code>support.v7</code>包的PopupMenu换成<code>android.widget.PopupWindow</code>包下的PopupMenu。</p>
-</blockquote>
-<p><strong>对应到AndroidX的话</strong>，就是将<code>androidx.appcompat.widget.PopupMenu</code>换成<code>import android.widget.PopupMenu</code></p>
-</li>
-</ol>
-<ol start="2">
-<li><blockquote>
-<p>重写与<code>PopupMenu</code>绑定的<code>AnchorView</code>的<code>requestRectangleOnScreen(Rect rectangle, boolean immediate)</code>方法，并且<code>return false</code>。</p>
-</blockquote>
-</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -2403,20 +1638,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">58</span>
+          <span class="site-state-item-count">60</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-count">22</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">53</span>
+        <span class="site-state-item-count">54</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -2464,12 +1699,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">193k</span>
+    <span title="站点总字数">198k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5:22</span>
+    <span title="站点阅读时长">5:30</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.7.1
   </div>
