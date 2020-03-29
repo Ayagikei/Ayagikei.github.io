@@ -14,8 +14,8 @@
         <category>Code-Snippet</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
         <tag>Code-Snippet</tag>
       </tags>
   </entry>
@@ -40,8 +40,8 @@
         <category>Code-Snippet</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
         <tag>Code-Snippet</tag>
       </tags>
   </entry>
@@ -52,6 +52,8 @@
 <li><p><strong>When getting achievement reward, unlock date is incorrect (always 2019/11/16)</strong></p>
 <p>You can re-enter the achievement page to check the correct date.</p>
 <p>The bug will be fixed next version.</p>
+</li>
+<li><p><strong>Sensitive word filter not working well with English.</strong></p>
 </li>
 </ul>
 <p><br></p>
@@ -200,8 +202,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -916,6 +918,30 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>2020/03/29</td>
+<td>*雯</td>
+<td>很喜欢！！ 每天都在用！要一直做下去呀！</td>
+<td>3.90</td>
+</tr>
+<tr>
+<td>2020/03/28</td>
+<td>*小庆</td>
+<td>支持。</td>
+<td>1.00</td>
+</tr>
+<tr>
+<td>2020/03/28</td>
+<td>*铖昊</td>
+<td></td>
+<td>1.00</td>
+</tr>
+<tr>
+<td>2020/03/28</td>
+<td>*军</td>
+<td>给瓶农夫山泉，学生党一枚</td>
+<td>2.00</td>
+</tr>
 <tr>
 <td>2020/03/27</td>
 <td>**楠</td>
@@ -1647,8 +1673,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -1675,8 +1701,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -2006,8 +2032,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -2025,8 +2051,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -2074,8 +2100,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -2109,8 +2135,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -2370,8 +2396,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -4038,8 +4064,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
         <tag>调试</tag>
       </tags>
   </entry>
@@ -4266,9 +4292,9 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
+        <tag>技术</tag>
         <tag>DigitalOcean</tag>
       </tags>
   </entry>
@@ -4686,9 +4712,9 @@
         <category>Linux</category>
       </categories>
       <tags>
+        <tag>系统</tag>
         <tag>Ubuntu</tag>
         <tag>linux</tag>
-        <tag>系统</tag>
       </tags>
   </entry>
   <entry>
@@ -4845,8 +4871,8 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>云服务器</tag>
+        <tag>技术</tag>
         <tag>游戏</tag>
         <tag>记录</tag>
         <tag>linux</tag>
@@ -5210,10 +5236,10 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
