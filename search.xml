@@ -14,8 +14,8 @@
         <category>Code-Snippet</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
         <tag>Code-Snippet</tag>
       </tags>
   </entry>
@@ -40,8 +40,8 @@
         <category>Code-Snippet</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
         <tag>Code-Snippet</tag>
       </tags>
   </entry>
@@ -202,8 +202,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -918,6 +918,18 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>2020/04/01</td>
+<td>阿莉司</td>
+<td>UI舒服，很棒的创意、也很有用…感谢作者！(<em>˘︶˘</em>)</td>
+<td>2.33</td>
+</tr>
+<tr>
+<td>2020/03/31</td>
+<td>*文鑫</td>
+<td>加油！</td>
+<td>4.00</td>
+</tr>
 <tr>
 <td>2020/03/29</td>
 <td>*雯</td>
@@ -1673,8 +1685,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -1701,8 +1713,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -2032,8 +2044,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -2051,8 +2063,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -2100,8 +2112,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -2135,8 +2147,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -2206,10 +2218,10 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>后端</tag>
-        <tag>SpringBoot2</tag>
         <tag>Java</tag>
         <tag>框架</tag>
+        <tag>后端</tag>
+        <tag>SpringBoot2</tag>
       </tags>
   </entry>
   <entry>
@@ -2396,8 +2408,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -4064,8 +4076,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
         <tag>调试</tag>
       </tags>
   </entry>
@@ -4292,9 +4304,9 @@
         <category>记录</category>
       </categories>
       <tags>
+        <tag>技术</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
-        <tag>技术</tag>
         <tag>DigitalOcean</tag>
       </tags>
   </entry>
@@ -4712,9 +4724,9 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>系统</tag>
         <tag>Ubuntu</tag>
         <tag>linux</tag>
+        <tag>系统</tag>
       </tags>
   </entry>
   <entry>
@@ -4871,8 +4883,8 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>云服务器</tag>
         <tag>技术</tag>
+        <tag>云服务器</tag>
         <tag>游戏</tag>
         <tag>记录</tag>
         <tag>linux</tag>
@@ -5236,10 +5248,10 @@
         <category>技术</category>
       </categories>
       <tags>
+        <tag>技术</tag>
         <tag>Android</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
-        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -5425,10 +5437,10 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>Java</tag>
-        <tag>框架</tag>
         <tag>Quartz</tag>
         <tag>实例</tag>
+        <tag>Java</tag>
+        <tag>框架</tag>
       </tags>
   </entry>
   <entry>
