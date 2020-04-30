@@ -14,8 +14,8 @@
         <category>Code-Snippet</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
         <tag>Code-Snippet</tag>
       </tags>
   </entry>
@@ -40,8 +40,8 @@
         <category>Code-Snippet</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
         <tag>Code-Snippet</tag>
       </tags>
   </entry>
@@ -247,8 +247,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -1992,8 +1992,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -2020,8 +2020,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -2351,8 +2351,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -2370,8 +2370,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -2419,8 +2419,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -2454,8 +2454,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -2525,10 +2525,10 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>Java</tag>
-        <tag>框架</tag>
         <tag>后端</tag>
         <tag>SpringBoot2</tag>
+        <tag>Java</tag>
+        <tag>框架</tag>
       </tags>
   </entry>
   <entry>
@@ -2715,8 +2715,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -3289,7 +3289,9 @@
 <li><p><a href="http://sarasarasa.net/post/22d5d0d5.html">捐赠名单</a></p>
 </li>
 </ul>
-<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p><strong>如何撤销完成事项？</strong></p>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><ul>
+<li><strong>如何撤销完成事项？</strong></li>
+</ul>
 <ol>
 <li><p>在完成时，点击底部提示框的“撤销”按钮。</p>
 </li>
@@ -3301,27 +3303,39 @@
 </blockquote>
 </li>
 </ol>
-<p><strong>可以设置经验值或者金币惩罚吗？</strong></p>
+<ul>
+<li><p><strong>可以设置经验值或者金币惩罚吗？</strong></p>
 <p>可以的，默认也启用了经验值惩罚。金币惩罚默认没启用。</p>
 <p>可以在<code>侧边栏</code>-<code>设置</code>-<code>自定义设置</code>里自由设定。</p>
 <blockquote>
 <p>😅 不知道为什么这点一直有人反馈建议（还没留联系方式，没法回复），后续会加强对“惩罚”的展示效果。</p>
 </blockquote>
-<p><strong>如何隐藏掉已经完成的事项（其实是未开始的事项）？</strong></p>
+</li>
+<li><p><strong>如何隐藏掉已经完成的事项（其实是未开始的事项）？</strong></p>
 <p>在主页（即<code>告示</code>页面），点击右上角的菜单栏（三个点），再点击<code>筛选</code>，选中<code>只显示今天事项</code>即可。</p>
-<p><strong>如何下架商品？</strong></p>
+</li>
+<li><p><strong>如何建立指定周几的待办事项？如每周一、二、三。</strong></p>
+<p><a href="http://sarasarasa.net/post/423cff64.html#3-%E6%AF%8F%E5%91%A8%E4%B8%80-%E6%AF%8F%E5%91%A8%E6%97%A5">点击这里查看</a></p>
+</li>
+<li><p><strong>如何下架商品？</strong></p>
 <p>在<code>商店</code>页面，长按商品，然后选择顶部的垃圾桶按钮。</p>
-<p><strong>指定时间没收到提醒？</strong></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>指定时间没收到提醒？</strong></p>
 <p>应用内其实也有说明，由于独立应用权限有限，默认的提醒方式会受系统限制，可能关了后台就失效了。</p>
 <p>可以尝试<strong>更换为系统日历提醒方式（<code>设置</code>-<code>事项设置</code>）</strong>，更换后，可以查看系统日历app有没有成功插入提醒时间。</p>
-<p><strong>想初始化“我的”页面中的逾期、放弃数</strong></p>
+</li>
+<li><p><strong>想初始化“我的”页面中的逾期、放弃数</strong></p>
 <p>这里的数字统计是基于历史记录的，可以前往<code>侧边栏</code>-<code>历史</code>页面，删除相应的错误记录。</p>
-<p><strong>如何建立指定周几的待办事项？</strong></p>
-<p><a href="http://sarasarasa.net/post/423cff64.html#3-%E6%AF%8F%E5%91%A8%E4%B8%80-%E6%AF%8F%E5%91%A8%E6%97%A5">点击这里查看</a></p>
-<p><strong>什么是目标重复次数和计数事项次数？</strong></p>
+</li>
+<li><p><strong>什么是目标重复次数和计数事项次数？</strong></p>
 <p><a href="http://sarasarasa.net/post/423cff64.html#%E7%9B%AE%E6%A0%87%E9%87%8D%E5%A4%8D%E6%AC%A1%E6%95%B0">点击这里查看</a></p>
-<p><strong>我不想用社区，可以隐藏吗？</strong></p>
+</li>
+<li><p><strong>我不想用社区，可以隐藏吗？</strong></p>
 <p>可以前往<code>侧边栏</code>-<code>设置</code>-<code>显示设置</code>内隐藏社区，需要重启应用生效~</p>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>项目</category>
@@ -4488,8 +4502,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
         <tag>调试</tag>
       </tags>
   </entry>
@@ -4716,9 +4730,9 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
+        <tag>技术</tag>
         <tag>DigitalOcean</tag>
       </tags>
   </entry>
@@ -5295,8 +5309,8 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>云服务器</tag>
+        <tag>技术</tag>
         <tag>游戏</tag>
         <tag>记录</tag>
         <tag>linux</tag>
@@ -5660,10 +5674,10 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -5849,10 +5863,10 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>Quartz</tag>
-        <tag>实例</tag>
         <tag>Java</tag>
         <tag>框架</tag>
+        <tag>Quartz</tag>
+        <tag>实例</tag>
       </tags>
   </entry>
   <entry>
