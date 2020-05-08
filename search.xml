@@ -48,21 +48,20 @@
   <entry>
     <title>LifeUp Release Log</title>
     <url>/post/e5dce7c7.html</url>
-    <content><![CDATA[<h2 id="Known-Bug（v1-71-1）"><a href="#Known-Bug（v1-71-1）" class="headerlink" title="Known Bug（v1.71.1）"></a>Known Bug（v1.71.1）</h2><h3 id="Please-update-to-v1-71-2-to-fix-these-bug"><a href="#Please-update-to-v1-71-2-to-fix-these-bug" class="headerlink" title="Please update to v1.71.2 to fix these bug"></a>Please update to v1.71.2 to fix these bug</h3><ul>
-<li><p><strong>When getting achievement reward, unlock date is incorrect (always 2019/11/16)</strong></p>
-<p>You can re-enter the achievement page to check the correct date.</p>
-<p>The bug will be fixed next version.</p>
-</li>
-<li><p><del><strong>Sensitive word filter not working well with English.</strong></del></p>
-<p>Fixed by server update.</p>
-</li>
-<li><p><strong>Not enough space for Difficulty Degree to show in the Task Detail Page.</strong></p>
-</li>
-<li><p><strong>Sub-Task of the single task will be reset when it pass the deadline.</strong> </p>
-</li>
+    <content><![CDATA[<h2 id="Future-Plan"><a href="#Future-Plan" class="headerlink" title="Future Plan"></a>Future Plan</h2><ol>
+<li>Custom Achievements</li>
+<li>Link Complete Reward of task to the inventory.</li>
+<li>Add time selector in Statistics page</li>
+<li>Custom Exp of task</li>
+<li>Better settings of creating a task.</li>
+</ol>
+<h2 id="Known-Bug（v1-71-4）"><a href="#Known-Bug（v1-71-4）" class="headerlink" title="Known Bug（v1.71.4）"></a>Known Bug（v1.71.4）</h2><ul>
+<li><strong>Transparent part of the png picture may turn to black when cropping a picture.</strong></li>
 </ul>
 <p><br></p>
-<h2 id="Release-Log"><a href="#Release-Log" class="headerlink" title="Release Log"></a>Release Log</h2><p><strong>1.71.2（Released at 2020/04/14）</strong></p>
+<h2 id="Release-Log"><a href="#Release-Log" class="headerlink" title="Release Log"></a>Release Log</h2><p><strong>1.71.3/1.71.4（Released at 2020/04/16）</strong></p>
+<p><strong>Minor Fixes about icon and crash report</strong></p>
+<p><strong>1.71.2（Released at 2020/04/14）</strong></p>
 <p><strong>Features:</strong></p>
 <ul>
 <li><p>Turkish Language (thanks <strong>İbrahim DOĞAN</strong> for helping translation)</p>
@@ -955,7 +954,7 @@
 <h3 id="QQ"><a href="#QQ" class="headerlink" title="QQ"></a>QQ</h3> <img src="/post/22d5d0d5/02.png">
 <hr>
 <h2 id="捐赠名单"><a href="#捐赠名单" class="headerlink" title="捐赠名单"></a>捐赠名单</h2><p><strong>感谢以下各位的捐赠：</strong></p>
-<p>更新时间：2020年5月2日 01点02分；如有遗漏请邮件联系~</p>
+<p>更新时间：2020年5月8日 22点48分；如有遗漏请邮件联系~</p>
 <p>（按时间倒序排序）</p>
 <table>
 <thead>
@@ -967,6 +966,48 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>2020/05/08</td>
+<td>*玉勤</td>
+<td></td>
+<td>6.00</td>
+</tr>
+<tr>
+<td>2020/05/07</td>
+<td>（微信）Eline</td>
+<td>梦想中的app，作者加油，期待软件的更新</td>
+<td>6.66</td>
+</tr>
+<tr>
+<td></td>
+<td>*亚杰</td>
+<td></td>
+<td>5.00</td>
+</tr>
+<tr>
+<td>2020/05/05</td>
+<td>*著</td>
+<td></td>
+<td>2.00</td>
+</tr>
+<tr>
+<td>2020/05/04</td>
+<td>*美岑</td>
+<td></td>
+<td>10.00</td>
+</tr>
+<tr>
+<td>2020/05/04</td>
+<td>*城</td>
+<td>喜欢这软件，支持一下</td>
+<td>10.00</td>
+</tr>
+<tr>
+<td>2020/05/03</td>
+<td>&amp;</td>
+<td>安卓绿色 加油(ง •_•)ง</td>
+<td>5.00</td>
+</tr>
 <tr>
 <td>2020/05/02</td>
 <td>（微信）空气</td>
@@ -2543,10 +2584,10 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>后端</tag>
-        <tag>SpringBoot2</tag>
         <tag>Java</tag>
         <tag>框架</tag>
+        <tag>后端</tag>
+        <tag>SpringBoot2</tag>
       </tags>
   </entry>
   <entry>
@@ -3077,75 +3118,6 @@
       </tags>
   </entry>
   <entry>
-    <title>人升LifeUp 常见问题</title>
-    <url>/post/157a032e.html</url>
-    <content><![CDATA[<h2 id="其他链接"><a href="#其他链接" class="headerlink" title="其他链接"></a>其他链接</h2><ul>
-<li><p><a href="http://sarasarasa.net/post/621e3bb6.html">公告、已知问题、应用详细介绍</a></p>
-</li>
-<li><p><a href="http://sarasarasa.net/post/a889432c.html">更新日志</a></p>
-</li>
-<li><p><a href="http://sarasarasa.net/post/22d5d0d5.html">捐赠名单</a></p>
-</li>
-</ul>
-<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><ul>
-<li><strong>如何撤销完成事项？</strong></li>
-</ul>
-<ol>
-<li><p>在完成时，点击底部提示框的“撤销”按钮。</p>
-</li>
-<li><p>于<code>侧边栏</code>的<code>历史</code>页面，点击撤销按钮。</p>
-</li>
-<li><p>于<code>日历</code>页面的<code>已结束</code>模块，点击撤销按钮。</p>
-<blockquote>
-<p>可以撤销任意时刻的无重复待办事项，以及<strong>今天完成的重复事项</strong>。</p>
-</blockquote>
-</li>
-</ol>
-<ul>
-<li><p><strong>可以设置经验值或者金币惩罚吗？</strong></p>
-<p>可以的，默认也启用了经验值惩罚。金币惩罚默认没启用。</p>
-<p>可以在<code>侧边栏</code>-<code>设置</code>-<code>自定义设置</code>里自由设定。</p>
-<blockquote>
-<p>😅 不知道为什么这点一直有人反馈建议（还没留联系方式，没法回复），后续会加强对“惩罚”的展示效果。</p>
-</blockquote>
-</li>
-<li><p><strong>如何隐藏掉已经完成的事项（其实是未开始的事项）？</strong></p>
-<p>在主页（即<code>告示</code>页面），点击右上角的菜单栏（三个点），再点击<code>筛选</code>，选中<code>只显示今天事项</code>即可。</p>
-</li>
-<li><p><strong>如何建立指定周几的待办事项？如每周一、二、三。</strong></p>
-<p><a href="http://sarasarasa.net/post/423cff64.html#3-%E6%AF%8F%E5%91%A8%E4%B8%80-%E6%AF%8F%E5%91%A8%E6%97%A5">点击这里查看</a></p>
-</li>
-<li><p><strong>如何下架商品？</strong></p>
-<p>在<code>商店</code>页面，长按商品，然后选择顶部的垃圾桶按钮。</p>
-</li>
-</ul>
-<ul>
-<li><p><strong>指定时间没收到提醒？</strong></p>
-<p>应用内其实也有说明，由于独立应用权限有限，默认的提醒方式会受系统限制，可能关了后台就失效了。</p>
-<p>可以尝试<strong>更换为系统日历提醒方式（<code>设置</code>-<code>事项设置</code>）</strong>，更换后，可以查看系统日历app有没有成功插入提醒时间。</p>
-</li>
-<li><p><strong>想初始化“我的”页面中的逾期、放弃数</strong></p>
-<p>这里的数字统计是基于历史记录的，可以前往<code>侧边栏</code>-<code>历史</code>页面，删除相应的错误记录。</p>
-</li>
-<li><p><strong>什么是目标重复次数和计数事项次数？</strong></p>
-<p><a href="http://sarasarasa.net/post/423cff64.html#%E7%9B%AE%E6%A0%87%E9%87%8D%E5%A4%8D%E6%AC%A1%E6%95%B0">点击这里查看</a></p>
-</li>
-<li><p><strong>我不想用社区，可以隐藏吗？</strong></p>
-<p>可以前往<code>侧边栏</code>-<code>设置</code>-<code>显示设置</code>内隐藏社区，需要重启应用生效~</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>项目</category>
-        <category>开发日志</category>
-        <category>人升</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>开发日志</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>人升LifeUp 公告与详细介绍</title>
     <url>/post/621e3bb6.html</url>
     <content><![CDATA[<h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><h2 id="已知bug"><a href="#已知bug" class="headerlink" title="已知bug"></a>已知bug</h2><ul>
@@ -3172,7 +3144,7 @@
 <p>新成就系统</p>
 <p><br></p>
 <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ol>
-<li><a href="#应用简介">应用简介</a><br>1.1 <a href="#情景介绍">情景介绍</a><br>1.2 <a href="#已知问题">已知问题</a><br>1.3 <a href="#更新计划">更新计划</a><br>1.4 <a href="#常见问题">常见问题</a><br>1.5 <a href="#绿色应用">绿色应用</a><br>1.6 <a href="#盈利方式">盈利方式</a><br>1.7 <a href="#上架市场">上架市场</a><br>1.8 <a href="#关于开源">关于开源</a></li>
+<li><a href="#应用简介">应用简介</a><br>1.1 <a href="#情景介绍">情景介绍</a><br>1.2 <a href="#已知问题">已知问题</a><br>1.3 <a href="#更新计划">更新计划</a><br>1.4 <a href="#绿色应用">绿色应用</a><br>1.5 <a href="#盈利方式">盈利方式</a><br>1.6 <a href="#上架市场">上架市场</a><br>1.7 <a href="#关于开源">关于开源</a></li>
 <li><a href="#功能介绍">功能介绍</a><br>2.1 <a href="#新成就系统">新成就系统</a><br>2.2 <a href="#稍后阅读">稍后阅读</a><br>2.3 <a href="#商店系统">商店系统</a><br>2.4 <a href="#社区">社区</a></li>
 <li><a href="#其他">其他</a><br>3.1 <a href="http://sarasarasa.net/post/a889432c.html">更新日志</a><br>3.2 <a href="http://sarasarasa.net/post/22d5d0d5.html">捐赠名单</a></li>
 </ol>
@@ -3195,14 +3167,6 @@
 <p><br></p>
 <h2 id="更新计划"><a href="#更新计划" class="headerlink" title="更新计划"></a>更新计划</h2><p><strong>2019/10/31：</strong>因为目前在实习+准备毕设，稍微将原本大概7-14天一更的频次调整到<strong>14-21天一更</strong>。</p>
 <p><br></p>
-<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p><strong>Q：</strong>团队事项消失？</p>
-<p><strong>A：</strong>在退出登录的时候会清空未完成的团队事项。</p>
-<p>可以查看自己加入的团队，<strong>然后点击“领取”按钮重新领取团队事项。</strong></p>
-<p>计划加入“一键领取所有已加入团队事项”的按钮。</p>
-<p><strong>Q：</strong>如何建立工作日事项或者周指定日事项?</p>
-<p><strong>A：</strong>重复频次选择“每日”后，选择“设置忽略”按钮。详情可以查看<a href="#建立事项">建立事项</a>。</p>
-<p><strong>Q：</strong>没能收到事项的提醒？</p>
-<p><strong>A：</strong>默认的提醒用的是Android原生的闹钟机制，在国产OS里，这个闹钟机制可能需要应用后台运行才能正常运作。如果有精准的需求，<strong>可以前往设置里，选择<code>更换提醒方式</code>，系统日历提醒会更准确，并且不受后台运行限制。</strong></p>
 <h2 id="绿色应用"><a href="#绿色应用" class="headerlink" title="绿色应用"></a>绿色应用</h2><p>并且，《人升》<strong>无开屏、无内置广告、暂无内购</strong>。体积也一直<strong>尽量保持在6mb</strong>左右。</p>
 <p>并且通过了<a href="https://green-android.org/" target="_blank" rel="noopener">Android 绿色应用公约 3.0验证</a>，<strong>无需读取手机状态、甚至无需外部存储空间权限</strong>。</p>
 <p>理论上运行<strong>无需任何权限</strong>，只为了一些可选功能申请了一些权限：</p>
@@ -3255,6 +3219,7 @@
 <h3 id="Google-Play上的Pro版差异"><a href="#Google-Play上的Pro版差异" class="headerlink" title="Google Play上的Pro版差异"></a>Google Play上的Pro版差异</h3><ul>
 <li>去掉了“捐赠”入口</li>
 <li>去掉了“应用内更新提示”</li>
+<li>自定义卡片背景，自定义商品“使用”按钮文本</li>
 <li>（计划）更多增值内容，如Google Drive同步</li>
 </ul>
 <p><br></p>
@@ -3354,6 +3319,75 @@
 <hr>
 <h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a><a href="http://sarasarasa.net/post/a889432c.html">更新日志</a></h2><h2 id="捐赠名单"><a href="#捐赠名单" class="headerlink" title="捐赠名单"></a><a href="http://sarasarasa.net/post/22d5d0d5.html">捐赠名单</a></h2><p>扫码关注人升公众号，可以尽快收到更新介绍<del>而且我们说不定能赚点服务器钱:)</del></p>
  <img src="/post/621e3bb6/01.jpg">
+]]></content>
+      <categories>
+        <category>项目</category>
+        <category>开发日志</category>
+        <category>人升</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>开发日志</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>人升LifeUp 常见问题</title>
+    <url>/post/157a032e.html</url>
+    <content><![CDATA[<h2 id="其他链接"><a href="#其他链接" class="headerlink" title="其他链接"></a>其他链接</h2><ul>
+<li><p><a href="http://sarasarasa.net/post/621e3bb6.html">公告、已知问题、应用详细介绍</a></p>
+</li>
+<li><p><a href="http://sarasarasa.net/post/a889432c.html">更新日志</a></p>
+</li>
+<li><p><a href="http://sarasarasa.net/post/22d5d0d5.html">捐赠名单</a></p>
+</li>
+</ul>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><ul>
+<li><strong>如何撤销完成事项？</strong></li>
+</ul>
+<ol>
+<li><p>在完成时，点击底部提示框的“撤销”按钮。</p>
+</li>
+<li><p>于<code>侧边栏</code>的<code>历史</code>页面，点击撤销按钮。</p>
+</li>
+<li><p>于<code>日历</code>页面的<code>已结束</code>模块，点击撤销按钮。</p>
+<blockquote>
+<p>可以撤销任意时刻的无重复待办事项，以及<strong>今天完成的重复事项</strong>。</p>
+</blockquote>
+</li>
+</ol>
+<ul>
+<li><p><strong>可以设置经验值或者金币惩罚吗？</strong></p>
+<p>可以的，默认也启用了经验值惩罚。金币惩罚默认没启用。</p>
+<p>可以在<code>侧边栏</code>-<code>设置</code>-<code>自定义设置</code>里自由设定。</p>
+<blockquote>
+<p>😅 不知道为什么这点一直有人反馈建议（还没留联系方式，没法回复），后续会加强对“惩罚”的展示效果。</p>
+</blockquote>
+</li>
+<li><p><strong>如何隐藏掉已经完成的事项（其实是未开始的事项）？</strong></p>
+<p>在主页（即<code>告示</code>页面），点击右上角的菜单栏（三个点），再点击<code>筛选</code>，选中<code>只显示今天事项</code>即可。</p>
+</li>
+<li><p><strong>如何建立指定周几的待办事项？如每周一、二、三。</strong></p>
+<p><a href="http://sarasarasa.net/post/423cff64.html#3-%E6%AF%8F%E5%91%A8%E4%B8%80-%E6%AF%8F%E5%91%A8%E6%97%A5">点击这里查看</a></p>
+</li>
+<li><p><strong>如何下架商品？</strong></p>
+<p>在<code>商店</code>页面，长按商品，然后选择顶部的垃圾桶按钮。</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>指定时间没收到提醒？</strong></p>
+<p>应用内其实也有说明，由于独立应用权限有限，默认的提醒方式会受系统限制，可能关了后台就失效了。</p>
+<p>可以尝试<strong>更换为系统日历提醒方式（<code>设置</code>-<code>事项设置</code>）</strong>，更换后，可以查看系统日历app有没有成功插入提醒时间。</p>
+</li>
+<li><p><strong>想初始化“我的”页面中的逾期、放弃数</strong></p>
+<p>这里的数字统计是基于历史记录的，可以前往<code>侧边栏</code>-<code>历史</code>页面，删除相应的错误记录。</p>
+</li>
+<li><p><strong>什么是目标重复次数和计数事项次数？</strong></p>
+<p><a href="http://sarasarasa.net/post/423cff64.html#%E7%9B%AE%E6%A0%87%E9%87%8D%E5%A4%8D%E6%AC%A1%E6%95%B0">点击这里查看</a></p>
+</li>
+<li><p><strong>我不想用社区，可以隐藏吗？</strong></p>
+<p>可以前往<code>侧边栏</code>-<code>设置</code>-<code>显示设置</code>内隐藏社区，需要重启应用生效~</p>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>项目</category>
@@ -5881,10 +5915,10 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>Java</tag>
-        <tag>框架</tag>
         <tag>Quartz</tag>
         <tag>实例</tag>
+        <tag>Java</tag>
+        <tag>框架</tag>
       </tags>
   </entry>
   <entry>
