@@ -1,323 +1,5 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.7.1">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-  <meta http-equiv="Cache-Control" content="no-transform">
-  <meta http-equiv="Cache-Control" content="no-siteapp">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
-
-
-<script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    hostname: new URL('http://sarasarasa.net').hostname,
-    root: '/',
-    scheme: 'Pisces',
-    version: '7.6.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: true,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    comments: {"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: 'search.xml',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
-  };
-</script>
-
-  <meta name="description" content="公告已知bug 领取成就奖励时，显示的时间不正确。 重新进入页面可以查看正确的时间。下个版本会修复。   更新速度减缓因为近期我们两位开发者都需要赶毕业设计/论文进度😅 所以这段时间的更新速度会稍微减缓。 后续的一些更新目前计划是关注于增强“游戏化”方面，还有实现之前采纳的用户建议。 也欢迎大家继续提出各种建议~  图标应用图标感觉需要一波更新，但我们这边暂时没什么想法(:з」∠) 如果你有意贡">
-<meta name="keywords" content="Android,开发日志">
-<meta property="og:type" content="article">
-<meta property="og:title" content="人升LifeUp 公告与详细介绍">
-<meta property="og:url" content="http://sarasarasa.net/post/621e3bb6.html">
-<meta property="og:site_name" content="SaraSaraSa">
-<meta property="og:description" content="公告已知bug 领取成就奖励时，显示的时间不正确。 重新进入页面可以查看正确的时间。下个版本会修复。   更新速度减缓因为近期我们两位开发者都需要赶毕业设计/论文进度😅 所以这段时间的更新速度会稍微减缓。 后续的一些更新目前计划是关注于增强“游戏化”方面，还有实现之前采纳的用户建议。 也欢迎大家继续提出各种建议~  图标应用图标感觉需要一波更新，但我们这边暂时没什么想法(:з」∠) 如果你有意贡">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://sarasarasa.net/post/621e3bb6/shop_01.jpg">
-<meta property="og:image" content="http://sarasarasa.net/post/621e3bb6/01.jpg">
-<meta property="og:updated_time" content="2020-05-08T14:49:57.487Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="人升LifeUp 公告与详细介绍">
-<meta name="twitter:description" content="公告已知bug 领取成就奖励时，显示的时间不正确。 重新进入页面可以查看正确的时间。下个版本会修复。   更新速度减缓因为近期我们两位开发者都需要赶毕业设计/论文进度😅 所以这段时间的更新速度会稍微减缓。 后续的一些更新目前计划是关注于增强“游戏化”方面，还有实现之前采纳的用户建议。 也欢迎大家继续提出各种建议~  图标应用图标感觉需要一波更新，但我们这边暂时没什么想法(:з」∠) 如果你有意贡">
-<meta name="twitter:image" content="http://sarasarasa.net/post/621e3bb6/shop_01.jpg">
-
-<link rel="canonical" href="http://sarasarasa.net/post/621e3bb6.html">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome: false,
-    isPost: true
-  };
-</script>
-
-  <title>人升LifeUp 公告与详细介绍 | SaraSaraSa</title>
-  
-
-
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?bbe7ac5f435cef91b7c68c2e1aa4d39e";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">SaraSaraSa</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-        <p class="site-subtitle">A Blog to Write about Everything</p>
-  </div>
-
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-</div>
-
-
-<nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
-
-</nav>
-  <div class="site-search">
-    <div class="popup search-popup">
-    <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none"
-           placeholder="搜索..." spellcheck="false"
-           type="text" id="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result"></div>
-
-</div>
-<div class="search-pop-overlay"></div>
-
-  </div>
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-  <div class="reading-progress-bar"></div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content">
-            
-
-  <div class="posts-expand">
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://sarasarasa.net/post/621e3bb6.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="AyagiKei">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SaraSaraSa">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          人升LifeUp 公告与详细介绍
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2018-12-15 19:40:10" itemprop="dateCreated datePublished" datetime="2018-12-15T19:40:10+08:00">2018-12-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-08 22:49:57" itemprop="dateModified" datetime="2020-05-08T22:49:57+08:00">2020-05-08</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/项目/" itemprop="url" rel="index">
-                    <span itemprop="name">项目</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/项目/开发日志/" itemprop="url" rel="index">
-                    <span itemprop="name">开发日志</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/项目/开发日志/人升/" itemprop="url" rel="index">
-                    <span itemprop="name">人升</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/post/621e3bb6.html#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="post/621e3bb6.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>3.6k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>6 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-        <h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><h2 id="已知bug"><a href="#已知bug" class="headerlink" title="已知bug"></a>已知bug</h2><ul>
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="generator" content="Hexo 4.2.1"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>人升LifeUp 公告与详细介绍 - SaraSaraSa</title><meta description="公告已知bug 领取成就奖励时，显示的时间不正确。 重新进入页面可以查看正确的时间。下个版本会修复。   更新速度减缓因为近期我们两位开发者都需要赶毕业设计&amp;#x2F;论文进度😅 所以这段时间的更新速度会稍微减缓。 后续的一些更新目前计划是关注于增强“游戏化”方面，还有实现之前采纳的用户建议。 也欢迎大家继续提出各种建议~  图标应用图标感觉需要一波更新，但我们这边暂时没什么想法(:з」∠) 如果你有意贡"><meta property="og:type" content="blog"><meta property="og:title" content="人升LifeUp 公告与详细介绍"><meta property="og:url" content="http://sarasarasa.net/post/621e3bb6.html"><meta property="og:site_name" content="SaraSaraSa"><meta property="og:description" content="公告已知bug 领取成就奖励时，显示的时间不正确。 重新进入页面可以查看正确的时间。下个版本会修复。   更新速度减缓因为近期我们两位开发者都需要赶毕业设计&amp;#x2F;论文进度😅 所以这段时间的更新速度会稍微减缓。 后续的一些更新目前计划是关注于增强“游戏化”方面，还有实现之前采纳的用户建议。 也欢迎大家继续提出各种建议~  图标应用图标感觉需要一波更新，但我们这边暂时没什么想法(:з」∠) 如果你有意贡"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://sarasarasa.net/post/621e3bb6/shop_01.jpg"><meta property="og:image" content="http://sarasarasa.net/post/621e3bb6/01.jpg"><meta property="article:published_time" content="2018-12-15T11:40:10.000Z"><meta property="article:modified_time" content="2020-07-12T16:02:07.966Z"><meta property="article:author" content="AyagiKei"><meta property="article:tag" content="Android"><meta property="article:tag" content="开发日志"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/post/621e3bb6/shop_01.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://sarasarasa.net/post/621e3bb6.html"},"headline":"SaraSaraSa","image":["http://sarasarasa.net/post/621e3bb6/shop_01.jpg","http://sarasarasa.net/post/621e3bb6/01.jpg"],"datePublished":"2018-12-15T11:40:10.000Z","dateModified":"2020-07-12T16:02:07.966Z","author":{"@type":"Person","name":"AyagiKei"},"description":"公告已知bug 领取成就奖励时，显示的时间不正确。 重新进入页面可以查看正确的时间。下个版本会修复。   更新速度减缓因为近期我们两位开发者都需要赶毕业设计&#x2F;论文进度😅 所以这段时间的更新速度会稍微减缓。 后续的一些更新目前计划是关注于增强“游戏化”方面，还有实现之前采纳的用户建议。 也欢迎大家继续提出各种建议~  图标应用图标感觉需要一波更新，但我们这边暂时没什么想法(:з」∠) 如果你有意贡"}</script><link rel="canonical" href="http://sarasarasa.net/post/621e3bb6.html"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="SaraSaraSa" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2018-12-15T11:40:10.000Z" title="2018-12-15T11:40:10.000Z">2018-12-15</time><span class="level-item"><a class="link-muted" href="/categories/%E9%A1%B9%E7%9B%AE/">项目</a><span> / </span><a class="link-muted" href="/categories/%E9%A1%B9%E7%9B%AE/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/">开发日志</a><span> / </span><a class="link-muted" href="/categories/%E9%A1%B9%E7%9B%AE/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/%E4%BA%BA%E5%8D%87/">人升</a></span><span class="level-item">23 分钟 读完 (大约 3421 个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">人升LifeUp 公告与详细介绍</h1><div class="content"><h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><h2 id="已知bug"><a href="#已知bug" class="headerlink" title="已知bug"></a>已知bug</h2><ul>
 <li><p><strong>领取成就奖励时，显示的时间不正确。</strong></p>
 <p>重新进入页面可以查看正确的时间。下个版本会修复。</p>
 </li>
@@ -326,20 +8,20 @@
 <p>所以这段时间的更新速度会稍微减缓。</p>
 <p>后续的一些更新目前计划是关注于增强“游戏化”方面，还有实现之前采纳的用户建议。</p>
 <p>也欢迎大家继续提出各种建议~</p>
-<p><br></p>
+<p><br /></p>
 <h2 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h2><p>应用图标感觉需要一波更新，但我们这边暂时没什么想法<em>(:з」∠)</em></p>
 <p>如果你有意贡献图标/想法的话，欢迎邮件联系~</p>
-<p><br></p>
+<p><br /></p>
 <h2 id="使用指南（施工中）"><a href="#使用指南（施工中）" class="headerlink" title="使用指南（施工中）"></a>使用指南（施工中）</h2><p><strong><a href="http://sarasarasa.net/post/423cff64.html">事项篇</a></strong></p>
 <p>新建事项的各个选项介绍、新建各种类型的事项、清单管理与排序、稍后阅读功能</p>
-<p><br></p>
+<p><br /></p>
 <h2 id="版本更新"><a href="#版本更新" class="headerlink" title="版本更新"></a>版本更新</h2><p><strong><a href="http://sarasarasa.net/post/c7d8419c.html">v1.70.x更新介绍</a></strong></p>
 <p>简洁模式、图片附件、WebDAV配置方法、撤销优化、动态显示优化</p>
 <p><strong><a href="http://sarasarasa.net/post/3651a964.html">v1.69.0更新介绍</a></strong></p>
 <p>子任务、逾期处理、自定义排序、冻结、编辑团队事项</p>
 <p><strong><a href="http://sarasarasa.net/post/43761082.html">v1.68.0更新介绍</a></strong></p>
 <p>新成就系统</p>
-<p><br></p>
+<p><br /></p>
 <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ol>
 <li><a href="#应用简介">应用简介</a><br>1.1 <a href="#情景介绍">情景介绍</a><br>1.2 <a href="#已知问题">已知问题</a><br>1.3 <a href="#更新计划">更新计划</a><br>1.4 <a href="#绿色应用">绿色应用</a><br>1.5 <a href="#盈利方式">盈利方式</a><br>1.6 <a href="#上架市场">上架市场</a><br>1.7 <a href="#关于开源">关于开源</a></li>
 <li><a href="#功能介绍">功能介绍</a><br>2.1 <a href="#新成就系统">新成就系统</a><br>2.2 <a href="#稍后阅读">稍后阅读</a><br>2.3 <a href="#商店系统">商店系统</a><br>2.4 <a href="#社区">社区</a></li>
@@ -361,11 +43,11 @@
 <p>于是现实中，可以心满意足地点开外卖应用下单奶茶奖励自己。</p>
 </blockquote>
 <p>该情景<strong>主要只涵盖了应用的游戏化部分</strong>，除此之外还有社区、统计、日历、桌面小部件等功能，会在后面部分介绍。</p>
-<p><br></p>
+<p><br /></p>
 <h2 id="更新计划"><a href="#更新计划" class="headerlink" title="更新计划"></a>更新计划</h2><p><strong>2019/10/31：</strong>因为目前在实习+准备毕设，稍微将原本大概7-14天一更的频次调整到<strong>14-21天一更</strong>。</p>
-<p><br></p>
+<p><br /></p>
 <h2 id="绿色应用"><a href="#绿色应用" class="headerlink" title="绿色应用"></a>绿色应用</h2><p>并且，《人升》<strong>无开屏、无内置广告、暂无内购</strong>。体积也一直<strong>尽量保持在6mb</strong>左右。</p>
-<p>并且通过了<a href="https://green-android.org/" target="_blank" rel="noopener">Android 绿色应用公约 3.0验证</a>，<strong>无需读取手机状态、甚至无需外部存储空间权限</strong>。</p>
+<p>并且通过了<a href="https://green-android.org/">Android 绿色应用公约 3.0验证</a>，<strong>无需读取手机状态、甚至无需外部存储空间权限</strong>。</p>
 <p>理论上运行<strong>无需任何权限</strong>，只为了一些可选功能申请了一些权限：</p>
 <ul>
 <li><p><strong>查看网络连接、查看WLAN连接、拥有完全的网络访问权限</strong></p>
@@ -385,12 +67,12 @@
 <p>比如Google授权登录、QQ授权登录。</p>
 </li>
 </ul>
-<p><br></p>
+<p><br /></p>
 <h2 id="盈利方式"><a href="#盈利方式" class="headerlink" title="盈利方式"></a>盈利方式</h2><p>暂时，《人升》在国内是<del>用爱发电</del>，<strong>感谢诸位的捐赠让我们走下来。</strong></p>
-<p><br></p>
+<p><br /></p>
 <p>在Google Play市场，我们面向海外发布了价格为$0.99的买断版本。</p>
 <p><strong>捐赠过的用户可以向我们发送邮件获取Google Play的兑换码。</strong></p>
-<p><br></p>
+<p><br /></p>
 <p>并且有意把这个版本当作以后《人升》实现“终身会员”的雏形，</p>
 <p><strong>目前的所有基础功能都不会需要会员</strong>，</p>
 <p>部分比较偏的需求，或者是需要消耗服务器资源的需求，可能会选作是”终身会员“的福利。</p>
@@ -398,7 +80,7 @@
 <p>有意把”会员“的购买界面做得像购买游戏DLC一样😂</p>
 <p>并且计划实现会员前捐赠的所有用户都能获得相应的会员兑换码。</p>
 </blockquote>
-<p><br></p>
+<p><br /></p>
 <p>🧐<strong>小谈一下押金制</strong>，目前也有一部分用户出于好意提议我们未来采用押金制。</p>
 <p><strong>但就我个人而言，觉得押金制有些功利（无论是对于开发者还是使用者）。</strong></p>
 <p>对于使用者来说，使用实际的金钱惩罚，来逼迫自己冲动地完成或者是坚持某个目标。</p>
@@ -406,10 +88,10 @@
 <p>甚至也有可能起反作用，对自己本来想要做的事情起了厌恶之情。</p>
 <p>又或者是，为了避开惩罚，就算没完成也硬是点下<code>完成</code>按钮。</p>
 <p>逐渐偏离最初的目标，从坚持完成某个事，到为了不受惩罚而完成某件事。</p>
-<p><br></p>
+<p><br /></p>
 <p>当然，这一些都因人而异，选择自己合适的方式即可😜。</p>
 <p><strong>只是《人升》基于以上原因不可能会采用押金制。</strong></p>
-<p><br></p>
+<p><br /></p>
 <h2 id="上架市场"><a href="#上架市场" class="headerlink" title="上架市场"></a>上架市场</h2><p>目前，我们官方上架并且维护更新的应用市场有：<strong>酷安、魅族、小米、华为、Google Play、应用宝、阿里应用分发（含：豌豆荚、PP 助手、YunOS 应用商店、UC应用商店等）</strong>。</p>
 <p>华为应用市场也拿回了应用管理权，也可以在华为应用市场上更新人升了。</p>
 <p>并且在这些应用市场上架的都是相同的包名，完全<strong>可以跨市场升级</strong>~</p>
@@ -419,22 +101,21 @@
 <li>自定义卡片背景，自定义商品“使用”按钮文本</li>
 <li>（计划）更多增值内容，如Google Drive同步</li>
 </ul>
-<p><br></p>
+<p><br /></p>
 <h2 id="关于开源"><a href="#关于开源" class="headerlink" title="关于开源"></a>关于开源</h2><p>之前客户端的代码是在Github上完全开源的，</p>
 <p>但是经历了被人恶意篡改、插入广告，上架到一些市场抢占包名的事情之后，</p>
 <p>我们已经把客户端的代码闭源了。</p>
-<p><br></p>
+<p><br /></p>
 <p>以后，<strong>可能会开源部分代码或者应用架构等</strong>。</p>
 <a id="more"></a>
-<p><br></p>
+<p><br /></p>
 <hr>
-<h1 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h1><h2 id="商店系统"><a href="#商店系统" class="headerlink" title="商店系统"></a>商店系统</h2><div class="note primary">
-            <p><strong>上架商品，获得金币，购买奖励</strong></p><p>商店系统是对完成事项后奖励自我的一种游戏化体现，<del>并不是什么内购</del>。</p>
-          </div>
+<h1 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h1><h2 id="商店系统"><a href="#商店系统" class="headerlink" title="商店系统"></a>商店系统</h2><p><strong>上架商品，获得金币，购买奖励</strong></p>
+<p>商店系统是对完成事项后奖励自我的一种游戏化体现，<del>并不是什么内购</del>。</p>
 <p>所以，在商店上架的商品，就是你打算在自己达到一定目标后给自己的奖励。</p>
 <p>价格是你自己衡量是否达到这个目标的标尺。</p>
-<p><br></p>
- <img src="/post/621e3bb6/shop_01.jpg">
+<p><br /></p>
+ <img src="/post/621e3bb6/shop_01.jpg" class="">
 <h3 id="金币获取手段"><a href="#金币获取手段" class="headerlink" title="金币获取手段"></a>金币获取手段</h3><p>设置好了商品（奖励），那么就只差金币的获取手段了：</p>
 <ol>
 <li><p><strong>自建待办事项，设置金币奖励</strong></p>
@@ -451,16 +132,16 @@
 <p>部分成就解锁后，会奖励小额金币。</p>
 </li>
 </ol>
-<p><br></p>
+<p><br /></p>
 <h3 id="仓库"><a href="#仓库" class="headerlink" title="仓库"></a>仓库</h3><p>默认情况下，购买的商品会放到仓库里。</p>
 <p>需要点击<code>使用</code>的时候才消耗掉。</p>
 <p>当然，最新版本，你能在购买的时候选择<code>立即使用</code>了。</p>
-<p><br></p>
+<p><br /></p>
 <h3 id="贷款"><a href="#贷款" class="headerlink" title="贷款"></a>贷款</h3><p>右上角的商店设置里，可以设置贷款金额。</p>
 <p>现在的贷款实现，其实是允许金币负值。</p>
 <p>比如，你设置了贷款1000。那么就是允许金币最小为-1000。</p>
 <p>所以，偿还贷款的方式，就是挣金币~</p>
-<p><br></p>
+<p><br /></p>
 <h3 id="使用参考"><a href="#使用参考" class="headerlink" title="使用参考"></a>使用参考</h3><p>具体上架什么商品，取决你自己的爱好~</p>
 <p><strong>这里提供一些参考：</strong></p>
 <p>奶茶 —— 10金币：使用之后，奖励自己一杯奶茶</p>
@@ -469,9 +150,10 @@
 <p><strong>另外，也有一些用户把商品当作惩罚来用😂：</strong></p>
 <p>浪费时间惩罚 —— 5金币：如果今天浪费了时间，就购买这项金币惩罚</p>
 <hr>
-<h2 id="社区"><a href="#社区" class="headerlink" title="社区"></a>社区</h2><div class="note primary">
-            <p><strong>组织团队、共同进步</strong></p><p>《人升》的社区也不是普通的论坛，而是一个组织团队共同完成某个事项，养成习惯的地方。</p><p>并且这里主打轻社交，没有聊天，没有通知。</p><p>但是你能看到浏览别人完成事项的动态。</p>
-          </div>
+<h2 id="社区"><a href="#社区" class="headerlink" title="社区"></a>社区</h2><p><strong>组织团队、共同进步</strong></p>
+<p>《人升》的社区也不是普通的论坛，而是一个组织团队共同完成某个事项，养成习惯的地方。</p>
+<p>并且这里主打轻社交，没有聊天，没有通知。</p>
+<p>但是你能看到浏览别人完成事项的动态。</p>
 <h3 id="团队"><a href="#团队" class="headerlink" title="团队"></a>团队</h3><p>社区的主体就是团队，</p>
 <p>你可以浏览加入感兴趣的团队。</p>
 <p>如果找不到，那么可以自己建立一个团队。</p>
@@ -479,25 +161,25 @@
 <p> 团队的内容是公开的，<strong>所以请不要建立比较私人的事项，或者涉及违法敏感相关的事项，谢谢~</strong>。</p>
 <p> 如果有特殊需要，可以建立成本地事项。</p>
 </blockquote>
-<p><br></p>
+<p><br /></p>
 <p>加入或者建立一个团队之后，会自动领取团队事项。</p>
 <p><strong>如果你删除错了团队事项，或者退出登录导致团队事项消失。</strong></p>
 <p>那么，可以返回团队详情界面，<strong>点击<code>领取</code>按钮</strong>重新领取团队事项。</p>
-<p><br></p>
+<p><br /></p>
 <p>团队事项暂时不支持编辑、放弃等操作。</p>
 <p>后续会开放<strong>部分编辑</strong>功能。</p>
-<p><br></p>
+<p><br /></p>
 <h3 id="新建团队"><a href="#新建团队" class="headerlink" title="新建团队"></a>新建团队</h3><p>新建团队的界面其实和新建待办事项差不多，只是缺少了一些自定义选项。</p>
 <p>值得注意的是，</p>
 <p>“<code>首次开始日期</code>+<code>首次开始时间</code>”和“<code>首次结束日期</code>+<code>结束时间</code>”指的是<strong>第一次事项的开始结束时间，并不是团队的结束时间</strong>。</p>
 <p>比如，每日事项，这两个时间一般来说是一天的00:00:00到23:59:59即可。</p>
 <p>如果是<code>早起</code>之类的事项，设置为<strong>同一天</strong>的06:00:00到08:59:59。</p>
 <p>再比如说每周事项，可以设置为周一00:00:00到周日23:59:59。</p>
-<p><br></p>
+<p><br /></p>
 <p><strong>如果需要终止团队，</strong></p>
 <p>如果创建者到团队详情页面右上角选项，选择<code>终止</code>即可。</p>
 <p>如果你不是创建者，可以选择<code>退出</code>团队。</p>
-<p><br></p>
+<p><br /></p>
 <h3 id="时刻"><a href="#时刻" class="headerlink" title="时刻"></a>时刻</h3><p>在完成团队事项的时候，你可选择性地发表动态，并且可以贴上图片。</p>
 <blockquote>
 <p>为了节省服务器流量，以及防止一些问题，图片会默认进行压缩。</p>
@@ -506,276 +188,37 @@
 <p>同时，你也能关注感兴趣的人。并且筛选关注的人的动态等。</p>
 <p>在个人主页（<strong>入口</strong>：<code>我的</code>→<code>我的主页</code>→<code>查看</code>），</p>
 <p>你能随时浏览自己发表过的动态，长按也可以进行删除操作。</p>
-<p><br></p>
+<p><br /></p>
 <h3 id="排行榜"><a href="#排行榜" class="headerlink" title="排行榜"></a>排行榜</h3><p>你可能会诧异为什么排行榜只有你自己一个人。😂</p>
 <p>因为并不想让排行榜变成一个攀比的地方，所以设计成了只显示自己与自己关注的人。</p>
-<p><br></p>
+<p><br /></p>
 <p><strong>所以，去关注一下其他人吧~<del>（说不定还能解锁成就）</del></strong></p>
 <p>排行榜目前功能较薄弱，以后可能会改进。</p>
-<p><br></p>
+<p><br /></p>
 <hr>
 <h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a><a href="http://sarasarasa.net/post/a889432c.html">更新日志</a></h2><h2 id="捐赠名单"><a href="#捐赠名单" class="headerlink" title="捐赠名单"></a><a href="http://sarasarasa.net/post/22d5d0d5.html">捐赠名单</a></h2><p>扫码关注人升公众号，可以尽快收到更新介绍<del>而且我们说不定能赚点服务器钱:)</del></p>
- <img src="/post/621e3bb6/01.jpg">
-
-    </div>
-
-    
-    
-    
-
-      <footer class="post-footer">
-          
-          <div class="post-tags">
-              <a href="/tags/Android/" rel="tag"><i class="fa fa-tag"></i> Android</a>
-              <a href="/tags/开发日志/" rel="tag"><i class="fa fa-tag"></i> 开发日志</a>
-          </div>
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/post/f5d060f4.html" rel="prev" title="人升开发日志#11 | 12/06 Android 桌面小部件">
-      <i class="fa fa-chevron-left"></i> 人升开发日志#11 | 12/06 Android 桌面小部件
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/post/a889432c.html" rel="next" title="人升Lifeup 更新日志">
-      人升Lifeup 更新日志 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-  </div>
-
-
-          </div>
-          
-    
-  <div class="comments">
-    <div id="disqus_thread">
-      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-    </div>
-  </div>
-  
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let activeClass = CONFIG.comments.activeClass;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#公告"><span class="nav-number">1.</span> <span class="nav-text">公告</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#已知bug"><span class="nav-number">1.1.</span> <span class="nav-text">已知bug</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更新速度减缓"><span class="nav-number">1.2.</span> <span class="nav-text">更新速度减缓</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图标"><span class="nav-number">1.3.</span> <span class="nav-text">图标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用指南（施工中）"><span class="nav-number">1.4.</span> <span class="nav-text">使用指南（施工中）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本更新"><span class="nav-number">1.5.</span> <span class="nav-text">版本更新</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目录"><span class="nav-number">2.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#应用简介"><span class="nav-number">3.</span> <span class="nav-text">应用简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#情景介绍"><span class="nav-number">3.1.</span> <span class="nav-text">情景介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更新计划"><span class="nav-number">3.2.</span> <span class="nav-text">更新计划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绿色应用"><span class="nav-number">3.3.</span> <span class="nav-text">绿色应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#盈利方式"><span class="nav-number">3.4.</span> <span class="nav-text">盈利方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上架市场"><span class="nav-number">3.5.</span> <span class="nav-text">上架市场</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Google-Play上的Pro版差异"><span class="nav-number">3.5.1.</span> <span class="nav-text">Google Play上的Pro版差异</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于开源"><span class="nav-number">3.6.</span> <span class="nav-text">关于开源</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#功能介绍"><span class="nav-number">4.</span> <span class="nav-text">功能介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#商店系统"><span class="nav-number">4.1.</span> <span class="nav-text">商店系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#金币获取手段"><span class="nav-number">4.1.1.</span> <span class="nav-text">金币获取手段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#仓库"><span class="nav-number">4.1.2.</span> <span class="nav-text">仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#贷款"><span class="nav-number">4.1.3.</span> <span class="nav-text">贷款</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用参考"><span class="nav-number">4.1.4.</span> <span class="nav-text">使用参考</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#社区"><span class="nav-number">4.2.</span> <span class="nav-text">社区</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#团队"><span class="nav-number">4.2.1.</span> <span class="nav-text">团队</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建团队"><span class="nav-number">4.2.2.</span> <span class="nav-text">新建团队</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#时刻"><span class="nav-number">4.2.3.</span> <span class="nav-text">时刻</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排行榜"><span class="nav-number">4.2.4.</span> <span class="nav-text">排行榜</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-number">5.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#更新日志"><span class="nav-number">5.1.</span> <span class="nav-text">更新日志</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#捐赠名单"><span class="nav-number">5.2.</span> <span class="nav-text">捐赠名单</span></a></li></ol></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="AyagiKei"
-      src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">AyagiKei</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">61</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">22</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">54</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/Ayagikei" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Ayagikei" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:AyagiKei@163.com" title="E-Mail → mailto:AyagiKei@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://www.zhihu.com/people/kei-8/activities" title="ZhiHu → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;kei-8&#x2F;activities" rel="noopener" target="_blank"><i class="fa fa-fw fa-circle"></i>ZhiHu</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://blog.csdn.net/ayagikei" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;ayagikei" rel="noopener" target="_blank"><i class="fa fa-fw fa-circle"></i>CSDN</a>
-      </span>
-  </div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">AyagiKei</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
-    </span>
-    <span title="站点总字数">204k</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-    <span title="站点阅读时长">5:39</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.7.1
-  </div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.6.0
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
-<script src="/js/schemes/pisces.js"></script>
-<script src="/js/next-boot.js"></script>
-
-
-
-  
-
-
-
-
-  <script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-<script>
-  function loadCount() {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://AyagiKei.disqus.com/count.js';
-    s.id = 'dsq-count-scr';
-    (d.head || d.body).appendChild(s);
-  }
-  // defer loading until the whole page loading is completed
-  window.addEventListener('load', loadCount, false);
-</script>
-<script>
-  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
-    if (window.DISQUS) {
-      DISQUS.reset({
-        reload: true,
-        config: {page: {
-            url: "http://sarasarasa.net/post/621e3bb6.html",
-            identifier: "post/621e3bb6.html",
-            title: "人升LifeUp 公告与详细介绍"
-          }
-        }
-      });
-    } else {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://AyagiKei.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', '' + +new Date());
-      (d.head || d.body).appendChild(s);
-    }
-  });
-</script>
-
-</body>
-</html>
+ <img src="/post/621e3bb6/01.jpg" class="">
+</div><div class="article-tags size-small mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Android/">Android</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/">开发日志</a></div><div class="notification is-danger">You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.</div></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button is-info donate"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/" alt="支付宝"></span></a><a class="button donate" href="/" style="background-color:rgba(255,128,62,.87);border-color:transparent;color:white;" target="_blank" rel="noopener"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>送我杯咖啡</span></a><a class="button is-danger donate" href="/" target="_blank" rel="noopener"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><div class="notification is-danger">You forgot to set the <code>business</code> or <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.</div><a class="button is-success donate"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="/" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/post/1f18a9aa.html"><i class="level-item fas fa-chevron-left"></i><span class="level-item">2018 年终总结</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/post/157a032e.html"><span class="level-item">人升LifeUp 常见问题</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="Your name"></figure><p class="title is-size-4 is-block line-height-inherit">Your name</p><p class="is-size-6 is-block">Your title</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Your location</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">61</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">22</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">54</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/ppoffice"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/%E4%B8%AA%E4%BA%BA/"><span class="level-start"><span class="level-item">个人</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%8A%80%E6%9C%AF/"><span class="level-start"><span class="level-item">技术</span></span><span class="level-end"><span class="level-item tag">24</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E6%8A%80%E6%9C%AF/Android/"><span class="level-start"><span class="level-item">Android</span></span><span class="level-end"><span class="level-item tag">11</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E6%8A%80%E6%9C%AF/Android/Code-Snippet/"><span class="level-start"><span class="level-item">Code-Snippet</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%8A%80%E6%9C%AF/Git/"><span class="level-start"><span class="level-item">Git</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%8A%80%E6%9C%AF/Linux/"><span class="level-start"><span class="level-item">Linux</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%8A%80%E6%9C%AF/%E5%90%8E%E7%AB%AF/"><span class="level-start"><span class="level-item">后端</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%8A%80%E6%9C%AF/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"><span class="level-start"><span class="level-item">数据结构与算法</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%8A%80%E6%9C%AF/%E8%AE%B0%E5%BD%95/"><span class="level-start"><span class="level-item">记录</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%B8%B8%E6%88%8F/"><span class="level-start"><span class="level-item">游戏</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E6%B8%B8%E6%88%8F/%E6%96%87%E5%8C%96/"><span class="level-start"><span class="level-item">文化</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/%E7%94%9F%E6%B4%BB/"><span class="level-start"><span class="level-item">生活</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E7%94%9F%E6%B4%BB/%E5%85%B6%E4%BB%96/"><span class="level-start"><span class="level-item">其他</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"><span class="level-start"><span class="level-item">计算机</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6/"><span class="level-start"><span class="level-item">软件</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6/%E6%B8%85%E5%8D%95/"><span class="level-start"><span class="level-item">清单</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/%E8%BD%AF%E4%BB%B6/"><span class="level-start"><span class="level-item">软件</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E8%BD%AF%E4%BB%B6/%E5%AE%89%E5%88%A9/"><span class="level-start"><span class="level-item">安利</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/%E9%A1%B9%E7%9B%AE/"><span class="level-start"><span class="level-item">项目</span></span><span class="level-end"><span class="level-item tag">28</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E9%A1%B9%E7%9B%AE/%E4%BA%BA%E5%8D%87Q-A/"><span class="level-start"><span class="level-item">人升Q&amp;A</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E9%A1%B9%E7%9B%AE/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/"><span class="level-start"><span class="level-item">开发日志</span></span><span class="level-end"><span class="level-item tag">23</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E9%A1%B9%E7%9B%AE/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/%E4%BA%BA%E5%8D%87/"><span class="level-start"><span class="level-item">人升</span></span><span class="level-end"><span class="level-item tag">23</span></span></a></li></ul></li></ul></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content size-small"><p><time dateTime="2020-03-24T17:20:23.000Z">2020-03-25</time></p><p class="title is-6"><a class="link-muted" href="/post/a542da69.html">Android DialogFragment 相关代码段</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> / <a class="link-muted" href="/categories/%E6%8A%80%E6%9C%AF/Android/">Android</a> / <a class="link-muted" href="/categories/%E6%8A%80%E6%9C%AF/Android/Code-Snippet/">Code-Snippet</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-03-24T17:08:56.000Z">2020-03-25</time></p><p class="title is-6"><a class="link-muted" href="/post/a2321477.html">Android动画相关代码段</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> / <a class="link-muted" href="/categories/%E6%8A%80%E6%9C%AF/Android/">Android</a> / <a class="link-muted" href="/categories/%E6%8A%80%E6%9C%AF/Android/Code-Snippet/">Code-Snippet</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-03-04T07:51:15.000Z">2020-03-04</time></p><p class="title is-6"><a class="link-muted" href="/post/e5dce7c7.html">LifeUp Release Log</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E9%A1%B9%E7%9B%AE/">项目</a> / <a class="link-muted" href="/categories/%E9%A1%B9%E7%9B%AE/%E4%BA%BA%E5%8D%87Q-A/">人升Q&amp;A</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-02-29T08:06:06.000Z">2020-02-29</time></p><p class="title is-6"><a class="link-muted" href="/post/e0a2859e.html">Android 5.0共享元素崩溃</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> / <a class="link-muted" href="/categories/%E6%8A%80%E6%9C%AF/Android/">Android</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-02-23T14:11:50.000Z">2020-02-23</time></p><p class="title is-6"><a class="link-muted" href="/post/423cff64.html">人升LifeUp常见问题-事项篇</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E9%A1%B9%E7%9B%AE/">项目</a> / <a class="link-muted" href="/categories/%E9%A1%B9%E7%9B%AE/%E4%BA%BA%E5%8D%87Q-A/">人升Q&amp;A</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2020/03/"><span class="level-start"><span class="level-item">三月 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/02/"><span class="level-start"><span class="level-item">二月 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/01/"><span class="level-start"><span class="level-item">一月 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2019/12/"><span class="level-start"><span class="level-item">十二月 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2019/11/"><span class="level-start"><span class="level-item">十一月 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2019/10/"><span class="level-start"><span class="level-item">十月 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2019/09/"><span class="level-start"><span class="level-item">九月 2019</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2019/08/"><span class="level-start"><span class="level-item">八月 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2019/07/"><span class="level-start"><span class="level-item">七月 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2019/06/"><span class="level-start"><span class="level-item">六月 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2019/05/"><span class="level-start"><span class="level-item">五月 2019</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2019/04/"><span class="level-start"><span class="level-item">四月 2019</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2019/03/"><span class="level-start"><span class="level-item">三月 2019</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2019/02/"><span class="level-start"><span class="level-item">二月 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2019/01/"><span class="level-start"><span class="level-item">一月 2019</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2018/12/"><span class="level-start"><span class="level-item">十二月 2018</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2018/11/"><span class="level-start"><span class="level-item">十一月 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2018/09/"><span class="level-start"><span class="level-item">九月 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2018/08/"><span class="level-start"><span class="level-item">八月 2018</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2018/07/"><span class="level-start"><span class="level-item">七月 2018</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2018/06/"><span class="level-start"><span class="level-item">六月 2018</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2018/05/"><span class="level-start"><span class="level-item">五月 2018</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2018/04/"><span class="level-start"><span class="level-item">四月 2018</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/APP/"><span class="tag">APP</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Android/"><span class="tag">Android</span><span class="tag is-grey-lightest">39</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Code-Snippet/"><span class="tag">Code-Snippet</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DigitalOcean/"><span class="tag">DigitalOcean</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/English/"><span class="tag">English</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Git/"><span class="tag">Git</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Github/"><span class="tag">Github</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Java/"><span class="tag">Java</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/NexT/"><span class="tag">NexT</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Portal/"><span class="tag">Portal</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA/"><span class="tag">QQ机器人</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Quartz/"><span class="tag">Quartz</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SSH/"><span class="tag">SSH</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SpringBoot2/"><span class="tag">SpringBoot2</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Steam/"><span class="tag">Steam</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Ubuntu/"><span class="tag">Ubuntu</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Valve/"><span class="tag">Valve</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/WIN10/"><span class="tag">WIN10</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hexo/"><span class="tag">hexo</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/java/"><span class="tag">java</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/linux/"><span class="tag">linux</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%AA%E4%BA%BA/"><span class="tag">个人</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"><span class="tag">云服务器</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BA%AC%E9%98%BF%E5%B0%BC/"><span class="tag">京阿尼</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BF%A1%E7%94%A8%E5%8D%A1/"><span class="tag">信用卡</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%89%8D%E7%AB%AF/"><span class="tag">前端</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%90%8E%E7%AB%AF/"><span class="tag">后端</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AE%89%E5%88%A9/"><span class="tag">安利</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AE%9E%E4%BE%8B/"><span class="tag">实例</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B9%B3%E6%9D%BF/"><span class="tag">平板</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/"><span class="tag">开发日志</span><span class="tag is-grey-lightest">27</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%80%BB%E7%BB%93/"><span class="tag">总结</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%89%8B%E6%9C%BA/"><span class="tag">手机</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%8A%80%E6%9C%AF/"><span class="tag">技术</span><span class="tag is-grey-lightest">21</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"><span class="tag">数据结构</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%96%87%E5%8C%96/"><span class="tag">文化</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%96%87%E6%A1%A3/"><span class="tag">文档</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9B%B4%E6%96%B0%E4%BB%8B%E7%BB%8D/"><span class="tag">更新介绍</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9C%BA%E5%88%B6/"><span class="tag">机制</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9F%A5%E6%89%BE/"><span class="tag">查找</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%A1%86%E6%9E%B6/"><span class="tag">框架</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B8%85%E5%8D%95/"><span class="tag">清单</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B8%B8%E6%88%8F/"><span class="tag">游戏</span><span class="tag is-grey-lightest">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B8%B8%E6%88%8F%E6%96%87%E5%8C%96/"><span class="tag">游戏文化</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%9F%E6%B4%BB/"><span class="tag">生活</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%B5%E8%84%91/"><span class="tag">电脑</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%9F%A5%E4%B9%8E%E4%B8%93%E6%A0%8F/"><span class="tag">知乎专栏</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AE%97%E6%B3%95/"><span class="tag">算法</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%B3%BB%E7%BB%9F/"><span class="tag">系统</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"><span class="tag">计算机</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AE%B0%E5%BD%95/"><span class="tag">记录</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%B0%83%E8%AF%95/"><span class="tag">调试</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%BD%AF%E4%BB%B6/"><span class="tag">软件</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%A1%B9%E7%9B%AE/"><span class="tag">项目</span><span class="tag is-grey-lightest">1</span></a></div></div></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button is-primary" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="SaraSaraSa" height="28"></a><p class="size-small"><span>&copy; 2020 AyagiKei</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            site: {
+                url: 'http://sarasarasa.net',
+                external_link: {"enable":true,"exclude":[]}
+            },
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
