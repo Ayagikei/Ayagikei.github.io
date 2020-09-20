@@ -1,21 +1,84 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="generator" content="Hexo 4.2.1"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Android 5.0共享元素崩溃 - SaraSaraSa</title><meta description="简介后台监测到了数个仅限于Android5的崩溃问题，日志大概如下： 1Fatal Exception: java.lang.NullPointerException: Attempt to invoke virtual method &amp;#39;android.view.ViewParent android.view.View.getParent()&amp;#39; on a null object r"><meta property="og:type" content="blog"><meta property="og:title" content="Android 5.0共享元素崩溃"><meta property="og:url" content="http://sarasarasa.net/post/e0a2859e.html"><meta property="og:site_name" content="SaraSaraSa"><meta property="og:description" content="简介后台监测到了数个仅限于Android5的崩溃问题，日志大概如下： 1Fatal Exception: java.lang.NullPointerException: Attempt to invoke virtual method &amp;#39;android.view.ViewParent android.view.View.getParent()&amp;#39; on a null object r"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://sarasarasa.net/img/og_image.png"><meta property="article:published_time" content="2020-02-29T08:06:06.000Z"><meta property="article:modified_time" content="2020-03-02T17:43:38.706Z"><meta property="article:author" content="AyagiKei"><meta property="article:tag" content="技术"><meta property="article:tag" content="Android"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://sarasarasa.net/post/e0a2859e.html"},"headline":"SaraSaraSa","image":["http://sarasarasa.net/img/og_image.png"],"datePublished":"2020-02-29T08:06:06.000Z","dateModified":"2020-03-02T17:43:38.706Z","author":{"@type":"Person","name":"AyagiKei"},"description":"简介后台监测到了数个仅限于Android5的崩溃问题，日志大概如下： 1Fatal Exception: java.lang.NullPointerException: Attempt to invoke virtual method &#39;android.view.ViewParent android.view.View.getParent()&#39; on a null object r"}</script><link rel="canonical" href="http://sarasarasa.net/post/e0a2859e.html"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="SaraSaraSa" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-02-29T08:06:06.000Z" title="2020-02-29T08:06:06.000Z">2020-02-29</time><span class="level-item"><a class="link-muted" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a><span> / </span><a class="link-muted" href="/categories/%E6%8A%80%E6%9C%AF/Android/">Android</a></span><span class="level-item">3 分钟 读完 (大约 484 个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">Android 5.0共享元素崩溃</h1><div class="content"><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>后台监测到了数个仅限于Android5的崩溃问题，日志大概如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Fatal Exception: java.lang.NullPointerException: Attempt to invoke virtual method &#39;android.view.ViewParent android.view.View.getParent()&#39; on a null object reference at android.view.ViewOverlay$OverlayViewGroup.add(ViewOverlay.java:164) at android.view.ViewGroupOverlay.add(ViewGroupOverlay.java:63) at android.app.EnterTransitionCoordinator.startRejectedAnimations(EnterTransitionCoordinator.java:598) at android.app.EnterTransitionCoordinator.startSharedElementTransition(EnterTransitionCoordinator.java:325) at android.app.EnterTransitionCoordinator.access$200(EnterTransitionCoordinator.java:42) at android.app.EnterTransitionCoordinator$5$1.run(EnterTransitionCoordinator.java:389) at android.app.ActivityTransitionCoordinator.startTransition(ActivityTransitionCoordinator.java:698) at android.app.EnterTransitionCoordinator$5.onPreDraw(EnterTransitionCoordinator.java:386) at android.view.ViewTreeObserver.dispatchOnPreDraw(ViewTreeObserver.java:847) at android.view.ViewRootImpl.performTraversals(ViewRootImpl.java:1985) at android.view.ViewRootImpl.doTraversal(ViewRootImpl.java:1077) at android.view.ViewRootImpl$TraversalRunnable.run(ViewRootImpl.java:5845) at android.view.Choreographer$CallbackRecord.run(Choreographer.java:767) at android.view.Choreographer.doCallbacks(Choreographer.java:580) at android.view.Choreographer.doFrame(Choreographer.java:550) at android.view.Choreographer$FrameDisplayEventReceiver.run(Choreographer.java:753) at android.os.Handler.handleCallback(Handler.java:739) at android.os.Handler.dispatchMessage(Handler.java:95) at android.os.Looper.loop(Looper.java:135) at android.app.ActivityThread.main(ActivityThread.java:5272) at java.lang.reflect.Method.invoke(Method.java) at java.lang.reflect.Method.invoke(Method.java:372) at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:909) at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:704)</span><br></pre></td></tr></table></figure>
-<p>查了下资料，发现这是 Android 5.0 系统的内置Bug。</p>
-<p>在执行切换动画的时候，有一定条件下会导致崩溃问题。</p>
-<p>并且，在 API level 22（即 Android 5.1）之后，这个  bug 已经被修复了。</p>
-<p>最简单也是最有效的解决方法：</p>
-<p><strong>只有在API level 22的情况下，再执行切换动画。</strong></p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>也有一些想要在 Android 5.0 继续使用切换动画，避免崩溃的解决方案。</p>
-<blockquote>
-<p>这个 Android 系统 bug 与分享元素的选取排除（’rejected’）的处理有关。如果一个分享元素在执行动画的时候没有 attached to the window 就有可能被拒绝，也就是当 View 可见性为 <code>GONE</code> 的时候。</p>
-<p>所以，解决方法就是在执行切换动画的时候，检查每一个共享元素View，并且将可见性改为 <code>VISIBLE</code>。</p>
-<p><a href="https://stackoverflow.com/users/1435436/glenn-schmidt">Glenn Schmidt</a></p>
+<html lang="zh"><head><meta charset="utf-8"><meta name="generator" content="Hexo 4.2.1"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>人升更新介绍#1.75.0 | 09/20 番茄钟 - SaraSaraSa</title><meta description="总览 番茄钟 WebDAV 自动同步 清单&amp;#x2F;事项颜色 可以但没必要的会员系统 模块隐藏 计划"><meta property="og:type" content="blog"><meta property="og:title" content="人升更新介绍#1.75.0 | 09/20 番茄钟"><meta property="og:url" content="http://sarasarasa.net/post/635a53df.html"><meta property="og:site_name" content="SaraSaraSa"><meta property="og:description" content="总览 番茄钟 WebDAV 自动同步 清单&amp;#x2F;事项颜色 可以但没必要的会员系统 模块隐藏 计划"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://sarasarasa.net/post/635a53df/01.png"><meta property="og:image" content="http://sarasarasa.net/post/635a53df/02.png"><meta property="og:image" content="http://sarasarasa.net/post/635a53df/03.png"><meta property="og:image" content="http://sarasarasa.net/post/635a53df/04.png"><meta property="og:image" content="http://sarasarasa.net/post/635a53df/05.png"><meta property="og:image" content="http://sarasarasa.net/post/635a53df/06.png"><meta property="og:image" content="http://sarasarasa.net/post/635a53df/07.png"><meta property="og:image" content="http://sarasarasa.net/post/635a53df/08.png"><meta property="og:image" content="http://sarasarasa.net/post/635a53df/09.png"><meta property="og:image" content="http://sarasarasa.net/post/635a53df/10.png"><meta property="og:image" content="http://sarasarasa.net/post/635a53df/11.png"><meta property="og:image" content="http://sarasarasa.net/post/635a53df/12.png"><meta property="og:image" content="http://sarasarasa.net/post/635a53df/13.png"><meta property="og:image" content="http://sarasarasa.net/post/635a53df/14.png"><meta property="article:published_time" content="2020-09-20T14:56:34.000Z"><meta property="article:modified_time" content="2020-09-20T14:58:14.696Z"><meta property="article:author" content="AyagiKei"><meta property="article:tag" content="Android"><meta property="article:tag" content="开发日志"><meta property="article:tag" content="更新介绍"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/post/635a53df/01.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://sarasarasa.net/post/635a53df.html"},"headline":"SaraSaraSa","image":["http://sarasarasa.net/post/635a53df/01.png","http://sarasarasa.net/post/635a53df/02.png","http://sarasarasa.net/post/635a53df/03.png","http://sarasarasa.net/post/635a53df/04.png","http://sarasarasa.net/post/635a53df/05.png","http://sarasarasa.net/post/635a53df/06.png","http://sarasarasa.net/post/635a53df/07.png","http://sarasarasa.net/post/635a53df/08.png","http://sarasarasa.net/post/635a53df/09.png","http://sarasarasa.net/post/635a53df/10.png","http://sarasarasa.net/post/635a53df/11.png","http://sarasarasa.net/post/635a53df/12.png","http://sarasarasa.net/post/635a53df/13.png","http://sarasarasa.net/post/635a53df/14.png"],"datePublished":"2020-09-20T14:56:34.000Z","dateModified":"2020-09-20T14:58:14.696Z","author":{"@type":"Person","name":"AyagiKei"},"description":"总览 番茄钟 WebDAV 自动同步 清单&#x2F;事项颜色 可以但没必要的会员系统 模块隐藏 计划"}</script><link rel="canonical" href="http://sarasarasa.net/post/635a53df.html"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="SaraSaraSa" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-09-20T14:56:34.000Z" title="2020-09-20T14:56:34.000Z">2020-09-20</time><span class="level-item"><a class="link-muted" href="/categories/%E9%A1%B9%E7%9B%AE/">项目</a><span> / </span><a class="link-muted" href="/categories/%E9%A1%B9%E7%9B%AE/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/">开发日志</a><span> / </span><a class="link-muted" href="/categories/%E9%A1%B9%E7%9B%AE/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/%E4%BA%BA%E5%8D%87/">人升</a></span><span class="level-item">8 分钟 读完 (大约 1212 个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">人升更新介绍#1.75.0 | 09/20 番茄钟</h1><div class="content"><h2 id="总览"><a href="#总览" class="headerlink" title="总览"></a>总览</h2><ol>
+<li><strong>番茄钟</strong></li>
+<li><strong>WebDAV 自动同步</strong></li>
+<li><strong>清单/事项颜色</strong></li>
+<li><strong>可以但没必要的会员系统</strong></li>
+<li><strong>模块隐藏</strong></li>
+<li><strong>计划</strong></li>
+</ol>
+<a id="more"></a>
+<hr>
+<h2 id="▋-番茄钟"><a href="#▋-番茄钟" class="headerlink" title="▋ 番茄钟"></a>▋ 番茄钟</h2> <img src="/post/635a53df/01.png" class="">
+<p>hi~有使用过能吃番茄的番茄钟功能吗？</p>
+<p>「人升」新版本增加了番茄钟计时功能，使用番茄工作法可以更好地安排工作和时间。</p>
+<p>在「人升」中，你每完成一个番茄钟计时，可以得到一个番茄。如果番茄计时过半的情况下，跳过番茄计时，也能获取到半个番茄。</p>
+<p>你可以随时「食用」或者「售出」你获得的番茄。</p>
+ <img src="/post/635a53df/02.png" class="">
+ <img src="/post/635a53df/03.png" class="">
+<p><strong>食用番茄</strong>可以获取到耐力经验值。</p>
+<p><strong>出售番茄</strong>则可以获得金币。</p>
+ <img src="/post/635a53df/04.png" class="">
+<p>另外，番茄计时可以跟待办事项绑定。</p>
+<p>后续可以在待办事项的详情页面看到该待办事项所属的番茄数量。</p>
+<h3 id="功能入口"><a href="#功能入口" class="headerlink" title="功能入口"></a>功能入口</h3> <img src="/post/635a53df/05.png" class="">
+<p>主页，点击侧边栏，点击进入“番茄”页面。</p>
+<p>或者长按待办事项，在右上角菜单中选择<strong>“计时”</strong>选项。</p>
+<h3 id="后续计划"><a href="#后续计划" class="headerlink" title="后续计划"></a>后续计划</h3><ul>
+<li>增加自定义番茄「食用」可获得的属性经验值种类和数量</li>
+<li>增加自定义番茄「出售」可获得的金币数量</li>
+<li>增加自定义环境白噪声</li>
+<li>与成就系统结合</li>
+</ul>
+<hr>
+<h2 id="▋-WebDAV-自动同步"><a href="#▋-WebDAV-自动同步" class="headerlink" title="▋ WebDAV 自动同步"></a>▋ WebDAV 自动同步</h2> <img src="/post/635a53df/06.png" class="">
+<p>此前，即便配置了 WebDAV 备份。也需要手动到「数据管理」页面进行备份或恢复操作，十分不便。</p>
+<p>新版本增加了 WebDAV 自动备份功能，启用后，会在每次进入应用的时候执行备份。</p>
+ <img src="/post/635a53df/07.png" class="">
+<p>同时也会在首页顶部卡片展示同步状态，也能点击进行手动同步。</p>
+ <img src="/post/635a53df/08.png" class="">
+<p>当同步实现冲突时，用户可以抉择使用本地还是云端数据。</p>
+<p>有了该功能，跨设备间的数据同步会轻松一些。</p>
+ <img src="/post/635a53df/09.png" class="">
+<p>在「数据管理」页面，也增加了“如何使用坚果云配置WebDAV备份”的链接。</p>
+<p>还没配置的同学可以去看看~</p>
+<hr>
+<h2 id="▋-清单-事项颜色"><a href="#▋-清单-事项颜色" class="headerlink" title="▋ 清单/事项颜色"></a>▋ 清单/事项颜色</h2> <img src="/post/635a53df/10.png" class="">
+<p>现在用户可以自定义事项卡片的主题色。</p>
+<p>支持自定义整个清单的主题色，或是具体待办事项的颜色。</p>
+<p><strong>优先级：</strong>事项自定义颜色&gt;清单自定义颜色&gt;默认颜色（跟随重复频次变动）</p>
+<hr>
+<h2 id="▋-可以但没必要的会员系统"><a href="#▋-可以但没必要的会员系统" class="headerlink" title="▋ 可以但没必要的会员系统"></a>▋ 可以但没必要的会员系统</h2> <img src="/post/635a53df/11.png" class="">
+<p>可以但没必要的会员系统上线了~</p>
+<p>目前会员系统专属功能比较少，更像是对我们的支持的一个证明。</p>
+<p>以下是一部分现有的功能：</p>
+<ol>
+<li><p>在【设置】→【进阶】中，可以自定义事项卡片背景和透明度。</p>
+ <img src="/post/635a53df/12.png" class="">
+</li>
+<li><p>在【上架商品】页面中，可以自定义商品的操作文案。比如食品类商品可以把文案修改为“吃”。</p>
+ <img src="/post/635a53df/13.png" class="">
+</li>
+<li><p>在【会员】页面中，可以加入 Alpha 测试更新推送和咨询开发者问题。</p>
+</li>
+</ol>
+<hr>
+<h2 id="▋-模块隐藏"><a href="#▋-模块隐藏" class="headerlink" title="▋ 模块隐藏"></a>▋ 模块隐藏</h2> <img src="/post/635a53df/14.png" class="">
+<p>在这次更新后，用户可以自由隐藏底部任意模块（除告示外）。</p>
+<h3 id="功能入口-1"><a href="#功能入口-1" class="headerlink" title="功能入口"></a>功能入口</h3><p><code>侧边栏</code>→<code>设置</code>→<code>显示</code></p>
+<p><br /></p>
+<hr>
+<h2 id="▋-计划"><a href="#▋-计划" class="headerlink" title="▋ 计划"></a>▋ 计划</h2><blockquote>
+<p>长文警告⚠</p>
 </blockquote>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://stackoverflow.com/questions/34658911/entertransitioncoordinator-causes-npe-in-android-5-0">https://stackoverflow.com/questions/34658911/entertransitioncoordinator-causes-npe-in-android-5-0</a></p>
-</div><div class="article-tags size-small mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%8A%80%E6%9C%AF/">技术</a><a class="link-muted mr-2" rel="tag" href="/tags/Android/">Android</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/post/e5dce7c7.html"><i class="level-item fas fa-chevron-left"></i><span class="level-item">LifeUp Release Log</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/post/423cff64.html"><span class="level-item">人升LifeUp常见问题-事项篇</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
-            this.page.url = 'http://sarasarasa.net/post/e0a2859e.html';
-            this.page.identifier = 'post/e0a2859e.html';
+<p>最近两个版本主要是扩展了功能的宽度（用户成就+番茄钟）。</p>
+<p>计划下个版本加强深度，把各个功能结合起来。比如商店方面增加“使用商品”的定制逻辑，可以获得/失去经验值、金币，时间段限购；成就方面一个是增加完成条件关联，可以关联完成某个待办事项xx次，关联属性达到多少级，关联商品购买，关联番茄钟等。达到条件后自动触发解锁，而不是现在的手动解锁。</p>
+<p>还有一些零碎的改进点，比如新建待办事项的一些选项优化（现在确实学习成本有点大）；还有商店/成就提供一些默认图标；番茄钟考虑加一下白噪声等等。</p>
+<p>社区方面本来是这个月安排做成就清单分享的，但是技术实现上有点卡壳，应该会先做服务器备份功能（会员权益）。</p>
+<p>打怪系统因为现在想法还很不完善，继续摸~</p>
+</div><div class="article-tags size-small mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Android/">Android</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/">开发日志</a><a class="link-muted mr-2" rel="tag" href="/tags/%E6%9B%B4%E6%96%B0%E4%BB%8B%E7%BB%8D/">更新介绍</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/post/5df23248.html"><span class="level-item">联系我们</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+            this.page.url = 'http://sarasarasa.net/post/635a53df.html';
+            this.page.identifier = 'post/635a53df.html';
         };
         (function() {
             var d = document, s = d.createElement('script');  

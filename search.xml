@@ -1,6 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>人升更新介绍#1.75.0 | 09/20 番茄钟</title>
+    <url>/post/635a53df.html</url>
+    <content><![CDATA[<h2 id="总览"><a href="#总览" class="headerlink" title="总览"></a>总览</h2><ol>
+<li><strong>番茄钟</strong></li>
+<li><strong>WebDAV 自动同步</strong></li>
+<li><strong>清单/事项颜色</strong></li>
+<li><strong>可以但没必要的会员系统</strong></li>
+<li><strong>模块隐藏</strong></li>
+<li><strong>计划</strong></li>
+</ol>
+<a id="more"></a>
+<hr>
+<h2 id="▋-番茄钟"><a href="#▋-番茄钟" class="headerlink" title="▋ 番茄钟"></a>▋ 番茄钟</h2> <img src="/post/635a53df/01.png" class="">
+<p>hi~有使用过能吃番茄的番茄钟功能吗？</p>
+<p>「人升」新版本增加了番茄钟计时功能，使用番茄工作法可以更好地安排工作和时间。</p>
+<p>在「人升」中，你每完成一个番茄钟计时，可以得到一个番茄。如果番茄计时过半的情况下，跳过番茄计时，也能获取到半个番茄。</p>
+<p>你可以随时「食用」或者「售出」你获得的番茄。</p>
+ <img src="/post/635a53df/02.png" class="">
+ <img src="/post/635a53df/03.png" class="">
+<p><strong>食用番茄</strong>可以获取到耐力经验值。</p>
+<p><strong>出售番茄</strong>则可以获得金币。</p>
+ <img src="/post/635a53df/04.png" class="">
+<p>另外，番茄计时可以跟待办事项绑定。</p>
+<p>后续可以在待办事项的详情页面看到该待办事项所属的番茄数量。</p>
+<h3 id="功能入口"><a href="#功能入口" class="headerlink" title="功能入口"></a>功能入口</h3> <img src="/post/635a53df/05.png" class="">
+<p>主页，点击侧边栏，点击进入“番茄”页面。</p>
+<p>或者长按待办事项，在右上角菜单中选择<strong>“计时”</strong>选项。</p>
+<h3 id="后续计划"><a href="#后续计划" class="headerlink" title="后续计划"></a>后续计划</h3><ul>
+<li>增加自定义番茄「食用」可获得的属性经验值种类和数量</li>
+<li>增加自定义番茄「出售」可获得的金币数量</li>
+<li>增加自定义环境白噪声</li>
+<li>与成就系统结合</li>
+</ul>
+<hr>
+<h2 id="▋-WebDAV-自动同步"><a href="#▋-WebDAV-自动同步" class="headerlink" title="▋ WebDAV 自动同步"></a>▋ WebDAV 自动同步</h2> <img src="/post/635a53df/06.png" class="">
+<p>此前，即便配置了 WebDAV 备份。也需要手动到「数据管理」页面进行备份或恢复操作，十分不便。</p>
+<p>新版本增加了 WebDAV 自动备份功能，启用后，会在每次进入应用的时候执行备份。</p>
+ <img src="/post/635a53df/07.png" class="">
+<p>同时也会在首页顶部卡片展示同步状态，也能点击进行手动同步。</p>
+ <img src="/post/635a53df/08.png" class="">
+<p>当同步实现冲突时，用户可以抉择使用本地还是云端数据。</p>
+<p>有了该功能，跨设备间的数据同步会轻松一些。</p>
+ <img src="/post/635a53df/09.png" class="">
+<p>在「数据管理」页面，也增加了“如何使用坚果云配置WebDAV备份”的链接。</p>
+<p>还没配置的同学可以去看看~</p>
+<hr>
+<h2 id="▋-清单-事项颜色"><a href="#▋-清单-事项颜色" class="headerlink" title="▋ 清单/事项颜色"></a>▋ 清单/事项颜色</h2> <img src="/post/635a53df/10.png" class="">
+<p>现在用户可以自定义事项卡片的主题色。</p>
+<p>支持自定义整个清单的主题色，或是具体待办事项的颜色。</p>
+<p><strong>优先级：</strong>事项自定义颜色&gt;清单自定义颜色&gt;默认颜色（跟随重复频次变动）</p>
+<hr>
+<h2 id="▋-可以但没必要的会员系统"><a href="#▋-可以但没必要的会员系统" class="headerlink" title="▋ 可以但没必要的会员系统"></a>▋ 可以但没必要的会员系统</h2> <img src="/post/635a53df/11.png" class="">
+<p>可以但没必要的会员系统上线了~</p>
+<p>目前会员系统专属功能比较少，更像是对我们的支持的一个证明。</p>
+<p>以下是一部分现有的功能：</p>
+<ol>
+<li><p>在【设置】→【进阶】中，可以自定义事项卡片背景和透明度。</p>
+ <img src="/post/635a53df/12.png" class="">
+</li>
+<li><p>在【上架商品】页面中，可以自定义商品的操作文案。比如食品类商品可以把文案修改为“吃”。</p>
+ <img src="/post/635a53df/13.png" class="">
+</li>
+<li><p>在【会员】页面中，可以加入 Alpha 测试更新推送和咨询开发者问题。</p>
+</li>
+</ol>
+<hr>
+<h2 id="▋-模块隐藏"><a href="#▋-模块隐藏" class="headerlink" title="▋ 模块隐藏"></a>▋ 模块隐藏</h2> <img src="/post/635a53df/14.png" class="">
+<p>在这次更新后，用户可以自由隐藏底部任意模块（除告示外）。</p>
+<h3 id="功能入口-1"><a href="#功能入口-1" class="headerlink" title="功能入口"></a>功能入口</h3><p><code>侧边栏</code>→<code>设置</code>→<code>显示</code></p>
+<p><br /></p>
+<hr>
+<h2 id="▋-计划"><a href="#▋-计划" class="headerlink" title="▋ 计划"></a>▋ 计划</h2><blockquote>
+<p>长文警告⚠</p>
+</blockquote>
+<p>最近两个版本主要是扩展了功能的宽度（用户成就+番茄钟）。</p>
+<p>计划下个版本加强深度，把各个功能结合起来。比如商店方面增加“使用商品”的定制逻辑，可以获得/失去经验值、金币，时间段限购；成就方面一个是增加完成条件关联，可以关联完成某个待办事项xx次，关联属性达到多少级，关联商品购买，关联番茄钟等。达到条件后自动触发解锁，而不是现在的手动解锁。</p>
+<p>还有一些零碎的改进点，比如新建待办事项的一些选项优化（现在确实学习成本有点大）；还有商店/成就提供一些默认图标；番茄钟考虑加一下白噪声等等。</p>
+<p>社区方面本来是这个月安排做成就清单分享的，但是技术实现上有点卡壳，应该会先做服务器备份功能（会员权益）。</p>
+<p>打怪系统因为现在想法还很不完善，继续摸~</p>
+]]></content>
+      <categories>
+        <category>项目</category>
+        <category>开发日志</category>
+        <category>人升</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>开发日志</tag>
+        <tag>更新介绍</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>联系我们</title>
     <url>/post/5df23248.html</url>
     <content><![CDATA[<hr>
@@ -3747,6 +3839,8 @@
     <title>人升LifeUp 常见问题</title>
     <url>/post/157a032e.html</url>
     <content><![CDATA[<h2 id="其他链接"><a href="#其他链接" class="headerlink" title="其他链接"></a>其他链接</h2><ul>
+<li><p><a href="http://sarasarasa.net/post/635a53df.html">1.75.1 番茄钟、WebDAV自动备份更新日志</a></p>
+</li>
 <li><p><a href="http://sarasarasa.net/post/e817e5b9.html">1.74.0 用户成就版本更新日志</a></p>
 </li>
 <li><p><a href="http://sarasarasa.net/post/621e3bb6.html">公告、已知问题、应用详细介绍</a></p>
@@ -4030,7 +4124,22 @@
   <entry>
     <title>人升Lifeup 更新日志</title>
     <url>/post/a889432c.html</url>
-    <content><![CDATA[<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p><strong>1.75.0（2020/09/16）</strong></p>
+    <content><![CDATA[<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p><strong>1.75.1（2020/09/20）</strong></p>
+<p><strong>优化</strong></p>
+<ol>
+<li>国内应用市场分发的版本，默认语言设置为简体中文</li>
+</ol>
+<p><strong>修复</strong></p>
+<ol>
+<li>修复计步模块隐藏不生效的问题</li>
+<li>修改重复待办事项的商店奖励不能被继承的任务</li>
+<li>修复逾期处理弹窗的UI问题</li>
+<li>修复经验值减少时的进度条不精准的问题</li>
+<li>修复获得金币总数显示不正确的问题</li>
+<li>修复商店/仓库搜索不正常的问题</li>
+<li>修复顶部进度条刷新不及时的问题</li>
+</ol>
+<p><strong>1.75.0（2020/09/16）</strong></p>
 <p><strong>功能</strong></p>
 <ol>
 <li>初版游戏化番茄钟：完成番茄钟获得番茄，食用或者出售番茄，支持关联待办事项</li>
