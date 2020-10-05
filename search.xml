@@ -308,8 +308,8 @@
         <category>Code-Snippet</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
         <tag>Code-Snippet</tag>
       </tags>
   </entry>
@@ -334,8 +334,8 @@
         <category>Code-Snippet</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
         <tag>Code-Snippet</tag>
       </tags>
   </entry>
@@ -347,7 +347,9 @@
 <li><del>Link Complete Reward of task to the inventory.</del></li>
 <li>Custom Exp of task</li>
 <li>Better settings of creating a task.</li>
-<li>Pomodoro</li>
+<li><del>Pomodoro</del></li>
+<li>Custom achievement complete condition</li>
+<li>Shop Item usage effect</li>
 </ol>
 <p><br /></p>
 <h2 id="Support-Us"><a href="#Support-Us" class="headerlink" title="Support Us"></a>Support Us</h2><p>Support are always appreciated and help support the project. ❤️</p>
@@ -357,7 +359,22 @@
 
 <p><strong>Share the application to your friends will also be a great help.</strong> </p>
 <p><br /></p>
-<h2 id="Release-Log"><a href="#Release-Log" class="headerlink" title="Release Log"></a>Release Log</h2><p><strong>1.75.0</strong></p>
+<h2 id="Release-Log"><a href="#Release-Log" class="headerlink" title="Release Log"></a>Release Log</h2><p><strong>1.75.2（Released at 2020/10/05）</strong></p>
+<ol>
+<li>Default coin number setting of subtask</li>
+<li>Add over 100+ icons that can be selected as shop item/achievements icons</li>
+<li>add “Enable sound effect” settings</li>
+<li>Filter feelings by task content and better ui of filters</li>
+<li>Create pomodoro shortcuts</li>
+<li>Custom tomatoes selling prices</li>
+<li>Pomodoro page will keep screen on when counting down now</li>
+<li>Fixed some problems</li>
+</ol>
+<p><strong>1.75.1（Released at 2020/09/20）</strong></p>
+<ol>
+<li>Fix lots bugs of 1.75.0</li>
+</ol>
+<p><strong>1.75.0（Released at 2020/09/16）</strong></p>
 <ol>
 <li>Gamify pomodoro timer</li>
 <li>Custom task/list tag color</li>
@@ -365,7 +382,7 @@
 <li>Hide modules settings</li>
 <li>Lots of improvements and fixes</li>
 </ol>
-<p><strong>1.74.2</strong></p>
+<p><strong>1.74.2（Released at 2020/08/23）</strong></p>
 <ol>
 <li>Portuguese Language</li>
 </ol>
@@ -624,8 +641,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -2796,8 +2813,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -2824,8 +2841,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -3155,8 +3172,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -3174,8 +3191,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -3223,8 +3240,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -3258,8 +3275,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -3329,10 +3346,10 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>Java</tag>
-        <tag>框架</tag>
         <tag>后端</tag>
         <tag>SpringBoot2</tag>
+        <tag>Java</tag>
+        <tag>框架</tag>
       </tags>
   </entry>
   <entry>
@@ -3519,8 +3536,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -5473,8 +5490,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
+        <tag>技术</tag>
         <tag>调试</tag>
       </tags>
   </entry>
@@ -5701,9 +5718,9 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
+        <tag>技术</tag>
         <tag>DigitalOcean</tag>
       </tags>
   </entry>
@@ -6280,10 +6297,10 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>云服务器</tag>
-        <tag>游戏</tag>
+        <tag>技术</tag>
         <tag>记录</tag>
+        <tag>游戏</tag>
         <tag>linux</tag>
       </tags>
   </entry>
@@ -6539,9 +6556,9 @@
         <category>文化</category>
       </categories>
       <tags>
-        <tag>游戏</tag>
         <tag>Portal</tag>
         <tag>Valve</tag>
+        <tag>游戏</tag>
         <tag>文化</tag>
         <tag>机制</tag>
       </tags>
@@ -6611,10 +6628,10 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Android</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -6800,10 +6817,10 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>Quartz</tag>
-        <tag>实例</tag>
         <tag>Java</tag>
         <tag>框架</tag>
+        <tag>Quartz</tag>
+        <tag>实例</tag>
       </tags>
   </entry>
   <entry>
