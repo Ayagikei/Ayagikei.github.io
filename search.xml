@@ -23,7 +23,7 @@
 </ol>
 <a id="more"></a>
 <hr>
-<h2 id="▋-商品使用效果"><a href="#▋-商品使用效果" class="headerlink" title="▋ 商品使用效果"></a>▋ 商品使用效果</h2> <img src="/post/undefined/01.png" class="">
+<h2 id="▋-商品使用效果"><a href="#▋-商品使用效果" class="headerlink" title="▋ 商品使用效果"></a>▋ 商品使用效果</h2> <img src="/post/115f79e5/01.png" class="">
 <p>商品作为个性化物品激励机制，可以算是《人升》的核心机制。</p>
 <p>以往版本的商品的「使用」功能的体现只有库存减少。</p>
 <p><strong>1.76.0版本提供了更为游戏化的使用效果设置，你可以自定义以下效果：</strong></p>
@@ -35,16 +35,16 @@
 </ul>
 <p><strong>由此，其实可以扩展出非常多的玩法。举几个例子：</strong></p>
 <p>（1）  为「奶茶」添加经验值增减效果。因为可能会影响健康，减少“力量”属性的经验值</p>
- <img src="/post/undefined/02.png" class="">
+ <img src="/post/115f79e5/02.png" class="">
 <p>（2） 通过使用增加金币效果，来实现自制「一袋金币」的效果。同时可以配合待办事项的物品奖励，增加游戏化代入感。</p>
- <img src="/post/undefined/03.png" class="">
+ <img src="/post/115f79e5/03.png" class="">
 <p>（3） 合成搭配待办事项的物品奖励，以实现靶向奖励的效果。比如每次完成某项「早起」待办事项可以获得一张电影券，获得30电影券后，可以合成真正的「看电影」奖励。</p>
- <img src="/post/undefined/01.png" class="">
+ <img src="/post/115f79e5/01.png" class="">
 <p>（4） ”不可使用“效果可以用来实现一些收藏式的奖励，存放到仓库中。</p>
 <p>（5） 实现自我惩罚。</p>
- <img src="/post/undefined/04.png" class="">
+ <img src="/post/115f79e5/04.png" class="">
 <hr>
-<h2 id="▋-橱窗"><a href="#▋-橱窗" class="headerlink" title="▋ 橱窗"></a>▋ 橱窗</h2> <img src="/post/undefined/05.png" class="">
+<h2 id="▋-橱窗"><a href="#▋-橱窗" class="headerlink" title="▋ 橱窗"></a>▋ 橱窗</h2> <img src="/post/115f79e5/05.png" class="">
 <p>在「世界」模块的中的”橱窗“功能里，现在你可以分享自己的创意商品设计了。</p>
 <p>也可以浏览他人分享的优秀商品，使用”进货“功能引入自己的商店中。</p>
 <p>无论是炸鸡薯条奶茶，还是“熬夜券”、“B站券”，这里应有尽有。</p>
@@ -52,12 +52,12 @@
 <p>一个注意点：分享出去的商品也会带有使用效果，但不会带着限购效果。</p>
 </blockquote>
 <hr>
-<h2 id="▋-内置图标"><a href="#▋-内置图标" class="headerlink" title="▋ 内置图标"></a>▋ 内置图标</h2> <img src="/post/undefined/06.png" class="">
+<h2 id="▋-内置图标"><a href="#▋-内置图标" class="headerlink" title="▋ 内置图标"></a>▋ 内置图标</h2> <img src="/post/115f79e5/06.png" class="">
 <p>寻找合适的商品图片一直是个用户使用上的一个不便之处。</p>
 <p><strong>新版本内置了上百个扁平化图标供你选择~解决你的找图痛点。</strong></p>
 <p>另外，这些图标也可以用于创建「用户成就」。</p>
 <hr>
-<h2 id="▋-商品限购"><a href="#▋-商品限购" class="headerlink" title="▋ 商品限购"></a>▋ 商品限购</h2> <img src="/post/undefined/07.png" class="">
+<h2 id="▋-商品限购"><a href="#▋-商品限购" class="headerlink" title="▋ 商品限购"></a>▋ 商品限购</h2> <img src="/post/115f79e5/07.png" class="">
 <p>商品现在也支持设置限购数量了~</p>
 <p>并且可以多种限购同时生效。</p>
 <p><strong>时间范围支持：</strong></p>
@@ -69,13 +69,13 @@
 </ul>
 <hr>
 <h2 id="▋-事项统计"><a href="#▋-事项统计" class="headerlink" title="▋ 事项统计"></a>▋ 事项统计</h2><p><strong>入口：点击事项卡片，进入事项详情页面</strong></p>
- <img src="/post/undefined/08.png" class="">
+ <img src="/post/115f79e5/08.png" class="">
 <p>为重复事项添加了单独的完成统计视图。</p>
- <img src="/post/undefined/09.jpg" class="">
+ <img src="/post/115f79e5/09.jpg" class="">
 <p>增加了三种进度的显示：子任务、计数、重复目标次数。</p>
 <p><br /></p>
 <hr>
-<h2 id="▋-顶部清单切换"><a href="#▋-顶部清单切换" class="headerlink" title="▋ 顶部清单切换"></a>▋ 顶部清单切换</h2> <img src="/post/undefined/09.png" class="">
+<h2 id="▋-顶部清单切换"><a href="#▋-顶部清单切换" class="headerlink" title="▋ 顶部清单切换"></a>▋ 顶部清单切换</h2> <img src="/post/115f79e5/09.png" class="">
 <p>现在可以直接在顶部点击切换清单了。</p>
 <p>这里的排列顺序可以在清单管理页面调整。（长按可以拖动排序）</p>
 <hr>
