@@ -1,6 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>人升更新介绍#1.79.0 | 11月/12月 成就解锁条件与计时统计</title>
+    <url>/post/83023146.html</url>
+    <content><![CDATA[<h2 id="应用简介"><a href="#应用简介" class="headerlink" title="应用简介"></a>应用简介</h2><p><strong>人升是什么？</strong></p>
+<p><em>《人升》</em>取义“让你的人生升级”是一款安卓平台的含有大量『游戏化』元素的待办事项（To-Do）和习惯养成类应用。<em>《人升》</em>既能满足对待办事项的常规功能要求外，还引入了「经验值等级系统」、「成就系统」和个性化的物品激励机制「金币、商品和仓库体系」。</p>
+<blockquote>
+<p>大概就是一个简易版本的地球OL~完成你的待办事项，努力提升自己的各大属性等级。赚取金币，去购买自己设定好的物品奖励。</p>
+<p>并且可以自设定各种复杂的成就，应用能够自动检测是否达到解锁目标。解锁条件能获取自己设置的奖励~</p>
+</blockquote>
+<p>除此之外还有感想、游戏化番茄钟、自定义成就、模块自定义隐藏等诸多功能待你探索~</p>
+<p>我们也在课余、业余时间维护更新了这款独立应用两年多的时间。</p>
+<p>一直维持着应用小体积（小于9MB）、通过绿色应用公约验证、无广告、无订阅制的特色。</p>
+<p>不来试试吗~可以在各大手机应用市场和第三方应用商店搜索《人升》进行下载。</p>
+<h2 id="总览"><a href="#总览" class="headerlink" title="总览"></a>总览</h2><ol>
+<li><strong>自设成就解锁条件</strong></li>
+<li><strong>番茄计时统计</strong></li>
+<li><strong>用户橱窗</strong></li>
+<li><strong>自定义音效（会员专属）</strong></li>
+<li><strong>比较小但有用的改进</strong></li>
+<li><strong>预热：开箱系统</strong></li>
+</ol>
+<a id="more"></a>
+<hr>
+<h2 id="▋-自设成就的解锁条件"><a href="#▋-自设成就的解锁条件" class="headerlink" title="▋ 自设成就的解锁条件"></a>▋ 自设成就的解锁条件</h2> <img src="/post/83023146/02.png" class="">
+<p>现在《人升》支持用户在创建成就的时候，设定好各种各样的解锁条件。</p>
+<p>然后系统会自动检测条件，达到条件时自动解锁成就，并且会以「系统成就」一样的方式提醒解锁：</p>
+ <img src="/post/83023146/03.jpg" class="">
+<p>新建成就界面：</p>
+ <img src="/post/83023146/01.png" class="">
+<p><strong>目前支持设定以下这些解锁条件：</strong></p>
+<ul>
+<li><p>总计完成某个事项达到一定次数</p>
+</li>
+<li><p>连续完成事项达到一定次数</p>
+<p>例如：连续20天「早起」</p>
+</li>
+<li><p>属性达到某个等级</p>
+<p>例如：「力量」达到15级</p>
+</li>
+<li><p>总计获得番茄数量</p>
+</li>
+<li><p>使用《人升》天数</p>
+</li>
+<li><p>社区获得赞数</p>
+</li>
+<li><p>坚持完成任意事项天数</p>
+</li>
+<li><p>当前金币总数</p>
+</li>
+<li><p>今日金币新增数量</p>
+</li>
+<li><p>指定事项累计获得番茄数</p>
+</li>
+<li><p>购买指定商品达到一定次数</p>
+<p>例如：购买「看电影」奖励达到20次</p>
+</li>
+<li><p>使用指定商品达到一定次数</p>
+</li>
+</ul>
+<p>通过这些解锁条件，搭配上商品奖励，其实《人升》已经实现了 <strong>事项-属性-成就-商品</strong> 的多重闭环激励体系了。</p>
+<p>具体的用法就靠各位用户挖掘了~非常欢迎分享自己的成就设置。</p>
+<p><strong>未来也会扩展更多的解锁条件，比如下个版本会推出开箱概率系统。</strong></p>
+<p><strong>再之后的版本就可能会上线“开箱得到xx商品多少次”的奖励。</strong></p>
+<hr>
+<h2 id="▋-番茄计时统计"><a href="#▋-番茄计时统计" class="headerlink" title="▋ 番茄计时统计"></a>▋ 番茄计时统计</h2> <img src="/post/83023146/04.jpg" class="">
+<p>新版本针对番茄钟追加了<strong>计时统计</strong>的功能。</p>
+<p>可以在统计界面查看自己的专注情况和时长统计，以及专注的事项内容。</p>
+<blockquote>
+<p><strong>长按也可以删除记录。</strong></p>
+</blockquote>
+ <img src="/post/83023146/05.jpg" class="">
+<p>在「状态」页面也新增了番茄的统计卡片。</p>
+<hr>
+<h2 id="▋-用户橱窗"><a href="#▋-用户橱窗" class="headerlink" title="▋ 用户橱窗"></a>▋ 用户橱窗</h2> <img src="/post/83023146/06.jpg" class="">
+<p>在用户详情页面，也支持查看该用户分享的所有橱窗商品。</p>
+<blockquote>
+<p>当看到一个中意的图标的时候，不妨进入用户主页浏览一下TA分享的其他商品~</p>
+</blockquote>
+<hr>
+<h2 id="▋-自定义音效（会员专属）"><a href="#▋-自定义音效（会员专属）" class="headerlink" title="▋ 自定义音效（会员专属）"></a>▋ 自定义音效（会员专属）</h2> <img src="/post/83023146/07.jpg" class="">
+<p>会员的一个专属小功能。</p>
+<p>可以自定义目前应用内的所有音效。</p>
+<p>比如可以将“等级提升”的音效替换成你喜欢的某款游戏的音效~</p>
+<p>因系统机制限制，比较推荐使用短促的音频文件。</p>
+<p>目前网络上有一些音效网站，可以专门下载这种类别的音频文件。</p>
+<blockquote>
+<p>也可以带上关键字+Sound Effect 搜索外网</p>
+</blockquote>
+<hr>
+<h2 id="▋-比较小但有用的改进"><a href="#▋-比较小但有用的改进" class="headerlink" title="▋ 比较小但有用的改进"></a>▋ 比较小但有用的改进</h2><ul>
+<li>从日历界面直接选择日期创建待办事项（可选择作为开始时间/期限时间）</li>
+<li>完成计时时，增加了振动提示</li>
+<li>用户成就现在支持设置商品作为解锁时的奖励</li>
+<li>商品和成就都增加了详情页面，点击即可查看</li>
+<li>（会员专属）增加了5种主题色</li>
+<li>（会员专属）商品可直接开启“不可购买”开关</li>
+<li>商品和待办事项选择增加了🔍搜索功能</li>
+<li>自定义经验值</li>
+</ul>
+<p><br /></p>
+<hr>
+<h2 id="▋-预热：开箱系统"><a href="#▋-预热：开箱系统" class="headerlink" title="▋ 预热：开箱系统"></a>▋ 预热：开箱系统</h2> <img src="/post/83023146/09.jpg" class="">
+ <img src="/post/83023146/10.jpg" class="">
+<p>下个版本（其实就这两天）会更新规划已久的开箱系统。</p>
+<p>开箱功能会作为一种「商品使用效果」上线。</p>
+<p><strong>你可以自由设定箱子内的物品内容、数量和获取概率。</strong></p>
+<p><strong>享受成为策划的感觉吧~</strong></p>
+]]></content>
+      <categories>
+        <category>项目</category>
+        <category>开发日志</category>
+        <category>人升</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>开发日志</tag>
+        <tag>更新介绍</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>人升更新介绍#1.77.4 | 11/05 商品效果与橱窗</title>
     <url>/post/115f79e5.html</url>
     <content><![CDATA[<h2 id="应用简介"><a href="#应用简介" class="headerlink" title="应用简介"></a>应用简介</h2><p><strong>人升是什么？</strong></p>
@@ -536,8 +655,8 @@
         <category>Code-Snippet</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
         <tag>Code-Snippet</tag>
       </tags>
   </entry>
@@ -562,8 +681,8 @@
         <category>Code-Snippet</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
         <tag>Code-Snippet</tag>
       </tags>
   </entry>
@@ -911,8 +1030,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -3096,8 +3215,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -3124,8 +3243,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -3455,8 +3574,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -3474,8 +3593,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -3523,8 +3642,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -3558,8 +3677,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -3629,10 +3748,10 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>后端</tag>
-        <tag>SpringBoot2</tag>
         <tag>Java</tag>
         <tag>框架</tag>
+        <tag>后端</tag>
+        <tag>SpringBoot2</tag>
       </tags>
   </entry>
   <entry>
@@ -3819,8 +3938,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -4163,6 +4282,79 @@
       </tags>
   </entry>
   <entry>
+    <title>人升LifeUp 常见问题</title>
+    <url>/post/157a032e.html</url>
+    <content><![CDATA[<h2 id="其他链接"><a href="#其他链接" class="headerlink" title="其他链接"></a>其他链接</h2><ul>
+<li><p><a href="http://sarasarasa.net/post/635a53df.html">1.75.1 番茄钟、WebDAV自动备份更新日志</a></p>
+</li>
+<li><p><a href="http://sarasarasa.net/post/e817e5b9.html">1.74.0 用户成就版本更新日志</a></p>
+</li>
+<li><p><a href="http://sarasarasa.net/post/621e3bb6.html">公告、已知问题、应用详细介绍</a></p>
+</li>
+<li><p><a href="http://sarasarasa.net/post/a889432c.html">更新日志</a></p>
+</li>
+<li><p><a href="http://sarasarasa.net/post/22d5d0d5.html">捐赠名单</a></p>
+</li>
+</ul>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><ul>
+<li><strong>如何撤销完成事项？</strong></li>
+</ul>
+<ol>
+<li><p>在完成时，点击底部提示框的“撤销”按钮。</p>
+</li>
+<li><p>于<code>侧边栏</code>的<code>历史</code>页面，点击撤销按钮。</p>
+</li>
+<li><p>于<code>日历</code>页面的<code>已结束</code>模块，点击撤销按钮。</p>
+<blockquote>
+<p>可以撤销任意时刻的无重复待办事项，以及<strong>今天完成的重复事项</strong>。</p>
+</blockquote>
+</li>
+</ol>
+<ul>
+<li><p><strong>可以设置经验值或者金币惩罚吗？</strong></p>
+<p>可以的，默认也启用了经验值惩罚。金币惩罚默认没启用。</p>
+<p>可以在<code>侧边栏</code>-<code>设置</code>-<code>自定义设置</code>里自由设定。</p>
+<blockquote>
+<p>😅 不知道为什么这点一直有人反馈建议（还没留联系方式，没法回复），后续会加强对“惩罚”的展示效果。</p>
+</blockquote>
+</li>
+<li><p><strong>如何隐藏掉已经完成的事项（其实是未开始的事项）？</strong></p>
+<p>在主页（即<code>告示</code>页面），点击右上角的菜单栏（三个点），再点击<code>筛选</code>，选中<code>只显示今天事项</code>即可。</p>
+</li>
+<li><p><strong>如何建立指定周几的待办事项？如每周一、二、三。</strong></p>
+<p><a href="http://sarasarasa.net/post/423cff64.html#3-%E6%AF%8F%E5%91%A8%E4%B8%80-%E6%AF%8F%E5%91%A8%E6%97%A5">点击这里查看</a></p>
+</li>
+<li><p><strong>如何下架商品？</strong></p>
+<p>在<code>商店</code>页面，长按商品，然后选择顶部的垃圾桶按钮。</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>指定时间没收到提醒？</strong></p>
+<p>应用内其实也有说明，由于独立应用权限有限，默认的提醒方式会受系统限制，可能关了后台就失效了。</p>
+<p>可以尝试<strong>更换为系统日历提醒方式（<code>设置</code>-<code>事项设置</code>）</strong>，更换后，可以查看系统日历app有没有成功插入提醒时间。</p>
+</li>
+<li><p><strong>想初始化“我的”页面中的逾期、放弃数</strong></p>
+<p>这里的数字统计是基于历史记录的，可以前往<code>侧边栏</code>-<code>历史</code>页面，删除相应的错误记录。</p>
+</li>
+<li><p><strong>什么是目标重复次数和计数事项次数？</strong></p>
+<p><a href="http://sarasarasa.net/post/423cff64.html#%E7%9B%AE%E6%A0%87%E9%87%8D%E5%A4%8D%E6%AC%A1%E6%95%B0">点击这里查看</a></p>
+</li>
+<li><p><strong>我不想用社区，可以隐藏吗？</strong></p>
+<p>可以前往<code>侧边栏</code>-<code>设置</code>-<code>显示设置</code>内隐藏社区，需要重启应用生效~</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>项目</category>
+        <category>开发日志</category>
+        <category>人升</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>开发日志</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>人升LifeUp 公告与详细介绍</title>
     <url>/post/621e3bb6.html</url>
     <content><![CDATA[<h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><h2 id="已知bug"><a href="#已知bug" class="headerlink" title="已知bug"></a>已知bug</h2><ul>
@@ -4364,79 +4556,6 @@
 <hr>
 <h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a><a href="http://sarasarasa.net/post/a889432c.html">更新日志</a></h2><h2 id="捐赠名单"><a href="#捐赠名单" class="headerlink" title="捐赠名单"></a><a href="http://sarasarasa.net/post/22d5d0d5.html">捐赠名单</a></h2><p>扫码关注人升公众号，可以尽快收到更新介绍<del>而且我们说不定能赚点服务器钱:)</del></p>
  <img src="/post/621e3bb6/01.jpg" class="">
-]]></content>
-      <categories>
-        <category>项目</category>
-        <category>开发日志</category>
-        <category>人升</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>开发日志</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>人升LifeUp 常见问题</title>
-    <url>/post/157a032e.html</url>
-    <content><![CDATA[<h2 id="其他链接"><a href="#其他链接" class="headerlink" title="其他链接"></a>其他链接</h2><ul>
-<li><p><a href="http://sarasarasa.net/post/635a53df.html">1.75.1 番茄钟、WebDAV自动备份更新日志</a></p>
-</li>
-<li><p><a href="http://sarasarasa.net/post/e817e5b9.html">1.74.0 用户成就版本更新日志</a></p>
-</li>
-<li><p><a href="http://sarasarasa.net/post/621e3bb6.html">公告、已知问题、应用详细介绍</a></p>
-</li>
-<li><p><a href="http://sarasarasa.net/post/a889432c.html">更新日志</a></p>
-</li>
-<li><p><a href="http://sarasarasa.net/post/22d5d0d5.html">捐赠名单</a></p>
-</li>
-</ul>
-<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><ul>
-<li><strong>如何撤销完成事项？</strong></li>
-</ul>
-<ol>
-<li><p>在完成时，点击底部提示框的“撤销”按钮。</p>
-</li>
-<li><p>于<code>侧边栏</code>的<code>历史</code>页面，点击撤销按钮。</p>
-</li>
-<li><p>于<code>日历</code>页面的<code>已结束</code>模块，点击撤销按钮。</p>
-<blockquote>
-<p>可以撤销任意时刻的无重复待办事项，以及<strong>今天完成的重复事项</strong>。</p>
-</blockquote>
-</li>
-</ol>
-<ul>
-<li><p><strong>可以设置经验值或者金币惩罚吗？</strong></p>
-<p>可以的，默认也启用了经验值惩罚。金币惩罚默认没启用。</p>
-<p>可以在<code>侧边栏</code>-<code>设置</code>-<code>自定义设置</code>里自由设定。</p>
-<blockquote>
-<p>😅 不知道为什么这点一直有人反馈建议（还没留联系方式，没法回复），后续会加强对“惩罚”的展示效果。</p>
-</blockquote>
-</li>
-<li><p><strong>如何隐藏掉已经完成的事项（其实是未开始的事项）？</strong></p>
-<p>在主页（即<code>告示</code>页面），点击右上角的菜单栏（三个点），再点击<code>筛选</code>，选中<code>只显示今天事项</code>即可。</p>
-</li>
-<li><p><strong>如何建立指定周几的待办事项？如每周一、二、三。</strong></p>
-<p><a href="http://sarasarasa.net/post/423cff64.html#3-%E6%AF%8F%E5%91%A8%E4%B8%80-%E6%AF%8F%E5%91%A8%E6%97%A5">点击这里查看</a></p>
-</li>
-<li><p><strong>如何下架商品？</strong></p>
-<p>在<code>商店</code>页面，长按商品，然后选择顶部的垃圾桶按钮。</p>
-</li>
-</ul>
-<ul>
-<li><p><strong>指定时间没收到提醒？</strong></p>
-<p>应用内其实也有说明，由于独立应用权限有限，默认的提醒方式会受系统限制，可能关了后台就失效了。</p>
-<p>可以尝试<strong>更换为系统日历提醒方式（<code>设置</code>-<code>事项设置</code>）</strong>，更换后，可以查看系统日历app有没有成功插入提醒时间。</p>
-</li>
-<li><p><strong>想初始化“我的”页面中的逾期、放弃数</strong></p>
-<p>这里的数字统计是基于历史记录的，可以前往<code>侧边栏</code>-<code>历史</code>页面，删除相应的错误记录。</p>
-</li>
-<li><p><strong>什么是目标重复次数和计数事项次数？</strong></p>
-<p><a href="http://sarasarasa.net/post/423cff64.html#%E7%9B%AE%E6%A0%87%E9%87%8D%E5%A4%8D%E6%AC%A1%E6%95%B0">点击这里查看</a></p>
-</li>
-<li><p><strong>我不想用社区，可以隐藏吗？</strong></p>
-<p>可以前往<code>侧边栏</code>-<code>设置</code>-<code>显示设置</code>内隐藏社区，需要重启应用生效~</p>
-</li>
-</ul>
 ]]></content>
       <categories>
         <category>项目</category>
@@ -5984,8 +6103,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>技术</tag>
+        <tag>Android</tag>
         <tag>调试</tag>
       </tags>
   </entry>
@@ -6212,9 +6331,9 @@
         <category>记录</category>
       </categories>
       <tags>
+        <tag>技术</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
-        <tag>技术</tag>
         <tag>DigitalOcean</tag>
       </tags>
   </entry>
@@ -6791,8 +6910,8 @@
         <category>记录</category>
       </categories>
       <tags>
-        <tag>云服务器</tag>
         <tag>技术</tag>
+        <tag>云服务器</tag>
         <tag>游戏</tag>
         <tag>记录</tag>
         <tag>linux</tag>
@@ -7122,10 +7241,10 @@
         <category>技术</category>
       </categories>
       <tags>
+        <tag>技术</tag>
         <tag>Android</tag>
         <tag>SSH</tag>
         <tag>云服务器</tag>
-        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -7311,10 +7430,10 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>Java</tag>
-        <tag>框架</tag>
         <tag>Quartz</tag>
         <tag>实例</tag>
+        <tag>Java</tag>
+        <tag>框架</tag>
       </tags>
   </entry>
   <entry>
