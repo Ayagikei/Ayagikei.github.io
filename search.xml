@@ -709,7 +709,15 @@
 
 <p><strong>Share the application to your friends will also be a great help.</strong> </p>
 <p><br /></p>
-<h2 id="Release-Log"><a href="#Release-Log" class="headerlink" title="Release Log"></a>Release Log</h2><p><strong>1.79.x（2020/12)</strong></p>
+<h2 id="Release-Log"><a href="#Release-Log" class="headerlink" title="Release Log"></a>Release Log</h2><p><strong>1.80.0（2020/12/24)</strong></p>
+<ol>
+<li>Loot boxes shop item effect!</li>
+<li>Integrated with Dropbox backup</li>
+<li>Configurations for compact mode</li>
+<li>Add photo select history bar</li>
+<li>A lot of fixes and improvements</li>
+</ol>
+<p><strong>1.79.x（2020/12)</strong></p>
 <ol>
 <li>3 more unlock condition settings</li>
 <li>Custom sound effects settings</li>
@@ -4570,7 +4578,41 @@
   <entry>
     <title>人升Lifeup 更新日志</title>
     <url>/post/a889432c.html</url>
-    <content><![CDATA[<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p><strong>1.79.3（2020/12/17)</strong></p>
+    <content><![CDATA[<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p><strong>1.80.0（2020/12/17)</strong></p>
+<p><strong>功能</strong></p>
+<ol>
+<li>新增【开箱】使用效果！<br>自定义概率随机获得物品，并且可以定义数量</li>
+<li>支持Dropbox云同步（国内网络可能无法正常访问）</li>
+<li>新增了几个默认图标，并且支持了动态更新</li>
+<li>支持设置自动备份间隔</li>
+<li>用户成就补上「移至…」功能</li>
+<li>简洁模式可进行配置（只显示时间/显示金币数量）</li>
+<li>选择图片增加历史记录</li>
+<li>支持对单个事项设置惩罚系数</li>
+<li>支持在历史页面“重新开始”事项</li>
+</ol>
+<p><strong>优化</strong></p>
+<ol>
+<li>优化仓库的动画效果</li>
+<li>在服务器异常时弹窗提醒</li>
+<li>优化更新提示</li>
+<li>优化了番茄钟结束时的振动效果和时长</li>
+<li>用户成就的在标题栏增加（已完成/总数）的显示</li>
+<li>记忆对事项的感想开关、系统成就的排序</li>
+<li>优化一些文案，修正错误</li>
+<li>支持从动态点击进入团队详情</li>
+<li>填写的动态内容增加持久化缓存，防止输入的内容和图片丢失</li>
+<li>对事项的状态追加了一层判断，防止各种意外导致重复事项丢失</li>
+</ol>
+<p><strong>修复</strong></p>
+<ol>
+<li>修复“不可购买”商品可退货的问题</li>
+<li>修复撤销完成的成就进度显示不正确的问题</li>
+<li>修复事项标签颜色可能不正确的问题</li>
+<li>修复购买重新上架的商品后，仓库显示不正确的问题</li>
+<li>修复重新上架的商品，库存为0的问题</li>
+</ol>
+<p><strong>1.79.3（2020/12/17)</strong></p>
 <ol>
 <li>番茄钟支持记录暂停时间段</li>
 <li>增加“检查重复效果”按钮</li>
