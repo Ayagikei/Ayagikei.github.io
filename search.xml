@@ -709,7 +709,15 @@
 
 <p><strong>Share the application to your friends will also be a great help.</strong> </p>
 <p><br /></p>
-<h2 id="Release-Log"><a href="#Release-Log" class="headerlink" title="Release Log"></a>Release Log</h2><p><strong>1.80.0（2020/12/24)</strong></p>
+<h2 id="Release-Log"><a href="#Release-Log" class="headerlink" title="Release Log"></a>Release Log</h2><p><strong>1.80.3（2021/01/04)</strong></p>
+<ol>
+<li>Free style crop picture</li>
+<li>View/Add the icon of the items in the market</li>
+<li>When selecting task/item, now you can create a new one directly</li>
+<li>Support COPY action for user achievements</li>
+<li>A lot of fixes and improvements</li>
+</ol>
+<p><strong>1.80.0（2020/12/24)</strong></p>
 <ol>
 <li>Loot boxes shop item effect!</li>
 <li>Integrated with Dropbox backup</li>
@@ -4578,7 +4586,34 @@
   <entry>
     <title>人升Lifeup 更新日志</title>
     <url>/post/a889432c.html</url>
-    <content><![CDATA[<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p><strong>1.80.0（2020/12/17)</strong></p>
+    <content><![CDATA[<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p><strong>1.80.3（2021/01/04)</strong></p>
+<ol>
+<li>橱窗图标增加查看大图/添加到选择列表的功能</li>
+<li>修复内置图标整体不居中的问题</li>
+<li>修正用户成就界面的文案问题</li>
+<li>裁剪图片支持自由裁剪</li>
+<li>修复夜间模式概率表的颜色错误，增加数量显示</li>
+<li>修正商品相关的文案错误</li>
+<li>选择待办事项/商品时支持直接新建</li>
+<li>用户成就支持「复制」操作</li>
+<li>ATM增加隐藏金额的功能</li>
+<li>修复一个当商品操作过多时的崩溃问题</li>
+<li>金币负数时应该支持购买0金币的商品</li>
+<li>修复番茄专注记录会重复计算暂停+跳过的时间，忽略小于半分钟的专注记录</li>
+<li>优化成就清单列表和商品列表的初次加载动画</li>
+<li>修复仓库历史无法显示橱窗进货的商品图片的问题</li>
+<li>将限制同时使用的数量从5提升到了10</li>
+</ol>
+<p><strong>1.80.2（2020/12/28)</strong></p>
+<ol>
+<li>适配HMS</li>
+</ol>
+<p><strong>1.80.1（2020/12/27)</strong></p>
+<ol>
+<li>适配HMS</li>
+<li>修复自动备份开关判断失误的问题</li>
+</ol>
+<p><strong>1.80.0（2020/12/17)</strong></p>
 <p><strong>功能</strong></p>
 <ol>
 <li>新增【开箱】使用效果！<br>自定义概率随机获得物品，并且可以定义数量</li>
