@@ -792,7 +792,39 @@
 
 <p><strong>Share the application to your friends will also be a great help.</strong> </p>
 <p><br /></p>
-<h2 id="Release-Log"><a href="#Release-Log" class="headerlink" title="Release Log"></a>Release Log</h2><p><strong>1.80.3（2021/01/04)</strong></p>
+<h2 id="Release-Log"><a href="#Release-Log" class="headerlink" title="Release Log"></a>Release Log</h2><p><strong>1.80.7（2021/01/26)</strong></p>
+<ol>
+<li>Add shop item statistic</li>
+<li>Redesign attributes description dialog</li>
+<li>Custom attributes description</li>
+<li>Add a config settings for compact mode: hide all extra info</li>
+<li>Fixed a restore from backup file bug</li>
+<li>More fixes and improvements…</li>
+</ol>
+<p><strong>1.80.6（2021/01/22)</strong></p>
+<ol>
+<li>Now the item with loot boxes effect can be shared to market</li>
+<li>New search page: now you can searching user by nickname</li>
+<li>Filter team/makret items with time range</li>
+<li>Quick add tasks notification</li>
+<li>Media files can be ignored when performing backup.</li>
+<li>More fixes and improvements…</li>
+</ol>
+<p><strong>1.80.5（2021/01/14)</strong></p>
+<ol>
+<li>Open 10/50 loot boxes by one click</li>
+<li>Add unlock condition [Get selected item for specify times from Loot Boxes]</li>
+<li>ATM interest rate settings</li>
+<li>Input number for selling/eating tomatoes</li>
+<li>Custom rest timer end sound effect</li>
+<li>Add some user guide</li>
+<li>Fixed some problems and make some improvements</li>
+</ol>
+<p><strong>1.80.4（2021/01/04)</strong></p>
+<ol>
+<li>Fix a crash on Android 6</li>
+</ol>
+<p><strong>1.80.3（2021/01/04)</strong></p>
 <ol>
 <li>Free style crop picture</li>
 <li>View/Add the icon of the items in the market</li>
@@ -4669,7 +4701,65 @@
   <entry>
     <title>人升Lifeup 更新日志</title>
     <url>/post/a889432c.html</url>
-    <content><![CDATA[<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p><strong>1.80.4（2021/01/05)</strong></p>
+    <content><![CDATA[<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p><strong>1.80.7（2021/01/26)</strong></p>
+<p>【功能】</p>
+<ol>
+<li>增加商品的相关统计（购买、使用、开箱、奖励获得次数）</li>
+<li>自定义属性的描述</li>
+<li>简洁模式增加配置项：隐藏所有额外信息</li>
+</ol>
+<p>【优化】</p>
+<ol>
+<li>「不可购买」的仓库物品现也支持退货（删除）操作，返还0金币</li>
+<li>重新设计的属性描述对话框</li>
+<li>优化「快速创建常驻通知」的逻辑：添加事项后，回到之前的页面（而不是人升中的上一个页面）</li>
+<li>所有能够选择待办清单的地方也支持了管理功能（编辑、重命名等）</li>
+<li>搜索界面增加搜索动画</li>
+</ol>
+<p>【修复】</p>
+<ol>
+<li>修复某些情况下，番茄专注统计页面的展示会很长的问题</li>
+<li>修复在修改团队任务的经验值后，下一次任务会恢复的问题</li>
+<li>修复自定义属性后，状态页面不能及时更新，且可能字体重叠的问题</li>
+<li>移除番茄钟的废弃逻辑：距离上次专注超过4小时，会重置状态</li>
+<li>修复在「忽略媒体文件」的情况下生成的备份文件，恢复时会出现异常的问题</li>
+</ol>
+<p><strong>1.80.6（2021/01/22)</strong></p>
+<p>【功能】</p>
+<ol>
+<li>支持分享带有开箱效果的商品</li>
+<li>增加独立的搜索界面，支持根据用户昵称进行搜索</li>
+<li>团队和橱窗界面按活跃度/热度/进货数排序，支持按时间进行筛选</li>
+<li>支持开启常驻快速创建事项通知</li>
+<li>备份支持忽略媒体图片文件</li>
+</ol>
+<p>【优化】</p>
+<ol>
+<li>数据管理界面会展示媒体图片文件占用的体积</li>
+<li>隐藏商店的清单编辑弹窗中的「归档」按钮</li>
+<li>更新葡萄牙语文本资源</li>
+<li>优化so库，减少应用体积</li>
+<li>优化利息的计算时机，改为跨天时，而不是超过24小时后</li>
+<li>增加部分用户指引</li>
+</ol>
+<p>【修复】</p>
+<ol>
+<li>低版本系统可能无法创建番茄钟快捷方式的问题</li>
+<li>当开箱效果套娃获取当前物品时，结算的库存数量异常的问题</li>
+<li>当删除单次事项，顶部卡片进度条不会刷新的问题</li>
+<li>修复当设置了空的开箱效果时，可以添加其他使用效果的问题</li>
+<li>修复接口缓存导致的部分问题</li>
+</ol>
+<p><strong>1.80.5（2021/01/14)</strong></p>
+<ol>
+<li>开箱支持10连、50连开启</li>
+<li>增加【开箱得到指定物品一定次数】的成就解锁条件选项</li>
+<li>ATM增加利息功能，可自由设置日利率（0-10%）</li>
+<li>食用/售卖番茄时，支持输入相应的数量</li>
+<li>可对休息时间结束专门设定音效（会员）</li>
+<li>交互优化和问题修复</li>
+</ol>
+<p><strong>1.80.4（2021/01/05)</strong></p>
 <ol>
 <li>修复低版本安卓系统的兼容性崩溃问题</li>
 <li>修复奖励“仅文本”不可输入的问题</li>
