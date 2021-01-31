@@ -4729,7 +4729,14 @@
   <entry>
     <title>人升Lifeup 更新日志</title>
     <url>/post/a889432c.html</url>
-    <content><![CDATA[<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p><strong>1.80.7（2021/01/26)</strong></p>
+    <content><![CDATA[
+
+<script>
+    location.href="http://wiki.lifeupapp.fun/zh-cn/#/introduction/release_log";
+</script>
+
+
+<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p><strong>1.80.7（2021/01/26)</strong></p>
 <p>【功能】</p>
 <ol>
 <li>增加商品的相关统计（购买、使用、开箱、奖励获得次数）</li>
