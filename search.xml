@@ -3,7 +3,14 @@
   <entry>
     <title>人升更新介绍#1.80.0 | 12月 开箱抽奖机制</title>
     <url>/post/eb7440ce.html</url>
-    <content><![CDATA[<h2 id="应用简介"><a href="#应用简介" class="headerlink" title="应用简介"></a>应用简介</h2><p><strong>人升是什么？</strong></p>
+    <content><![CDATA[
+
+<script>
+    location.href="http://wiki.lifeupapp.fun/zh-cn/#/features/180";
+</script>
+
+
+<h2 id="应用简介"><a href="#应用简介" class="headerlink" title="应用简介"></a>应用简介</h2><p><strong>人升是什么？</strong></p>
 <p><em>《人升》</em>取义“让你的人生升级”是一款安卓平台的含有大量『游戏化』元素的待办事项（To-Do）和习惯养成类应用。<em>《人升》</em>既能满足对待办事项的常规功能要求外，还引入了「经验值等级系统」、「成就系统」和个性化的物品激励机制「金币、商品和仓库体系」。</p>
 <blockquote>
 <p>大概就是一个简易版本的地球OL~完成你的待办事项，努力提升自己的各大属性等级。赚取金币，去购买自己设定好的物品奖励。</p>
@@ -4422,7 +4429,14 @@
   <entry>
     <title>人升LifeUp 常见问题</title>
     <url>/post/157a032e.html</url>
-    <content><![CDATA[<h2 id="其他链接"><a href="#其他链接" class="headerlink" title="其他链接"></a>其他链接</h2><ul>
+    <content><![CDATA[
+
+<script>
+    location.href="http://wiki.lifeupapp.fun/zh-cn/#/guide/faq";
+</script>
+
+
+<h2 id="其他链接"><a href="#其他链接" class="headerlink" title="其他链接"></a>其他链接</h2><ul>
 <li><p><a href="http://sarasarasa.net/post/635a53df.html">1.75.1 番茄钟、WebDAV自动备份更新日志</a></p>
 </li>
 <li><p><a href="http://sarasarasa.net/post/e817e5b9.html">1.74.0 用户成就版本更新日志</a></p>
@@ -4495,7 +4509,14 @@
   <entry>
     <title>人升LifeUp 公告与详细介绍</title>
     <url>/post/621e3bb6.html</url>
-    <content><![CDATA[<h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><h2 id="已知bug"><a href="#已知bug" class="headerlink" title="已知bug"></a>已知bug</h2><ul>
+    <content><![CDATA[
+
+<script>
+    location.href="http://wiki.lifeupapp.fun/zh-cn/#/";
+</script>
+
+
+<h1 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h1><h2 id="已知bug"><a href="#已知bug" class="headerlink" title="已知bug"></a>已知bug</h2><ul>
 <li><p><strong>领取成就奖励时，显示的时间不正确。</strong></p>
 <p>重新进入页面可以查看正确的时间。下个版本会修复。</p>
 </li>
