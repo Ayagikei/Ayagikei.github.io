@@ -772,7 +772,14 @@
   <entry>
     <title>LifeUp Release Log</title>
     <url>/post/e5dce7c7.html</url>
-    <content><![CDATA[<h2 id="Future-Plan"><a href="#Future-Plan" class="headerlink" title="Future Plan"></a>Future Plan</h2><ol>
+    <content><![CDATA[
+
+<script>
+    location.href="http://wiki.lifeupapp.fun/en/#/ReleaseLog";
+</script>
+
+
+<h2 id="Future-Plan"><a href="#Future-Plan" class="headerlink" title="Future Plan"></a>Future Plan</h2><ol>
 <li><del>Custom Achievements</del></li>
 <li><del>Link Complete Reward of task to the inventory.</del></li>
 <li><del>Custom Exp of task</del></li>
