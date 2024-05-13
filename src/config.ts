@@ -41,7 +41,7 @@ export const navBarConfig: NavBarConfig = {
 }
 
 export const profileConfig: ProfileConfig = {
-  avatar: 'assets/images/avatar.png',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+  avatar: 'assets/images/avatar.gif',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
   name: 'AyagiKei',
   bio: 'the developer and designer of LifeUp app.',
   links: [
