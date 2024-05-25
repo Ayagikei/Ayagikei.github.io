@@ -33,6 +33,10 @@ export default defineConfig({
   site: "https://aronaplana.io/",
   // base: "/",
   trailingSlash: "always",
+  i18n: {
+    defaultLocale: "en",
+    locales: ["zh-cn", "en"],
+  },
   integrations: [
     tailwind(),
     swup({
