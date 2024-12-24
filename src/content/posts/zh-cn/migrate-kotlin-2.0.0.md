@@ -5,6 +5,7 @@ description: 将人升迁移到Kotlin2.0.0的记录和编译数据对比
 tags: [人升, Kotlin, Android]
 category: LifeUp
 draft: false 
+lang: zh_CN
 ---
 
 # 将人升迁移至 Kotlin 2.0
@@ -29,7 +30,6 @@ https://kotlinlang.org/docs/whatsnew20.html
 2. 根据官网说明 gradle 版本最好也升级到 8.3 以上，使用 IDE 的升级助理升级到了 8.7 版本。
 3. 但为了让 IDE 也能用上新编译器，也试了试把 IDE 升级到了考拉🐨版本。
 
-![4XDF1C(AJR@7@P](./_media/migrate-kotlin-2.0.0/4XDF1C(AJR@7@P]((QH{F)I.png)
 
 然后在设置中启用 K2。
 
