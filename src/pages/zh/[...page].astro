@@ -1,13 +1,15 @@
 ---
 import type { GetStaticPaths } from 'astro'
-import PostPage from '../components/PostPage.astro'
-import Pagination from '../components/control/Pagination.astro'
-import { PAGE_SIZE } from '../constants/constants'
-import MainGridLayout from '../layouts/MainGridLayout.astro'
-import { getSortedPosts } from '../utils/content-utils'
+import PostPage from '../../components/PostPage.astro'
+import Pagination from '../../components/control/Pagination.astro'
+import { PAGE_SIZE } from '../../constants/constants'
+import MainGridLayout from '../../layouts/MainGridLayout.astro'
+import { getSortedPosts } from '../../utils/content-utils'
 
 export const getStaticPaths = (async ({ paginate }) => {
-  const allBlogPosts = await getSortedPosts()
+  const allBlogPosts = await getSortedPosts({
+    filterFn: post => post.data.lang === 'zh' || post.data.lang === 'zh_CN',
+  })
   return paginate(allBlogPosts, { pageSize: PAGE_SIZE })
 }) satisfies GetStaticPaths
 // https://github.com/withastro/astro/issues/6507#issuecomment-1489916992

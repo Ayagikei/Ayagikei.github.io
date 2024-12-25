@@ -3,11 +3,14 @@ import type { BlogPostData } from '@/types/config'
 import I18nKey from '@i18n/i18nKey'
 import { i18n } from '@i18n/translation'
 
-export async function getSortedPosts(): Promise<
+export async function getSortedPosts({ filterFn } = {}): Promise<
   { body: string, data: BlogPostData; slug: string }[]
 > {
   const allBlogPosts = (await getCollection('posts', ({ data }) => {
-    return import.meta.env.PROD ? data.draft !== true : true
+    // 首先应用草稿过滤
+    const isDraft = import.meta.env.PROD ? data.draft !== true : true
+    // 然后应用语言过滤（如果有）
+    return filterFn ? (isDraft && filterFn({ data })) : isDraft
   })) as unknown as { body: string, data: BlogPostData; slug: string }[]
 
   const sorted = allBlogPosts.sort(

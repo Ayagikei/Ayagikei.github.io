@@ -1,0 +1,42 @@
+---
+// src/components/LanguageSwitcher.astro
+import I18nKey from '@i18n/i18nKey'
+import { i18n } from '@i18n/translation'
+import { Icon } from 'astro-icon/components'
+
+// 获取当前页面的路径和语言信息
+const pathname = Astro.url.pathname
+const currentLang = pathname.split('/')[1]
+
+// 生成目标语言的 URL
+function getTargetUrl() {
+  const targetLang = currentLang === 'zh' ? 'en' : 'zh'
+
+  // 如果是首页
+  if (pathname === `/${currentLang}` || pathname === `/${currentLang}/`) {
+    return `/${targetLang}`
+  }
+
+  // 替换路径中的语言部分
+  return pathname.replace(`/${currentLang}`, `/${targetLang}`)
+}
+
+const targetUrl = getTargetUrl()
+---
+
+<div class="flex items-center">
+    
+        href={targetUrl}
+        class="transition rounded-lg h-8 px-2 flex items-center gap-1.5
+               hover:bg-black/5 dark:hover:bg-white/10
+               active:scale-95"
+    >
+        <Icon 
+            name="material-symbols:translate" 
+            class="text-lg text-black/60 dark:text-white/60"
+        />
+        <span class="text-sm text-black/75 dark:text-white/75">
+            {currentLang === 'zh' ? 'English' : '中文'}
+        </span>
+    </a>
+</div>

@@ -1,0 +1,10 @@
+---
+// 获取浏览器语言偏好
+const preferredLanguage =
+  Astro.request.headers.get('accept-language')?.split(',')[0].split('-')[0] ||
+  'zh'
+
+// 根据语言偏好决定重定向目标
+const targetLang = preferredLanguage === 'zh' ? 'zh' : 'en'
+return Astro.redirect(`/${targetLang}/`)
+---
